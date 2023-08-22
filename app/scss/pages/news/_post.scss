@@ -1,0 +1,146 @@
+.news-post {
+
+	display: grid;
+	@include _992 {
+		grid-template-columns: 50% auto;
+	}
+	gap: 31px;
+
+	padding-bottom: 64px;
+
+	// .news-post__col
+
+	&__col {
+	}
+
+	// .news-post__tags
+
+	&__tags {
+	}
+
+	// .news-post__title
+
+	&__title {
+		margin-top: 14px;
+	}
+
+	// .news-post__info
+
+	&__info {
+		margin-top: 14px;
+
+		font-weight: 500;
+		color: var(--dark-secondary);
+
+		display: flex;
+		flex-wrap: wrap;
+
+		> *:not(:last-child) {
+			padding-right: 12px; margin-right: 12px;
+			border-right: 1px solid var(--white-opacity-1);
+		}
+	}
+
+	// .news-post__thumbnail
+
+	&__thumbnail {
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
+
+		img {
+			border-radius: 20px;
+			border: 1px solid var(--white-opacity-1);
+		}
+	}
+
+	// .news-post__content
+
+	&__content {
+		margin-top: 18px;
+
+		h2 {
+			padding-top: 20px;
+
+			font-family: var(--title-font);
+			font-weight: 700;
+			line-height: 100%;
+			font-size: 1.25rem; // 20px
+
+			@include _550 {
+				font-size: 1.5rem; // 24px
+			}
+			
+			@include _768 {
+				font-size: 1.75rem; // 28px
+			}
+			
+			@include _992 {
+				font-size: 2rem; // 32px
+			}
+		}
+
+		h3 {
+			padding-top: 20px;
+
+			font-family: var(--title-font);
+			font-weight: 700;
+			line-height: 100%;
+			font-size: 1.125rem; // 18px
+
+			@include _550 {
+				font-size: 1.125rem; // 18px
+			}
+			
+			@include _768 {
+				font-size: 1.25rem; // 20px
+			}
+			
+			@include _992 {
+				font-size: 1.5rem; // 24px
+			}
+		}
+
+		p {
+			color: var(--dark-secondary);
+			&:not(:first-child) {
+				padding-top: 20px;
+			}
+		}
+
+		figure {
+			margin-top: 20px; padding-top: var(--padding-aspect-ratio);
+			width: 100%;
+			display: block;
+
+			position: relative;
+
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+
+				border-radius: 20px;
+				border: 1px solid var(--white-opacity-1);
+			}
+		}
+	}
+
+	// .news-post__list
+
+	&__list {
+		
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include _550 {
+			
+		}
+		gap: 14px;
+
+		@include _992 {
+			margin-top: 20px;
+		}
+	}
+}

@@ -1,0 +1,450 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="index-hero container">
+			<div class="index-hero__background">
+				<div class="index-hero__background--decor"></div>
+				<div class="index-hero__background--decor"></div>
+			</div>
+			<div class="index-hero__content">
+				<ul class="index-hero__tags">
+					<li>
+						Акции
+					</li>
+					<li>
+						Биржевые товары
+					</li>
+					<li>
+						Криптовалюты
+					</li>
+				</ul>
+				<h1 class="index-hero__title main-title">
+					Свобода и Успех: Трейдинг без Препятствий
+				</h1>
+				<div class="index-hero__text">
+					<p>
+						Получите доступ к передовым инструментам, индивидуальной поддержке и надежной системе безопасности.
+					</p>
+				</div>
+				<a href="#" class="index-hero__btn btn">
+					Регистрация
+				</a>
+			</div>
+			<div class="index-hero__image">
+				<div class="index-hero__image--wrapper image-aspect-ratio">
+					<picture>
+						<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
+						<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
+						<img src="img/index/hero/index-hero-image.png" alt="" width="1840" height="1840" loading="lazy">
+					</picture>
+				</div>
+				<div class="index-hero__image--tooltip">
+					<div class="index-hero__image--tooltip-bg"></div>
+					<div class="index-hero__image--tooltip-text">
+						Blockchain
+					</div>
+					<div class="index-hero__image--target">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#plus"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="index-hero__image--tooltip">
+					<div class="index-hero__image--tooltip-bg"></div>
+					<div class="index-hero__image--tooltip-text">
+						Security
+					</div>
+					<div class="index-hero__image--target">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#plus"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="index-hero__panel">
+				<div class="index-hero__panel--col">
+					<div class="index-hero__about">
+						<div class="index-hero__about--logo">
+							<picture>
+								<source srcset="img/logo-icon-light.avif" type="image/avif">
+								<source srcset="img/logo-icon-light.webp" type="image/webp">
+								<img src="img/logo-icon-light.png" width="113" height="125" loading="lazy" alt="">
+							</picture>
+						</div>
+						<h2 class="index-hero__about--text">
+							Первая уникальная биржа с уникальным УТП
+						</h2>
+					</div>
+				</div>
+				<div class="index-hero__panel--col">
+					<table class="index-hero__table">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>
+									Coin
+								</th>
+								<th>
+									Value
+								</th>
+								<th>
+									Change 24h
+								</th>
+								<th>
+									Dinamics
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							@@loop("html/_index-hero-table-item.html", [
+								{},
+								{},
+								{},
+								{},
+							])
+						</tbody>
+					</table>
+				</div>
+				<div class="index-hero__panel--col">
+					<form method="post" class="index-hero__buy-shares buy-shares-block">
+						<div class="buy-shares-block__item">
+							<h2 class="buy-shares-block__title">
+								Купить акции
+							</h2>
+							<div class="buy-shares-block__element">
+								<div class="buy-shares-block__element--header">
+									<span class="buy-shares-block__name">Select stock</span>
+								</div>
+								<div class="buy-shares-block__element--select">
+									<select name="stock" class="custom-select">
+										<option value="tsl" data-html="<b>TSL</b><span>Tesla Inc.</span>">Tesla Inc.</option>
+										<option value="tsl-2" data-html="<b>TSL</b><span>Tesla Inc. 2</span>">Tesla Inc. 2</option>
+										<option value="tsl-3" data-html="<b>TSL</b><span>Tesla Inc. 3</span>">Tesla Inc. 3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="buy-shares-block__item">
+							<div class="buy-shares-block__element">
+								<div class="buy-shares-block__element--header">
+									<span class="buy-shares-block__name">Enter amount</span>
+									<span class="buy-shares-block__name">Price ~ $110,3</span>
+								</div>
+								<div class="buy-shares-block__element--input">
+									<input type="number" name="amount" min="1" value="1" required placeholder="0">
+								</div>
+							</div>
+						</div>
+						<button class="buy-shares-block__submit btn" type="button">
+							Купить
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="start-trading container">
+			<div class="start-trading__image">
+				<div class="theme-change">
+					<div class="theme-change-light">
+						<div class="start-trading__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/start/index-start-image-light.avif" type="image/avif">
+								<source srcset="img/index/start/index-start-image-light.webp" type="image/webp">
+								<img src="img/index/start/index-start-image-light.png" alt="" width="565" height="565" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="theme-change-dark">
+						<div class="start-trading__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/start/index-start-image-dark.avif" type="image/avif">
+								<source srcset="img/index/start/index-start-image-dark.webp" type="image/webp">
+								<img src="img/index/start/index-start-image-dark.png" alt="" width="565" height="565" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="start-trading__card">
+					<div class="start-trading__card--icon">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#reload"></use>
+						</svg>
+					</div>
+					<div class="start-trading__card--text">
+						Ваша анонимность
+					</div>
+				</div>
+				<div class="start-trading__card">
+					<div class="start-trading__card--icon">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#reload"></use>
+						</svg>
+					</div>
+					<div class="start-trading__card--text">
+						Самые выгодные курсы
+					</div>
+				</div>
+			</div>
+			<div class="start-trading__content">
+				<h2 class="start-trading__title main-title _min">
+					Откройте двери успешного трейдинга прямо сейчас
+				</h2>
+				<div class="start-trading__text">
+					<p>Глобальный брокер с богатой историей достижений. Мы предлагаем клиентам проверенные временем результаты в управлении капиталом и инвестициями.</p>
+				</div>
+				<ul class="start-trading__list" style="--decor-marker-dark: #C1FBFF; --decor-marker-light: #2E4CEB;">
+					<li>
+						<div class="start-trading__list--decor-marker decor-marker">
+							<div class="decor-marker-line"></div>
+							<div class="decor-marker-dot"></div>
+						</div>
+						Создайте аккаунт
+					</li>
+					<li>
+						<div class="start-trading__list--decor-marker decor-marker">
+							<div class="decor-marker-line"></div>
+							<div class="decor-marker-dot"></div>
+						</div>
+						Внесите депозит
+					</li>
+					<li>
+						<div class="start-trading__list--decor-marker decor-marker">
+							<div class="decor-marker-line"></div>
+							<div class="decor-marker-dot"></div>
+						</div>
+						Создайте сделку
+					</li>
+				</ul>
+				<div class="start-trading__footer">
+					<a href="#" class="start-trading__btn btn">
+						Начать
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="stock-market container">
+			<div class="stock-market__content">
+				<h2 class="stock-market__title main-title _min">
+					Рынок акций
+				</h2>
+				<div class="stock-market__text">
+					<p>Присоединяйтесь к более чем 1 000 000 инвесторов со всего мира, которые выбрали ZATARA CAPITAL SECURITIES</p>
+				</div>
+			</div>
+			<div class="stock-market__drop-down">
+				<select name="type-list" class="custom-select-2">
+					<option value="value-1">Trending Tickers</option>
+					<option value="value-2">Value 2</option>
+					<option value="value-3">Value 3</option>
+				</select>
+			</div>
+			<div class="stock-market__table coins-table _stock-market">
+				<div class="coins-table__wrapper" data-simplebar>
+					<table class="coins-table__block">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Symbol</th>
+								<th>Name</th>
+								<th>Цена</th>
+								<th>Market Time</th>
+								<th>Change</th>
+								<th>Change %</th>
+								<th>Market Cap</th>
+							</tr>
+						</thead>
+						<tbody>
+							@@loop("html/_stock-market-table-item.html", [
+								{},
+								{},
+								{},
+								{},
+								{},
+							])
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<section class="try-now container">
+			<div class="try-now__body">
+				<div class="try-now__header">
+					<h2 class="try-now__title main-title _min _light">
+						Откройте мир финансовых возможностей: Начните торговать сегодня
+					</h2>
+					<a href="#" class="try-now__btn btn _dark">
+						Попробовать сейчас
+					</a>
+				</div>
+				<div class="try-now__row">
+					<div class="try-now__image">
+						<div class="try-now__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/try-now/try-now-image-large.avif" type="image/avif">
+								<source srcset="img/index/try-now/try-now-image-large.webp" type="image/webp">
+								<img src="img/index/try-now/try-now-image-large.png" alt="" width="896" height="636" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="try-now__image">
+						<div class="try-now__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/try-now/try-now-image-min.avif" type="image/avif">
+								<source srcset="img/index/try-now/try-now-image-min.webp" type="image/webp">
+								<img src="img/index/try-now/try-now-image-min.png" alt="" width="288" height="636" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="stock-market container">
+			<div class="stock-market__content">
+				<h2 class="stock-market__title main-title _min">
+					Рынок криптовалют
+				</h2>
+				<div class="stock-market__text">
+					<p>Присоединяйтесь к более чем 1 000 000 инвесторов со всего мира, которые выбрали ZATARA CAPITAL SECURITIES</p>
+				</div>
+			</div>
+			<div class="stock-market__table coins-table _cryptocurrency-market">
+				<div class="coins-table__wrapper" data-simplebar>
+					<table class="coins-table__block">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Наименование</th>
+								<th>Цена</th>
+								<th>Объем (24 ч)</th>
+								<th>Рыночная капитализация</th>
+								<th>7d %</th>
+								<th>% 24ч</th>
+								<th>1h %</th>
+							</tr>
+						</thead>
+						<tbody>
+							@@loop("html/_index-table-item-2.html", [
+								{},
+								{},
+								{},
+								{},
+								{},
+							])
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<section class="reviews container">
+			<div class="reviews__background" aria-hidden="true">
+				<div class="reviews__background--decor"></div>
+				<div class="reviews__background--decor"></div>
+			</div>
+			<div class="reviews__card">
+				<div class="reviews__card--background" aria-hidden="true">
+					<div class="reviews__card--background-panel"></div>
+					<div class="reviews__card--background-decor"></div>
+					<div class="reviews__card--background-decor"></div>
+				</div>
+				<div class="reviews__card--body">
+					<div class="reviews__card--info">
+						<div class="reviews__card--avatar">
+							<picture>
+								<source srcset="img/index/reviews/reviews-avatar.avif" type="image/avif">
+								<source srcset="img/index/reviews/reviews-avatar.webp" type="image/webp">
+								<img src="img/index/reviews/reviews-avatar.png" alt="" width="64" height="64" loading="lazy">
+							</picture>
+						</div>
+						<h3 class="reviews__card--name">
+							Maryam Wensdo
+						</h3>
+						<span class="reviews__card--proffesion">
+							Проф. трейдер
+						</span>
+					</div>
+					<div class="reviews__card--text">
+						<p>
+							Madhuri and her team were truly gems to work with! We revamped our entire website with Nocloco, and it all turned out to be spot on—be it speed optimisation or design. The Nocoloco team really came through with solutions at all-times for any challenges we faced. Can't recommend them enough.
+						</p>
+					</div>
+					<div class="reviews__card--footer">
+						<span class="reviews__card--date">2 Ноября 2023</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews__content">
+				<h2 class="reviews__title main-title _min">
+					Магия Восторженных Отзывов: Наши Клиенты Делятся Впечатлениями!
+				</h2>
+				<div class="reviews__text">
+					<p>
+						Они - настоящее отражение нашей приверженности к качеству обслуживания и индивидуальному подходу к каждому клиенту
+					</p>
+				</div>
+				<ul class="reviews__social-list">
+					<li class="reviews__social-list--item">
+						<a href="#" class="reviews__social-list--link" title="NASDAQ">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<img src="img/index/reviews/reviews-logo-light-1.svg" width="103" height="35" loading="lazy" alt="">
+								</div>
+								<div class="theme-change-dark">
+									<img src="img/index/reviews/reviews-logo-dark-1.svg" width="103" height="35" loading="lazy" alt="">
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="reviews__social-list--item">
+						<a href="#" class="reviews__social-list--link" title="Reddit">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<img src="img/index/reviews/reviews-logo-light-2.svg" width="103" height="35" loading="lazy" alt="">
+								</div>
+								<div class="theme-change-dark">
+									<img src="img/index/reviews/reviews-logo-dark-2.svg" width="103" height="35" loading="lazy" alt="">	
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="reviews__social-list--item">
+						<a href="#" class="reviews__social-list--link" titla="NYSE">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<img src="img/index/reviews/reviews-logo-light-3.svg" width="103" height="35" loading="lazy" alt="">
+								</div>
+								<div class="theme-change-dark">
+									<img src="img/index/reviews/reviews-logo-dark-3.svg" width="103" height="35" loading="lazy" alt="">	
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		@@include("html/_try-now-2.html")
+	</main>
+
+@@include("html/_footer.html")

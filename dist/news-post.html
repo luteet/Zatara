@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		if (localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
+			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+		</clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<nav class="header__nav">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--login"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								О нас
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link Link Link Link Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговля
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговая платформа
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__login" data-append-to=".header__nav--login">
+						<a href="#" class="header__login--btn btn _none-accent">
+							Регистрация
+						</a>
+						<a href="#" class="header__login--btn btn">
+							Вход
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<section class="news-post container">
+				<div class="news-post__col">
+					<ul class="news-post__tags news-tags">
+						<li>
+							<a href="#">
+								Crypto
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								News
+							</a>
+						</li>
+					</ul>
+					<h2 class="news-post__title main-title _min">
+						Wall Street eyes higher open after Meta results, Fed optimism
+					</h2>
+					<div class="news-post__info">
+						<time datetime="2023-07-12">12 July, 2023</time>
+						<span>10 min read</span>
+					</div>
+					<div class="news-post__thumbnail image-aspect-ratio visible-on-mob">
+						<picture>
+							<source srcset="img/news/news-image-1.avif" type="image/avif">
+							<source srcset="img/news/news-image-1.webp" type="image/webp">
+							<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+						</picture>
+					</div>
+					<div class="news-post__content">
+						<h2>The tech-heavy Nasdaq was set to lead Wall Street higher on Thursday,</h2>
+						<p>Meta Platforms gained 9.7% in premarket trading after it also reported a jump in second-quarter advertising revenue, topping Wall Street financial targets. <br>
+							The Facebook (NASDAQ:META) parent's results followed strong performance by Alphabet (NASDAQ:GOOGL) earlier this week, which show that consumers, and advertisers eager to reach them, are spending despite broad economic concerns. <br>
+							Outsized gains in megacap growth stocks have helped the Nasdaq lead the charge on Wall Street so far this year, but the Dow is catching up as investors bet on sectors beyond technology.
+						</p>
+						<h3>The blue-chips Dow is on track for its 14th straight day of gains after a scorching rally that saw it log its longest winning streak since 1987 in the previous session.</h3>
+						<p>
+							On Wednesday, the U.S. Federal Reserve raised interest rates by 25 basis points as expected. Traders now expect only a 20% chance that the Fed could surprise with a quarter-point increase in September. <br>
+							Fed Chair Jerome Powell said the economy still needed to slow and the labor market to weaken for inflation to "credibly" return to the U.S. central bank's 2% target.
+						</p>
+						<p>
+							"Markets are up because Powell delivered exactly what everyone expected with the quarter point hike yesterday and he didn't say anything overly hawkish or overly dovish," said Randy Frederick, managing director of trading and derivatives for Charles Schwab (NYSE:SCHW). <br>
+							A Commerce Department report showed the economy likely maintained a moderate pace of growth in the previous quarter, potentially keeping a much-feared recession at bay.
+						</p>
+						<p>At 8:42 a.m. ET, Dow e-minis were up 136 points, or 0.38%, S&P 500 e-minis were up 35.75 points, or 0.78%, and Nasdaq 100 e-minis were up 215.75 points, or 1.38%.</p>
+						<p>
+							EBay forecast third-quarter profit below market expectations as the e-commerce platform spent more to bolster categories such as auto parts, refurbished goods and collectibles, sending its shares down 5.8%. <br>
+							Chipmakers including Nvidia (NASDAQ:NVDA), Micron (NASDAQ:MU) and Marvell (NASDAQ:MRVL) Technology rose between 2.0% and 4.3% after Lam Research (NASDAQ:LRCX) forecast upbeat quarterly sales. Shares of Lam rose 5.1%. <br>
+							Universal banks including Citigroup (NYSE:C), Wells Fargo (NYSE:WFC) and Bank of America (N:BAC) crept higher about 0.6% each ahead of a rule U.S. regulators are set to unveil later in the day that could significantly raise capital requirements for the lenders.
+						</p>
+						<p>
+							Royal Caribbean (NYSE:RCL) surged 8.3% after the cruise operator lifted its annual profit forecast, while Bristol Myers (NYSE:BMY) Squibb fell 2.7% after the drugmaker said its quarterly sales missed expectations. <br>
+							Southwest Airlines (NYSE:LUV) tumbled 5.4% after the airline warned of higher labor costs for the year and posted a dip in second-quarter profit. <br>
+							Elsewhere, the European Central Bank raised interest rates for the ninth consecutive time and kept the door open to further tightening.
+						</p>
+						<figure>
+							<picture>
+								<source srcset="img/news/news-image-1.avif" type="image/avif">
+								<source srcset="img/news/news-image-1.webp" type="image/webp">
+								<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+							</picture>
+						</figure>
+					</div>
+				</div>
+				<div class="news-post__col">
+					<div class="news-post__thumbnail image-aspect-ratio visible-on-desktop">
+						<picture>
+							<source srcset="img/news/news-image-1.avif" type="image/avif">
+							<source srcset="img/news/news-image-1.webp" type="image/webp">
+							<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+						</picture>
+					</div>
+					<ul class="news-post__list">
+						<li class="news__card">
+							<a href="news-post.html" class="news__card--image image-aspect-ratio">
+								<picture>
+									<source srcset="img/news/news-image-5.avif" type="image/avif">
+									<source srcset="img/news/news-image-5.webp" type="image/webp">
+									<img src="img/news/news-image-5.jpg" alt="" width="388" height="292" loading="lazy">
+								</picture>
+							</a>
+							<ul class="news__card--tags news-tags">
+								<li>
+									<a href="#">
+										Crypto
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+							</ul>
+							<h2 class="news__card--title title _min">
+								<a href="news-post.html">
+									Wall Street eyes higher open after Meta results, Fed optimism
+								</a>
+							</h2>
+							<div class="news__card--footer">
+								<time datetime="2023-07-12">12 July, 2023</time>
+								<span>10 min read</span>
+							</div>
+						</li>
+						<li class="news__card">
+							<a href="news-post.html" class="news__card--image image-aspect-ratio">
+								<picture>
+									<source srcset="img/news/news-image-5.avif" type="image/avif">
+									<source srcset="img/news/news-image-5.webp" type="image/webp">
+									<img src="img/news/news-image-5.jpg" alt="" width="388" height="292" loading="lazy">
+								</picture>
+							</a>
+							<ul class="news__card--tags news-tags">
+								<li>
+									<a href="#">
+										Crypto
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+							</ul>
+							<h2 class="news__card--title title _min">
+								<a href="news-post.html">
+									Wall Street eyes higher open after Meta results, Fed optimism
+								</a>
+							</h2>
+							<div class="news__card--footer">
+								<time datetime="2023-07-12">12 July, 2023</time>
+								<span>10 min read</span>
+							</div>
+						</li>
+						<li class="news__card">
+							<a href="news-post.html" class="news__card--image image-aspect-ratio">
+								<picture>
+									<source srcset="img/news/news-image-5.avif" type="image/avif">
+									<source srcset="img/news/news-image-5.webp" type="image/webp">
+									<img src="img/news/news-image-5.jpg" alt="" width="388" height="292" loading="lazy">
+								</picture>
+							</a>
+							<ul class="news__card--tags news-tags">
+								<li>
+									<a href="#">
+										Crypto
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+							</ul>
+							<h2 class="news__card--title title _min">
+								<a href="news-post.html">
+									Wall Street eyes higher open after Meta results, Fed optimism
+								</a>
+							</h2>
+							<div class="news__card--footer">
+								<time datetime="2023-07-12">12 July, 2023</time>
+								<span>10 min read</span>
+							</div>
+						</li>
+						<li class="news__card">
+							<a href="news-post.html" class="news__card--image image-aspect-ratio">
+								<picture>
+									<source srcset="img/news/news-image-5.avif" type="image/avif">
+									<source srcset="img/news/news-image-5.webp" type="image/webp">
+									<img src="img/news/news-image-5.jpg" alt="" width="388" height="292" loading="lazy">
+								</picture>
+							</a>
+							<ul class="news__card--tags news-tags">
+								<li>
+									<a href="#">
+										Crypto
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										News
+									</a>
+								</li>
+							</ul>
+							<h2 class="news__card--title title _min">
+								<a href="news-post.html">
+									Wall Street eyes higher open after Meta results, Fed optimism
+								</a>
+							</h2>
+							<div class="news__card--footer">
+								<time datetime="2023-07-12">12 July, 2023</time>
+								<span>10 min read</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__marquee splide container">
+				<div class="footer__marquee--track splide__track">
+					<ul class="footer__marquee--list splide__list">
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<a href="index.html" class="footer__logo">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/logo-dark.avif" type="image/avif">
+										<source srcset="img/logo-dark.webp" type="image/webp">
+										<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/logo-light.avif" type="image/avif">
+										<source srcset="img/logo-light.webp" type="image/webp">
+										<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+							</div>
+						</a>
+						<div class="footer__lang change-lang">
+							<button class="change-lang__target" type="button">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#lang"></use>
+								</svg>
+								RUS
+								<svg width="19" height="19" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</button>
+							<ul class="change-lang__list">
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<nav class="footer__nav">
+							<ul>
+								<li>
+									<a href="#">
+										Торговля
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												100% A-Book
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Агрегация ликвидности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Риск-менеджмент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции и ETF
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Валюты и металы
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#">
+												Фьючерсы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Опционы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Фонды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Облигации
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Криптовалюты
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Почему мы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Юридическая документация
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Защита Средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Поставщики ликвидности
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Уведомление о рисках
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Безопасность средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Политика безопасности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Условия и положения
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="tel:+13146035827">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#tel"></use>
+								</svg>
+								+1 314 603 5827
+							</a>
+						</li>
+						<li>
+							<a href="mailto:info@zataracs.com">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								info@zataracs.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#map-point"></use>
+								</svg>
+								1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__note">
+					<p>
+						ZATARA CAPITAL SECURITIES LP. (Registration No. <u>201919700005</u>). All investment and ancillary services are offered through this entity, with registered address in 1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA, where office is restricted to provide client-support services only and does not include investment services.
+						All complaints may be directed to the email address and/or phone number and will be resolved based on the complaints handling policy outlined here.
+					</p>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__copy">2023 ZATARA CAPITAL SECURITIES LP</div>
+				<div class="footer__privacy">
+					<ul>
+						<li>
+							<a href="#">
+								Политика в отношении конфликтов интересов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика идентификации клиентов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Возврат средств
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика исполнения сделок
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

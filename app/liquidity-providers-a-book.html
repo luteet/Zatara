@@ -1,0 +1,165 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="page-hero container">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<div class="page-hero__background" aria-hidden="true">
+				<div class="page-hero__background--main">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/section-hero-light-background.avif" type="image/avif">
+								<source srcset="img/section-hero-light-background.webp" type="image/webp">
+								<img src="img/section-hero-light-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/section-hero-dark-background.avif" type="image/avif">
+								<source srcset="img/section-hero-dark-background.webp" type="image/webp">
+								<img src="img/section-hero-dark-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="page-hero__background--decor"></div>
+			</div>
+			<div class="page-hero__content">
+				<h1 class="page-hero__title main-title">
+					Компания работает по 100%-й A-book модели, хеджируя на внешних контрагентах все клиентские позиции.
+				</h1>
+				<div class="page-hero__text">
+					<p>
+						Компания не заинтересована в убытках клиента, поскольку зарабатывает лишь с уплаченной им комиссии за совершение сделок.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="liquidity-providers-works container">
+			<div class="liquidity-providers-works__block">
+				<strong class="liquidity-providers-works__section-name section-name">
+					РАССКАЗЫВАЕМ ЛЕГКО
+				</strong>
+				<h2 class="liquidity-providers-works__title title">
+					Ознакомьтесь с детальной информацией на иллюстрации
+				</h2>
+				<nav class="liquidity-providers-works__tabs-nav liquidity-providers-tabs-nav">
+					<ul>
+						<li>
+							<a href="liquidity-providers-a-book.html" class="current">
+								100%-A-book
+							</a>
+						</li>
+						<li>
+							<a href="liquidity-providers-works.html">
+								Агрегация ликвидности
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="liquidity-providers-a-book">
+					<canvas class="liquidity-providers-a-book__background arrow-canvas"></canvas>
+					<div class="liquidity-providers-a-book__col">
+						<div class="liquidity-providers-a-book__item standard-style-item _center">
+							<h3>A-book</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item standard-style-item _add-marker arrow-item" data-arrow-id="client" data-arrow-to="[broker, bottom, top]; [interbank, right, right]" data-mob-arrow-to="[broker, bottom, top]; [interbank, right, right]">
+							<h3>Клиент</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item standard-style-item _add-marker arrow-item" data-arrow-id="broker" data-arrow-to="[interbank, bottom, top]" data-mob-arrow-to="[interbank, bottom, top]">
+							<h3>Брокер</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item standard-style-item _add-marker arrow-item" data-arrow-id="interbank" data-arrow-to="[client, left, left]" data-mob-arrow-to="[client, left, left]">
+							<h3>Межбанк</h3>
+							<p>МежбанкКонтрагенты 1-ого ипоследующих уровней</p>
+						</div>
+					</div>
+					<div class="liquidity-providers-a-book__col">
+						<div class="liquidity-providers-a-book__item danger-style-item _center">
+							<h3>A-book</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item danger-style-item _add-marker arrow-item" data-arrow-id="client-2" data-arrow-to="[broker-2, bottom, top]; [broker-2, right, right]" data-mob-arrow-to="[broker-2, bottom, top]; [broker-2, right, right]">
+							<h3>Клиент</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item danger-style-item _add-marker arrow-item" data-arrow-id="broker-2" data-arrow-to="[client-2, left, left]" data-mob-arrow-to="[client-2, left, left]">
+							<h3>Брокер</h3>
+						</div>
+						<div class="liquidity-providers-a-book__item danger-style-item _center _accent arrow-item _min-padding" 
+						data-arrow-to="[a-book-list-item-1, bottom, left]; [a-book-list-item-2, bottom, left]; [a-book-list-item-3, bottom, left]; [a-book-list-item-4, bottom, left]"
+						data-mob-arrow-to="[a-book-list-item-1, bottom, left]; [a-book-list-item-2, bottom, left]; [a-book-list-item-3, bottom, left]; [a-book-list-item-4, bottom, left]">
+							<h3>Конфликт интересов</h3>
+						</div>
+						<div class="liquidity-providers-a-book__list">
+							<div class="liquidity-providers-a-book__item danger-style-item _add-marker _accent" data-arrow-id="a-book-list-item-1">
+								<h3>Ухудшение исполнения торговых приказов</h3>
+							</div>
+							<div class="liquidity-providers-a-book__item danger-style-item _add-marker _accent" data-arrow-id="a-book-list-item-2">
+								<h3>Введение ограничений на торговлю</h3>
+							</div>
+							<div class="liquidity-providers-a-book__item danger-style-item _add-marker _accent" data-arrow-id="a-book-list-item-3">
+								<h3>Отмена доходных сделок</h3>
+							</div>
+							<div class="liquidity-providers-a-book__item danger-style-item _add-marker _accent" data-arrow-id="a-book-list-item-4">
+								<h3>Отказ в выплате прибыли</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="liquidity-providers-works__block">
+				<div class="liquidity-providers-psyho">
+					<canvas class="liquidity-providers-psyho__background arrow-canvas"></canvas>
+					<div class="liquidity-providers-psyho__start standard-style-item arrow-item _min" 
+					data-arrow-to="[psyho-item-1, bottom, top]; [psyho-item-2, bottom, top]"
+					data-mob-arrow-to="[psyho-item-1, bottom, left]; [psyho-item-2, bottom, left]">
+						<h3>Психологическое состояние трейдера</h3>
+					</div>
+					<div class="liquidity-providers-psyho__col">
+						<div class="liquidity-providers-psyho__item standard-style-item _add-marker" data-arrow-id="psyho-item-1">
+							<h3>
+								Отсутствие конфликта <br class="visible-on-desktop"> интересов
+							</h3>
+							<p>
+								В случае работы по B-book и смешанной модели компания выступает контрагентом по сделкам клиента, заработок клиента становится потерями компании, и наоборот. <br>
+								Схема работы по A-book модели полностью исключает конфликт интересов между компанией и клиентами, поскольку Компанияне выступает контрагентам по сделкам клиентов и не заинтересована в их потерях.
+							</p>
+						</div>
+					</div>
+					<div class="liquidity-providers-psyho__col">
+						<div class="liquidity-providers-psyho__item standard-style-item _add-marker" data-arrow-id="psyho-item-2">
+							<h3>Отсутствие рисков <br class="visible-on-desktop"> банкротства</h3>
+							<p>
+								В случае работы по B-book и смешанной модели компания несет дополнительные риски, так как выступает контрагентомпо сделкам клиента, заработок клиента становится потерями компании, и наоборот. <br>
+								Данная причина привела к банкротству довольно большого количества компаний, ввиду слишком больших заработков клиентовв короткий промежуток времени.
+							</p>
+						</div>
+					</div>
+					<div class="liquidity-providers-psyho__note">
+						<p>
+							ZATARA CAPITAL SECURITIES не несет данных рисков банкротства, поскольку не выступает контрагентом по сделкам клиентов.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

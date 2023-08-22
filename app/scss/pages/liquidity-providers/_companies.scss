@@ -1,0 +1,72 @@
+.liquidity-providers-companies {
+
+	padding-bottom: 64px;
+
+	@include _992 {
+		padding-bottom: 141px;
+	}
+
+	// .liquidity-providers-companies__section-name
+
+	&__section-name {
+		
+	}
+
+	// .liquidity-providers-companies__title
+
+	&__title {
+		max-width: 620px;
+		margin-top: 15px;
+	}
+
+	// .liquidity-providers-companies__list
+
+	&__list {
+		margin-top: 33px;
+
+		display: grid;
+		gap: 16px;
+		grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+	}
+
+	// .liquidity-providers-companies__card
+
+	&__card {
+
+		// .liquidity-providers-companies__card--logo
+
+		&--logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			text-align: center;
+
+			min-height: 131px;
+			padding: 15px;
+
+			background: var(--white);
+			border-radius: 16px;
+
+			img {
+				object-fit: contain;
+				max-width: 100%;
+			}
+		}
+
+		// .liquidity-providers-companies__card--name
+
+		&--name {
+			margin-top: 16px;
+
+
+		}
+
+		// .liquidity-providers-companies__card--descr
+
+		&--descr {
+			margin-top: 7px;
+			color: var(--dark-secondary);
+		}
+	}
+}

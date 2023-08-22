@@ -1,0 +1,47 @@
+.stock-market {
+
+	padding-top: 30px;
+
+	@include _992 {
+		padding-top: 50px;
+	}
+
+	// .stock-market__content
+
+	&__content {
+		
+	}
+
+	// .stock-market__title
+
+	&__title {
+	}
+
+	// .stock-market__text
+
+	&__text {
+		max-width: 505px;
+		margin-top: 10px;
+
+		color: var(--white-opacity-5);
+
+		@include _992 {
+			color: var(--secondary-2);
+		}
+	}
+
+	// .stock-market__drop-down
+
+	&__drop-down {
+		margin-top: 40px;
+		display: inline-block;
+	}
+
+	// .stock-market__table
+
+	&__table {
+		width: 100%;
+	}
+}
+
+

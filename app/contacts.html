@@ -1,0 +1,104 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="page-hero container _center">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<div class="page-hero__background" aria-hidden="true">
+				<div class="page-hero__background--main">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/section-hero-light-background.avif" type="image/avif">
+								<source srcset="img/section-hero-light-background.webp" type="image/webp">
+								<img src="img/section-hero-light-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/section-hero-dark-background.avif" type="image/avif">
+								<source srcset="img/section-hero-dark-background.webp" type="image/webp">
+								<img src="img/section-hero-dark-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-hero__content">
+				<h1 class="page-hero__title main-title">
+					Обратитесь к нам для <span class="decor-title-icon">
+						вопросов
+						<span>
+							<svg width="21" height="21" viewBox="0 0 21 21">
+								<use xlink:href="img/sprites.svg#message"></use>
+							</svg>
+						</span>
+					</span> об акциях и инвестициях!
+				</h1>
+				<ul class="page-hero__social">
+					<li class="page-hero__social--item">
+						<a href="#">
+							<img src="img/contacts/skype.svg" width="28" height="28" loading="lazy" alt="">
+							live:.cid.d74591fa539cd3d3
+						</a>
+					</li>
+					<li class="page-hero__social--item">
+						<a href="tel:+13146035827">
+							<img src="img/contacts/united-states.svg" width="28" height="28" loading="lazy" alt="">
+							+1 314 603 5827
+							<span>США</span>
+						</a>
+					</li>
+					<li class="page-hero__social--item">
+						<a href="mailto:support@zataracs.com">
+							<img src="img/contacts/email.svg" width="28" height="28" loading="lazy" alt="">
+							support@zataracs.com
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="contacts container">
+			<h2 class="visually-hidden">
+				Contacts
+			</h2>
+			<ul class="contacts__list">
+				@@loop("html/_contacts-card.html", [
+					{},
+					{},
+					{},
+					{},
+
+					{},
+					{},
+					{},
+					{},
+
+					{},
+					{},
+					{},
+					{},
+				])
+			</ul>
+		</section>
+		@@include("html/_try-now-2.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -1,0 +1,148 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="page-hero container _none-full-screen">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<div class="page-hero__background" aria-hidden="true">
+				<div class="page-hero__background--main">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/section-hero-light-background.avif" type="image/avif">
+								<source srcset="img/section-hero-light-background.webp" type="image/webp">
+								<img src="img/section-hero-light-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/section-hero-dark-background.avif" type="image/avif">
+								<source srcset="img/section-hero-dark-background.webp" type="image/webp">
+								<img src="img/section-hero-dark-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="page-hero__background--decor"></div>
+			</div>
+			<div class="page-hero__content">
+				<h1 class="page-hero__title main-title">
+					Риск менеджмент
+				</h1>
+				<div class="page-hero__text">
+					<p>
+						Компанией разработана система внешнего контроля за торговлей трейдеров, доступная каждому желающему. Трейдер может установить ряд ограничений, при реализации одного из которых сделки автоматически закроются и возможность торговли заблокируется на определенный период времени. Также, невозможно любое моментальное изменение уровня ограничений в сторону увеличения, поэтому трейдер не может увеличивать свои потери сверх изначально определенных ограничений в момент нарастания убытка.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="liquidity-providers-works container">
+			<div class="liquidity-providers-works__block">
+				<strong class="liquidity-providers-works__section-name section-name">
+					РАССКАЗЫВАЕМ ЛЕГКО
+				</strong>
+				<h2 class="liquidity-providers-works__title title">
+					Ознакомьтесь с детальной информацией на иллюстрации
+				</h2>
+				<nav class="liquidity-providers-works__tabs-nav liquidity-providers-tabs-nav">
+					<ul>
+						<li>
+							<a href="liquidity-providers-general.html" class="current">
+								Общая информация
+							</a>
+						</li>
+						<li>
+							<a href="liquidity-providers-system.html">
+								Функционал
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="liquidity-providers-general">
+					<canvas class="liquidity-providers-general__background arrow-canvas"></canvas>
+					<div class="liquidity-providers-general__start standard-style-item arrow-item" data-arrow-to="[serenity, bottom, top]; [psychological-pressure, bottom, top]"
+					data-mob-arrow-to="[serenity, bottom, top]; [psychological-pressure, bottom, right]">
+						<h3>
+							<svg width="32" height="32" viewBox="0 0 32 32">
+								<use xlink:href="img/sprites.svg#shield"></use>
+							</svg>
+							Психологическое состояние трейдера
+						</h3>
+					</div>
+					<div class="liquidity-providers-general__col">
+						<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="serenity">
+							<h3>Спокойствие</h3>
+						</div>
+						<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="setting-limits">
+							<h3>Установка <br class="visible-on-desktop"> ограничений</h3>
+							<p>
+								Производиться в спокойной обстановке без влияния емоций
+							</p>
+						</div>
+						<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="change-limits">
+							<h3>Изменение <br class="visible-on-desktop"> ограничений</h3>
+							<p>
+								(возможно только по прошествии определенного времени, что дает возможность трейдеру стабилизировать псих.состояние)
+							</p>
+						</div>
+					</div>
+					<div class="liquidity-providers-general__col">
+						<div class="liquidity-providers-general__item danger-style-item _add-marker" data-arrow-id="psychological-pressure">
+							<h3>Психологическое давление</h3>
+						</div>
+						<div class="liquidity-providers-general__item danger-style-item _add-marker arrow-item _min-padding" data-arrow-id="setting-limit" 
+						data-arrow-to="[changing-restrictions, bottom, top]"
+						data-mob-arrow-to="[changing-restrictions, bottom, top]">
+							<h3>Установка ограничений</h3>
+						</div>
+						<div class="liquidity-providers-general__row">
+							<div class="liquidity-providers-general__item danger-style-item _min _add-marker arrow-item _min-padding" data-arrow-id="changing-restrictions" 
+							data-arrow-to="[stop-loss, bottom, top]; [setting-limits, left, right, noneMinPadding]"
+							data-mob-arrow-to="[stop-loss, bottom, top]; [setting-limits, left, left, noneMinPadding]">
+								<span class="danger-style-item__label">торговля</span>
+								<h3>Изменение ограничений</h3>
+								<p>увелечение уровней потенциальныых потерь в момент</p>
+							</div>
+							<div class="liquidity-providers-general__item danger-style-item _min _add-marker arrow-item _min-padding" data-arrow-id="losses"
+							data-arrow-to="[setting-limit, top, bottom]; [stop-loss, bottom, top]"
+							data-mob-arrow-to="[setting-limit, top, bottom]; [stop-loss, bottom, top]">
+								<h3>Потери</h3>
+								<p>из-за неверно віставленніх уровней ограничений</p>
+								<span class="danger-style-item__label">торговля</span>
+							</div>
+						</div>
+						<div class="liquidity-providers-general__item danger-style-item _add-marker _accent arrow-item" data-arrow-id="stop-loss" 
+						data-arrow-to="[new-mistakes-and-losses, bottom, top]; [setting-limits, left, right]; [change-limits, left, bottom]"
+						data-mob-arrow-to="[new-mistakes-and-losses, bottom, top]; [setting-limits, left, left]; [change-limits, left, left]">
+							<h3>Реализация ограничений(Stop-Loss и т.р.)</h3>
+						</div>
+						<div class="liquidity-providers-general__item danger-style-item _add-marker" data-arrow-id="new-mistakes-and-losses">
+							<h3>Новые ошибки и убытки</h3>
+							<p>
+								Из-за продолжение торговли под психологическим прессингом от полученных только что убытков
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

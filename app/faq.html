@@ -1,0 +1,177 @@
+@@include("html/_header.html")
+
+	<main class="main _none-hidden">
+		<section class="faq">
+			<div class="faq__hero container">
+				<div class="breadcrumbs _light">
+					<a href="#" class="breadcrumbs__link">
+						Главная
+					</a>
+					<span class="breadcrumbs__separator">
+						<svg width="19" height="19" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</span>
+					<a href="#" class="breadcrumbs__link">
+						О нас
+					</a>
+					<span class="breadcrumbs__separator">
+						<svg width="19" height="19" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</span>
+					<span class="breadcrumbs__current">Наши преимущества</span>
+				</div>
+				<h1 class="faq__title main-title">
+					FaQ
+				</h1>
+				<div class="faq__text">
+					<p>
+						Здесь собраны ответы на вопросы, которые наиболее часто задают наши инвесторы и участники партнерской программы. Если среди представленных вопросов тот, на который вы желаете получить ответ, отсутствует, вы можете задать его представителю технической поддержки. Ответ будет предоставлен в кротчайшие сроки.
+					</p>
+				</div>
+			</div>
+			<div class="faq__wrapper container">
+				<div class="faq__nav splide">
+					<div class="faq__nav--track splide__track">
+						<ul class="faq__nav--list splide__list">
+							<li class="faq__nav--item splide__slide">
+								<a href="#account-opening" class="_current">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-account-opening"></use>
+									</svg>
+									Открытие счета
+								</a>
+							</li>
+							<li class="faq__nav--item splide__slide">
+								<a href="#key-issues">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-settings"></use>
+									</svg>
+									Основные вопросы
+								</a>
+							</li>
+							<li class="faq__nav--item splide__slide">
+								<a href="#bounty">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-bounty"></use>
+									</svg>
+									Баунти
+								</a>
+							</li>
+							<li class="faq__nav--item splide__slide">
+								<a href="#security">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-security"></use>
+									</svg>
+									Безопасность
+								</a>
+							</li>
+							<li class="faq__nav--item splide__slide">
+								<a href="#account">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-account"></use>
+									</svg>
+									Аккаунт
+								</a>
+							</li>
+							<li class="faq__nav--item splide__slide">
+								<a href="#other">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#faq-other"></use>
+									</svg>
+									Остальное
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="faq__main">
+					<div class="faq__block _scrolled" id="account-opening">
+						<h2 class="faq__block-title title">
+							Открытие счета
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "Как открыть счет?"},
+								{"question": "Что делать если я забыл пароль?"},
+								{"question": "Сколько стоит открытие счета? "},
+							])
+						</ul>
+					</div>
+					<div class="faq__block" id="key-issues">
+						<h2 class="faq__block-title title">
+							Основные вопросы
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "What security measures are in place to protect my account?"},
+								{"question": "What security measures are in place to protect customer information?"},
+								{"question": "Какие меры безопасности принимаются для защиты моей учетной записи?"},
+								{"question": "Как открыть счет?"},
+								{"question": "Открытие счета бесплатно."},
+							])
+						</ul>
+					</div>
+					<div class="faq__block" id="bounty">
+						<h2 class="faq__block-title title">
+							Баунти
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "What security measures are in place to protect my account?"},
+								{"question": "What security measures are in place to protect customer information?"},
+								{"question": "Какие меры безопасности принимаются для защиты моей учетной записи?"},
+								{"question": "Как открыть счет?"},
+								{"question": "Открытие счета бесплатно."},
+							])
+						</ul>
+					</div>
+					<div class="faq__block" id="security">
+						<h2 class="faq__block-title title">
+							Безопасность
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "What security measures are in place to protect my account?"},
+								{"question": "What security measures are in place to protect customer information?"},
+								{"question": "Какие меры безопасности принимаются для защиты моей учетной записи?"},
+								{"question": "Как открыть счет?"},
+								{"question": "Открытие счета бесплатно."},
+							])
+						</ul>
+					</div>
+					<div class="faq__block" id="account">
+						<h2 class="faq__block-title title">
+							Аккаунт
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "What security measures are in place to protect my account?"},
+								{"question": "What security measures are in place to protect customer information?"},
+								{"question": "Какие меры безопасности принимаются для защиты моей учетной записи?"},
+								{"question": "Как открыть счет?"},
+								{"question": "Открытие счета бесплатно."},
+							])
+						</ul>
+					</div>
+					<div class="faq__block" id="other">
+						<h2 class="faq__block-title title">
+							Остальное
+						</h2>
+						<ul class="faq__list">
+							@@loop("html/_faq-item.html", [
+								{"question": "What security measures are in place to protect my account?"},
+								{"question": "What security measures are in place to protect customer information?"},
+								{"question": "Какие меры безопасности принимаются для защиты моей учетной записи?"},
+								{"question": "Как открыть счет?"},
+								{"question": "Открытие счета бесплатно."},
+							])
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

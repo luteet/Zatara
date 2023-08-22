@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		if (localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
+			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+		</clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<nav class="header__nav">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--login"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								О нас
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link Link Link Link Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговля
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговая платформа
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__login" data-append-to=".header__nav--login">
+						<a href="#" class="header__login--btn btn _none-accent">
+							Регистрация
+						</a>
+						<a href="#" class="header__login--btn btn">
+							Вход
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<section class="index-hero container">
+				<div class="index-hero__background">
+					<div class="index-hero__background--decor"></div>
+					<div class="index-hero__background--decor"></div>
+				</div>
+				<div class="index-hero__content">
+					<ul class="index-hero__tags">
+						<li>
+							Акции
+						</li>
+						<li>
+							Биржевые товары
+						</li>
+						<li>
+							Криптовалюты
+						</li>
+					</ul>
+					<h1 class="index-hero__title main-title">
+						Свобода и Успех: Трейдинг без Препятствий
+					</h1>
+					<div class="index-hero__text">
+						<p>
+							Получите доступ к передовым инструментам, индивидуальной поддержке и надежной системе безопасности.
+						</p>
+					</div>
+					<a href="#" class="index-hero__btn btn">
+						Регистрация
+					</a>
+				</div>
+				<div class="index-hero__image">
+					<div class="index-hero__image--wrapper image-aspect-ratio">
+						<picture>
+							<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
+							<source srcset="img/index/hero/index-hero-image.webp" type="image/webp">
+							<img src="img/index/hero/index-hero-image.png" alt="" width="1840" height="1840" loading="lazy">
+						</picture>
+					</div>
+					<div class="index-hero__image--tooltip">
+						<div class="index-hero__image--tooltip-bg"></div>
+						<div class="index-hero__image--tooltip-text">
+							Blockchain
+						</div>
+						<div class="index-hero__image--target">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#plus"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="index-hero__image--tooltip">
+						<div class="index-hero__image--tooltip-bg"></div>
+						<div class="index-hero__image--tooltip-text">
+							Security
+						</div>
+						<div class="index-hero__image--target">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#plus"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="index-hero__panel">
+					<div class="index-hero__panel--col">
+						<div class="index-hero__about">
+							<div class="index-hero__about--logo">
+								<picture>
+									<source srcset="img/logo-icon-light.avif" type="image/avif">
+									<source srcset="img/logo-icon-light.webp" type="image/webp">
+									<img src="img/logo-icon-light.png" width="113" height="125" loading="lazy" alt="">
+								</picture>
+							</div>
+							<h2 class="index-hero__about--text">
+								Первая уникальная биржа с уникальным УТП
+							</h2>
+						</div>
+					</div>
+					<div class="index-hero__panel--col">
+						<table class="index-hero__table">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										Coin
+									</th>
+									<th>
+										Value
+									</th>
+									<th>
+										Change 24h
+									</th>
+									<th>
+										Dinamics
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="index-hero__table--coin">
+											<div class="index-hero__table--coin-logo">
+												<picture>
+													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
+													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
+													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<span class="index-hero__table--coin-name">
+												BitVavo
+											</span>
+										</div>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Value</span>
+										<span class="index-hero__table--value" data-before="$">53,09</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Change 24h</span>
+										<span class="index-hero__table--value _up">+8,5%</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Dinamics</span>
+										<div class="index-hero__table--dynamics _up">
+											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="index-hero__table--coin">
+											<div class="index-hero__table--coin-logo">
+												<picture>
+													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
+													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
+													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<span class="index-hero__table--coin-name">
+												BitVavo
+											</span>
+										</div>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Value</span>
+										<span class="index-hero__table--value" data-before="$">53,09</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Change 24h</span>
+										<span class="index-hero__table--value _up">+8,5%</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Dinamics</span>
+										<div class="index-hero__table--dynamics _up">
+											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="index-hero__table--coin">
+											<div class="index-hero__table--coin-logo">
+												<picture>
+													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
+													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
+													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<span class="index-hero__table--coin-name">
+												BitVavo
+											</span>
+										</div>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Value</span>
+										<span class="index-hero__table--value" data-before="$">53,09</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Change 24h</span>
+										<span class="index-hero__table--value _up">+8,5%</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Dinamics</span>
+										<div class="index-hero__table--dynamics _up">
+											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="index-hero__table--coin">
+											<div class="index-hero__table--coin-logo">
+												<picture>
+													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
+													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
+													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<span class="index-hero__table--coin-name">
+												BitVavo
+											</span>
+										</div>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Value</span>
+										<span class="index-hero__table--value" data-before="$">53,09</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Change 24h</span>
+										<span class="index-hero__table--value _up">+8,5%</span>
+									</td>
+									<td>
+										<span class="index-hero__table--name">Dinamics</span>
+										<div class="index-hero__table--dynamics _up">
+											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+											</svg>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="index-hero__panel--col">
+						<form method="post" class="index-hero__buy-shares buy-shares-block">
+							<div class="buy-shares-block__item">
+								<h2 class="buy-shares-block__title">
+									Купить акции
+								</h2>
+								<div class="buy-shares-block__element">
+									<div class="buy-shares-block__element--header">
+										<span class="buy-shares-block__name">Select stock</span>
+									</div>
+									<div class="buy-shares-block__element--select">
+										<select name="stock" class="custom-select">
+											<option value="tsl" data-html="<b>TSL</b><span>Tesla Inc.</span>">Tesla Inc.</option>
+											<option value="tsl-2" data-html="<b>TSL</b><span>Tesla Inc. 2</span>">Tesla Inc. 2</option>
+											<option value="tsl-3" data-html="<b>TSL</b><span>Tesla Inc. 3</span>">Tesla Inc. 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="buy-shares-block__item">
+								<div class="buy-shares-block__element">
+									<div class="buy-shares-block__element--header">
+										<span class="buy-shares-block__name">Enter amount</span>
+										<span class="buy-shares-block__name">Price ~ $110,3</span>
+									</div>
+									<div class="buy-shares-block__element--input">
+										<input type="number" name="amount" min="1" value="1" required placeholder="0">
+									</div>
+								</div>
+							</div>
+							<button class="buy-shares-block__submit btn" type="button">
+								Купить
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="start-trading container">
+				<div class="start-trading__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<div class="start-trading__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/index/start/index-start-image-light.avif" type="image/avif">
+									<source srcset="img/index/start/index-start-image-light.webp" type="image/webp">
+									<img src="img/index/start/index-start-image-light.png" alt="" width="565" height="565" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="theme-change-dark">
+							<div class="start-trading__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/index/start/index-start-image-dark.avif" type="image/avif">
+									<source srcset="img/index/start/index-start-image-dark.webp" type="image/webp">
+									<img src="img/index/start/index-start-image-dark.png" alt="" width="565" height="565" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="start-trading__card">
+						<div class="start-trading__card--icon">
+							<svg width="30" height="30" viewBox="0 0 30 30">
+								<use xlink:href="img/sprites.svg#reload"></use>
+							</svg>
+						</div>
+						<div class="start-trading__card--text">
+							Ваша анонимность
+						</div>
+					</div>
+					<div class="start-trading__card">
+						<div class="start-trading__card--icon">
+							<svg width="30" height="30" viewBox="0 0 30 30">
+								<use xlink:href="img/sprites.svg#reload"></use>
+							</svg>
+						</div>
+						<div class="start-trading__card--text">
+							Самые выгодные курсы
+						</div>
+					</div>
+				</div>
+				<div class="start-trading__content">
+					<h2 class="start-trading__title main-title _min">
+						Откройте двери успешного трейдинга прямо сейчас
+					</h2>
+					<div class="start-trading__text">
+						<p>Глобальный брокер с богатой историей достижений. Мы предлагаем клиентам проверенные временем результаты в управлении капиталом и инвестициями.</p>
+					</div>
+					<ul class="start-trading__list" style="--decor-marker-dark: #C1FBFF; --decor-marker-light: #2E4CEB;">
+						<li>
+							<div class="start-trading__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Создайте аккаунт
+						</li>
+						<li>
+							<div class="start-trading__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Внесите депозит
+						</li>
+						<li>
+							<div class="start-trading__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Создайте сделку
+						</li>
+					</ul>
+					<div class="start-trading__footer">
+						<a href="#" class="start-trading__btn btn">
+							Начать
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="stock-market container">
+				<div class="stock-market__content">
+					<h2 class="stock-market__title main-title _min">
+						Рынок акций
+					</h2>
+					<div class="stock-market__text">
+						<p>Присоединяйтесь к более чем 1 000 000 инвесторов со всего мира, которые выбрали ZATARA CAPITAL SECURITIES</p>
+					</div>
+				</div>
+				<div class="stock-market__drop-down">
+					<select name="type-list" class="custom-select-2">
+						<option value="value-1">Trending Tickers</option>
+						<option value="value-2">Value 2</option>
+						<option value="value-3">Value 3</option>
+					</select>
+				</div>
+				<div class="stock-market__table coins-table _stock-market">
+					<div class="coins-table__wrapper" data-simplebar>
+						<table class="coins-table__block">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Symbol</th>
+									<th>Name</th>
+									<th>Цена</th>
+									<th>Market Time</th>
+									<th>Change</th>
+									<th>Change %</th>
+									<th>Market Cap</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<b>
+											ADMP
+										</b>
+									</td>
+									<td>
+										<span>
+											Adamis Pharmaceuticals Corporation
+										</span>
+									</td>
+									<td>
+										<b>$3.9900</b>
+									</td>
+									<td>
+										<span>4:00PM EDT</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<b>9.081M</b>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<b>
+											ADMP
+										</b>
+									</td>
+									<td>
+										<span>
+											Adamis Pharmaceuticals Corporation
+										</span>
+									</td>
+									<td>
+										<b>$3.9900</b>
+									</td>
+									<td>
+										<span>4:00PM EDT</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<b>9.081M</b>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<b>
+											ADMP
+										</b>
+									</td>
+									<td>
+										<span>
+											Adamis Pharmaceuticals Corporation
+										</span>
+									</td>
+									<td>
+										<b>$3.9900</b>
+									</td>
+									<td>
+										<span>4:00PM EDT</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<b>9.081M</b>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<b>
+											ADMP
+										</b>
+									</td>
+									<td>
+										<span>
+											Adamis Pharmaceuticals Corporation
+										</span>
+									</td>
+									<td>
+										<b>$3.9900</b>
+									</td>
+									<td>
+										<span>4:00PM EDT</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<b>9.081M</b>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<b>
+											ADMP
+										</b>
+									</td>
+									<td>
+										<span>
+											Adamis Pharmaceuticals Corporation
+										</span>
+									</td>
+									<td>
+										<b>$3.9900</b>
+									</td>
+									<td>
+										<span>4:00PM EDT</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<b>9.081M</b>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section class="try-now container">
+				<div class="try-now__body">
+					<div class="try-now__header">
+						<h2 class="try-now__title main-title _min _light">
+							Откройте мир финансовых возможностей: Начните торговать сегодня
+						</h2>
+						<a href="#" class="try-now__btn btn _dark">
+							Попробовать сейчас
+						</a>
+					</div>
+					<div class="try-now__row">
+						<div class="try-now__image">
+							<div class="try-now__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/index/try-now/try-now-image-large.avif" type="image/avif">
+									<source srcset="img/index/try-now/try-now-image-large.webp" type="image/webp">
+									<img src="img/index/try-now/try-now-image-large.png" alt="" width="896" height="636" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="try-now__image">
+							<div class="try-now__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/index/try-now/try-now-image-min.avif" type="image/avif">
+									<source srcset="img/index/try-now/try-now-image-min.webp" type="image/webp">
+									<img src="img/index/try-now/try-now-image-min.png" alt="" width="288" height="636" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="stock-market container">
+				<div class="stock-market__content">
+					<h2 class="stock-market__title main-title _min">
+						Рынок криптовалют
+					</h2>
+					<div class="stock-market__text">
+						<p>Присоединяйтесь к более чем 1 000 000 инвесторов со всего мира, которые выбрали ZATARA CAPITAL SECURITIES</p>
+					</div>
+				</div>
+				<div class="stock-market__table coins-table _cryptocurrency-market">
+					<div class="coins-table__wrapper" data-simplebar>
+						<table class="coins-table__block">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Наименование</th>
+									<th>Цена</th>
+									<th>Объем (24 ч)</th>
+									<th>Рыночная капитализация</th>
+									<th>7d %</th>
+									<th>% 24ч</th>
+									<th>1h %</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<div class="coins-table__coin">
+											<div class="coins-table__coin--logo">
+												<picture>
+													<source srcset="img/index/cryptocurrency-market/bitcoin.avif" type="image/avif">
+													<source srcset="img/index/cryptocurrency-market/bitcoin.webp" type="image/webp">
+													<img src="img/index/cryptocurrency-market/bitcoin.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<div class="coins-table__coin--name">Bitcoin</div>
+											<div class="coins-table__coin--currency">BTC</div>
+										</div>
+									</td>
+									<td>
+										<b>
+											$28,951.07
+										</b>
+									</td>
+									<td>
+										<b>$15,499,580,703</b><br>
+										<span>535,606 BTC</span>
+									</td>
+									<td>
+										<b>$315,063,221</b>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _down">-1,1%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<div class="coins-table__coin">
+											<div class="coins-table__coin--logo">
+												<picture>
+													<source srcset="img/index/cryptocurrency-market/bitcoin.avif" type="image/avif">
+													<source srcset="img/index/cryptocurrency-market/bitcoin.webp" type="image/webp">
+													<img src="img/index/cryptocurrency-market/bitcoin.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<div class="coins-table__coin--name">Bitcoin</div>
+											<div class="coins-table__coin--currency">BTC</div>
+										</div>
+									</td>
+									<td>
+										<b>
+											$28,951.07
+										</b>
+									</td>
+									<td>
+										<b>$15,499,580,703</b><br>
+										<span>535,606 BTC</span>
+									</td>
+									<td>
+										<b>$315,063,221</b>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _down">-1,1%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<div class="coins-table__coin">
+											<div class="coins-table__coin--logo">
+												<picture>
+													<source srcset="img/index/cryptocurrency-market/bitcoin.avif" type="image/avif">
+													<source srcset="img/index/cryptocurrency-market/bitcoin.webp" type="image/webp">
+													<img src="img/index/cryptocurrency-market/bitcoin.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<div class="coins-table__coin--name">Bitcoin</div>
+											<div class="coins-table__coin--currency">BTC</div>
+										</div>
+									</td>
+									<td>
+										<b>
+											$28,951.07
+										</b>
+									</td>
+									<td>
+										<b>$15,499,580,703</b><br>
+										<span>535,606 BTC</span>
+									</td>
+									<td>
+										<b>$315,063,221</b>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _down">-1,1%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<div class="coins-table__coin">
+											<div class="coins-table__coin--logo">
+												<picture>
+													<source srcset="img/index/cryptocurrency-market/bitcoin.avif" type="image/avif">
+													<source srcset="img/index/cryptocurrency-market/bitcoin.webp" type="image/webp">
+													<img src="img/index/cryptocurrency-market/bitcoin.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<div class="coins-table__coin--name">Bitcoin</div>
+											<div class="coins-table__coin--currency">BTC</div>
+										</div>
+									</td>
+									<td>
+										<b>
+											$28,951.07
+										</b>
+									</td>
+									<td>
+										<b>$15,499,580,703</b><br>
+										<span>535,606 BTC</span>
+									</td>
+									<td>
+										<b>$315,063,221</b>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _down">-1,1%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<b>1</b>
+									</td>
+									<td>
+										<div class="coins-table__coin">
+											<div class="coins-table__coin--logo">
+												<picture>
+													<source srcset="img/index/cryptocurrency-market/bitcoin.avif" type="image/avif">
+													<source srcset="img/index/cryptocurrency-market/bitcoin.webp" type="image/webp">
+													<img src="img/index/cryptocurrency-market/bitcoin.png" alt="" width="40" height="40" loading="lazy">
+												</picture>
+											</div>
+											<div class="coins-table__coin--name">Bitcoin</div>
+											<div class="coins-table__coin--currency">BTC</div>
+										</div>
+									</td>
+									<td>
+										<b>
+											$28,951.07
+										</b>
+									</td>
+									<td>
+										<b>$15,499,580,703</b><br>
+										<span>535,606 BTC</span>
+									</td>
+									<td>
+										<b>$315,063,221</b>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _down">-1,1%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+12,2%</span>
+									</td>
+									<td>
+										<span class="coins-table__percent-value _up">+8,5%</span>
+									</td>
+									<td>
+										<div class="coins-table__add-to-favorite">
+											<button class="coins-table__add-to-favorite--btn" type="button">
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="img/sprites.svg#like"></use>
+												</svg>
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section class="reviews container">
+				<div class="reviews__background" aria-hidden="true">
+					<div class="reviews__background--decor"></div>
+					<div class="reviews__background--decor"></div>
+				</div>
+				<div class="reviews__card">
+					<div class="reviews__card--background" aria-hidden="true">
+						<div class="reviews__card--background-panel"></div>
+						<div class="reviews__card--background-decor"></div>
+						<div class="reviews__card--background-decor"></div>
+					</div>
+					<div class="reviews__card--body">
+						<div class="reviews__card--info">
+							<div class="reviews__card--avatar">
+								<picture>
+									<source srcset="img/index/reviews/reviews-avatar.avif" type="image/avif">
+									<source srcset="img/index/reviews/reviews-avatar.webp" type="image/webp">
+									<img src="img/index/reviews/reviews-avatar.png" alt="" width="64" height="64" loading="lazy">
+								</picture>
+							</div>
+							<h3 class="reviews__card--name">
+								Maryam Wensdo
+							</h3>
+							<span class="reviews__card--proffesion">
+								Проф. трейдер
+							</span>
+						</div>
+						<div class="reviews__card--text">
+							<p>
+								Madhuri and her team were truly gems to work with! We revamped our entire website with Nocloco, and it all turned out to be spot on—be it speed optimisation or design. The Nocoloco team really came through with solutions at all-times for any challenges we faced. Can't recommend them enough.
+							</p>
+						</div>
+						<div class="reviews__card--footer">
+							<span class="reviews__card--date">2 Ноября 2023</span>
+						</div>
+					</div>
+				</div>
+				<div class="reviews__content">
+					<h2 class="reviews__title main-title _min">
+						Магия Восторженных Отзывов: Наши Клиенты Делятся Впечатлениями!
+					</h2>
+					<div class="reviews__text">
+						<p>
+							Они - настоящее отражение нашей приверженности к качеству обслуживания и индивидуальному подходу к каждому клиенту
+						</p>
+					</div>
+					<ul class="reviews__social-list">
+						<li class="reviews__social-list--item">
+							<a href="#" class="reviews__social-list--link" title="NASDAQ">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<img src="img/index/reviews/reviews-logo-light-1.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+									<div class="theme-change-dark">
+										<img src="img/index/reviews/reviews-logo-dark-1.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="reviews__social-list--item">
+							<a href="#" class="reviews__social-list--link" title="Reddit">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<img src="img/index/reviews/reviews-logo-light-2.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+									<div class="theme-change-dark">
+										<img src="img/index/reviews/reviews-logo-dark-2.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="reviews__social-list--item">
+							<a href="#" class="reviews__social-list--link" titla="NYSE">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<img src="img/index/reviews/reviews-logo-light-3.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+									<div class="theme-change-dark">
+										<img src="img/index/reviews/reviews-logo-dark-3.svg" width="103" height="35" loading="lazy" alt="">
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="try-now-2 container">
+				<div class="try-now-2__body">
+					<h2 class="try-now-2__title main-title _min _light">
+						Откройте мир финансовых возможностей: Начните торговать сегодня
+					</h2>
+					<div class="try-now-2__image">
+						<div class="try-now-2__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-image.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-image.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-image.png" alt="" width="669" height="585" loading="lazy">
+							</picture>
+						</div>
+						<div class="try-now-2__image--decor">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-decor-1.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-decor-1.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-decor-1.png" alt="" width="120" height="137" loading="lazy">
+							</picture>
+						</div>
+						<div class="try-now-2__image--decor">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-decor-2.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-decor-2.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-decor-2.png" alt="" width="130" height="126" loading="lazy">
+							</picture>
+						</div>
+						<a href="#" class="try-now-2__btn btn _dark">
+							Попробовать сейчас
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__marquee splide container">
+				<div class="footer__marquee--track splide__track">
+					<ul class="footer__marquee--list splide__list">
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<a href="index.html" class="footer__logo">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/logo-dark.avif" type="image/avif">
+										<source srcset="img/logo-dark.webp" type="image/webp">
+										<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/logo-light.avif" type="image/avif">
+										<source srcset="img/logo-light.webp" type="image/webp">
+										<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+							</div>
+						</a>
+						<div class="footer__lang change-lang">
+							<button class="change-lang__target" type="button">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#lang"></use>
+								</svg>
+								RUS
+								<svg width="19" height="19" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</button>
+							<ul class="change-lang__list">
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<nav class="footer__nav">
+							<ul>
+								<li>
+									<a href="#">
+										Торговля
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												100% A-Book
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Агрегация ликвидности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Риск-менеджмент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции и ETF
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Валюты и металы
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#">
+												Фьючерсы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Опционы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Фонды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Облигации
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Криптовалюты
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Почему мы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Юридическая документация
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Защита Средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Поставщики ликвидности
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Уведомление о рисках
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Безопасность средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Политика безопасности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Условия и положения
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="tel:+13146035827">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#tel"></use>
+								</svg>
+								+1 314 603 5827
+							</a>
+						</li>
+						<li>
+							<a href="mailto:info@zataracs.com">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								info@zataracs.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#map-point"></use>
+								</svg>
+								1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__note">
+					<p>
+						ZATARA CAPITAL SECURITIES LP. (Registration No. <u>201919700005</u>). All investment and ancillary services are offered through this entity, with registered address in 1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA, where office is restricted to provide client-support services only and does not include investment services.
+						All complaints may be directed to the email address and/or phone number and will be resolved based on the complaints handling policy outlined here.
+					</p>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__copy">2023 ZATARA CAPITAL SECURITIES LP</div>
+				<div class="footer__privacy">
+					<ul>
+						<li>
+							<a href="#">
+								Политика в отношении конфликтов интересов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика идентификации клиентов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Возврат средств
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика исполнения сделок
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

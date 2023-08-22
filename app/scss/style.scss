@@ -1,0 +1,37 @@
+@import 'mixin';
+@import 'vars';
+@import 'libs';
+@import 'null';
+@import 'global';
+@import 'font';
+@import 'form';
+//@import 'popup';
+
+@import 'components/header';
+@import 'components/coins-table';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/page-hero';
+
+@import 'pages/index/hero';
+@import 'pages/index/start-trading';
+@import 'pages/index/stock-market';
+@import 'pages/index/try-now';
+@import 'pages/index/reviews';
+@import 'pages/index/try-now-2';
+
+@import 'pages/about-us/hero';
+@import 'pages/about-us/about-section';
+@import 'pages/about-us/content-box';
+@import 'pages/about-us/to-registration';
+
+@import 'pages/news/main';
+
+@import 'pages/contacts/main';
+
+@import 'pages/faq/main';
+
+@import 'pages/liquidity-providers/main';
+//@import 'pages';
+
+@import 'components/footer';

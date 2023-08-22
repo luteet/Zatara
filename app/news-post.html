@@ -1,0 +1,106 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="breadcrumbs container">
+			<a href="#" class="breadcrumbs__link">
+				Главная
+			</a>
+			<span class="breadcrumbs__separator">
+				<svg width="19" height="19" viewBox="0 0 17 17">
+					<use xlink:href="img/sprites.svg#arrow-next"></use>
+				</svg>
+			</span>
+			<a href="#" class="breadcrumbs__link">
+				О нас
+			</a>
+			<span class="breadcrumbs__separator">
+				<svg width="19" height="19" viewBox="0 0 17 17">
+					<use xlink:href="img/sprites.svg#arrow-next"></use>
+				</svg>
+			</span>
+			<span class="breadcrumbs__current">Наши преимущества</span>
+		</div>
+		<section class="news-post container">
+			<div class="news-post__col">
+				<ul class="news-post__tags news-tags">
+					<li>
+						<a href="#">
+							Crypto
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							News
+						</a>
+					</li>
+				</ul>
+				<h2 class="news-post__title main-title _min">
+					Wall Street eyes higher open after Meta results, Fed optimism
+				</h2>
+				<div class="news-post__info">
+					<time datetime="2023-07-12">12 July, 2023</time>
+					<span>10 min read</span>
+				</div>
+				<div class="news-post__thumbnail image-aspect-ratio visible-on-mob">
+					<picture>
+						<source srcset="img/news/news-image-1.avif" type="image/avif">
+						<source srcset="img/news/news-image-1.webp" type="image/webp">
+						<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+					</picture>
+				</div>
+				<div class="news-post__content">
+					<h2>The tech-heavy Nasdaq was set to lead Wall Street higher on Thursday,</h2>
+					<p>Meta Platforms gained 9.7% in premarket trading after it also reported a jump in second-quarter advertising revenue, topping Wall Street financial targets. <br>
+						The Facebook (NASDAQ:META) parent's results followed strong performance by Alphabet (NASDAQ:GOOGL) earlier this week, which show that consumers, and advertisers eager to reach them, are spending despite broad economic concerns. <br>
+						Outsized gains in megacap growth stocks have helped the Nasdaq lead the charge on Wall Street so far this year, but the Dow is catching up as investors bet on sectors beyond technology.
+					</p>
+					<h3>The blue-chips Dow is on track for its 14th straight day of gains after a scorching rally that saw it log its longest winning streak since 1987 in the previous session.</h3>
+					<p>
+						On Wednesday, the U.S. Federal Reserve raised interest rates by 25 basis points as expected. Traders now expect only a 20% chance that the Fed could surprise with a quarter-point increase in September. <br>
+						Fed Chair Jerome Powell said the economy still needed to slow and the labor market to weaken for inflation to "credibly" return to the U.S. central bank's 2% target.
+					</p>
+					<p>
+						"Markets are up because Powell delivered exactly what everyone expected with the quarter point hike yesterday and he didn't say anything overly hawkish or overly dovish," said Randy Frederick, managing director of trading and derivatives for Charles Schwab (NYSE:SCHW). <br>
+						A Commerce Department report showed the economy likely maintained a moderate pace of growth in the previous quarter, potentially keeping a much-feared recession at bay.
+					</p>
+					<p>At 8:42 a.m. ET, Dow e-minis were up 136 points, or 0.38%, S&P 500 e-minis were up 35.75 points, or 0.78%, and Nasdaq 100 e-minis were up 215.75 points, or 1.38%.</p>
+					<p>
+						EBay forecast third-quarter profit below market expectations as the e-commerce platform spent more to bolster categories such as auto parts, refurbished goods and collectibles, sending its shares down 5.8%. <br>
+						Chipmakers including Nvidia (NASDAQ:NVDA), Micron (NASDAQ:MU) and Marvell (NASDAQ:MRVL) Technology rose between 2.0% and 4.3% after Lam Research (NASDAQ:LRCX) forecast upbeat quarterly sales. Shares of Lam rose 5.1%. <br>
+						Universal banks including Citigroup (NYSE:C), Wells Fargo (NYSE:WFC) and Bank of America (N:BAC) crept higher about 0.6% each ahead of a rule U.S. regulators are set to unveil later in the day that could significantly raise capital requirements for the lenders.
+					</p>
+					<p>
+						Royal Caribbean (NYSE:RCL) surged 8.3% after the cruise operator lifted its annual profit forecast, while Bristol Myers (NYSE:BMY) Squibb fell 2.7% after the drugmaker said its quarterly sales missed expectations. <br>
+						Southwest Airlines (NYSE:LUV) tumbled 5.4% after the airline warned of higher labor costs for the year and posted a dip in second-quarter profit. <br>
+						Elsewhere, the European Central Bank raised interest rates for the ninth consecutive time and kept the door open to further tightening.
+					</p>
+					<figure>
+						<picture>
+							<source srcset="img/news/news-image-1.avif" type="image/avif">
+							<source srcset="img/news/news-image-1.webp" type="image/webp">
+							<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+						</picture>
+					</figure>
+				</div>
+			</div>
+			<div class="news-post__col">
+				<div class="news-post__thumbnail image-aspect-ratio visible-on-desktop">
+					<picture>
+						<source srcset="img/news/news-image-1.avif" type="image/avif">
+						<source srcset="img/news/news-image-1.webp" type="image/webp">
+						<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
+					</picture>
+				</div>
+				<ul class="news-post__list">
+					@@loop("html/_news-card.html", [
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

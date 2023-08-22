@@ -1,0 +1,262 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="page-hero container">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<div class="page-hero__background" aria-hidden="true">
+				<div class="page-hero__background--main">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/section-hero-light-background.avif" type="image/avif">
+								<source srcset="img/section-hero-light-background.webp" type="image/webp">
+								<img src="img/section-hero-light-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/section-hero-dark-background.avif" type="image/avif">
+								<source srcset="img/section-hero-dark-background.webp" type="image/webp">
+								<img src="img/section-hero-dark-background.png" alt="" width="0" height="0" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="page-hero__background--decor"></div>
+			</div>
+			<div class="page-hero__content">
+				<h1 class="page-hero__title main-title">
+					Компания работает по 100%-й A-book модели, хеджируя на внешних контрагентах все клиентские позиции.
+				</h1>
+				<div class="page-hero__text">
+					<p>
+						Компания не заинтересована в убытках клиента, поскольку зарабатывает лишь с уплаченной им комиссии за совершение сделок.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="liquidity-providers-works container">
+			<div class="liquidity-providers-works__block">
+				<strong class="liquidity-providers-works__section-name section-name">
+					РАССКАЗЫВАЕМ ЛЕГКО
+				</strong>
+				<h2 class="liquidity-providers-works__title title">
+					Ознакомьтесь с детальной информацией на иллюстрации
+				</h2>
+				<nav class="liquidity-providers-works__tabs-nav liquidity-providers-tabs-nav">
+					<ul>
+						<li>
+							<a href="liquidity-providers-a-book.html">
+								100%-A-book
+							</a>
+						</li>
+						<li>
+							<a href="liquidity-providers-works.html" class="current">
+								Агрегация ликвидности
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="liquidity-providers-works__aggregation liquidity-providers-aggregation">
+					<p>
+						ZATARA CAPITAL SECURITIES предоставляет клиентам ликвидность, агрегированную от нескольких контрагентов, что предоставляет ряд преимуществ:клиенты всегда получают лучшие цены, защищены от некачественного исполнения ордеров со стороны контрагента, и полностью для него анонимны.
+					</p>
+					<ul class="liquidity-providers-aggregation__dd-list">
+						<li>
+							<b>STP</b>
+							<span>На счетах типа STP работает агрегатор, разработанный компанией Itransition.</span>
+						</li>
+						<li>
+							<b>ECN</b>
+							<span>На счетах типа ECN работает агрегатор, разработанный компанией Softwire.</span>
+						</li>
+					</ul>
+					<div class="liquidity-providers-aggregation__scheme">
+						<canvas class="liquidity-providers-aggregation__scheme--background arrow-canvas"></canvas>
+						<div class="liquidity-providers-aggregation__scheme--wrapper">
+							<ul class="liquidity-providers-aggregation__scheme--list arrow-item" 
+							data-arrow-to="[liquidity-providers-scheme-aggregator-logo, right, left]"
+							data-mob-arrow-to="[liquidity-providers-scheme-aggregator-logo, bottom, top]">
+								<li class="arrow-item" data-arrow-id="aggregation-list-1-item-1"
+								data-arrow-to="[aggregation-list-1-item-2, right, right, noneStartPoint]; [aggregation-list-1-item-3, right, right, noneStartPoint]; [aggregation-list-1-item-4, right, right, noneStartPoint]; [aggregation-list-1-item-5, right, right, noneStartPoint]; [aggregation-list-1-item-6, right, right, noneStartPoint]"
+								data-mob-arrow-to="[aggregation-list-1-item-2, bottom, bottom, noneStartPoint]; [aggregation-list-1-item-3, bottom, bottom, noneStartPoint]; [aggregation-list-1-item-4, bottom, bottom, noneStartPoint]; [aggregation-list-1-item-5, bottom, bottom, noneStartPoint]; [aggregation-list-1-item-6, bottom, bottom, noneStartPoint];">
+									Клиент №1
+								</li>
+								<li data-arrow-id="aggregation-list-1-item-2">
+									Клиент №1
+								</li>
+								<li data-arrow-id="aggregation-list-1-item-3">
+									Клиент №1
+								</li>
+								<li data-arrow-id="aggregation-list-1-item-4">
+									Клиент №1
+								</li>
+								<li data-arrow-id="aggregation-list-1-item-5">
+									...
+								</li>
+								<li class="arrow-item" data-arrow-id="aggregation-list-1-item-6"
+								data-arrow-to="[aggregation-list-1-item-1, right, right, noneStartPoint]"
+								data-mob-arrow-to="[aggregation-list-1-item-1, bottom, bottom, noneStartPoint]">
+									Клиент N
+								</li>
+							</ul>
+							<div class="liquidity-providers-aggregation__scheme--logo arrow-item" 
+							data-arrow-id="liquidity-providers-scheme-aggregator-logo" 
+							data-arrow-to="[liquidity-providers-scheme-aggregator-item, right, left, doubleArrows]"
+							data-mob-arrow-to="[liquidity-providers-scheme-aggregator-item, bottom, top, doubleArrows]">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<picture>
+											<source srcset="img/logo-dark.avif" type="image/avif">
+											<source srcset="img/logo-dark.webp" type="image/webp">
+											<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy">
+										</picture>
+									</div>
+									<div class="theme-change-dark">
+										<picture>
+											<source srcset="img/logo-light.avif" type="image/avif">
+											<source srcset="img/logo-light.webp" type="image/webp">
+											<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy">
+										</picture>
+									</div>
+								</div>
+							</div>
+							<div class="liquidity-providers-aggregation__scheme--item" data-arrow-id="liquidity-providers-scheme-aggregator-item">
+								<b>Aggregator</b>
+							</div>
+							<ul class="liquidity-providers-aggregation__scheme--list arrow-item"
+							data-arrow-to="[liquidity-providers-scheme-aggregator-item, left, right]"
+							data-mob-arrow-to="[liquidity-providers-scheme-aggregator-item, top, bottom, doubleArrows]">
+								<li class="arrow-item"
+								data-arrow-id="aggregation-list-2-item-1"
+								data-arrow-to="[aggregation-list-2-item-2, left, left, doubleArrows]; [aggregation-list-2-item-3, left, left, noneStartPoint]; [aggregation-list-2-item-4, left, left, noneStartPoint]"
+								data-mob-arrow-to="[aggregation-list-2-item-2, top, top, doubleArrows]; [aggregation-list-2-item-3, top, top, noneStartPoint]; [aggregation-list-2-item-4, top, top, noneStartPoint]">
+									Котрагент №1
+								</li>
+								<li data-arrow-id="aggregation-list-2-item-2">
+									Котрагент №2
+								</li>
+								<li data-arrow-id="aggregation-list-2-item-3">
+									...
+								</li>
+								<li data-arrow-id="aggregation-list-2-item-4">
+									Котрагент N
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="liquidity-providers-works__block liquidity-providers-advantages">
+				<h2 class="liquidity-providers-advantages__title title _min">
+					Ознакомьтесь с детальной информацией на иллюстрации
+				</h2>
+				<div class="liquidity-providers-advantages__wrapper">
+					<canvas class="liquidity-providers-advantages__background arrow-canvas"></canvas>
+					<div class="liquidity-providers-advantages__inner">
+						<div class="liquidity-providers-advantages__hero">
+							<div class="liquidity-providers-advantages__item danger-style-item">
+								<h3>Преимущества агрегации ликвидности</h3>
+							</div>
+							<div class="liquidity-providers-advantages__item success-style-item">
+								<h3>Пул контрагентов (Агрегация ликвидности)</h3>
+							</div>
+							<div class="liquidity-providers-advantages__item standard-style-item arrow-item"
+							data-arrow-to="[advantages-item-1, bottom, left]; [advantages-item-2, bottom, left]; [advantages-item-3, bottom, left]; [advantages-item-4, bottom, left]; [advantages-item-5, bottom, right]; [advantages-item-6, bottom, right]; [advantages-item-7, bottom, right]; [advantages-item-8, bottom, right]"
+							data-mob-arrow-to="[advantages-item-1, bottom, left]; [advantages-item-2, bottom, left]; [advantages-item-3, bottom, left]; [advantages-item-4, bottom, left]; [advantages-item-5, bottom, right]; [advantages-item-6, bottom, right]; [advantages-item-7, bottom, right]; [advantages-item-8, bottom, right]">
+								<h3>Возможность выбора контрагента для хеджирования сделки</h3>
+							</div>
+						</div>
+						<div class="liquidity-providers-advantages__col">
+							<div class="liquidity-providers-advantages__item danger-style-item _add-marker" data-arrow-id="advantages-item-1">
+								<h3>
+									Цена контрагента
+								</h3>
+								<p>
+									Нет возможности выбрать лучшую цену. Необходимость исполнения приказа по цене единственного контрагента.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item danger-style-item _add-marker" data-arrow-id="advantages-item-2">
+								<h3>
+									Нет защиты от нерыночных котировок
+								</h3>
+								<p>
+									В случае появления у контрагента нерыночной котировки (шпильки), стоп-ордер будет активирован данной котировкой и клиент понесет дополнительные убытки.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item danger-style-item _add-marker" data-arrow-id="advantages-item-3">
+								<h3>
+									Нет защиты от некачественного исполнения
+								</h3>
+								<p>
+									Высокая вероятность исполнения ордера с большим проскальзыванием, задержкой и прочими атрибутами некачественного исполнения.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item danger-style-item _add-marker" data-arrow-id="advantages-item-4">
+								<h3>
+									Нет защиты от форс-мажора
+								</h3>
+								<p>
+									Нет возможности обойти форс-мажорные ситуации: обрыв связи с контрагентом, отсутствие потока котировок и т.п.
+								</p>
+							</div>
+						</div>
+						<div class="liquidity-providers-advantages__col">
+							<div class="liquidity-providers-advantages__item success-style-item _add-marker" data-arrow-id="advantages-item-5">
+								<h3>
+									Лучшие цены
+								</h3>
+								<p>
+									Цены у разных контрагентов различаются. Агрегатор позволяет выбрать лучшую из предложенных цен.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item success-style-item _add-marker" data-arrow-id="advantages-item-6">
+								<h3>
+									Нет защиты от нерыночных котировок
+								</h3>
+								<p>
+									В случае появления у контрагента нерыночной котировки (шпильки), стоп-ордер не будет активирован данной котировкой.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item success-style-item _add-marker" data-arrow-id="advantages-item-7">
+								<h3>
+									Защита от некачественного исполнения
+								</h3>
+								<p>
+									Минимизируется вероятность исполнения ордера с большим проскальзыванием, задержкой и прочими атрибутами некачественного исполнения.
+								</p>
+							</div>
+							<div class="liquidity-providers-advantages__item success-style-item _add-marker" data-arrow-id="advantages-item-8">
+								<h3>
+									Нет защиты от форс-мажора
+								</h3>
+								<p>
+									В случае возникновения какого-либо форс-мажора: обрыв связи с контрагентом, отсутствие потока котировок и т.д., ордербудет исполнен у другого контрагента.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

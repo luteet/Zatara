@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		if(localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26"/>
+				<stop offset="1" stop-opacity="0"/>
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26"/>
+				<stop offset="1" stop-opacity="0"/>
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox"><path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path></clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<nav class="header__nav">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--login"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								О нас
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link Link Link Link Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговля
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговая платформа
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__login" data-append-to=".header__nav--login">
+						<a href="#" class="header__login--btn btn _none-accent">
+							Регистрация
+						</a>
+						<a href="#" class="header__login--btn btn">
+							Вход
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>

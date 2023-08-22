@@ -1,0 +1,89 @@
+.liquidity-providers-general {
+
+	padding: 0 5px 30px;
+
+	@include _550 {
+		padding: 0 24px 30px;
+	}
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		padding: 0 0px 30px;
+	}
+
+	@include _container {
+		padding: 0 60px 30px;
+	}
+
+	// .liquidity-providers-general__background
+
+	&__background {
+	}
+
+	// .liquidity-providers-general__start
+
+	&__start {
+		text-align: center;
+		grid-column: 2 span; justify-self: center;
+
+		margin-bottom: 40px;
+		@include _992 {
+			margin-bottom: 96px;
+		}
+	}
+
+	// .liquidity-providers-general__col
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		@include _992 {
+			align-items: center;
+
+			&:nth-child(4) {
+				padding-left: 40px; padding-top: 0;
+			}
+		}
+
+		&:nth-child(4) {
+			padding-top: 24px;
+		}
+	}
+
+	&__col:nth-child(3) > &__item {
+		@include _992 {
+			max-width: 382px; width: 100%;
+		}
+		&:not(:first-child) {
+			margin-top: 16px;
+		}
+	}
+
+	&__col:nth-child(4) > &__item {
+		width: 100%;
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
+
+		&:nth-child(2) {
+			margin-top: 12px;
+		}
+	}
+
+	// .liquidity-providers-general__item
+
+	&__item {
+	}
+
+	// .liquidity-providers-general__row
+
+	&__row {
+		margin-top: 55px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+	}
+}

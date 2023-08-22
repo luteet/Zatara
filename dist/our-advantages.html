@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		if (localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
+			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+		</clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<nav class="header__nav">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--login"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								О нас
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link Link Link Link Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговля
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговая платформа
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__login" data-append-to=".header__nav--login">
+						<a href="#" class="header__login--btn btn _none-accent">
+							Регистрация
+						</a>
+						<a href="#" class="header__login--btn btn">
+							Вход
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="breadcrumbs container">
+				<a href="#" class="breadcrumbs__link">
+					Главная
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<a href="#" class="breadcrumbs__link">
+					О нас
+				</a>
+				<span class="breadcrumbs__separator">
+					<svg width="19" height="19" viewBox="0 0 17 17">
+						<use xlink:href="img/sprites.svg#arrow-next"></use>
+					</svg>
+				</span>
+				<span class="breadcrumbs__current">Наши преимущества</span>
+			</div>
+			<section class="about-us-hero container">
+				<div class="about-us-hero__content">
+					<strong class="about-us-hero__name-section">
+						Наши преимущества
+					</strong>
+					<h1 class="about-us-hero__title main-title">
+						Интересы наших клиентов всегда на первом месте
+					</h1>
+					<div class="about-us-hero__text">
+						<p>
+							Наш опыт показывает, если мы будем хорошо обслуживать наших клиентов, наш собственный успех последует за ними. <br>
+							Наши активы - это наши люди, капитал и репутация.
+						</p>
+					</div>
+					<div class="about-us-hero__content--footer">
+						<a href="#" class="about-us-hero__btn btn _none-accent">
+							Вход
+						</a>
+						<a href="#" class="about-us-hero__btn btn">
+							Регистрация
+						</a>
+					</div>
+				</div>
+				<div class="about-us-hero__image">
+					<div class="about-us-hero__image--wrapper image-aspect-ratio">
+						<picture>
+							<source srcset="img/about-us/our-advantages/hero/about-us-our-advantages-hero.avif" type="image/avif">
+							<source srcset="img/about-us/our-advantages/hero/about-us-our-advantages-hero.webp" type="image/webp">
+							<img src="img/about-us/our-advantages/hero/about-us-our-advantages-hero.png" alt="" width="526" height="562" loading="lazy">
+						</picture>
+					</div>
+					<div class="about-us-hero__image--tooltip">
+						<div class="about-us-hero__image--tooltip-bg"></div>
+						<div class="about-us-hero__image--tooltip-text">
+							Benefits
+						</div>
+						<div class="about-us-hero__image--target">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#plus"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="about-us-hero__image--tooltip">
+						<div class="about-us-hero__image--tooltip-bg"></div>
+						<div class="about-us-hero__image--tooltip-text">
+							About us
+						</div>
+						<div class="about-us-hero__image--target">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#plus"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about-section container">
+				<div class="about-section__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<div class="about-section__image--background image-aspect-ratio">
+								<picture>
+									<source srcset="img/about-us/our-advantages/any-market/any-market-image-light-background.avif" type="image/avif">
+									<source srcset="img/about-us/our-advantages/any-market/any-market-image-light-background.webp" type="image/webp">
+									<img src="img/about-us/our-advantages/any-market/any-market-image-light-background.png" alt="" width="533" height="533" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="theme-change-dark">
+							<div class="about-section__image--background image-aspect-ratio">
+								<picture>
+									<source srcset="img/about-us/our-advantages/any-market/any-market-image-dark-background.avif" type="image/avif">
+									<source srcset="img/about-us/our-advantages/any-market/any-market-image-dark-background.webp" type="image/webp">
+									<img src="img/about-us/our-advantages/any-market/any-market-image-dark-background.png" alt="" width="533" height="533" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="about-section__image--wrapper image-aspect-ratio">
+						<picture>
+							<source srcset="img/about-us/our-advantages/any-market/any-market-image.avif" type="image/avif">
+							<source srcset="img/about-us/our-advantages/any-market/any-market-image.webp" type="image/webp">
+							<img src="img/about-us/our-advantages/any-market/any-market-image.png" alt="" width="592" height="444" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div class="about-section__content">
+					<h2 class="about-section__title title">
+						Вы можете выбрать любой финансовый рынок или все из того широкого диапазона, к которому мы предлагаем доступ
+					</h2>
+					<div class="about-section__text">
+						<p>Открывая счет в компании ZATARA CAPITAL SECURITIES , вам предоставляется возможность торговать валютами и акциями, криптовалютами, опционами или фьючерсами, используя нашу торговую платформу ZCS Trader Pro. </p>
+						<p>Более того, если вы много путешествуете или предпочитаете операционные системы, отличные от MS Windows, нет необходимости устанавливать ограничения на ваши передвижения, выбор программного обеспечения и компьютеров. Наша уникальная торговая платформа ZCS Trader Pro позволит вам оставаться на связи с вашим торговым счетом в любое время, в любом месте, с любого компьютера, с любой системой.</p>
+					</div>
+				</div>
+			</section>
+			<section class="content-box container">
+				<div class="content-box__block">
+					<h2>Открывая счет в компании ZATARA CAPITAL SECURITIES , вам предоставляется возможность торговать валютами и акциями</h2>
+					<ul>
+						<li>криптовалютами, опционами или фьючерсами, используя нашу торговую платформу ZCS Trader Pro. Более того, если вы много путешествуете или предпочитаете операционные системы, отличные от MS Windows, нет необходимости устанавливать ограничения на ваши передвижения, выбор программного обеспечения и компьютеров. Наша уникальная торговая платформа ZCS Trader Pro позволит вам оставаться на связи с вашим торговым счетом в любое время, в любом месте, с любого компьютера, с любой системой.</li>
+						<li>ZCS Mobile Trader - также позволяет работать без ограничений по местоположению и времени, на ходу, обеспечивая доступ к торговым счетам с мобильных устройств. Вы можете свободно выбирать тип счета, который вам нравится - с фиксированными или переменными доходом, начиная с минимальных депозитов с низким уровнем риска или непосредственно на межбанковском рынке, торгуя огромными суммами, с минимальными спредами и быстрым исполнением ордеров.</li>
+					</ul>
+				</div>
+				<div class="content-box__nav">
+					<h3 class="content-box__nav--title">
+						Так же читают:
+					</h3>
+					<ul class="content-box__nav--list">
+						<li>
+							<a href="#">
+								<div class="content-box__nav--logo">
+									<picture>
+										<source srcset="img/logo-icon-light.avif" type="image/avif">
+										<source srcset="img/logo-icon-light.webp" type="image/webp">
+										<img src="img/logo-icon-light.png" alt="" width="44" height="49" loading="lazy">
+									</picture>
+								</div>
+								<span class="content-box__nav--name title _min">Почему мы</span>
+								<span class="content-box__nav--more">Детальнее</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="content-box__nav--logo">
+									<picture>
+										<source srcset="img/logo-icon-light.avif" type="image/avif">
+										<source srcset="img/logo-icon-light.webp" type="image/webp">
+										<img src="img/logo-icon-light.png" alt="" width="44" height="49" loading="lazy">
+									</picture>
+								</div>
+								<span class="content-box__nav--name title _min">Юридическая информация</span>
+								<span class="content-box__nav--more">Детальнее</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="content-box__nav--logo">
+									<picture>
+										<source srcset="img/logo-icon-light.avif" type="image/avif">
+										<source srcset="img/logo-icon-light.webp" type="image/webp">
+										<img src="img/logo-icon-light.png" alt="" width="44" height="49" loading="lazy">
+									</picture>
+								</div>
+								<span class="content-box__nav--name title _min">Защита средств</span>
+								<span class="content-box__nav--more">Детальнее</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="to-registration">
+				<div class="to-registration__hero container">
+					<div class="to-registration__background" aria-hidden="true">
+						<div class="to-registration__background--item">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/section-decor-light.avif" media="(min-width: 992px)" type="image/avif">
+										<source srcset="img/section-decor-light.webp" media="(min-width: 992px)" type="image/webp">
+										<source srcset="img/section-decor-light-mob.avif" type="image/avif">
+										<source srcset="img/section-decor-light-mob.webp" type="image/webp">
+										<img src="img/section-decor-light.png" alt="" width="0" height="0" loading="lazy">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/section-decor-dark.avif" media="(min-width: 992px)" type="image/avif">
+										<source srcset="img/section-decor-dark.webp" media="(min-width: 992px)" type="image/webp">
+										<source srcset="img/section-decor-dark-mob.avif" type="image/avif">
+										<source srcset="img/section-decor-dark-mob.webp" type="image/webp">
+										<img src="img/section-decor-dark.png" alt="" width="0" height="0" loading="lazy">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="to-registration__background--item">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/section-decor-light.avif" media="(min-width: 992px)" type="image/avif">
+										<source srcset="img/section-decor-light.webp" media="(min-width: 992px)" type="image/webp">
+										<source srcset="img/section-decor-light-mob.avif" type="image/avif">
+										<source srcset="img/section-decor-light-mob.webp" type="image/webp">
+										<img src="img/section-decor-light.png" alt="" width="0" height="0" loading="lazy">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/section-decor-dark.avif" media="(min-width: 992px)" type="image/avif">
+										<source srcset="img/section-decor-dark.webp" media="(min-width: 992px)" type="image/webp">
+										<source srcset="img/section-decor-dark-mob.avif" type="image/avif">
+										<source srcset="img/section-decor-dark-mob.webp" type="image/webp">
+										<img src="img/section-decor-dark.png" alt="" width="0" height="0" loading="lazy">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2 class="to-registration__title main-title _min">
+						Предлагая торговлю через ZCS Trader Pro, мы стремимся к успеху наших клиентов. Мы обеспечиваем прозрачную и ориентированную на клиента торговлю так, как вам нужно.
+					</h2>
+					<a href="#" class="to-registration__btn btn">
+						Регистрация
+					</a>
+				</div>
+				<div class="to-registration__wrapper container">
+					<div class="to-registration__slider splide">
+						<div class="to-registration__slider--track splide__track">
+							<ul class="to-registration__list splide__list">
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Наши активы - это наши люди, капитал и репутация
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Если какой-либо из них когда-либо уменьшается, последний является наиболее трудным для восстановления. Мы нацелены на полное соблюдение международных правил и этических принципов, которыми мы руководствуемся. Наш дальнейший успех зависит от непоколебимой приверженности этому стандарту.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы гордимся профессиональным качеством нашей работы.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											У нас есть бескомпромиссная решимость достичь совершенства во всем, что мы предпринимаем. Хотя мы можем быть вовлечены в широкий спектр и большой объем деятельности, но мы стараемся обеспечить наших клиентов всем необходимым для финансового развития.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы подчеркиваем творческий подход и воображение во всем, что мы делаем.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Признавая, что старый способ все еще может быть лучшим, мы постоянно стремимся найти лучшее решение проблем клиента. Мы гордимся тем, что первыми внедрили многие методы и приемы в международной брокерской деятельности, ставшие стандартными в нашей отрасли.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы прилагаем необычные усилия, чтобы определить и подобрать самого лучшего человека для каждой работы.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Хотя наша деятельность измеряется миллиардами долларов, мы выбираем наших людей один за другим. В сфере услуг мы знаем, что без лучших людей мы не можем быть лучшей компанией.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы гордимся профессиональным качеством нашей работы.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											У нас есть бескомпромиссная решимость достичь совершенства во всем, что мы предпринимаем. Хотя мы можем быть вовлечены в широкий спектр и большой объем деятельности, но мы стараемся обеспечить наших клиентов всем необходимым для финансового развития.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы подчеркиваем творческий подход и воображение во всем, что мы делаем.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Признавая, что старый способ все еще может быть лучшим, мы постоянно стремимся найти лучшее решение проблем клиента. Мы гордимся тем, что первыми внедрили многие методы и приемы в международной брокерской деятельности, ставшие стандартными в нашей отрасли.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы подчеркиваем творческий подход и воображение во всем, что мы делаем.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Признавая, что старый способ все еще может быть лучшим, мы постоянно стремимся найти лучшее решение проблем клиента. Мы гордимся тем, что первыми внедрили многие методы и приемы в международной брокерской деятельности, ставшие стандартными в нашей отрасли.
+										</p>
+									</div>
+								</li>
+								<li class="to-registration__card splide__slide">
+									<div class="to-registration__card--background"></div>
+									<div class="to-registration__card--icon">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</div>
+									<h3 class="to-registration__card--title min-title">
+										Мы прилагаем необычные усилия, чтобы определить и подобрать самого лучшего человека для каждой работы.
+									</h3>
+									<div class="to-registration__card--text">
+										<p>
+											Хотя наша деятельность измеряется миллиардами долларов, мы выбираем наших людей один за другим. В сфере услуг мы знаем, что без лучших людей мы не можем быть лучшей компанией.
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="to-registration__slider-progress">
+						<div class="to-registration__slider-progress--bar"></div>
+					</div>
+				</div>
+			</section>
+			<section class="try-now-2 container">
+				<div class="try-now-2__body">
+					<h2 class="try-now-2__title main-title _min _light">
+						Откройте мир финансовых возможностей: Начните торговать сегодня
+					</h2>
+					<div class="try-now-2__image">
+						<div class="try-now-2__image--wrapper image-aspect-ratio">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-image.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-image.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-image.png" alt="" width="669" height="585" loading="lazy">
+							</picture>
+						</div>
+						<div class="try-now-2__image--decor">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-decor-1.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-decor-1.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-decor-1.png" alt="" width="120" height="137" loading="lazy">
+							</picture>
+						</div>
+						<div class="try-now-2__image--decor">
+							<picture>
+								<source srcset="img/index/add-try-now/add-try-now-decor-2.avif" type="image/avif">
+								<source srcset="img/index/add-try-now/add-try-now-decor-2.webp" type="image/webp">
+								<img src="img/index/add-try-now/add-try-now-decor-2.png" alt="" width="130" height="126" loading="lazy">
+							</picture>
+						</div>
+						<a href="#" class="try-now-2__btn btn _dark">
+							Попробовать сейчас
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__marquee splide container">
+				<div class="footer__marquee--track splide__track">
+					<ul class="footer__marquee--list splide__list">
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<a href="index.html" class="footer__logo">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/logo-dark.avif" type="image/avif">
+										<source srcset="img/logo-dark.webp" type="image/webp">
+										<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/logo-light.avif" type="image/avif">
+										<source srcset="img/logo-light.webp" type="image/webp">
+										<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+							</div>
+						</a>
+						<div class="footer__lang change-lang">
+							<button class="change-lang__target" type="button">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#lang"></use>
+								</svg>
+								RUS
+								<svg width="19" height="19" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</button>
+							<ul class="change-lang__list">
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<nav class="footer__nav">
+							<ul>
+								<li>
+									<a href="#">
+										Торговля
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												100% A-Book
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Агрегация ликвидности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Риск-менеджмент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции и ETF
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Валюты и металы
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#">
+												Фьючерсы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Опционы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Фонды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Облигации
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Криптовалюты
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Почему мы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Юридическая документация
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Защита Средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Поставщики ликвидности
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Уведомление о рисках
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Безопасность средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Политика безопасности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Условия и положения
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="tel:+13146035827">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#tel"></use>
+								</svg>
+								+1 314 603 5827
+							</a>
+						</li>
+						<li>
+							<a href="mailto:info@zataracs.com">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								info@zataracs.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#map-point"></use>
+								</svg>
+								1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__note">
+					<p>
+						ZATARA CAPITAL SECURITIES LP. (Registration No. <u>201919700005</u>). All investment and ancillary services are offered through this entity, with registered address in 1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA, where office is restricted to provide client-support services only and does not include investment services.
+						All complaints may be directed to the email address and/or phone number and will be resolved based on the complaints handling policy outlined here.
+					</p>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__copy">2023 ZATARA CAPITAL SECURITIES LP</div>
+				<div class="footer__privacy">
+					<ul>
+						<li>
+							<a href="#">
+								Политика в отношении конфликтов интересов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика идентификации клиентов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Возврат средств
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика исполнения сделок
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

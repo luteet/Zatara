@@ -1,0 +1,124 @@
+.liquidity-providers-a-book {
+
+	position: relative;
+	padding-top: 64px; padding-bottom: 40px;
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 30px;
+		padding: 0 30px 30px;
+		margin: 0;
+	}
+	
+	margin: 0 -15px;
+	padding: 0 34px;
+
+	// .liquidity-providers-a-book__background
+
+	&__background {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+	}
+
+	// .liquidity-providers-a-book__col
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__col > &__item:not(:first-child) {
+		margin-top: 26px;
+		margin-bottom: 16px;
+	}
+
+	&__col > &__item:first-child {
+		margin-bottom: 0;
+	}
+
+	&__col > &__list {
+		margin-top: 26px;
+	}
+
+	&__col > &__list > &__item:not(:first-child) {
+		margin-top: 16px;
+	}
+
+	// .liquidity-providers-a-book__item
+
+	&__item {
+		max-width: 383px;
+		width: 100%;
+	}
+
+	// .liquidity-providers-a-book__list
+
+	&__list {
+	}
+}
+
+.liquidity-providers-psyho {
+
+	padding: 0 0 0px 14px;
+
+	@include _550 {
+		padding: 0 24px 0px;
+	}
+
+	@include _992 {
+		display: grid;
+		gap: 0 44px;
+		grid-template-columns: 1fr 1fr;
+
+		padding: 0 60px 40px;
+	}
+
+	// .liquidity-providers-psyho__background
+
+	&__background {
+	}
+
+	// .liquidity-providers-psyho__start
+
+	&__start {
+		grid-column: 2 span;
+		justify-self: center;
+
+		margin-bottom: 50px;
+		@include _992 {
+			margin-bottom: 108px;
+		}
+
+		text-align: center;
+	}
+
+	// .liquidity-providers-psyho__col
+
+	&__col {
+		margin-top: 12px;
+		@include _992 {
+			margin-top: 0;
+		}
+	}
+
+	// .liquidity-providers-psyho__item
+
+	&__item {
+		min-height: 100%;
+		
+	}
+
+	// .liquidity-providers-psyho__note
+
+	&__note {
+		grid-column: 2;
+		margin-top: 21px;
+
+		font-size: 0.875rem;
+		color: var(--dark-secondary);
+	}
+}
+

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		if (localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
+			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+		</clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<nav class="header__nav">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--login"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								О нас
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link Link Link Link Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговля
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Торговая платформа
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+							<ul>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Link
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								FAQ
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__login" data-append-to=".header__nav--login">
+						<a href="#" class="header__login--btn btn _none-accent">
+							Регистрация
+						</a>
+						<a href="#" class="header__login--btn btn">
+							Вход
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<section class="page-hero container _none-full-screen">
+				<div class="breadcrumbs container">
+					<a href="#" class="breadcrumbs__link">
+						Главная
+					</a>
+					<span class="breadcrumbs__separator">
+						<svg width="19" height="19" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</span>
+					<a href="#" class="breadcrumbs__link">
+						О нас
+					</a>
+					<span class="breadcrumbs__separator">
+						<svg width="19" height="19" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</span>
+					<span class="breadcrumbs__current">Наши преимущества</span>
+				</div>
+				<div class="page-hero__background" aria-hidden="true">
+					<div class="page-hero__background--main">
+						<div class="theme-change">
+							<div class="theme-change-light">
+								<picture>
+									<source srcset="img/section-hero-light-background.avif" type="image/avif">
+									<source srcset="img/section-hero-light-background.webp" type="image/webp">
+									<img src="img/section-hero-light-background.png" alt="" width="0" height="0" loading="lazy">
+								</picture>
+							</div>
+							<div class="theme-change-dark">
+								<picture>
+									<source srcset="img/section-hero-dark-background.avif" type="image/avif">
+									<source srcset="img/section-hero-dark-background.webp" type="image/webp">
+									<img src="img/section-hero-dark-background.png" alt="" width="0" height="0" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="page-hero__background--decor"></div>
+				</div>
+				<div class="page-hero__content">
+					<h1 class="page-hero__title main-title">
+						Риск менеджмент
+					</h1>
+					<div class="page-hero__text">
+						<p>
+							Компанией разработана система внешнего контроля за торговлей трейдеров, доступная каждому желающему. Трейдер может установить ряд ограничений, при реализации одного из которых сделки автоматически закроются и возможность торговли заблокируется на определенный период времени. Также, невозможно любое моментальное изменение уровня ограничений в сторону увеличения, поэтому трейдер не может увеличивать свои потери сверх изначально определенных ограничений в момент нарастания убытка.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="liquidity-providers-works container">
+				<div class="liquidity-providers-works__block">
+					<strong class="liquidity-providers-works__section-name section-name">
+						РАССКАЗЫВАЕМ ЛЕГКО
+					</strong>
+					<h2 class="liquidity-providers-works__title title">
+						Ознакомьтесь с детальной информацией на иллюстрации
+					</h2>
+					<nav class="liquidity-providers-works__tabs-nav liquidity-providers-tabs-nav">
+						<ul>
+							<li>
+								<a href="liquidity-providers-general.html" class="current">
+									Общая информация
+								</a>
+							</li>
+							<li>
+								<a href="liquidity-providers-system.html">
+									Функционал
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="liquidity-providers-general">
+						<canvas class="liquidity-providers-general__background arrow-canvas"></canvas>
+						<div class="liquidity-providers-general__start standard-style-item arrow-item" data-arrow-to="[serenity, bottom, top]; [psychological-pressure, bottom, top]" data-mob-arrow-to="[serenity, bottom, top]; [psychological-pressure, bottom, right]">
+							<h3>
+								<svg width="32" height="32" viewBox="0 0 32 32">
+									<use xlink:href="img/sprites.svg#shield"></use>
+								</svg>
+								Психологическое состояние трейдера
+							</h3>
+						</div>
+						<div class="liquidity-providers-general__col">
+							<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="serenity">
+								<h3>Спокойствие</h3>
+							</div>
+							<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="setting-limits">
+								<h3>Установка <br class="visible-on-desktop"> ограничений</h3>
+								<p>
+									Производиться в спокойной обстановке без влияния емоций
+								</p>
+							</div>
+							<div class="liquidity-providers-general__item standard-style-item _add-marker" data-arrow-id="change-limits">
+								<h3>Изменение <br class="visible-on-desktop"> ограничений</h3>
+								<p>
+									(возможно только по прошествии определенного времени, что дает возможность трейдеру стабилизировать псих.состояние)
+								</p>
+							</div>
+						</div>
+						<div class="liquidity-providers-general__col">
+							<div class="liquidity-providers-general__item danger-style-item _add-marker" data-arrow-id="psychological-pressure">
+								<h3>Психологическое давление</h3>
+							</div>
+							<div class="liquidity-providers-general__item danger-style-item _add-marker arrow-item _min-padding" data-arrow-id="setting-limit" data-arrow-to="[changing-restrictions, bottom, top]" data-mob-arrow-to="[changing-restrictions, bottom, top]">
+								<h3>Установка ограничений</h3>
+							</div>
+							<div class="liquidity-providers-general__row">
+								<div class="liquidity-providers-general__item danger-style-item _min _add-marker arrow-item _min-padding" data-arrow-id="changing-restrictions" data-arrow-to="[stop-loss, bottom, top]; [setting-limits, left, right, noneMinPadding]" data-mob-arrow-to="[stop-loss, bottom, top]; [setting-limits, left, left, noneMinPadding]">
+									<span class="danger-style-item__label">торговля</span>
+									<h3>Изменение ограничений</h3>
+									<p>увелечение уровней потенциальныых потерь в момент</p>
+								</div>
+								<div class="liquidity-providers-general__item danger-style-item _min _add-marker arrow-item _min-padding" data-arrow-id="losses" data-arrow-to="[setting-limit, top, bottom]; [stop-loss, bottom, top]" data-mob-arrow-to="[setting-limit, top, bottom]; [stop-loss, bottom, top]">
+									<h3>Потери</h3>
+									<p>из-за неверно віставленніх уровней ограничений</p>
+									<span class="danger-style-item__label">торговля</span>
+								</div>
+							</div>
+							<div class="liquidity-providers-general__item danger-style-item _add-marker _accent arrow-item" data-arrow-id="stop-loss" data-arrow-to="[new-mistakes-and-losses, bottom, top]; [setting-limits, left, right]; [change-limits, left, bottom]" data-mob-arrow-to="[new-mistakes-and-losses, bottom, top]; [setting-limits, left, left]; [change-limits, left, left]">
+								<h3>Реализация ограничений(Stop-Loss и т.р.)</h3>
+							</div>
+							<div class="liquidity-providers-general__item danger-style-item _add-marker" data-arrow-id="new-mistakes-and-losses">
+								<h3>Новые ошибки и убытки</h3>
+								<p>
+									Из-за продолжение торговли под психологическим прессингом от полученных только что убытков
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__marquee splide container">
+				<div class="footer__marquee--track splide__track">
+					<ul class="footer__marquee--list splide__list">
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+						<li class="footer__marquee--item splide__slide">
+							<span class="footer__marquee--name">EUR/USD</span>
+							<b class="footer__marquee--value">$0,04</b>
+							<b class="footer__marquee--percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9.9%
+							</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__row">
+					<div class="footer__col">
+						<a href="index.html" class="footer__logo">
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<picture>
+										<source srcset="img/logo-dark.avif" type="image/avif">
+										<source srcset="img/logo-dark.webp" type="image/webp">
+										<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+								<div class="theme-change-dark">
+									<picture>
+										<source srcset="img/logo-light.avif" type="image/avif">
+										<source srcset="img/logo-light.webp" type="image/webp">
+										<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="footer__logo--img">
+									</picture>
+								</div>
+							</div>
+						</a>
+						<div class="footer__lang change-lang">
+							<button class="change-lang__target" type="button">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#lang"></use>
+								</svg>
+								RUS
+								<svg width="19" height="19" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</button>
+							<ul class="change-lang__list">
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<nav class="footer__nav">
+							<ul>
+								<li>
+									<a href="#">
+										Торговля
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												100% A-Book
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Агрегация ликвидности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Риск-менеджмент
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Акции и ETF
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Валюты и металы
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#">
+												Фьючерсы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Опционы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Фонды
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Облигации
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Криптовалюты
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Почему мы
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Юридическая документация
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Защита Средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Поставщики ликвидности
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										О нас
+									</a>
+									<ul>
+										<li>
+											<a href="#">
+												Уведомление о рисках
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Безопасность средств
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Политика безопасности
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Контакты
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Условия и положения
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="tel:+13146035827">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#tel"></use>
+								</svg>
+								+1 314 603 5827
+							</a>
+						</li>
+						<li>
+							<a href="mailto:info@zataracs.com">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+								info@zataracs.com
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="28" height="28" viewBox="0 0 28 28">
+									<use xlink:href="img/sprites.svg#map-point"></use>
+								</svg>
+								1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__note">
+					<p>
+						ZATARA CAPITAL SECURITIES LP. (Registration No. <u>201919700005</u>). All investment and ancillary services are offered through this entity, with registered address in 1801 CENTURY PARK EAST, STE 450, LOS ANGELES, CA, 90067, USA, where office is restricted to provide client-support services only and does not include investment services.
+						All complaints may be directed to the email address and/or phone number and will be resolved based on the complaints handling policy outlined here.
+					</p>
+				</div>
+			</div>
+			<div class="footer__container container">
+				<div class="footer__copy">2023 ZATARA CAPITAL SECURITIES LP</div>
+				<div class="footer__privacy">
+					<ul>
+						<li>
+							<a href="#">
+								Политика в отношении конфликтов интересов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика идентификации клиентов
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Возврат средств
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Политика исполнения сделок
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

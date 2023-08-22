@@ -1,0 +1,147 @@
+.page-hero {
+
+	@include _992 {
+		min-height: calc(var(--svh,1vh) * 100);
+		&._none-full-screen {
+			min-height: 0;
+		}
+
+		text-align: center;
+	}
+
+	&._center {
+		text-align: center;
+	}
+
+	&._none-full-screen & {
+		&__content {
+			@include _992 {
+				padding-top: 107px;
+				
+			}
+		}
+
+		&__text {
+			max-width: 757px;
+		}
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	&__content {
+		flex: 1 1 auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		padding: 45px 0;
+	}
+
+	// .page-hero__background
+
+	&__background {
+
+		user-select: none; pointer-events: none;
+
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		z-index: -1;
+
+		&--decor {
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%,-40%);
+			width: 100%; max-width: 2500px; aspect-ratio: 1/1; min-width: 1000px;
+
+			background: radial-gradient(circle, rgba(0,80,255,0.8) 0%, rgba(0,80,255,0.7) 10%, rgba(0,0,0,0) 50%);
+			opacity: .5;
+		}
+
+		// .page-hero__background--main
+
+		&--main {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
+			}
+		}
+	}
+
+	// .page-hero__title
+
+	&__title {
+		max-width: 853px;
+
+		position: relative;
+	}
+
+	&__text {
+		max-width: 600px;
+		color: var(--dark-secondary);
+		margin-top: 20px;
+	}
+
+	// .page-hero__social
+
+	&__social {
+
+		margin-top: 32px;
+
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 8px;
+		@include _768 {
+			gap: 15px;
+			grid-template-columns: 1fr 1fr;
+		}
+		@include _992 {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		> * {
+			align-self: center;
+		}
+
+		// .page-hero__social--item
+
+		&--item {
+			
+			a {
+				display: block;
+
+				padding: 16px 24px;
+
+				border-radius: 54px;
+				border: 1px solid #222337;
+				background: #0E0E23;
+
+				color: var(--text-color);
+				font-weight: 700;
+				font-size: 1.125rem;
+				line-height: 150%;
+
+				span {
+					padding-left: 10px;
+					color: var(--white-opacity-5);
+				}
+
+				img {
+					margin-right: 16px; margin-bottom: -5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,269 @@
+.to-registration {
+
+	padding-top: 60px;
+	
+	@include _992 {
+		padding-top: 133px;
+	}
+	z-index: 2;
+
+	// .to-registration__hero
+
+	&__hero {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		padding-bottom: 70px; padding-top: 50px;
+		@include _992 {
+			padding-top: 0; padding-bottom: 50px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; bottom: 0;
+			transform: translate(-40%,40%);
+			@include _768 {
+				top: 50%; bottom: auto;
+				transform: translate(-50%,-40%);
+			}
+
+			width: 200%; aspect-ratio: 1/1; max-width: 1324px;
+			background: radial-gradient(circle, rgba(0,80,255,0.3) 0%, rgba(0,80,255,0.3) 10%, rgba(0,0,0,0) 50%);
+			opacity: 1;
+			filter: blur(20px);
+			z-index: -1;
+		}
+	}
+
+	// .to-registration__background
+
+	&__background {
+
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		z-index: -1;
+
+		user-select: none; pointer-events: none;
+
+		// .to-registration__background--item
+
+		&--item {
+
+			width: 500px; height: 100%;
+
+			position: absolute;
+
+			@include _992 {
+				width: 70%; height: 100%;
+
+				position: relative;
+				left: auto; top: auto;
+			}
+
+			&:nth-child(1) {
+				right: 0; top: 0;
+				transform: translate(0,-30%) scale(-1);
+
+				@include _992 {
+					left: auto; top: auto;
+					transform: none;
+				}
+
+				img {
+					transform: translate(-35%,0);
+				}
+			}
+
+			&:nth-child(2) {
+				left: 0; bottom: 0;
+				transform: translate(0,20%);
+				@include _992 {
+					left: auto; bottom: auto;
+					transform: scaleX(-1);
+				}
+				img {
+					transform: translate(-35%,0);
+				}
+			}
+
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	// .to-registration__title
+
+	&__title {
+		max-width: 810px; margin: 0 auto;
+		text-align: center;
+	}
+
+	// .to-registration__btn
+
+	&__btn {
+		margin: 33px auto 0;
+	}
+
+	// .to-registration__slider
+
+	&__slider {
+
+		visibility: visible;
+		margin-top: 20px;
+
+		padding: 0 50px 0 0px;
+
+		@include _992 {
+			padding: 0;
+			margin-top: 70px;
+		}
+
+		&.splide.is-initialized:not(.is-active) .splide__list {
+			@include _992 {
+				display: grid;
+			}
+		}
+
+		// .to-registration__slider--track
+
+		&--track {
+			overflow: visible;
+			&.splide__track {
+				overflow: visible;
+			}
+		}
+	}
+
+	// .to-registration__list
+
+	&__list {
+		@include _992 {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 16px;
+		}
+
+		@include _container {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	// .to-registration__card
+
+	&__card {
+
+		padding: 24px;
+
+		border-radius: 16px;
+		&::before {
+			content: '';
+			border-radius: 16px;
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.04) 100%);
+			@include _992 {
+				backdrop-filter: blur(20px);
+			}
+			z-index: -1;
+		}
+
+		position: relative;
+
+		@media (any-hover: hover) {
+			&:hover &--background {
+				opacity: 1; visibility: visible;
+			}
+
+			&:hover &--title {
+				color: var(--white);
+			}
+
+			&:hover &--text {
+				color: var(--white);
+			}
+		}
+
+		&.is-active &--background {
+			opacity: 1; visibility: visible;
+		}
+
+		// .to-registration__card--background
+
+		&--background {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			border-radius: 16px;
+			background: var(--primary-gradient);
+			z-index: -1;
+
+			transition: opacity .3s ease, visibility .3s ease;
+			opacity: 0; visibility: hidden;
+
+			pointer-events: none;
+		}
+
+		// .to-registration__card--icon
+
+		&--icon {
+			fill: var(--success);
+
+			svg {
+				transition: fill .2s ease;
+			}
+		}
+
+		// .to-registration__card--title
+
+		&--title {
+			transition: color .2s ease;
+		}
+
+		// .to-registration__card--text
+
+		&--text {
+
+			transition: color .2s ease;
+
+			font-size: 0.875rem;
+			line-height: 150%;
+			color: var(--white-opacity-7);
+			p {
+				padding-top: 11px;
+			}
+		}
+	}
+
+	&__slider-progress {
+
+		margin-top: 10px;
+
+		@include _992 {
+			display: none;
+		}
+
+		height: 2px;
+		background: #0E0E23;
+
+		&--bar {
+			height: 2px;
+			background: #222337;
+
+			transition: width 400ms ease;
+		}
+	}
+}
