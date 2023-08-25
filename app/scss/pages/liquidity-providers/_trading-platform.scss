@@ -1,0 +1,70 @@
+.trading-platform {
+
+	margin-top: 30px;
+
+	// .trading-platform__body
+
+	&__body {
+		padding: 24px;
+		margin: 0 calc(5px - var(--container-padding));
+
+		border-radius: 24px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.04) 100%);
+		backdrop-filter: blur(53px);
+
+		overflow: hidden;
+
+		display: grid;
+		@include _768 {
+			grid-template-columns: 60% auto;
+
+			padding: 40px 0 40px 40px;
+		}
+
+		> * {
+			align-self: center;
+		}
+	}
+
+	// .trading-platform__content
+
+	&__content {
+		@include _768 {
+			padding-right: 50px;
+		}
+	}
+
+	// .trading-platform__title
+
+	&__title {
+	}
+
+	// .trading-platform__text
+
+	&__text {
+		font-size: 0.875rem;
+		color: var(--dark-secondary);
+
+		p {
+			padding-top: 16px;
+		}
+	}
+
+	// .trading-platform__image
+
+	&__image {
+
+		margin-top: 24px;
+
+		@include _768 {
+			width: calc(100% + 150px);
+			margin-top: 0;
+		}
+
+		// .trading-platform__image--wrapper
+
+		&--wrapper {
+			width: 100%;
+		}
+	}
+}

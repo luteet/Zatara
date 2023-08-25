@@ -5,13 +5,14 @@
 @import 'global';
 @import 'font';
 @import 'form';
-//@import 'popup';
+@import 'popup';
 
 @import 'components/header';
 @import 'components/coins-table';
 @import 'components/breadcrumbs';
 @import 'components/pagination';
 @import 'components/page-hero';
+@import 'components/aside';
 
 @import 'pages/index/hero';
 @import 'pages/index/start-trading';
@@ -32,6 +33,10 @@
 @import 'pages/faq/main';
 
 @import 'pages/liquidity-providers/main';
+
+@import 'pages/register/main';
+
+@import 'pages/account/main';
 //@import 'pages';
 
 @import 'components/footer';

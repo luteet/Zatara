@@ -747,3 +747,22 @@
 		}
 	}
 }
+
+.danger-style-item, .standard-style-item, .success-style-item {
+	&__row {
+		display: grid;
+		gap: 30px 0;
+		@include _768 {
+			grid-template-columns: auto 310px;
+			gap: 0 15px;
+		}
+
+		@include _992 {
+			gap: 0 66px;
+		}
+	}
+
+	&__col {
+		align-self: center;
+	}
+}

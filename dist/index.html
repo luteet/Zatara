@@ -203,10 +203,10 @@
 				</div>
 				<div class="header__login-place">
 					<div class="header__login" data-append-to=".header__nav--login">
-						<a href="#" class="header__login--btn btn _none-accent">
+						<a href="register.html" class="header__login--btn btn _none-accent">
 							Регистрация
 						</a>
-						<a href="#" class="header__login--btn btn">
+						<a href="login.html" class="header__login--btn btn">
 							Вход
 						</a>
 					</div>
@@ -1587,6 +1587,151 @@
 				</div>
 			</div>
 		</footer>
+	</div>
+
+	<div class="forgot-password popup" id="forgot-password" style="display: none;">
+		<div class="forgot-password__wrapper popup-wrapper">
+			<div class="forgot-password__bg popup-bg popup-close"></div>
+			<div class="forgot-password__body popup-body">
+				<form method="post" class="forgot-password__block _active">
+					<div class="forgot-password__header">
+						<h2 class="forgot-password__title title _min">
+							Забыли пароль?
+						</h2>
+						<button type="button" class="forgot-password__close-btn popup-close-btn popup-close" title="Закрыть">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="forgot-password__text">
+						<p>
+							Мы отправим вам ссылку для восстановления пароля
+						</p>
+					</div>
+					<div class="forgot-password__switch">
+						<a href="#forgot-password-email" class="forgot-password__switch--btn _active">
+							Через почту
+						</a>
+						<a href="#forgot-password-tel" class="forgot-password__switch--btn">
+							Через телефон
+						</a>
+					</div>
+					<div class="forgot-password__label-wrapper">
+						<label class="forgot-password__label _active" id="forgot-password-email">
+							<span>Ваш e-mail</span>
+							<input type="email" name="email" placeholder="Введите ваш e-mail">
+						</label>
+						<label class="forgot-password__label" id="forgot-password-tel">
+							<span>Ваш номер телефона</span>
+							<input type="tel" name="tel" placeholder="Введите номер телефона">
+						</label>
+					</div>
+					<button class="forgot-password__submit btn" type="submit">
+						Отправить ссылку
+					</button>
+				</form>
+				<div class="forgot-password__block">
+					<div class="forgot-password__header">
+						<a href="#" class="forward-link">
+							<svg width="17" height="17" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#arrow-prev"></use>
+							</svg>
+							Назад
+						</a>
+						<button type="button" class="forgot-password__close-btn popup-close-btn popup-close" title="Закрыть">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+					<h2 class="forgot-password__title title _min">
+						Мы отправили ссылку на вашу почту
+					</h2>
+					<div class="forgot-password__text">
+						<p>
+							Мы отправим вам ссылку для восстановления пароля
+						</p>
+					</div>
+					<hr>
+					<div class="forgot-password__footer">
+						<div class="forgot-password__title text">
+							Я не получил ссылку <a href="#">Отправить еще раз</a>
+						</div>
+					</div>
+				</div>
+				<script>
+					const forgotPasswordBlockForm = document.querySelector('form.forgot-password__block'),
+						forgotPasswordBlock = document.querySelector('.forgot-password__block:not(._active)');
+
+					forgotPasswordBlockForm.addEventListener('submit', function(event) {
+						event.preventDefault();
+
+						forgotPasswordBlockForm.classList.add('fade-out');
+
+						setTimeout(() => {
+							forgotPasswordBlockForm.classList.remove('_active');
+							forgotPasswordBlock.classList.add('_active');
+							forgotPasswordBlock.classList.remove('fade-out');
+							forgotPasswordBlock.classList.add('fade-in');
+						}, 300)
+					})
+
+					const forgotPasswordHeaderForwardLink = document.querySelector('.forgot-password__header .forward-link');
+					forgotPasswordHeaderForwardLink.addEventListener('click', function(event) {
+						event.preventDefault();
+
+						forgotPasswordBlock.classList.add('fade-out');
+						forgotPasswordBlock.classList.remove('fade-in');
+
+						setTimeout(() => {
+							forgotPasswordBlock.classList.remove('_active');
+							forgotPasswordBlockForm.classList.add('_active');
+							forgotPasswordBlockForm.classList.remove('fade-out');
+							forgotPasswordBlockForm.classList.add('fade-in');
+
+						}, 300)
+
+					})
+				</script>
+			</div>
+		</div>
+	</div>
+
+	<div class="create-password popup" id="create-password" style="display: none;">
+		<div class="create-password__wrapper popup-wrapper">
+			<div class="create-password__bg popup-bg popup-close"></div>
+			<div class="create-password__body forgot-password__body popup-body">
+				<form method="post" class="create-password__block">
+					<div class="forgot-password__header">
+						<h2 class="forgot-password__title title _min">
+							Создайте пароль
+						</h2>
+						<button type="button" class="forgot-password__close-btn popup-close-btn popup-close" title="Закрыть">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="forgot-password__text">
+						<p>
+							Успешно подтвердили почту. Теперь создайте новый пароль
+						</p>
+					</div>
+					<label>
+						<span>Ваш пароль</span>
+						<input type="password" name="password" placeholder="Введите пароль">
+					</label>
+					<label>
+						<span>Ваш номер телефона</span>
+						<input type="password" name="repeat-password" placeholder="Повторите пароль">
+					</label>
+					<button class="forgot-password__submit btn" type="submit">
+						Создать пароль
+					</button>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/libs.min.js"></script>

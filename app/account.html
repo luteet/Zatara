@@ -1,0 +1,187 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="account">
+			<div class="account__main">
+				<div class="account__profile">
+					<div class="account__avatar">
+						<picture>
+							<source srcset="img/account/avatar.avif" type="image/avif">
+							<source srcset="img/account/avatar.webp" type="image/webp">
+							<img src="img/account/avatar.png" alt="" width="160" height="160" loading="lazy">
+						</picture>
+						<a href="#" class="account__avatar--edit">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#edit"></use>
+							</svg>
+						</a>
+					</div>
+					<h1 class="account__name title _min">
+						Katerina Smola
+						<span class="account__nickname">@username</span>
+					</h1>
+					<span class="account__email">mail@gmail.com</span>
+					<div class="account__select">
+						<select name="time-zone" class="custom-select _alt">
+							<option value="+2" data-html="<span>Ваш часовой пояс* (GMT):</span> <b>+2</b>">+2</option>
+							<option value="+3" data-html="<span>Ваш часовой пояс* (GMT):</span> <b>+3</b>">+3</option>
+							<option value="+4" data-html="<span>Ваш часовой пояс* (GMT):</span> <b>+4</b>">+4</option>
+						</select>
+					</div>
+					<label class="account__checkbox-switch checkbox-switch">
+						<input type="checkbox" name="do-not-receive-e-mail-alerts" class="checkbox-switch__input visually-hidden">
+						<span class="checkbox-switch__element"></span>
+						<span class="checkbox-switch__text">
+							<b>
+								Не получать оповещения на e-mail
+							</b>
+						</span>
+					</label>
+				</div>
+				<form method="post" class="account__info">
+					<fieldset class="account__info--fieldset">
+						<legend class="account__legend title _min">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#personal-data"></use>
+							</svg>
+							Личные данные
+						</legend>
+						<label class="account__label">
+							<span>Адрес:</span>
+							<input type="text" name="address" placeholder="Введите ваш адрес" required>
+						</label>
+						<label class="account__label">
+							<span>Город</span>
+							<input type="text" name="city" required placeholder="Введите ваш город">
+						</label>
+						<label class="account__label">
+							<span>Почтовый индекс:</span>
+							<input type="text" name="post-code" required placeholder="Введите ваш почтовые индекс">
+						</label>
+						<div class="account__label">
+							<span>Страна</span>
+							<div class="account__select">
+								<select name="country" class="custom-select _alt">
+									<option value="ukr" data-html="<b>Украина</b>">Украина</option>
+									<option value="ukr-2" data-html="<b>Украина 2</b>">Украина 2</option>
+									<option value="ukr-3" data-html="<b>Украина 3</b>">Украина 3</option>
+								</select>
+							</div>
+						</div>
+						<label class="account__label">
+							<span>Дата рождения:</span>
+							<input type="text" name="date-birth" class="date-input" required placeholder="Введите вашу дату рождения">
+						</label>
+						<label class="account__label">
+							<span>Телеграм:</span>
+							<input type="text" name="telegram" required placeholder="Введите ваш Телеграм">
+						</label>
+						<div class="account__label">
+							<span>Гражданство:</span>
+							<div class="account__select">
+								<select name="citizenship" class="custom-select _alt">
+									<option value="ukr-1" data-html="<b>Украина</b>">Украина</option>
+									<option value="ukr-2" data-html="<b>Украина 2</b>">Украина 2</option>
+									<option value="ukr-3" data-html="<b>Украина 3</b>">Украина 3</option>
+								</select>
+							</div>
+						</div>
+						<label class="account__label">
+							<span>Номер телефона:</span>
+							<input type="tel" name="tel" required placeholder="Введите ваш номер телефона">
+						</label>
+					</fieldset>
+					<fieldset class="account__info--fieldset">
+						<legend class="account__legend title _min">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#security"></use>
+							</svg>
+							Безопасность
+						</legend>
+						<label class="account__label">
+							<span>Контроль смены IP-адреса:</span>
+							<div class="account__select">
+								<select name="ip-address-change-control" class="custom-select _alt">
+									<option value="default-1" data-html="<b>По умолчанию 1</b>">По умолчанию 1</option>
+									<option value="default-2" data-html="<b>По умолчанию 2</b>">По умолчанию 2</option>
+									<option value="default-3" data-html="<b>По умолчанию 3</b>">По умолчанию 3</option>
+								</select>
+							</div>
+						</label>
+						<label class="account__label">
+							<span>Автовыход через (минут)</span>
+							<input type="number" name="auto-exit" required placeholder="0" min="1">
+						</label>
+						<label class="account__label checkbox-switch">
+							<input type="checkbox" name="bind-session-to-ip-address" class="checkbox-switch__input visually-hidden">
+							<span class="checkbox-switch__element"></span>
+							<span class="checkbox-switch__text">
+								Привязывать сессию к IP-адресу
+							</span>
+						</label>
+						<label class="account__label checkbox-switch">
+							<input type="checkbox" name="bind-session-to-ip-address" class="checkbox-switch__input visually-hidden">
+							<span class="checkbox-switch__element"></span>
+							<span class="checkbox-switch__text">
+								Запретить параллельные сессии:
+							</span>
+						</label>
+						<div class="account__info--footer">
+							<button class="account__info--submit btn" type="submit">
+								Подтвердить
+							</button>
+							<button class="account__info--reset btn _none-accent" type="reset">
+								Отмена
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="account__aside">
+				<form method="post" class="account__change-block account__change-email">
+					<div class="account__change-block--icon">
+						<svg width="24" height="24" viewBox="0 0 28 28">
+							<use xlink:href="img/sprites.svg#email"></use>
+						</svg>
+					</div>
+					<h3 class="account__change-block--title super-min-title">
+						Cмена email
+					</h3>
+					<label class="account__change-block--label">
+						<span class="required">Ваш пароль</span>
+						<input type="password" name="password" placeholder="Введите пароль" required>
+					</label>
+					<label class="account__change-block--label">
+						<span class="required">Новый e-mail</span>
+						<input type="email" name="email" placeholder="Введите e-mail" required>
+					</label>
+					<button class="account__change-block--submit btn" type="submit">
+						Изменить
+					</button>
+				</form>
+				<form method="post" class="account__change-block account__change-password">
+					<div class="account__change-block--icon">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#lock"></use>
+						</svg>
+					</div>
+					<h3 class="account__change-block--title super-min-title">
+						Cмена пароля
+					</h3>
+					<label class="account__change-block--label">
+						<span class="required">Ваш пароль</span>
+						<input type="password" name="password" placeholder="Введите текущий пароль" required>
+					</label>
+					<label class="account__change-block--label">
+						<span class="required">Новый пароль</span>
+						<input type="password" name="new-password" placeholder="Введите новый пароль" required>
+					</label>
+					<button class="account__change-block--submit btn" type="submit">
+						Изменить
+					</button>
+				</form>
+			</div>
+		</section>
+	</main>
+	
+@@include("html/_footer-account.html")

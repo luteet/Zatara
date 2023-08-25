@@ -37,10 +37,12 @@
 		flex-direction: column;
 		align-items: center;
 		@include _992 {
-			align-items: stretch;
+			align-items: flex-start;
 			flex-direction: row;
 			justify-content: space-between;
 		}
+
+		
 	}
 
 	// .try-now__title
@@ -58,6 +60,8 @@
 		@include _992 {
 			margin-top: 0;
 		}
+
+		background: transparent;
 	}
 
 	// .try-now__row
@@ -71,6 +75,8 @@
 		display: grid;
 		grid-template-columns: calc(75.65% - 16px) auto;
 		gap: 16px;
+
+		
 	}
 
 	// .try-now__image

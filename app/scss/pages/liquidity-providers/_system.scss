@@ -1,0 +1,244 @@
+.liquidity-providers-system {
+
+	display: flex;
+	flex-direction: column;
+	
+	padding: 0 0px 30px;
+	
+	@include _992 {
+		align-items: center;
+		padding: 0 80px 30px;
+	}
+
+	// .liquidity-providers-system__background
+
+	&__background {
+	}
+
+	// .liquidity-providers-system__start
+
+	&__start {
+		margin-bottom: 0px;
+		text-align: center;
+		@include _992 {
+			margin-bottom: 100px;
+		}
+
+		h3 svg {
+			margin-bottom: -5px;
+		}
+	}
+
+	// .liquidity-providers-system__row
+
+	&__row {
+		@include _992 {
+			display: grid;
+			grid-template-columns: 326px auto;
+			gap: 12px;	
+		}
+	}
+
+	&__row &__item {
+		margin-top: 42px;
+		@include _992 {
+			margin-top: 0;
+		}
+	}
+
+	// .liquidity-providers-system__item
+
+	&__item {
+
+		margin-top: 42px;
+
+		@include _992 {
+			margin-top: 12px;
+		}
+	}
+
+	// .liquidity-providers-system__chart
+
+	&__chart {
+
+		max-width: calc(100% + 40px);
+		margin-right: -40px;
+
+		
+
+		// .liquidity-providers-system__chart--accent
+
+		&--accent {
+			fill: var(--accent);
+		}
+
+		// .liquidity-providers-system__chart--danger
+
+		&--danger {
+			fill: var(--danger);
+		}
+
+		// .liquidity-providers-system__chart--accent-stroke
+
+		&--accent-stroke {
+			stroke: var(--white);
+		}
+
+		// .liquidity-providers-system__chart--line
+
+		&--line {
+			stroke: var(--white);
+		}
+
+		// .liquidity-providers-system__chart--line
+
+		&--fill-line {
+			fill: var(--white);
+		}
+
+		// .liquidity-providers-system__chart--legend
+
+		&--legend {
+			font-size: 0.875rem;
+			font-weight: 400;
+			line-height: 107.143%;
+
+			> * {
+				display: block;
+				&:not(:first-child) {
+					margin-top: 7px;
+				}
+			}
+		}
+
+		// .liquidity-providers-system__chart--legend-danger
+
+		&--legend-danger {
+			color: var(--danger);
+		}
+
+		// .liquidity-providers-system__chart--legend-middle
+
+		&--legend-middle {
+			color: #A567F6;
+		}
+
+		// .liquidity-providers-system__chart--text
+
+		&--text {
+			fill: var(--tertiary);
+			&._success {
+				fill: var(--success);
+			}
+			&._danger {
+				fill: var(--danger);
+			}
+			&._middle {
+				fill: #A567F6;
+			}
+		}
+
+		// .liquidity-providers-system__chart--success
+
+		&--success {
+			fill: var(--success);
+		}
+
+		// .liquidity-providers-system__chart--success-stroke
+
+		&--success-stroke {
+			stroke: var(--success);
+		}
+
+		// .liquidity-providers-system__chart--danger-stroke
+
+		&--danger-stroke {
+			stroke: var(--danger);
+		}
+
+		// .liquidity-providers-system__chart--legend-success
+
+		&--legend-success {
+			color: var(--success);
+		}
+	}
+}
+
+.liquidity-providers-risk-management {
+
+	// .liquidity-providers-risk-management__title
+
+	&__title {
+	}
+
+	// .liquidity-providers-risk-management__chart
+
+	&__chart {
+		width: calc(100% + 60px); height: auto;
+		margin-left: -30px;
+	}
+
+	// .liquidity-providers-risk-management__legend
+
+	&__legend {
+
+		
+		@include _768 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px 30px;
+		}
+
+		font-size: 0.875rem;
+
+		@include _992 {
+			font-size: 1rem;
+		}
+
+		dt {
+			justify-self: end;
+			text-align: right;
+
+			display: inline-flex;
+			align-items: center;
+		}
+
+		dd {
+			color: var(--tertiary);
+			margin-top: 8px;
+			@include _768 {
+				margin-top: 0;
+			}
+		}
+
+		// .liquidity-providers-risk-management__legend--line
+
+		&--line {
+			display: inline-block;
+			width: 50px; height: 2px;
+			background: var(--color);
+		}
+
+		// .liquidity-providers-risk-management__legend--dt
+
+		&--dt {
+			margin-top: 12px;
+			@include _768 {
+				margin-top: 0;
+			}
+			&._middle {
+				color: #A567F6;
+			}
+
+			&._danger {
+				color: var(--danger);
+			}
+
+			&._success {
+				color: var(--success);
+			}
+		}
+	}
+}
+
+

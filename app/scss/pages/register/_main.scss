@@ -1,0 +1,158 @@
+.register {
+
+	padding-top: calc(var(--height-header, 60px) + 15px);
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 0.95fr 1.05fr;
+
+		padding-top: calc(var(--height-header, 68px) + 55px);
+	}
+
+	> * {
+		align-self: center;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: 50%; bottom: 0;
+		transform: translate(50%,55%);
+		width: 200%; aspect-ratio: 1/1;
+		@include _992 {
+			width: 2000px;
+			right: 0;
+			transform: translate(45%,45%);
+		}
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(0,102,255,0.9) 0%, rgba(0,102,255,0.8) 10%, rgba(0,0,0,0) 50%);
+		z-index: -1;
+
+		opacity: .4;
+	}
+
+	// .register__main
+
+	&__main {
+		padding-bottom: 69px;
+	}
+
+	// .register__forward
+
+	&__forward {
+	}
+
+	// .register__title
+
+	&__title {
+		margin-top: 12px;
+	}
+
+	// .register__text
+
+	&__text {
+		margin-top: 12px;
+
+		color: var(--dark-secondary);
+		a {
+			color: var(--success);
+			padding: 0 5px;
+			font-weight: 500;
+		}
+	}
+
+	// .register__form
+
+	&__form {
+		margin-top: 16px;
+
+		display: grid;
+		gap: 16px 0;
+
+		> a {
+			color: var(--success);
+			font-weight: 500;
+		}
+
+		> label {
+			&:not(.checkbox) {
+				max-width: 389px;
+
+				display: block;
+			}
+		}
+
+		fieldset {
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+			display: grid;
+			gap: 16px;
+			@include _550 {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			h2 {
+				@include _550 {
+					grid-column: 2 span;
+				}
+				fill: var(--accent);
+
+				svg {
+					margin-bottom: -4px;
+				}
+
+				font-family: var(--title-font);
+				font-size: 1.375rem;
+				font-weight: 400;
+				line-height: 110%;
+			}
+		}
+
+		[type="submit"] {
+			margin-top: 16px;
+			width: 100%;
+			@include _550 {
+				width: auto;
+				max-width: 389px;
+			}
+			
+		}
+	}
+
+	// .register__checkbox
+
+	&__checkbox {
+	}
+
+	// .register__image
+
+	&__image {
+
+		padding: 0 0 30px;
+
+		@include _992 {
+			padding: 30px 0;
+		}
+
+		// .register__image--wrapper
+
+		&--wrapper {
+			transform: translate(0,30%) scale(1.5);
+			@include _550 {
+				transform: none;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 0;
+				transform: translate(-50%,-5%);
+				width: 100%; aspect-ratio: 1/0.5;
+				background: radial-gradient(circle, rgba(37,197,255,0.6) 0%, rgba(37,197,255,0.4) 10%, rgba(0,0,0,0) 50%);
+				border-radius: 50%;
+				filter: blur(15px);
+			}
+		}
+	}
+}
+

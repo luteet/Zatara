@@ -77,46 +77,48 @@
 				</nav>
 				<div class="liquidity-providers-system">
 					<canvas class="liquidity-providers-system__background arrow-canvas"></canvas>
-					<div class="liquidity-providers-system__start standard-style-item">
+					<div class="liquidity-providers-system__start standard-style-item arrow-item" 
+					data-arrow-to="[maximum-leverage, bottom, left]; [limit-maximum-leverage, bottom, top]; [maximum-drawdown, bottom, left]; [minimum-balance, bottom, left]"
+					data-mob-arrow-to="[maximum-leverage, bottom, top]">
 						<h3>
 							<svg width="24" height="24" viewBox="0 0 24 24">
 								<use xlink:href="img/sprites.svg#sale"></use>
 							</svg>
-							
+							Система риск-менеджмента
 						</h3>
 					</div>
 					<div class="liquidity-providers-system__row">
-						<div class="liquidity-providers-system__item standard-style-item _add-marker">
-							<h3></h3>
-							<p></p>
+						<div class="liquidity-providers-system__item standard-style-item _add-marker arrow-item" data-arrow-id="maximum-leverage" data-mob-arrow-to="[limit-maximum-leverage, bottom, top]">
+							<h3>Максимальное кредитное плечо</h3>
+							<p>Возможность ограничить значение максимального кредитного плеча.</p>
 						</div>
-						<div class="liquidity-providers-system__item standard-style-item _add-marker">
-							<h3></h3>
-							<p></p>
+						<div class="liquidity-providers-system__item standard-style-item _add-marker arrow-item" data-arrow-id="limit-maximum-leverage" data-mob-arrow-to="[maximum-losses-for-the-week, bottom, top]">
+							<h3>Возможность ограничить значение максимального кредитного плеча.</h3>
+							<p>Ограничивает максимальные потери за сутки, исчисляемые от значения equity на начало торговых суток, вне зависимости от того, насколько возрастает equity счета за этот период.</p>
 						</div>
 					</div>
-					<div class="liquidity-providers-system__item standard-style-item _add-marker">
+					<div class="liquidity-providers-system__item standard-style-item _add-marker arrow-item" data-arrow-id="maximum-losses-for-the-week" data-mob-arrow-to="[maximum-drawdown, bottom, top]">
 						<div class="standard-style-item__row">
 							<div class="standard-style-item__col">
 								<h3>
-
+									Максимальные потери за неделю
 								</h3>
 								<p>
-									
+									Является аналогом ограничения «максимальные потери за сутки». Ограничивает максимальные потери за неделю, исчисляемые от значения equity на начало торгового периода, вне зависимости от того, насколько возрастает equity счета за этот период.
 								</p>
 							</div>
 							<div class="standard-style-item__col">
-								<svg width="310" height="224" viewBox="0 0 310 224" fill="none" xmlns="http://www.w3.org/2000/svg" class="liquidity-providers-system__chart">
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="224" y="157.195">Время</tspan></text>
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="36" y="24.195">Изменение equity</tspan></text>
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="60.934">20%</tspan></text>
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="101.934">10%</tspan></text>
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="23" y="142.934">0</tspan></text>
-									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="0" y="183.934">-10%</tspan></text>
-									<path d="M36.711 31.2929C36.3205 30.9024 35.6873 30.9024 35.2968 31.2929L28.9328 37.6569C28.5423 38.0474 28.5423 38.6805 28.9328 39.0711C29.3234 39.4616 29.9565 39.4616 30.3471 39.0711L36.0039 33.4142L41.6608 39.0711C42.0513 39.4616 42.6844 39.4616 43.075 39.0711C43.4655 38.6805 43.4655 38.0474 43.075 37.6569L36.711 31.2929ZM37.0039 184L37.0039 32H35.0039L35.0039 184H37.0039Z" class="liquidity-providers-system__chart--accent" fill-opacity="0.4"/>
+								<svg width="310" height="204" viewBox="0 0 310 204" fill="none" xmlns="http://www.w3.org/2000/svg" class="liquidity-providers-system__chart">
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="224" y="157.195">Время</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="36" y="24.195">Изменение equity</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="60.934">20%</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="101.934">10%</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="23" y="142.934">0</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="0" y="183.934">-10%</tspan></text>
+									<path d="M36.711 31.2929C36.3205 30.9024 35.6873 30.9024 35.2968 31.2929L28.9328 37.6569C28.5423 38.0474 28.5423 38.6805 28.9328 39.0711C29.3234 39.4616 29.9565 39.4616 30.3471 39.0711L36.0039 33.4142L41.6608 39.0711C42.0513 39.4616 42.6844 39.4616 43.075 39.0711C43.4655 38.6805 43.4655 38.0474 43.075 37.6569L36.711 31.2929ZM37.0039 184L37.0039 32H35.0039L35.0039 184H37.0039Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
 									<path d="M51.1075 141.64C50.9122 141.444 50.5956 141.444 50.4004 141.64L47.2184 144.822C47.0231 145.017 47.0231 145.333 47.2184 145.529C47.4136 145.724 47.7302 145.724 47.9255 145.529L50.7539 142.7L53.5823 145.529C53.7776 145.724 54.0942 145.724 54.2894 145.529C54.4847 145.333 54.4847 145.017 54.2894 144.822L51.1075 141.64ZM51.2539 184.001L51.2539 141.993H50.2539L50.2539 184.001H51.2539Z" class="liquidity-providers-system__chart--danger"/>
 									<path d="M51.1075 184.355C50.9122 184.55 50.5956 184.55 50.4004 184.355L47.2184 181.173C47.0231 180.978 47.0231 180.661 47.2184 180.466C47.4136 180.271 47.7302 180.271 47.9255 180.466L50.7539 183.294L53.5823 180.466C53.7776 180.271 54.0942 180.271 54.2894 180.466C54.4847 180.661 54.4847 180.978 54.2894 181.173L51.1075 184.355ZM51.2539 141.993L51.2539 184.001H50.2539L50.2539 141.993H51.2539Z" class="liquidity-providers-system__chart--danger"/>
-									<path d="M255.716 140.707C256.107 140.317 256.107 139.683 255.716 139.293L249.352 132.929C248.962 132.538 248.329 132.538 247.938 132.929C247.548 133.319 247.548 133.953 247.938 134.343L253.595 140L247.938 145.657C247.548 146.047 247.548 146.681 247.938 147.071C248.329 147.462 248.962 147.462 249.352 147.071L255.716 140.707ZM36 141L255.009 141V139L36 139V141Z" class="liquidity-providers-system__chart--accent" fill-opacity="0.4"/>
+									<path d="M255.716 140.707C256.107 140.317 256.107 139.683 255.716 139.293L249.352 132.929C248.962 132.538 248.329 132.538 247.938 132.929C247.548 133.319 247.548 133.953 247.938 134.343L253.595 140L247.938 145.657C247.548 146.047 247.548 146.681 247.938 147.071C248.329 147.462 248.962 147.462 249.352 147.071L255.716 140.707ZM36 141L255.009 141V139L36 139V141Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
 									<line x1="36.0039" y1="183.5" x2="255.004" y2="183.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
 									<line x1="36" y1="95.5" x2="255" y2="95.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
 									<path d="M38.5039 141.5L56.0699 131.557C61.2133 128.646 67.7106 129.913 71.3831 134.543L77.0176 141.648C82.2855 148.29 92.5931 147.524 96.8209 140.175L100.569 133.661C104.691 126.496 114.654 125.547 120.055 131.805L138.674 153.38C139.878 154.775 141.386 155.873 143.083 156.591L161.828 164.522C164.817 165.786 168.191 165.786 171.18 164.522L184.827 158.748C189.443 156.795 194.786 157.916 198.227 161.56L218.004 182.5" class="liquidity-providers-system__chart--line"/>
@@ -130,6 +132,176 @@
 							</div>
 						</div>
 					</div>
+					<div class="liquidity-providers-system__item standard-style-item _add-marker arrow-item" data-arrow-id="maximum-drawdown" data-mob-arrow-to="[minimum-balance, bottom, top]">
+						<div class="standard-style-item__row">
+							<div class="standard-style-item__col">
+								<h3>
+									Максимальная просадка
+								</h3>
+								<p>
+									Расчет ведется от максимального значения equity счета, зафиксированного после установки данного ограничения. Если, спустя некоторое время, значение equity счета опустится на размер установленной максимальной просадки, данное ограничение будет реализовано. Выражается в процентах от депозита.
+								</p>
+							</div>
+							<div class="standard-style-item__col">
+								<svg width="310" height="201" viewBox="0 0 310 201" fill="none" xmlns="http://www.w3.org/2000/svg" class="liquidity-providers-system__chart">
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="224" y="197.195">Время</tspan></text>
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="36" y="24.195">Ограничение equity</tspan></text>
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="45.934">30%</tspan></text>
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="85.934">20%</tspan></text>
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="130.934">10%</tspan></text>
+									<text fill="#ACAFBD" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="20" y="173.934">0</tspan></text>
+									<path d="M38 169L71.9048 151.809C72.9198 151.294 73.6676 150.371 73.9608 149.272L82.9234 115.662C83.2817 114.319 84.3119 113.258 85.6442 112.86L114.966 104.107C116.238 103.727 117.239 102.741 117.637 101.475L136.579 41.2838C137.651 37.8744 142.317 37.4766 143.951 40.6551L156.779 65.5985C157.242 66.4991 158.03 67.1906 158.983 67.5332L200.099 82.3166C201.295 82.7464 202.215 83.7183 202.578 84.9353L214.779 125.759C214.925 126.249 215.163 126.705 215.481 127.105L234.5 151" class="liquidity-providers-system__chart--line"/>
+									<path d="M36.711 28.2929C36.3205 27.9024 35.6873 27.9024 35.2968 28.2929L28.9328 34.6568C28.5423 35.0474 28.5423 35.6805 28.9328 36.0711C29.3234 36.4616 29.9565 36.4616 30.3471 36.0711L36.0039 30.4142L41.6608 36.0711C42.0513 36.4616 42.6844 36.4616 43.075 36.0711C43.4655 35.6805 43.4655 35.0474 43.075 34.6568L36.711 28.2929ZM37.0039 171L37.0039 29H35.0039L35.0039 171H37.0039Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+									<path d="M255.716 170.707C256.107 170.317 256.107 169.683 255.716 169.293L249.352 162.929C248.962 162.538 248.329 162.538 247.938 162.929C247.548 163.319 247.548 163.953 247.938 164.343L253.595 170L247.938 175.657C247.548 176.047 247.548 176.681 247.938 177.071C248.329 177.462 248.962 177.462 249.352 177.071L255.716 170.707ZM36 171L255.009 171V169L36 169V171Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+									<line x1="36" y1="125.5" x2="255" y2="125.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="36" y1="81.5" x2="255" y2="81.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="36" y1="37.5" x2="255" y2="37.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="35.9951" y1="38.5" x2="138.995" y2="37.5" stroke="#A567F6" stroke-dasharray="9 9"/>
+									<line x1="143.995" y1="152.5" x2="234.995" y2="151.5" stroke="#A567F6" stroke-dasharray="9 9"/>
+									<path d="M140.852 42.6429C140.656 42.4485 140.339 42.4499 140.145 42.6461L136.977 45.8426C136.783 46.0388 136.785 46.3554 136.981 46.5497C137.177 46.7441 137.493 46.7426 137.688 46.5465L140.503 43.7051L143.345 46.5205C143.541 46.7149 143.857 46.7135 144.052 46.5173C144.246 46.3211 144.245 46.0046 144.048 45.8102L140.852 42.6429ZM141.5 151.998L141 42.9957L140 43.0003L140.5 152.002L141.5 151.998Z" fill="#A567F6"/>
+									<path d="M141.351 152.352C141.156 152.548 140.84 152.549 140.644 152.355L137.447 149.187C137.251 148.993 137.25 148.677 137.444 148.48C137.638 148.284 137.955 148.283 138.151 148.477L140.992 151.293L143.808 148.451C144.002 148.255 144.319 148.254 144.515 148.448C144.711 148.643 144.712 148.959 144.518 149.155L141.351 152.352ZM141 42.9955L141.495 151.998L140.495 152.002L140 43.0001L141 42.9955Z" fill="#A567F6"/>
+								</svg>									
+								<div class="liquidity-providers-system__chart--legend">
+									<span class="liquidity-providers-system__chart--legend-middle">
+										lim(max(DD)) - ограничение максимальной просадки
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="liquidity-providers-system__item standard-style-item _add-marker arrow-item" data-arrow-id="minimum-balance">
+						<div class="standard-style-item__row">
+							<div class="standard-style-item__col">
+								<h3>
+									Минимальный остаток
+								</h3>
+								<p>
+									Указывается денежное значение минимальной суммы, по достижении которой произойдет реализация ограничения, и торговля на счете остановится. Выражается в валюте депозита.
+								</p>
+							</div>
+							<div class="standard-style-item__col">
+								<svg width="310" height="238" viewBox="0 0 310 238" fill="none" xmlns="http://www.w3.org/2000/svg" class="liquidity-providers-system__chart">
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="224" y="157.195">Время</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="36" y="24.195">Изменение equity</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="60.934">20%</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="4" y="101.934">10%</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="23" y="142.934">0</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="0" y="183.934">-10%</tspan></text>
+									<text class="liquidity-providers-system__chart--text _success" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="55" y="175">LWM</tspan></text>
+									<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="95" y="180">lim(Loss(W))</tspan></text>
+									<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="150" y="225">lim(Loss(W))</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="47" y="203">1</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="102" y="203">2</tspan></text>
+									<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="12" letter-spacing="0em"><tspan x="163" y="203">3</tspan></text>
+									<line x1="105.375" y1="184.503" x2="105.375" y2="31.9999" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="174.5" y1="183.503" x2="174.5" y2="31" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<path d="M36.711 31.2929C36.3205 30.9024 35.6873 30.9024 35.2968 31.2929L28.9328 37.6569C28.5423 38.0474 28.5423 38.6805 28.9328 39.0711C29.3234 39.4616 29.9565 39.4616 30.3471 39.0711L36.0039 33.4142L41.6608 39.0711C42.0513 39.4616 42.6844 39.4616 43.075 39.0711C43.4655 38.6805 43.4655 38.0474 43.075 37.6569L36.711 31.2929ZM37.0039 184L37.0039 32H35.0039L35.0039 184H37.0039Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+									<path d="M50.3365 122.642C50.1388 122.449 49.8223 122.453 49.6295 122.651L46.4877 125.873C46.2949 126.071 46.2989 126.387 46.4966 126.58C46.6943 126.773 47.0109 126.769 47.2037 126.571L49.9963 123.707L52.8601 126.5C53.0578 126.693 53.3743 126.689 53.5671 126.491C53.7599 126.293 53.7559 125.977 53.5582 125.784L50.3365 122.642ZM51.2539 183.995L50.4874 122.994L49.4875 123.006L50.2539 184.008L51.2539 183.995Z" class="liquidity-providers-system__chart--success"/>
+									<path d="M105.348 104.642C105.151 104.449 104.834 104.453 104.641 104.651L101.499 107.873C101.307 108.071 101.311 108.387 101.508 108.58C101.706 108.773 102.023 108.769 102.215 108.571L105.008 105.707L107.872 108.5C108.069 108.693 108.386 108.689 108.579 108.491C108.772 108.293 108.768 107.977 108.57 107.784L105.348 104.642ZM106.266 165.995L105.499 104.994L104.499 105.006L105.266 166.008L106.266 165.995Z" class="liquidity-providers-system__chart--danger"/>
+									<path d="M51.1118 184.351C50.919 184.548 50.6024 184.552 50.4047 184.359L47.1837 181.217C46.986 181.024 46.9821 180.707 47.1749 180.51C47.3678 180.312 47.6843 180.308 47.882 180.501L50.7452 183.294L53.5384 180.431C53.7313 180.234 54.0478 180.23 54.2455 180.422C54.4431 180.615 54.4471 180.932 54.2542 181.13L51.1118 184.351ZM50.5 122.994L51.2539 183.995L50.2539 184.008L49.5 123.006L50.5 122.994Z" class="liquidity-providers-system__chart--success"/>
+									<path d="M106.124 166.351C105.931 166.548 105.614 166.552 105.416 166.359L102.195 163.217C101.998 163.024 101.994 162.707 102.187 162.51C102.38 162.312 102.696 162.308 102.894 162.501L105.757 165.294L108.55 162.431C108.743 162.234 109.06 162.23 109.257 162.422C109.455 162.615 109.459 162.932 109.266 163.13L106.124 166.351ZM105.512 104.994L106.266 165.995L105.266 166.008L104.512 105.006L105.512 104.994Z" class="liquidity-providers-system__chart--danger"/>
+									<path d="M255.716 140.707C256.107 140.317 256.107 139.683 255.716 139.293L249.352 132.929C248.962 132.538 248.329 132.538 247.938 132.929C247.548 133.319 247.548 133.953 247.938 134.343L253.595 140L247.938 145.657C247.548 146.047 247.548 146.681 247.938 147.071C248.329 147.462 248.962 147.462 249.352 147.071L255.716 140.707ZM36 141L255.009 141V139L36 139V141Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+									<line x1="36.0039" y1="183.5" x2="255.004" y2="183.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="36" y1="95.5" x2="255" y2="95.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="36" y1="51.5" x2="255" y2="51.5" class="liquidity-providers-system__chart--accent-stroke" stroke-opacity="0.2"/>
+									<line x1="67.0039" y1="183.5" x2="255.004" y2="183.5" class="liquidity-providers-system__chart--success-stroke" stroke-dasharray="9 9"/>
+									<path d="M36 139.794L47.0856 123.781C48.2063 122.162 50.0499 121.196 52.0188 121.196H72.5483C75.2399 121.196 77.6021 119.403 78.3268 116.811L84.7126 93.97C85.9539 89.5303 91.53 88.0907 94.7653 91.3746L104.731 101.49C105.126 101.892 105.576 102.235 106.067 102.511L126.671 114.081C127.917 114.78 128.872 115.9 129.365 117.241L140.489 147.487C141.596 150.496 144.871 152.103 147.927 151.138L163.109 146.344C164.181 146.005 165.327 145.975 166.416 146.256L190.454 152.467C191.458 152.726 192.377 153.241 193.123 153.962L201.125 161.698C201.948 162.493 202.98 163.036 204.102 163.264L223.513 167.205C224.276 167.36 225.001 167.661 225.649 168.093L242 179" class="liquidity-providers-system__chart--line"/>
+									<line x1="96.9844" y1="167" x2="116.011" y2="167" class="liquidity-providers-system__chart--danger-stroke"/>
+									<path d="M174.866 150.647C174.669 150.451 174.353 150.451 174.159 150.647L171.004 153.829C170.81 154.024 170.813 154.34 171.01 154.536C171.207 154.731 171.524 154.731 171.717 154.536L174.522 151.707L177.374 154.536C177.571 154.731 177.888 154.731 178.081 154.536C178.275 154.34 178.272 154.024 178.075 153.829L174.866 150.647ZM175.5 208L175.016 151H174.016L174.5 208H175.5Z" class="liquidity-providers-system__chart--danger"/>
+									<path d="M175.842 208.353C175.648 208.548 175.331 208.548 175.134 208.353L171.925 205.171C171.729 204.976 171.726 204.66 171.919 204.464C172.113 204.269 172.43 204.269 172.627 204.464L175.479 207.293L178.283 204.464C178.477 204.269 178.794 204.269 178.99 204.464C179.187 204.66 179.19 204.976 178.997 205.171L175.842 208.353ZM175.5 151L175.985 208H174.985L174.5 151H175.5Z" class="liquidity-providers-system__chart--danger"/>
+									<line x1="166" y1="210" x2="185.026" y2="210" class="liquidity-providers-system__chart--danger-stroke"/>
+								</svg>									
+								<div class="liquidity-providers-system__chart--legend">
+									<span class="liquidity-providers-system__chart--legend-success">
+										LWM (Low watermark) - ограничение минимальногоостатка средств
+									</span>
+									<span class="liquidity-providers-system__chart--legend-danger">
+										lim(Loss(W)) - ограничениемаксимальных потерь за неделю
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="liquidity-providers-works__block">
+				<div class="liquidity-providers-risk-management">
+					<h3 class="liquidity-providers-risk-management__title title _min">
+						Схематическое представление функционирования <br class="visible-on-desktop">
+						параметров риск-менеджмента
+					</h3>
+					<svg class="liquidity-providers-risk-management__chart" width="1019" height="426" viewBox="0 0 1019 426" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="85" y="47">Изменение equity</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="905" y="395">Недели</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="78" y="395">0</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="258" y="395">1</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="438" y="395">2</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="618" y="395">3</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="798" y="395">4</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="35" y="115">60%</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="35" y="175">40%</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="35" y="240">20%</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="55" y="305">0</tspan></text>
+						<text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="14" letter-spacing="0em"><tspan x="35" y="370">-20%</tspan></text>
+						<!-- <text class="liquidity-providers-system__chart--text" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="36" y="24.195">Изменение equity</tspan></text> -->
+						<line x1="82" y1="372.5" x2="947" y2="372.5" stroke="#BAFF62" stroke-dasharray="9 9"/>
+						<path d="M82.711 64.2929C82.3205 63.9024 81.6873 63.9024 81.2968 64.2929L74.9328 70.6568C74.5422 71.0473 74.5422 71.6804 74.9327 72.071C75.3233 72.4615 75.9564 72.4615 76.347 72.071L82.0039 66.4142L87.6607 72.0711C88.0512 72.4617 88.6844 72.4617 89.0749 72.0712C89.4654 71.6806 89.4654 71.0475 89.0749 70.657L82.711 64.2929ZM83 373L83.0039 65L81.0039 65L81 373L83 373Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+						<path d="M947.699 313.707C948.09 313.317 948.09 312.683 947.699 312.293L941.335 305.929C940.945 305.538 940.312 305.538 939.921 305.929C939.531 306.319 939.531 306.953 939.921 307.343L945.578 313L939.921 318.657C939.531 319.047 939.531 319.681 939.921 320.071C940.312 320.462 940.945 320.462 941.335 320.071L947.699 313.707ZM81.9922 314L946.992 314V312L81.9922 312V314Z" class="liquidity-providers-system__chart--fill-line" fill-opacity="0.4"/>
+						<line x1="81.9994" y1="252.5" x2="946.999" y2="251.5" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="81.9994" y1="191.5" x2="946.999" y2="190.5" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="81.9994" y1="130.5" x2="946.999" y2="129.5" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="441.5" y1="373" x2="441.5" y2="131" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="261.5" y1="373" x2="261.5" y2="131" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="621.5" y1="373" x2="621.5" y2="131" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<line x1="801.5" y1="373" x2="801.5" y2="131" class="liquidity-providers-system__chart--line" stroke-opacity="0.2"/>
+						<path d="M81.5 313.5L195.97 289.073C199.25 288.373 202.25 286.719 204.591 284.318L252.269 235.439C257.219 230.363 264.8 228.893 271.289 231.75L341.508 262.668L407.918 249.685L432.368 183.51C436.377 172.659 449.819 168.894 458.881 176.085L484.323 196.273C485.765 197.417 487.383 198.319 489.113 198.944L550.084 220.972C550.7 221.195 551.32 221.379 551.943 221.527L565.722 218.834C567.831 217.334 569.622 215.335 570.9 212.911L585.51 185.194C591.32 174.172 606.623 172.938 614.123 182.888L618.205 188.303C620.952 191.947 625.049 194.334 629.575 194.926L664.583 199.506L751.738 182.467L762.854 169.704C766.815 165.157 773.695 164.641 778.29 168.546C784.036 173.431 792.882 171.223 795.659 164.211L800.695 151.495C805.139 140.273 819.536 137.127 828.256 145.473L840.07 156.781C843.234 159.81 847.445 161.5 851.825 161.5H858.987L885.76 156.266L895.859 148.985C898.56 147.038 901.773 145.927 905.1 145.79L948.5 144L885.76 156.266L882.953 158.29C880.058 160.377 876.58 161.5 873.011 161.5H858.987L751.738 182.467L735.487 201.126C731.747 205.42 726.107 207.556 720.462 206.817L664.583 199.506L565.722 218.834C561.805 221.619 556.792 222.68 551.943 221.527L407.918 249.685L400.762 269.053C397.367 278.241 386.93 282.667 377.965 278.72L341.508 262.668L81.5 313.5Z" fill="#7A8EF5" fill-opacity="0.12"/>
+						<path d="M81.5 313L196.877 288.105C200.215 287.385 203.258 285.676 205.611 283.202L251.787 234.638C256.717 229.453 264.366 227.91 270.92 230.778L379.407 278.24C388.396 282.173 398.839 277.701 402.195 268.48L433.433 182.661C437.402 171.758 450.885 167.947 459.975 175.159L485.323 195.273C486.765 196.417 488.383 197.319 490.113 197.944L551.084 219.972C559.062 222.855 567.944 219.415 571.899 211.911L585.723 185.686C591.723 174.305 607.701 173.455 614.874 184.135L617.149 187.522C619.911 191.634 624.33 194.337 629.248 194.924L721.572 205.935C727.158 206.601 732.711 204.462 736.405 200.22L763.854 168.704C767.815 164.157 774.695 163.641 779.29 167.546V167.546C785.036 172.431 793.882 170.223 796.659 163.211L801.695 150.495C806.139 139.273 820.536 136.127 829.256 144.473L841.07 155.781C844.234 158.81 848.445 160.5 852.825 160.5H874.011C877.58 160.5 881.058 159.377 883.953 157.29L896.547 148.21C899.442 146.123 902.92 145 906.489 145H949.5" stroke="#5566FF" stroke-width="2"/>
+						<path d="M261.854 231.646C261.658 231.451 261.342 231.451 261.146 231.646L257.964 234.828C257.769 235.024 257.769 235.34 257.964 235.536C258.16 235.731 258.476 235.731 258.672 235.536L261.5 232.707L264.328 235.536C264.524 235.731 264.84 235.731 265.036 235.536C265.231 235.34 265.231 235.024 265.036 234.828L261.854 231.646ZM262 266.769V232H261V266.769H262Z" fill="#FF7562"/>
+						<path d="M261.854 267.122C261.658 267.318 261.342 267.318 261.146 267.122L257.964 263.94C257.769 263.745 257.769 263.428 257.964 263.233C258.16 263.038 258.476 263.038 258.672 263.233L261.5 266.062L264.328 263.233C264.524 263.038 264.84 263.038 265.036 263.233C265.231 263.428 265.231 263.745 265.036 263.94L261.854 267.122ZM262 232V266.769H261V232H262Z" fill="#FF7562"/>
+						<line x1="252" y1="270.269" x2="271" y2="270.269" stroke="#FF7562"/>
+						<path d="M261.854 274.415C261.658 274.22 261.342 274.22 261.146 274.415L257.964 277.597C257.769 277.792 257.769 278.109 257.964 278.304C258.16 278.499 258.476 278.499 258.672 278.304L261.5 275.476L264.328 278.304C264.524 278.499 264.84 278.499 265.036 278.304C265.231 278.109 265.231 277.792 265.036 277.597L261.854 274.415ZM262 309.537V274.769H261V309.537H262Z" fill="#9747FF"/>
+						<path d="M261.854 309.891C261.658 310.086 261.342 310.086 261.146 309.891L257.964 306.709C257.769 306.514 257.769 306.197 257.964 306.002C258.16 305.807 258.476 305.807 258.672 306.002L261.5 308.83L264.328 306.002C264.524 305.807 264.84 305.807 265.036 306.002C265.231 306.197 265.231 306.514 265.036 306.709L261.854 309.891ZM262 274.769V309.537H261V274.769H262Z" fill="#9747FF"/>
+						<line x1="252" y1="313.037" x2="271" y2="313.037" stroke="#9747FF"/>
+						<path d="M816.854 140.646C816.658 140.451 816.342 140.451 816.146 140.646L812.964 143.828C812.769 144.024 812.769 144.34 812.964 144.536C813.16 144.731 813.476 144.731 813.672 144.536L816.5 141.707L819.328 144.536C819.524 144.731 819.84 144.731 820.036 144.536C820.231 144.34 820.231 144.024 820.036 143.828L816.854 140.646ZM817 175.769V141H816V175.769H817Z" fill="#FF7562"/>
+						<path d="M816.854 176.122C816.658 176.318 816.342 176.318 816.146 176.122L812.964 172.94C812.769 172.745 812.769 172.428 812.964 172.233C813.16 172.038 813.476 172.038 813.672 172.233L816.5 175.062L819.328 172.233C819.524 172.038 819.84 172.038 820.036 172.233C820.231 172.428 820.231 172.745 820.036 172.94L816.854 176.122ZM817 141V175.769H816V141H817Z" fill="#FF7562"/>
+						<line x1="807" y1="179.269" x2="826" y2="179.269" stroke="#FF7562"/>
+						<path d="M816.854 183.415C816.658 183.22 816.342 183.22 816.146 183.415L812.964 186.597C812.769 186.792 812.769 187.109 812.964 187.304C813.16 187.5 813.476 187.5 813.672 187.304L816.5 184.476L819.328 187.304C819.524 187.5 819.84 187.5 820.036 187.304C820.231 187.109 820.231 186.792 820.036 186.597L816.854 183.415ZM817 218.537V183.769H816V218.537H817Z" fill="#9747FF"/>
+						<path d="M816.854 218.891C816.658 219.086 816.342 219.086 816.146 218.891L812.964 215.709C812.769 215.514 812.769 215.197 812.964 215.002C813.16 214.807 813.476 214.807 813.672 215.002L816.5 217.83L819.328 215.002C819.524 214.807 819.84 214.807 820.036 215.002C820.231 215.197 820.231 215.514 820.036 215.709L816.854 218.891ZM817 183.769V218.537H816V183.769H817Z" fill="#9747FF"/>
+						<line x1="807" y1="222.037" x2="826" y2="222.037" stroke="#9747FF"/>
+						<path d="M441.854 175.646C441.658 175.451 441.342 175.451 441.146 175.646L437.964 178.828C437.769 179.024 437.769 179.34 437.964 179.536C438.16 179.731 438.476 179.731 438.672 179.536L441.5 176.707L444.328 179.536C444.524 179.731 444.84 179.731 445.036 179.536C445.231 179.34 445.231 179.024 445.036 178.828L441.854 175.646ZM442 213.273V176H441V213.273H442Z" fill="#FF7562"/>
+						<path d="M441.854 213.626C441.658 213.822 441.342 213.822 441.146 213.626L437.964 210.444C437.769 210.249 437.769 209.932 437.964 209.737C438.16 209.542 438.476 209.542 438.672 209.737L441.5 212.566L444.328 209.737C444.524 209.542 444.84 209.542 445.036 209.737C445.231 209.932 445.231 210.249 445.036 210.444L441.854 213.626ZM442 176V213.273H441V176H442Z" fill="#FF7562"/>
+						<line x1="432" y1="216.773" x2="451" y2="216.773" stroke="#FF7562"/>
+						<path d="M441.854 220.919C441.658 220.724 441.342 220.724 441.146 220.919L437.964 224.101C437.769 224.296 437.769 224.613 437.964 224.808C438.16 225.004 438.476 225.004 438.672 224.808L441.5 221.98L444.328 224.808C444.524 225.004 444.84 225.004 445.036 224.808C445.231 224.613 445.231 224.296 445.036 224.101L441.854 220.919ZM442 258.545V221.273H441V258.545H442Z" fill="#9747FF"/>
+						<path d="M441.854 258.899C441.658 259.094 441.342 259.094 441.146 258.899L437.964 255.717C437.769 255.522 437.769 255.205 437.964 255.01C438.16 254.815 438.476 254.815 438.672 255.01L441.5 257.838L444.328 255.01C444.524 254.815 444.84 254.815 445.036 255.01C445.231 255.205 445.231 255.522 445.036 255.717L441.854 258.899ZM442 221.273V258.545H441V221.273H442Z" fill="#9747FF"/>
+						<line x1="432" y1="262.045" x2="451" y2="262.045" stroke="#9747FF"/>
+						<path d="M621.854 193.646C621.658 193.451 621.342 193.451 621.146 193.646L617.964 196.828C617.769 197.024 617.769 197.34 617.964 197.536C618.16 197.731 618.476 197.731 618.672 197.536L621.5 194.707L624.328 197.536C624.524 197.731 624.84 197.731 625.036 197.536C625.231 197.34 625.231 197.024 625.036 196.828L621.854 193.646ZM622 231.273V194H621V231.273H622Z" fill="#FF7562"/>
+						<path d="M621.854 231.626C621.658 231.822 621.342 231.822 621.146 231.626L617.964 228.444C617.769 228.249 617.769 227.932 617.964 227.737C618.16 227.542 618.476 227.542 618.672 227.737L621.5 230.566L624.328 227.737C624.524 227.542 624.84 227.542 625.036 227.737C625.231 227.932 625.231 228.249 625.036 228.444L621.854 231.626ZM622 194V231.273H621V194H622Z" fill="#FF7562"/>
+						<line x1="612" y1="234.773" x2="631" y2="234.773" stroke="#FF7562"/>
+						<line x1="589" y1="241.5" x2="608" y2="241.5" stroke="#9747FF"/>
+						<path d="M598.854 177.642C598.658 177.447 598.342 177.447 598.146 177.642L594.964 180.824C594.769 181.02 594.769 181.336 594.964 181.531C595.16 181.727 595.476 181.727 595.672 181.531L598.5 178.703L601.328 181.531C601.524 181.727 601.84 181.727 602.036 181.531C602.231 181.336 602.231 181.02 602.036 180.824L598.854 177.642ZM599 239.004L599 177.996L598 177.996L598 239.004L599 239.004Z" fill="#9747FF"/>
+						<path d="M598.854 239.358C598.658 239.553 598.342 239.553 598.146 239.358L594.964 236.176C594.769 235.98 594.769 235.664 594.964 235.469C595.16 235.273 595.476 235.273 595.672 235.469L598.5 238.297L601.328 235.469C601.524 235.273 601.84 235.273 602.036 235.469C602.231 235.664 602.231 235.98 602.036 236.176L598.854 239.358ZM599 177.996V239.004H598V177.996H599Z" fill="#9747FF"/>
+						<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="265" y="260">lim(Loss(W))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _middle" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="265" y="300">lim(max(DD))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="445" y="205">lim(Loss(W))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _middle" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="445" y="250">lim(max(DD))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _middle" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="537" y="230">lim(max(DD))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="625" y="225">lim(Loss(W))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _middle" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="822" y="210">lim(max(DD))</tspan></text>
+						<text class="liquidity-providers-system__chart--text _danger" xml:space="preserve" style="white-space: pre" font-size="10" letter-spacing="0em"><tspan x="822" y="170">lim(Loss(W))</tspan></text>
+					</svg>
+					<dl class="liquidity-providers-risk-management__legend">
+						<dt><span class="liquidity-providers-risk-management__legend--line" style="--color: #5A75FF;"></span></dt>
+						<dd>Equity</dd>
+
+						<dt class="liquidity-providers-risk-management__legend--dt _middle">lim(max(DD)) (20 %)</dt>
+						<dd>Ограничение максимальной просадки</dd>
+
+						<dt class="liquidity-providers-risk-management__legend--dt _danger">lim(Loss(W)) (10 %)</dt>
+						<dd>Ограничение максимальной просадки</dd>
+
+						<dt class="liquidity-providers-risk-management__legend--dt _success">LWM (Low watermark) (800 USD)</dt>
+						<dd>Ограничение минимального остатка средств</dd>
+					</dl>
 				</div>
 			</div>
 		</section>

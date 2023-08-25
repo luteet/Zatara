@@ -1,0 +1,171 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="stocks">
+			<h2 class="stocks__title main-title _min">
+				Акции
+			</h2>
+			<div class="stocks__header">
+				<div class="stocks__header--col">
+					<div class="stocks__search">
+						<label>
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#search"></use>
+							</svg>
+							<input type="search" name="search" required placeholder="Search for crypto or anything...">
+						</label>
+					</div>
+					<div class="stocks__sort">
+						<select name="sort" class="stocks__sort--select custom-select _stocks">
+							<option value="growing-up-today" 
+							data-html='
+							<span>
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#exchange"></use>
+								</svg>
+								Sort by:
+							</span>
+							<b>Growing up today</b>
+							'>
+							Growing up today
+							</option>
+							<option value="growing-up-today-2" 
+							data-html='
+							<span>
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#exchange"></use>
+								</svg>
+								Sort by:
+							</span>
+							<b>Growing up today 2</b>
+							'>
+							Growing up today 2
+							</option>
+							<option value="growing-up-today-3" 
+							data-html='
+							<span>
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#exchange"></use>
+								</svg>
+								Sort by:
+							</span>
+							<b>Growing up today 3</b>
+							'>
+							Growing up today 3
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="stocks__header--col">
+					<div class="stocks__market-status _danger">
+						<span>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#alert-2"></use>
+							</svg>
+							Рынок:
+						</span>
+						<b>
+							Закрыт
+						</b>
+					</div>
+				</div>
+			</div>
+			<div class="stocks__table coins-table-2 _stocks">
+				<div class="coins-table-2__nav visible-on-mob">
+					<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+					</button>
+					<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="coins-table-2__wrapper">
+					<table class="coins-table-2__block">
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Symbol</th>
+								<th class="visible-on-desktop">Название</th>
+								<th>Цена</th>
+								<th>Market Time</th>
+								<th>Change</th>
+								<th>Change %</th>
+								<th>Market Cap</th>
+							</tr>
+						</thead>
+						<tbody>
+							@@loop("html/_stocks-table-item.html", [
+								{},
+								{},
+								{},
+								{},
+								{},
+							])
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="stocks__footer news__footer">
+				<button class="news__load-more btn" type="button">
+					Load more
+				</button>
+				<div class="news__pagination pagination">
+					<button class="pagination__arrow _prev btn _none-accent" type="button" title="Prev page">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+					</button>
+					<ul class="pagination__list">
+						<li>
+							<a href="#" class="btn _none-accent">
+								2
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn _none-accent">
+								3
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn _none-accent">
+								...
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn _none-accent _current">
+								7
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn _none-accent">
+								8
+							</a>
+						</li>
+					</ul>
+					<button class="pagination__arrow _next btn _none-accent" type="button" title="Next page">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#arrow-next"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+@@include("html/_footer-account.html")

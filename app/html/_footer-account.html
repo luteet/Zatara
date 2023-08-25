@@ -1,0 +1,544 @@
+	</div>
+
+	<div class="verificate-popup popup" id="verificate-popup" style="display: none;">
+		<div class="verificate-popup__wrapper popup-wrapper">
+			<div class="verificate-popup__bg popup-bg popup-close"></div>
+			<div class="verificate-popup__body popup-body">
+				<button type="button" class="verificate-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<form class="verificate-popup__block popup-block _active">
+					<div class="verificate-popup__block--header">
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__upload">
+						<h3 class="verificate-popup__upload--title">
+							<b>
+								Загрузите фото паспорта
+							</b>
+						</h3>
+						<div class="verificate-popup__upload--area">
+							<div class="verificate-popup__upload--icon">
+								<svg width="32" height="32" viewBox="0 0 32 32">
+									<use xlink:href="img/sprites.svg#upload"></use>
+								</svg>
+							</div>
+							<b class="verificate-popup__upload--min-title">
+								Загрузить фото
+							</b>
+							<div class="verificate-popup__upload--text">
+								<p>
+									Фото до 4МБ. Формат png или jpeg. Вы можете загрузить фото или перетащить сюда
+								</p>
+							</div>
+							<label class="verificate-popup__upload--btn" title="Загрузить">
+								<input type="file" name="passport"  accept="image/png, image/jpeg" class="visually-hidden">
+								<span>Загрузить</span>
+							</label>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<form class="verificate-popup__block popup-block">
+					<div class="verificate-popup__block--header">
+						<a href="#" class="verificate-popup__forward forward-link">
+							<svg width="19" height="19" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#arrow-prev"></use>
+							</svg>
+							Назад
+						</a>
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _success">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__upload">
+						<h3 class="verificate-popup__upload--title">
+							<b>
+								Загрузите селфи с пасспортом
+							</b>
+						</h3>
+						<div class="verificate-popup__upload--area">
+							<div class="verificate-popup__upload--icon">
+								<svg width="32" height="32" viewBox="0 0 32 32">
+									<use xlink:href="img/sprites.svg#upload"></use>
+								</svg>
+							</div>
+							<b class="verificate-popup__upload--min-title">
+								Загрузить фото
+							</b>
+							<div class="verificate-popup__upload--text theme-text">
+								<p>
+									Фото до 4МБ. Формат png или jpeg. Вы можете загрузить фото или перетащить сюда
+								</p>
+							</div>
+							<label class="verificate-popup__upload--btn" title="Загрузить">
+								<input type="file" name="selfies-passport" accept="image/png, image/jpeg" class="visually-hidden">
+								<span>Загрузить</span>
+							</label>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<form class="verificate-popup__block popup-block _disable-next-change" data-remove-disable>
+					<div class="verificate-popup__block--header">
+						<a href="#" class="verificate-popup__forward forward-link">
+							<svg width="19" height="19" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#arrow-prev"></use>
+							</svg>
+							Назад
+						</a>
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _success">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__wait">
+						<div class="verificate-popup__wait--image">
+							<div class="verificate-popup__wait--image-wrapper">
+								<picture class="image-aspect-ratio">
+									<source srcset="img/account/verification/verification-waiting.avif" type="image/avif">
+									<source srcset="img/account/verification/verification-waiting.webp" type="image/webp">
+									<img src="img/account/verification/verification-waiting.png" alt="" width="105" height="105" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="verificate-popup__wait--content">
+							<h3 class="title _min">Мы проверяем информацию, ожидайте</h3>
+							<p class="theme-text">
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<div class="verificate-popup__block popup-block">
+					<div class="verificate-popup__block--header">
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<div class="verificate-popup__success-icon">
+						<div class="verificate-popup__success-icon--wrapper">
+							<picture>
+								<source srcset="img/account/verification/verification-check.avif" type="image/avif">
+								<source srcset="img/account/verification/verification-check.webp" type="image/webp">
+								<img src="img/account/verification/verification-check.png" alt="" width="105" height="105" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn popup-close" type="button">
+						Торговать
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="withdrawn-funds popup" id="successfully-withdrawn-funds-popup" style="display: none;">
+		<div class="withdrawn-funds__wrapper popup-wrapper">
+			<div class="withdrawn-funds__bg popup-bg popup-close"></div>
+			<div class="withdrawn-funds__body popup-body">
+				<button type="button" class="withdrawn-funds__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="withdrawn-funds__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/successful-light.avif" type="image/avif">
+								<source srcset="img/account/successful-light.webp" type="image/webp">
+								<img src="img/account/successful-light.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/successful-dark.avif" type="image/avif">
+								<source srcset="img/account/successful-dark.webp" type="image/webp">
+								<img src="img/account/successful-dark.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<h2 class="withdrawn-funds__title title _min">
+					Успешно! Вы успешно вывели средства
+				</h2>
+				<div class="withdrawn-funds__text theme-text">
+					<p>
+						Пожалуйста, ожидайте поступления
+					</p>
+				</div>
+				<div class="withdrawn-funds__footer">
+					<a href="#" class="withdrawn-funds__btn btn popup-close">
+						Закрыть
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="withdrawn-funds popup" id="error-withdrawn-funds-popup" style="display: none;">
+		<div class="withdrawn-funds__wrapper popup-wrapper">
+			<div class="withdrawn-funds__bg popup-bg popup-close"></div>
+			<div class="withdrawn-funds__body popup-body">
+				<button type="button" class="withdrawn-funds__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="withdrawn-funds__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/error-light.avif" type="image/avif">
+								<source srcset="img/account/error-light.webp" type="image/webp">
+								<img src="img/account/error-light.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/error-dark.avif" type="image/avif">
+								<source srcset="img/account/error-dark.webp" type="image/webp">
+								<img src="img/account/error-dark.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<h2 class="withdrawn-funds__title title _min">
+					Ой! Произошла ошибка при выводе средств
+				</h2>
+				<div class="withdrawn-funds__text theme-text">
+					<p>
+						Пожалуйста, попробуйте еще раз
+					</p>
+				</div>
+				<div class="withdrawn-funds__footer">
+					<a href="#" class="withdrawn-funds__btn btn popup-close">
+						Закрыть
+					</a>
+					<a href="#" class="withdrawn-funds__btn btn _none-accent">
+						Попробовать еще раз
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="exchange-popup popup" id="exchange-popup" style="display: none;">
+		<div class="exchange-popup__wrapper popup-wrapper">
+			<div class="exchange-popup__bg popup-bg popup-close"></div>
+			<form method="post" class="exchange-popup__body popup-body">
+				<button type="button" class="exchange-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="exchange-popup__title title _min">
+					Обменять
+				</h2>
+				<div class="exchange-popup__info theme-text">
+					<span>Ваш баланс</span>
+					<b>43,324 USDT</b>
+				</div>
+				<div class="exchange-popup__block">
+					<div class="exchange-popup__item">
+						<div class="exchange-popup__item--col">
+							<span>Я отдаю</span>
+							<input type="text" class="min-input" name="exchange" value="120" min="1" required>
+						</div>
+						<div class="exchange-popup__item--col">
+							<div class="exchange-popup__item--select">
+								<select name="exchange-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="exchange-popup__item">
+						<div class="exchange-popup__item--col">
+							<span>Я получаю</span>
+							<input type="text" class="min-input" name="get" value="0,003" min="1" required>
+						</div>
+						<div class="exchange-popup__item--col">
+							<div class="exchange-popup__item--select">
+								<select name="get-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="exchange-popup__icon">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#exchange"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="exchange-popup__info theme-text">
+					<span>Курс</span>
+					<b>1 BTC = 43,324 USDT</b>
+				</div>
+				<button class="exchange-popup__btn btn" type="submit">
+					Обменять
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="refill popup" id="refill-popup" style="display: none;">
+		<div class="refill__wrapper popup-wrapper">
+			<div class="refill__bg popup-bg popup-close"></div>
+			<form method="post" class="refill__body popup-body">
+				<button type="button" class="refill__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="refill__title title _min">
+					Пополнить
+				</h2>
+				<div class="refill__item">
+					<span class="theme-text">Количество</span>
+					<div class="refill__item--row">
+						<div class="refill__item--col">
+							<input type="number" name="length" placeholder="0" value="120" class="min-input">
+						</div>
+						<div class="refill__item--col">
+							<div class="refill__item--select">
+								<select name="refill-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="refill__select">
+					<span class="theme-text">Платёжная система</span>
+					<select name="payments-system" class="custom-select">
+						<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							USDT
+						</option>
+						<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							BTC
+						</option>
+					</select>
+				</div>
+				<ul class="refill__info">
+					<li>
+						<span class="theme-text">
+							Баланс будет пополнен на сумму:
+						</span>
+						<b>
+							12 ETH
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">
+							Комиссия:
+						</span>
+						<b>
+							0,00002 ETH
+						</b>
+					</li>
+				</ul>
+				<button class="refill__submit btn" type="submit">
+					Пополнить
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="refill popup" id="withdrawn-funds-2-popup" style="display: none;">
+		<div class="refill__wrapper popup-wrapper">
+			<div class="refill__bg popup-bg popup-close"></div>
+			<form method="post" class="refill__body popup-body">
+				<button type="button" class="refill__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="refill__title title _min">
+					Вывод
+				</h2>
+				<div class="refill__balance">
+					<span class="theme-text">Ваш баланс</span>
+					<b class="theme-text-2">43,324 USDT</b>
+				</div>
+				<div class="refill__item">
+					<span class="theme-text">Количество</span>
+					<div class="refill__item--row">
+						<div class="refill__item--col">
+							<input type="number" name="length" placeholder="0" value="120" class="min-input">
+						</div>
+						<div class="refill__item--col">
+							<div class="refill__item--select">
+								<select name="refill-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="refill__select">
+					<span class="theme-text">Платёжная система</span>
+					<select name="payments-system" class="custom-select">
+						<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							USDT
+						</option>
+						<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							BTC
+						</option>
+					</select>
+				</div>
+				<label class="refill__label">
+					<span class="required">Ваш кошелек</span>
+					<input type="text" name="wallet" placeholder="Введите кошелек" required>
+				</label>
+				<ul class="refill__info">
+					<li>
+						<span class="theme-text">
+							Будет выведено
+						</span>
+						<b>
+							12 ETH
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">
+							Комиссия:
+						</span>
+						<b>
+							0,00002 ETH
+						</b>
+					</li>
+				</ul>
+				<button class="refill__submit btn" type="submit">
+					Пополнить
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

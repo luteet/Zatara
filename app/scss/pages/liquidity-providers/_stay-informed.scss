@@ -1,0 +1,146 @@
+.stay-informed {
+
+	
+
+	&__body {
+		padding: 24px;
+		margin: 0 calc(5px - var(--container-padding));
+
+		border-radius: 24px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.04) 100%);
+		backdrop-filter: blur(53px);
+
+		overflow: hidden;
+
+		display: grid;
+		@include _992 {
+			grid-template-columns: 60% auto;
+		}
+	}
+
+	// .stay-informed__content
+
+	&__content {
+	}
+
+	// .stay-informed__title
+
+	&__title {
+	}
+
+	// .stay-informed__text
+
+	&__text {
+		margin-top: 16px;
+		max-width: 640px;
+	}
+
+	// .stay-informed__image
+
+	&__image {
+
+		position: relative;
+		margin-top: 19px;
+		@include _992 {
+			margin-top: 0;
+		}
+
+		// .stay-informed__image--body
+
+		&--body {
+		}
+
+		// .stay-informed__image--background
+
+		&--background {
+			pointer-events: none; user-select: none;
+
+			position: absolute;
+			left: 50%; top: 0;
+			width: 140%; aspect-ratio: 1/1;
+			transform: translate(-50%,0%);
+			@include _768 {
+				width: 100%;
+			}
+
+			border: 20px solid var(--white-opacity-1);
+			border-radius: 50%;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 5%;
+				transform: translate(-50%,0);
+				width: 90%; aspect-ratio: 1/1;
+
+				border: 15px solid var(--white-opacity-1);
+				border-radius: 50%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 50%; top: 50%;
+				transform: translate(-50%,-50%);
+				width: 200%; height: 200%;
+				@include _768 {
+					width: 160%; height: 160%;
+				}
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(0,80,255,0.2) 0%, rgba(0,0,0,0) 50%);
+			}
+		}
+
+		// .stay-informed__image--decor
+
+		&--decor {
+			position: absolute;
+			filter: grayscale(1);
+			&:nth-child(1) {
+				left: 10%; bottom: 57%;
+				img {
+					width: 50px; height: auto;
+					@include _550 {
+						width: 70px;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				left: 5%; bottom: 85%;
+				img {
+					width: 35px; height: auto;
+					@include _550 {
+						width: 50px;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				right: 5%; bottom: 75%;
+				img {
+					width: 40px; height: auto;
+					@include _550 {
+						width: 60px;
+					}
+				}
+			}
+		}
+
+		// .stay-informed__image--main
+
+		&--main {
+			max-width: 35%;
+			@include _768 {
+				max-width: 25%;
+			}
+			margin: 0 auto -50px;
+		}
+
+		// .stay-informed__image--wrapper
+
+		&--wrapper {
+			transform: translate(0,15%);
+		}
+	}
+}

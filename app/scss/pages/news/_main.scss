@@ -323,6 +323,17 @@
 	// .news__pagination
 
 	&__pagination {
+		.btn {
+			border-radius: 14px;
+			&::before, &::after {
+				border-radius: 14px;
+			}
+		}
+		.btn:not(._none-accent) {
+			&::before, &::after {
+				border-radius: 14px;
+			}
+		}
 	}
 }
 

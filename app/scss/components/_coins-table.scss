@@ -111,12 +111,12 @@
 				&:first-child td:first-child {
 					//padding-top: 0;
 					@include _992 {
-						padding-top: 25px;
+						padding-top: 11px;
 
 					}
 	
 					@include _container {
-						padding-top: 25px;
+						padding-top: 11px;
 					}
 				}
 
@@ -156,7 +156,7 @@
 			}
 
 			td {
-
+				min-height: 72px;
 				@include _992 {
 					&:nth-child(1) {
 						border-radius: 15px 0 0 15px;
@@ -171,14 +171,14 @@
 					color: var(--white-opacity-5);
 				}
 
-				padding: 9.5px 15px;
+				padding: 12px 15px;
 
 				@include _992 {
-					padding: 25px 15px;
+					padding: 11px 15px;
 				}
 
 				@include _container {
-					padding: 25px 20px;
+					padding: 11px 20px;
 				}
 
 				background: #0E0E23;
@@ -279,6 +279,40 @@
 				&:nth-child(3) {
 					text-align: left;
 				}
+			}
+		}
+	}
+
+	&._stocks &__block {
+		thead th {
+			text-align: right;
+
+			&:nth-child(1) {
+				text-align: left;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
+			}
+		}
+
+		tbody td {
+			text-align: right;
+
+			&:nth-child(1) {
+				text-align: left;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
 			}
 		}
 	}
@@ -389,3 +423,435 @@
 		}
 	}
 }
+
+.coins-table-2 {
+
+	margin: 0 -8px;
+	width: calc(100% + 16px);
+	@include _550 {
+		margin: 0 -20px;
+		width: calc(100% + 40px);
+	}
+	@include _992 {
+		margin: 0;
+		width: 100%;
+	}
+
+	
+	position: relative;
+	&__nav {
+		position: absolute;
+		right: 8px; top: 0;
+		transform: translate(0,155%);
+
+		z-index: 2;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5px;
+
+		&--arrow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 30px; height: 30px;
+
+			border-radius: 50%;
+
+			background: var(--white-opacity-1);
+
+			fill: var(--white-opacity-4);
+		}
+	}
+
+	// .coins-table__wrapper
+
+	&__wrapper {
+		overflow-x: auto;
+		display: inline-flex;
+
+		max-width: 100%;
+		width: 1005;
+
+		scroll-snap-type: x proximity;
+		
+
+		@include _992 {
+			display: block;
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	// .coins-table__block
+
+	&__block {
+		position: relative;
+
+		width: calc(100% + 16px);
+		margin-top: 35px;
+
+		border-spacing: 0;
+
+		border-radius: 15px;
+
+		min-width: 1400px;
+
+		@include _992 {
+			min-width: 1250px;
+			border-spacing: 0 6px;
+			width: 100%;
+		}
+
+		col:nth-child(1) {
+			width: 30px;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(2) {
+			width: calc(50vw - 30px);
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(3) {
+			width: calc(50vw - 15px);
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(4) {
+			width: 50vw;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(5) {
+			width: 50vw;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(6) {
+			width: 50vw;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-child(7) {
+			width: 50vw;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		/* col:nth-last-child(1) {
+			width: 40px;
+			@include _992 {
+				width: auto;
+			}
+		}
+
+		col:nth-last-child(2) {
+			width: 40px;
+			@include _992 {
+				width: auto;
+			}
+		} */
+
+		thead {
+			color: var(--white-opacity-5);
+			font-weight: 400;
+			line-height: 150%;
+
+			border: 1px solid rgba(46, 99, 235, 0.10);
+			border-right: 0;
+			border-radius: 15px 0 0 15px;
+
+			@include _992 {
+				border: 0;
+				border-radius: 0;
+			}
+
+			th {
+				font-weight: 400;
+				padding: 15px 20px;
+
+				border-top: 1px solid var(--theme-shade-1);
+				border-bottom: 1px solid var(--theme-shade-1);
+
+				&:not(:first-child) {
+					border-right: 1px solid var(--theme-shade-1);
+				}
+
+				&:first-child {
+					border-left: 1px solid var(--theme-shade-1);
+				}
+
+				@include _992 {
+					border: 0;
+					padding: 0 20px 22px;
+
+					border-top: 0;
+					border-bottom: 0;
+
+					&:not(:first-child) {
+						border-right: 0;
+					}
+					
+					&:first-child {
+						border-left: 0;
+					}
+				}
+			}
+		}
+
+		.coins-table__add-to-favorite {
+			justify-content: center;
+		}
+
+		tbody {
+
+			@include _992 {
+				tr:last-child td {
+					&:nth-child(1) {
+						border-radius: 15px 0 0 15px;
+					}
+	
+					&:last-child {
+						border-radius: 0 15px 15px 0;
+					}
+				}
+			}
+
+			td {
+				scroll-snap-align: start;
+				min-height: 72px;
+
+				&:nth-child(2) b {
+					display: flex;
+					align-items: center;
+
+					img {
+						flex: 0 0 26px;
+						margin-right: 10px;
+						object-fit: contain;
+						border-radius: 50%;
+					}
+				}
+				
+				@include _992 {
+					&:nth-child(1) {
+						border-radius: 15px 0 0 15px;
+					}
+				}
+	
+				&:last-child {
+					@include _992 {
+						border-radius: 0 15px 15px 0;
+					}
+				}
+
+				&:not(:first-child) {
+					border-right: 1px solid var(--theme-shade-1);
+				}
+
+				&:nth-last-child(2), &:nth-last-child(1) {
+					border-top: 1px solid var(--theme-shade-1);
+				}
+
+				&:first-child {
+					border-left: 1px solid var(--theme-shade-1);
+				}
+
+				span {
+					color: var(--white-opacity-5);
+				}
+
+				padding: 11px 20px;
+
+				@include _992 {
+					background: var(--theme-shade-2);
+
+					&:not(:first-child) {
+						border-right: 0;
+					}
+	
+					&:nth-last-child(2), &:nth-last-child(1) {
+						border-top: 0;
+					}
+	
+					&:first-child {
+						border-left: 0;
+					}
+				}
+			}
+			b {
+				font-size: 0.875rem;
+				@include _992 {
+					font-size: 1.125rem;
+				}
+			}
+		}
+
+	}
+
+	&._stocks &__block {
+		/* col {
+			width: 25%;
+		} */
+		thead th {
+			text-align: left;
+
+			&:nth-child(1) {
+				text-align: center;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
+			}
+		}
+
+		tbody td {
+			text-align: left;
+			@include _992 {
+				text-align: right;
+			}
+
+			&:nth-child(1) {
+				text-align: center;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+	}
+
+	// .coins-table__coin
+
+	&__coin {
+
+		display: flex;
+		align-items: center;
+
+		margin-top: -2px;
+
+		// .coins-table__coin--logo
+
+		&--logo {
+			
+			margin-right: 8px;
+			flex: 0 0 24px;
+			@include _992 {
+				flex: 0 0 40px;
+			}
+			img {
+				width: 24px; height: 24px;
+				@include _992 {
+					width: 40px; height: 40px;
+				}
+				border-radius: 50%;
+			}
+
+			align-self: center;
+		}
+
+		// .coins-table__coin--name
+
+		&--name {
+			font-weight: 700;
+			padding-right: 8px;
+		}
+
+		// .coins-table__coin--currency
+
+		&--currency {
+			font-weight: 700;
+			color: var(--secondary);
+		}
+	}
+
+	&._stock-market tbody td span.coins-table__percent-value {
+		font-weight: 700;
+		&._up {
+			color: var(--success-2);
+		}
+		&._down {
+			color: var(--danger-2);
+		}
+	}
+
+	// .coins-table__percent-value
+
+	&__percent-value {
+		font-weight: 700;
+		&._up {
+			color: var(--success);
+		}
+		&._down {
+			color: var(--danger);
+		}
+	}
+
+	// .coins-table__add-to-favorite
+
+	&__add-to-favorite {
+
+		display: flex;
+		align-items: center;
+		@include _992 {
+			justify-content: center;
+		}
+
+		// .coins-table__add-to-favorite--btn
+
+		&--btn {
+			background: transparent;
+
+			@media (any-hover: hover) {
+				&:hover {
+					stroke: var(--accent);
+				}
+				
+				&:active {
+					stroke: var(--accent-active);
+				}
+			}
+
+			fill: transparent;
+			stroke: var(--white-opacity-7);
+			stroke-width: 2px;
+
+			&._active {
+				stroke: var(--accent);
+				fill: var(--accent);
+			}
+
+			svg {
+				transition: fill .2s ease, stroke .2s ease;
+			}
+		}
+	}
+}
+

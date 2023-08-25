@@ -190,6 +190,7 @@ function stylesLib() {
 		'node_modules/slim-select/dist/slimselect.css', // Select
 		'node_modules/aos/dist/aos.css', // Анимация
 		'node_modules/simplebar/dist/simplebar.min.css',
+		'node_modules/vanillajs-datepicker/dist/css/datepicker.min.css', // https://mymth.github.io/vanillajs-datepicker/#/
 		//'node_modules/nouislider/dist/nouislider.css', // Кастомный input[range]
 	])
 	.pipe(concat('_libs.scss'))
