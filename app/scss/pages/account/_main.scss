@@ -1,19 +1,16 @@
 .account {
 
-	
-
 	display: grid;
-	gap: 20px 0;
+	gap: 8px 0;
 	@media (min-width: 1200px) {
 		grid-template-columns: auto 300px;
 		gap: 0 20px;
+		margin-bottom: 0;
 	}
 
 	@include _container {
 		grid-template-columns: auto 373px;
-	}
-
-	
+	}	
 
 	// .account__main
 
@@ -310,7 +307,10 @@
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.06) 100%);
 
 		&:not(:first-child) {
-			margin-top: 16px;
+			margin-top: 8px;
+			@include _992 {
+				margin-top: 16px;
+			}
 		}
 
 		// .account__change-block--icon

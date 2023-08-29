@@ -58,7 +58,7 @@
 			background: var(--white-opacity-05);
 
 			padding-left: 50px;
-			height: 50px;
+			height: 50px; min-height: 50px;
 			@include _768 {
 				height: 56px;
 			}

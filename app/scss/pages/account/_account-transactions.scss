@@ -56,7 +56,6 @@
 		// .account-transactions__filter--list
 
 		&--list {
-			
 
 			@include _992 {
 				margin: -4px;
@@ -399,6 +398,19 @@
 		}
 	}
 
+	&._alt & {
+		&__target {
+			background: transparent;
+			border: 1px solid var(--white-opacity-1);
+		}
+	}
+
+	/* &._alt._active & {
+		&__target {
+			background: var(--theme-shade-1);
+		}
+	} */
+
 	// .sort-select__target
 
 	&__target {
@@ -424,11 +436,10 @@
 		font-size: 0;
 
 		border-radius: 16px;
-		border: 1px solid var(--white-opacity-1);
+		border: 0;
+		background: var(--white-opacity-05);
 
 		white-space: nowrap;
-
-		background: transparent;
 
 		transition: background .3s ease;
 
