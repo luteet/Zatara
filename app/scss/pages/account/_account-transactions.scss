@@ -342,6 +342,7 @@
 
 		label {
 			display: block;
+			user-select: none;
 		}
 	}
 
@@ -495,6 +496,8 @@
 		max-height: 200px;
 		overflow-y: auto;
 		opacity: 0; visibility: hidden;
+
+		z-index: 3;
 	}
 
 	// .sort-select__param

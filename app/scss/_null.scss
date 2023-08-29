@@ -26,10 +26,14 @@ input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-input[type="number"] {
+input[type=number] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
+
+input[type=number] {
+	-moz-appearance: textfield;
+  }
 
 nav,footer,header,aside{display: block;}
 

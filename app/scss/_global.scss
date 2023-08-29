@@ -931,9 +931,22 @@ body {
 		}
 	}
 
+	.decor-title-icon {
+		> span {
+			background: var(--white);
+			box-shadow: 0px 34px 92px 0px rgba(0, 0, 0, 0.25);
+			border-color: var(--stroke-2);
+			fill: var(--accent);
+		}
+	}
+
 	.page-hero {
 		&__background--decor {
 			background: radial-gradient(circle, rgba(0, 102, 255, 0.22) 0%, rgba(0, 102, 255, 0.15) 10%, rgba(0,0,0,0) 50%);
+		}
+
+		&__title {
+
 		}
 
 		&__social {

@@ -22,7 +22,7 @@
 		</div>
 		<section class="news-post container">
 			<div class="news-post__col">
-				<ul class="news-post__tags news-tags">
+				<ul class="news-post__tags news-tags" data-aos="fade-in" data-aos-delay="300">
 					<li>
 						<a href="#">
 							Crypto
@@ -34,10 +34,10 @@
 						</a>
 					</li>
 				</ul>
-				<h2 class="news-post__title main-title _min">
+				<h2 class="news-post__title main-title _min" data-aos="fade-in" data-aos-delay="300">
 					Wall Street eyes higher open after Meta results, Fed optimism
 				</h2>
-				<div class="news-post__info">
+				<div class="news-post__info" data-aos="fade-in" data-aos-delay="300">
 					<time datetime="2023-07-12">12 July, 2023</time>
 					<span>10 min read</span>
 				</div>
@@ -48,7 +48,7 @@
 						<img src="img/news/news-image-1.jpg" alt="" width="592" height="426" loading="lazy">
 					</picture>
 				</div>
-				<div class="news-post__content">
+				<div class="news-post__content" data-aos="fade-in" data-aos-delay="400">
 					<h2>The tech-heavy Nasdaq was set to lead Wall Street higher on Thursday,</h2>
 					<p>Meta Platforms gained 9.7% in premarket trading after it also reported a jump in second-quarter advertising revenue, topping Wall Street financial targets. <br>
 						The Facebook (NASDAQ:META) parent's results followed strong performance by Alphabet (NASDAQ:GOOGL) earlier this week, which show that consumers, and advertisers eager to reach them, are spending despite broad economic concerns. <br>
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 			<div class="news-post__col">
-				<div class="news-post__thumbnail image-aspect-ratio visible-on-desktop">
+				<div class="news-post__thumbnail image-aspect-ratio visible-on-desktop" data-aos="fade-in" data-aos-delay="200">
 					<picture>
 						<source srcset="img/news/news-image-1.avif" type="image/avif">
 						<source srcset="img/news/news-image-1.webp" type="image/webp">
@@ -93,10 +93,18 @@
 				</div>
 				<ul class="news-post__list">
 					@@loop("html/_news-card.html", [
-						{},
-						{},
-						{},
-						{},
+						{
+							"image": "6",
+						},
+						{
+							"image": "7",
+						},
+						{
+							"image": "8",
+						},
+						{
+							"image": "9",
+						},
 					])
 				</ul>
 			</div>

@@ -119,7 +119,7 @@
 			&:nth-child(2) {
 				left: 0; bottom: 20%;
 				@include _992 {
-					left: -31px; bottom: 20%;
+					left: -50px; bottom: 20%;
 				}
 			}
 
@@ -159,7 +159,7 @@
 			right: auto; left: 0;
 			&::after {
 				right: auto; left: -4px;
-				transform: translate(0,-50%) scaleX(-1);
+				transform: translate(0,-51%) scaleX(-1);
 			}
 		}
 
@@ -215,7 +215,7 @@
 			transition: opacity .2s ease;
 
 			font-size: 0.875rem;
-			height: 32px;
+			height: 33px;
 			@include _992 {
 				font-size: 1rem;
 			}

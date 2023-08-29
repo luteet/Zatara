@@ -1,7 +1,7 @@
 @@include("html/_header.html")
 
 	<main class="main">
-		<div class="breadcrumbs container">
+		<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="200">
 			<a href="#" class="breadcrumbs__link">
 				Главная
 			</a>
@@ -22,10 +22,10 @@
 		</div>
 		<section class="news container">
 			<div class="news__hero">
-				<h1 class="news__title main-title">
+				<h1 class="news__title main-title" data-aos="fade-in" data-aos-delay="200">
 					Новости
 				</h1>
-				<div class="news__post">
+				<div class="news__post" data-aos="fade-in" data-aos-delay="300">
 					<a href="news-post.html" class="news__post--image image-aspect-ratio">
 						<picture>
 							<source srcset="img/news/news-image-1.avif" type="image/avif">
@@ -55,7 +55,7 @@
 						<span>10 min read</span>
 					</div>
 				</div>
-				<ul class="news__min-list">
+				<ul class="news__min-list" data-aos="fade-in" data-aos-delay="400">
 					<li class="news__min-list--item news__row-post">
 						<div class="news__row-post--image">
 							<div class="news__row-post--image-wrapper image-aspect-ratio">
@@ -88,9 +88,9 @@
 						<div class="news__row-post--image">
 							<div class="news__row-post--image-wrapper image-aspect-ratio">
 								<picture>
-									<source srcset="img/news/news-image-2.avif" type="image/avif">
-									<source srcset="img/news/news-image-2.webp" type="image/webp">
-									<img src="img/news/news-image-2.jpg" alt="" width="179" height="135" loading="lazy">
+									<source srcset="img/news/news-image-3.avif" type="image/avif">
+									<source srcset="img/news/news-image-3.webp" type="image/webp">
+									<img src="img/news/news-image-3.jpg" alt="" width="179" height="135" loading="lazy">
 								</picture>
 							</div>
 						</div>
@@ -116,9 +116,9 @@
 						<div class="news__row-post--image">
 							<div class="news__row-post--image-wrapper image-aspect-ratio">
 								<picture>
-									<source srcset="img/news/news-image-2.avif" type="image/avif">
-									<source srcset="img/news/news-image-2.webp" type="image/webp">
-									<img src="img/news/news-image-2.jpg" alt="" width="179" height="135" loading="lazy">
+									<source srcset="img/news/news-image-4.avif" type="image/avif">
+									<source srcset="img/news/news-image-4.webp" type="image/webp">
+									<img src="img/news/news-image-4.jpg" alt="" width="179" height="135" loading="lazy">
 								</picture>
 							</div>
 						</div>
@@ -144,9 +144,9 @@
 						<div class="news__row-post--image">
 							<div class="news__row-post--image-wrapper image-aspect-ratio">
 								<picture>
-									<source srcset="img/news/news-image-2.avif" type="image/avif">
-									<source srcset="img/news/news-image-2.webp" type="image/webp">
-									<img src="img/news/news-image-2.jpg" alt="" width="179" height="135" loading="lazy">
+									<source srcset="img/news/news-image-5.avif" type="image/avif">
+									<source srcset="img/news/news-image-5.webp" type="image/webp">
+									<img src="img/news/news-image-5.jpg" alt="" width="179" height="135" loading="lazy">
 								</picture>
 							</div>
 						</div>
@@ -172,12 +172,24 @@
 			</div>
 			<ul class="news__list">
 				@@loop("html/_news-card.html", [
-					{},
-					{},
-					{},
-					{},
-					{},
-					{},
+					{
+						"image": "6",
+					},
+					{
+						"image": "7",
+					},
+					{
+						"image": "8",
+					},
+					{
+						"image": "9",
+					},
+					{
+						"image": "10",
+					},
+					{
+						"image": "11",
+					},
 				])
 			</ul>
 			<div class="news__footer">

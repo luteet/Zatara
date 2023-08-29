@@ -611,7 +611,7 @@ body.addEventListener('click', function (event) {
 		event.preventDefault();
 		const block = document.querySelector(faqNavItemLink.getAttribute('href'));
 		window.scrollTo({
-			left: 0, top: getCoords(block).top - header.offsetHeight, behavior: "smooth"
+			left: 0, top: getCoords(block).top - header.offsetHeight + 10, behavior: "smooth"
 		})
 		//block.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 	}
@@ -824,17 +824,6 @@ body.addEventListener('click', function (event) {
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-
-
-
-/* body.addEventListener('mousedown', function (event) {
-	if(event.target.closest('#chartContainer') && getDeviceType() != "desktop") {
-		body.classList.add('_drag');
-	}
-})
-
-body.addEventListener('mouseup', function (event) {
-	body.classList.remove('_drag');
-}); */
 
 
 if (localStorage.getItem('zatara-theme') != "light") {
