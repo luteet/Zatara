@@ -209,17 +209,14 @@ summary {
     width: 20px
 }
 
-.splide__arrow,.splide__sr {
-    border: 0;
-    padding: 0;
-    position: absolute
-}
-
 .splide__sr {
     clip: rect(0 0 0 0);
+    border: 0;
     height: 1px;
     margin: -1px;
     overflow: hidden;
+    padding: 0;
+    position: absolute;
     width: 1px
 }
 
@@ -268,11 +265,6 @@ summary {
     user-select: none
 }
 
-.ss-main,.ss-main .ss-values .ss-max {
-    -webkit-user-select: none;
-    -ms-user-select: none
-}
-
 .splide__track--fade>.splide__list>.splide__slide {
     margin: 0!important;
     opacity: 0;
@@ -295,12 +287,15 @@ summary {
 .splide__arrow {
     align-items: center;
     background: #ccc;
+    border: 0;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     height: 2em;
     justify-content: center;
     opacity: .7;
+    padding: 0;
+    position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -612,6 +607,8 @@ summary {
     display: flex;
     flex-direction: row;
     position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     color: var(--ss-font-color);
     min-height: var(--ss-main-height);
@@ -685,6 +682,8 @@ summary {
 
 .ss-main .ss-values .ss-max {
     display: flex;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     align-items: center;
     width: -webkit-fit-content;
@@ -3636,7 +3635,12 @@ body._drag,body._mob-menu-active,body._popup-active {
 
 .light-theme .sort-select__target {
     border-color: var(--stroke-2);
-    fill: var(--tertiary)
+    fill: var(--tertiary);
+    background: var(--white)
+}
+
+.light-theme .sort-select__target._alt {
+    background: rgba(0,0,0,0)
 }
 
 .light-theme .sort-select__target span {
@@ -13207,7 +13211,7 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
         font-size: .875rem
     }
 
-    .coins-table-2__block tbody b,.coins-table__block tbody b,.danger-style-item h3,.standard-style-item h3,.success-style-item h3 {
+    .coins-table-2__block tbody b,.coins-table__block tbody b {
         font-size: 1.125rem
     }
 
@@ -13344,6 +13348,10 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
     .coins-table-2 {
         margin: 0;
         width: 100%
+    }
+
+    .about-us-hero__image--tooltip:nth-child(3) .about-us-hero__image--tooltip-text,.index-hero__image--tooltip:nth-child(3) .index-hero__image--tooltip-text {
+        margin-left: 26px
     }
 
     .coins-table-2__wrapper {
@@ -13530,10 +13538,6 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
     .index-hero__image--tooltip:nth-child(3) {
         right: 31px;
         top: 42%
-    }
-
-    .index-hero__image--tooltip:nth-child(3) .index-hero__image--tooltip-text {
-        margin-left: 26px
     }
 
     .index-hero__image--tooltip-text {
@@ -13815,10 +13819,6 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
         top: 12%
     }
 
-    .about-us-hero__image--tooltip:nth-child(3) .about-us-hero__image--tooltip-text {
-        margin-left: 26px
-    }
-
     .about-us-hero__image--tooltip-text {
         margin-right: 26px;
         font-size: 1rem
@@ -14094,6 +14094,10 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
         max-width: 372px
     }
 
+    .danger-style-item h3,.standard-style-item h3,.success-style-item h3 {
+        font-size: 1.125rem
+    }
+
     .danger-style-item__row,.standard-style-item__row,.success-style-item__row {
         gap: 0 66px
     }
@@ -14291,10 +14295,14 @@ input:not(.min-input)[readonly],textarea:not(.min-input)[readonly] {
         width: auto
     }
 
+    .sort-select._alt .sort-select__target {
+        padding: 15px 19px
+    }
+
     .sort-select__target {
         width: auto;
         height: auto;
-        padding: 15px 19px;
+        padding: 16px 19px;
         display: inline-flex;
         justify-content: stretch;
         font-size: 1rem

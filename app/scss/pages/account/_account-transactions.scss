@@ -400,6 +400,9 @@
 
 	&._alt & {
 		&__target {
+			@include _992 {
+				padding: 15px 19px;
+			}
 			background: transparent;
 			border: 1px solid var(--white-opacity-1);
 		}
@@ -426,7 +429,7 @@
 		@include _992 {
 
 			width: auto; height: auto;
-			padding: 15px 19px;
+			padding: 16px 19px;
 			display: inline-flex;
 			justify-content: stretch;
 

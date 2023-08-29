@@ -1482,6 +1482,10 @@ body {
 		&__target {
 			border-color: var(--stroke-2);
 			fill: var(--tertiary);
+			background: var(--white);
+			&._alt {
+				background: transparent;
+			}
 
 			span {
 				color: var(--tertiary);
