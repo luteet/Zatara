@@ -20,9 +20,15 @@
 		border-bottom: 1px solid var(--white-opacity-1);
 
 		min-height: 100vh;
+		height: calc(100vh - var(--height-header));
+
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	
 
 	display: flex;
 	@include _992 {
@@ -86,6 +92,13 @@
 			@include _768 {
 				font-size: 0.75rem;
 				padding: 14px 20px;
+			}
+
+			&.current {
+				fill: var(--accent);
+				svg {
+					opacity: 1;
+				}
 			}
 
 			display: flex;

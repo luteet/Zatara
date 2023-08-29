@@ -1,0 +1,452 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="buy-stocks">
+			<div class="buy-stocks__hero">
+				<div class="buy-stocks__block buy-stocks__about">
+					<a href="#" class="buy-stocks__about--forward-link theme-fill">
+						<svg width="17" height="17" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+						Назад
+					</a>
+					<div class="buy-stocks__about--header">
+						<div class="buy-stocks__about--stock">
+							<div class="buy-stocks__about--logo">
+								<picture>
+									<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+									<img src="img/account/buy-shares/AAAU.png" alt="" width="52" height="52" loading="lazy">
+								</picture>
+							</div>
+							<h3 class="theme-text">AGILENT TECHNOLOGIES INC.</h3>
+							<b>AAAU</b>
+						</div>
+						<div class="buy-stocks__about--price">
+							<b class="theme-text">Price</b>
+							<strong class="title _min">$54,654.09</strong>
+							<span class="buy-stocks__percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9,9%
+							</span>
+						</div>
+					</div>
+					<ul class="buy-stocks__about--info">
+						<li>
+							<h3 class="theme-text">
+								За неделю
+							</h3>
+							<strong>
+								$204,4
+							</strong>
+							<b class="buy-stocks__percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9,9%
+							</b>
+						</li>
+						<li>
+							<h3 class="theme-text">
+								За месяц
+							</h3>
+							<strong>
+								$204,4
+							</strong>
+							<b class="buy-stocks__percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9,9%
+							</b>
+						</li>
+						<li>
+							<h3 class="theme-text">
+								За год
+							</h3>
+							<strong>
+								$204,4
+							</strong>
+							<b class="buy-stocks__percent _up">
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#arrow-up"></use>
+								</svg>
+								9,9%
+							</b>
+						</li>
+					</ul>
+					<div class="buy-stocks__about--same">
+						<h3 class="theme-text">Похожие</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<div class="buy-stocks__about--same-logo">
+										<picture>
+											<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+											<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+											<img src="img/account/buy-shares/AAAU.png" alt="" width="30" height="30" loading="lazy">
+										</picture>
+									</div>
+									<h4 class="theme-text">AGILENT TECHNOLOGIES INC.</h4>
+									<b>AAAU</b>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="buy-stocks__about--same-logo">
+										<picture>
+											<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+											<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+											<img src="img/account/buy-shares/AAAU.png" alt="" width="30" height="30" loading="lazy">
+										</picture>
+									</div>
+									<h4 class="theme-text">AGILENT TECHNOLOGIES INC.</h4>
+									<b>AAAU</b>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="buy-stocks__about--same-logo">
+										<picture>
+											<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+											<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+											<img src="img/account/buy-shares/AAAU.png" alt="" width="30" height="30" loading="lazy">
+										</picture>
+									</div>
+									<h4 class="theme-text">AGILENT TECHNOLOGIES INC.</h4>
+									<b>AAAU</b>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<form method="post" class="buy-stocks__block buy-stocks__aside">
+					<h2 class="buy-stocks__block--title buy-stocks__aside--title theme-text">
+						Купить
+					</h2>
+					<label class="buy-stocks__aside--select">
+						<span>Способ оплаты</span>
+						<select name="assets" class="custom-select _alt-stroke">
+							<option value="card-1" data-html="<b>Карта *4934</b>">Карта *4934</option>
+							<option value="card-2" data-html="<b>Карта *4934</b>">Карта *4934</option>
+							<option value="card-3" data-html="<b>Карта *4934</b>">Карта *4934</option>
+						</select>
+					</label>
+					<div class="buy-stocks__aside--row">
+						<label>
+							<span>Количество</span>
+							<input type="number" name="length" value="2" placeholder="0">
+						</label>
+						<label>
+							<span>Сумма</span>
+							<input type="text" name="result" value="$123" readonly placeholder="$0">
+						</label>
+					</div>
+					<button class="buy-stocks__aside--submit btn" type="submit">
+						Купить
+					</button>
+				</form>
+			</div>
+			<div class="buy-stocks__chart stocks-chart">
+				<div class="stocks-chart__header">
+					<div class="stocks-chart__header--col">
+						<div class="stocks-chart__ranger">
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="1"  data-value-type="month" class="min-input visually-hidden">
+								<span>1m</span>
+							</label>
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="2" data-value-type="month" class="min-input visually-hidden">
+								<span>2m</span>
+							</label>
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="3" checked data-value-type="month" class="min-input visually-hidden">
+								<span>3m</span>
+							</label>
+						</div>
+					</div>
+					<div class="stocks-chart__header--col visible-on-desktop">
+						<ul class="stocks-chart__row-tool-list">
+							<li>
+								<button type="button">
+									<picture>
+										<source srcset="img/account/buy-shares/candlestick-chart-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/candlestick-chart-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/candlestick-chart-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+							<li>
+								<button type="button">
+									<picture>
+										<source srcset="img/account/buy-shares/combo-chart-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/combo-chart-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/combo-chart-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="stocks-chart__header--col">
+						<ul class="stocks-chart__row-tool-list">
+							<li>
+								<div class="stocks-chart__drop-down">
+									<button class="stocks-chart__drop-down--target" type="button">
+										<picture>
+											<source srcset="img/account/buy-shares/formula-fx-icon.avif" type="image/avif">
+											<source srcset="img/account/buy-shares/formula-fx-icon.webp" type="image/webp">
+											<img src="img/account/buy-shares/formula-fx-icon.png" alt="" width="24" height="24" loading="lazy">
+										</picture>
+										<span>Indicators</span>
+										<svg width="14" height="14" viewBox="0 0 14 14">
+											<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+										</svg>
+									</button>
+									<ul class="stocks-chart__drop-down--list">
+										<li>
+											<button type="button" aria-label="Param 1">
+												<span>Param 1</span>
+											</button>
+										</li>
+										<li>
+											<button type="button" aria-label="Param 2">
+												<span>Param 2</span>
+											</button>
+										</li>
+										<li>
+											<button type="button" aria-label="Param 3">
+												<span>Param 3</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Alerts">
+									<picture>
+										<source srcset="img/account/buy-shares/alarm-clock-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/alarm-clock-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/alarm-clock-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+									<span>Alerts</span>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Compare">
+									<picture>
+										<source srcset="img/account/buy-shares/add-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/add-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/add-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+									<span>Compare</span>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Prev">
+									<picture>
+										<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/reply-all-arrow-prev-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Next">
+									<picture>
+										<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/reply-all-arrow-next-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="stocks-chart__header--col visible-on-desktop">
+						<ul class="stocks-chart__row-tool-list">
+							<li>
+								<button type="button" title="Camera" class="stocks-chart__download">
+									<picture>
+										<source srcset="img/account/buy-shares/camera-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/camera-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/camera-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+							<li>
+								<button type="button" title="Settings">
+									<picture>
+										<source srcset="img/account/buy-shares/gear-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/gear-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/gear-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="stocks-chart__aside visible-on-desktop">
+					<ul class="stocks-chart__aside--list">
+						<li>
+							<button type="button" title="Button" data-button="crosshair">
+								<picture>
+									<source srcset="img/account/buy-shares/cross-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/cross-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/cross-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/unit-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/unit-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/unit-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/polyline-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/polyline-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/polyline-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/text-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/text-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/text-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/mesh-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/mesh-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/mesh-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/climate-change-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/climate-change-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/climate-change-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/shocker-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/shocker-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/shocker-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/ruler-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/ruler-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/ruler-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button" data-button="zoom">
+								<picture>
+									<source srcset="img/account/buy-shares/zoom-mode-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/zoom-mode-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/zoom-mode-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/hide-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/hide-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/padlock-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/padlock-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="stocks-chart__main">
+					<div id="chartContainer"></div>
+					<div class="stocks-chart__tooltip">
+						<div class="stocks-chart__tooltip--block visible-on-desktop">
+							<div class="stocks-chart__tooltip--currency">USD</div>
+							<div class="stocks-chart__tooltip--range">3m</div>
+							<div class="stocks-chart__tooltip--info-fx success-string">
+								<span>
+									DiamondFx
+								</span>
+								<ul>
+									<li>
+										<span>O</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>L</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>H</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>C</span>
+										<span>
+											0
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="stocks-chart__tooltip--block">
+							<div class="stocks-chart__tooltip--volume">
+								<span>Volume</span>
+								<ul>
+									<li class="success-string">
+										0.0094
+									</li>
+									<li>
+										0.0001
+									</li>
+									<li class="danger-string">
+										0.0093
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer-account.html")

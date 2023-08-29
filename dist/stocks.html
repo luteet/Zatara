@@ -8,7 +8,7 @@
 		}
 	</script>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -348,9 +348,12 @@
 									<source srcset="img/account/avatar.webp" type="image/webp">
 									<img src="img/account/avatar.png" alt="" width="32" height="32" loading="lazy">
 								</picture>
-								<div class="header__account--label _danger">
-									<svg width="24" height="24" viewBox="0 0 10 10">
+								<div class="header__account--label"> <!-- + _danger -->
+									<!-- <svg width="24" height="24" viewBox="0 0 10 10">
 										<use xlink:href="img/sprites.svg#alert-3"></use>
+									</svg> -->
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#verificated"></use>
 									</svg>
 								</div>
 							</div>
@@ -378,21 +381,35 @@
 										<source srcset="img/account/avatar.webp" type="image/webp">
 										<img src="img/account/avatar.png" alt="" width="48" height="48" loading="lazy">
 									</picture>
-									<div class="header__account-block--label _danger">
-										<svg width="24" height="24" viewBox="0 0 10 10">
+									<div class="header__account-block--label"> <!-- + _danger -->
+										<!-- <svg width="24" height="24" viewBox="0 0 10 10">
 											<use xlink:href="img/sprites.svg#alert-3"></use>
+										</svg> -->
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#verificated"></use>
 										</svg>
 									</div>
 								</div>
 								<b class="header__account-block--name">GitHAb676</b>
 								<span class="header__account-block--email">GitHAb676@gmail.com</span>
 							</div>
-							<a href="#" class="header__account-block--message _danger" aria-label="Please, verificate your information">
+							<!-- <a href="#" class="header__account-block--message _success" aria-label="Please, verificate your information">
 								<svg width="24" height="24" viewBox="0 0 24 24">
 									<use xlink:href="img/sprites.svg#alert-3"></use>
 								</svg>
 								<span>
 									Please, verificate <br> your information
+								</span>
+								<svg width="19" height="19" viewBox="0 0 17 17">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</a> -->
+							<a href="#" class="header__account-block--message" aria-label="You are verificated">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#verificated"></use>
+								</svg>
+								<span>
+									You are verificated
 								</span>
 								<svg width="19" height="19" viewBox="0 0 17 17">
 									<use xlink:href="img/sprites.svg#arrow-next"></use>
@@ -1339,8 +1356,246 @@
 		</div>
 	</div>
 
+	<div class="refill-2 popup" id="refill-2-popup" style="display: none;">
+		<div class="refill-2__wrapper popup-wrapper">
+			<div class="refill-2__bg popup-bg popup-close"></div>
+			<form method="post" class="refill-2__body popup-body tab-wrapper">
+				<div class="refill-2__header">
+					<button type="button" class="refill-2__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+					<a href="#" class="refill-2__forward-link theme-fill">
+						<svg width="17" height="17" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+						Назад
+					</a>
+				</div>
+				<div class="refill-2__content">
+					<h2 class="refill-2__title title _min">
+						Пополнить
+					</h2>
+					<div class="refill-2__text">
+						<p>
+							Вы можете совершить оплату по указанным реквизитам вручную, а затем указать данные этого платежа в форме ниже
+						</p>
+					</div>
+				</div>
+				<div class="refill-2__status _waiting visible-on-mob">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#alert"></use>
+					</svg>
+					<b>Операция НЕ подтверждена Вами!</b>
+				</div>
+				<div class="refill-2__nav tab-nav visible-on-mob">
+					<ul>
+						<li>
+							<a href="#refill-2-check" class="theme-text current">
+								Автотранзакция
+							</a>
+						</li>
+						<li>
+							<a href="#refill-2-manual" class="theme-text">
+								Manual
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="refill-2__check tab-block _active" id="refill-2-check">
+					<div class="refill-2__check--icon _waiting">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#check-2"></use>
+						</svg>
+					</div>
+					<h3 class="refill-2__check--title">
+						Наши платежные <br> реквизиты для оплаты <br> вручную через Ethereum:
+					</h3>
+					<div class="refill-2__check--label">
+						<span>Счет получателя (Ether-address):</span>
+						<div class="refill-2__check--copy-place">
+							0xC2226167B9c16B09F6a72604Cc6bDb94D7d03552
+							<button type="button" class="refill-2__check--copy-btn copy-btn" title="Copy" data-clipboard-text="0xC2226167B9c16B09F6a72604Cc6bDb94D7d03552">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="refill-2__check--label">
+						<span>Сумма:</span>
+						<div class="refill-2__check--copy-place">
+							23.000000 ETH
+							<button type="button" class="refill-2__check--copy-btn copy-btn" title="Copy" data-clipboard-text="23.000000 ETH">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<ul class="refill-2__check--info">
+						<li>
+							<span class="theme-text">Статус:</span>
+							<b class="refill-2__check--status _waiting">Ожидание</b>
+						</li>
+						<li>
+							<span class="theme-text">Дата:</span>
+							<b class="theme-text-2">сегодня, 13:32</b>
+						</li>
+						<li>
+							<span class="theme-text">Платежная система:</span>
+							<b class="theme-text-2">Ethereum</b>
+						</li>
+						<li>
+							<span class="theme-text">Сумма:</span>
+							<b class="theme-text-2">23.000000 ETH</b>
+						</li>
+					</ul>
+				</div>
+				<div class="refill-2__status _waiting visible-on-desktop">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#alert"></use>
+					</svg>
+					<b>Операция НЕ подтверждена Вами!</b>
+				</div>
+				<div class="refill-2__manual tab-block" id="refill-2-manual">
+					<h3 class="refill-2__manual--title">
+						Данные платежа через Ethereum, произведенного вручную и реквизиты плательщика:
+					</h3>
+					<label class="refill-2__manual--label">
+						<span class="required">Дата:</span>
+						<input type="text" name="date" readonly value="09.10.2023" placeholder="Дата">
+					</label>
+					<label class="refill-2__manual--label">
+						<span class="required">Batch-номер (операции/транзакции):</span>
+						<input type="text" name="batch-number" readonly value="IN000028" placeholder="Batch-номер (операции/транзакции)">
+					</label>
+					<label class="refill-2__manual--label">
+						<span class="required">Примечание:</span>
+						<input type="text" name="note" readonly value="Invoice #28, GitHAb676" placeholder="Дата">
+					</label>
+					<div class="refill-2__manual--footer visible-on-desktop">
+						<button class="refill-2__manual--btn btn" type="submit">
+							Подтвердить
+						</button>
+						<button class="refill-2__manual--btn btn _none-accent" type="button">
+							Отмена
+						</button>
+					</div>
+				</div>
+				<div class="refill-2__footer visible-on-mob">
+					<button class="refill-2__footer--btn btn" type="submit">
+						Подтвердить
+					</button>
+					<button class="refill-2__footer--btn btn _none-accent" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="transaction-popup popup" id="transaction-popup" style="display: none;">
+		<div class="transaction-popup__wrapper popup-wrapper">
+			<div class="transaction-popup__bg popup-bg popup-close"></div>
+			<div class="transaction-popup__body popup-body">
+				<div class="transaction-popup__header">
+					<div class="transaction-popup__main-info">
+						<div class="transaction-popup__status-icon _danger">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#conclusion"></use>
+							</svg>
+						</div>
+						<div>
+							<b>Вывод на карту **** 4395</b>
+							<time class="theme-text">12 июля 2023 16:00</time>
+						</div>
+					</div>
+					<button type="button" class="transaction-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				<ul class="transaction-popup__info">
+					<li>
+						<span class="theme-text">
+							Статус:
+						</span>
+						<b>
+							<span class="transaction-popup__status _waiting">
+								Ожидание
+							</span>
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">Дата:</span>
+						<b>сегодня, 13:32</b>
+					</li>
+					<li>
+						<span class="theme-text">Платежная система:</span>
+						<b>Ethereum</b>
+					</li>
+					<li>
+						<span class="theme-text">Сумма:</span>
+						<b>23.000000 ETH</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="confirm-buy-stock popup" id="confirm-buy-stock-popup" style="display: none;">
+		<div class="confirm-buy-stock__wrapper popup-wrapper">
+			<div class="confirm-buy-stock__bg popup-bg popup-close"></div>
+			<form method="post" class="confirm-buy-stock__body popup-body">
+				<button type="button" class="confirm-buy-stock__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="confirm-buy-stock__title title _min">
+					Вы уверены?
+				</h2>
+				<div class="confirm-buy-stock__order">
+					<span>Ваш заказ:</span>
+					<div class="confirm-buy-stock__order--item">
+						<div class="confirm-buy-stock__logo">
+							<picture>
+								<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+								<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+								<img src="img/account/buy-shares/AAAU.png" alt="" width="52" height="52" loading="lazy">
+							</picture>
+						</div>
+						<h3 class="theme-text">AGILENT TECHNOLOGIES INC.</h3>
+						<b>AAAU</b>
+					</div>
+				</div>
+				<ul class="confirm-buy-stock__info">
+					<li>
+						<span class="theme-text">Количество</span>
+						<b>12</b>
+					</li>
+					<li>
+						<span class="theme-text">Цена</span>
+						<b>$334,3</b>
+					</li>
+				</ul>
+				<div class="confirm-buy-stock__footer">
+					<button class="confirm-buy-stock__submit btn" type="submit">
+						Купить
+					</button>
+					<button class="confirm-buy-stock__cancel btn _none-accent popup-close" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<script src="js/libs.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 

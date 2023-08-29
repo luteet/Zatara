@@ -238,9 +238,17 @@
 			&:nth-child(3) {
 				flex: 1 1 auto;
 			}
+
+			min-height: 0;
+			padding: 9.5px 10px;
 			
 			@include _992 {
 				text-align: right;
+				height: 72px;
+				padding: 0;
+				&:last-child {
+					padding: 0 15px;
+				}
 
 				&:nth-child(1) {
 					text-align: center;
@@ -279,6 +287,19 @@
 				&:nth-child(3) {
 					text-align: left;
 				}
+			}
+		}
+
+		tbody td {
+			min-height: 0;
+			padding: 9.5px 10px;
+
+			@include _992 {
+				padding: 11px 15px;
+			}
+
+			@include _container {
+				padding: 11px 20px;
 			}
 		}
 	}
@@ -422,6 +443,10 @@
 			}
 		}
 	}
+
+	&__buy {
+		width: 100%;
+	}
 }
 
 .coins-table-2 {
@@ -437,6 +462,19 @@
 		width: 100%;
 	}
 
+	&__info {
+		display: flex;
+		align-items: center;
+
+		&--logo {
+			flex: 0 0 40px;
+			margin-right: 12px;
+		}
+
+		h3 {
+			padding-right: 12px;
+		}
+	}
 	
 	position: relative;
 	&__nav {
@@ -701,6 +739,42 @@
 				}
 			}
 		}
+
+	}
+
+	&._crypto &__block {
+		thead th {
+			text-align: right;
+
+			&:nth-child(1) {
+				text-align: center;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
+			}
+		}
+
+		tbody td {
+			text-align: right;
+
+			&:nth-child(1) {
+				text-align: center;
+			}
+
+			&:nth-child(2) {
+				text-align: left;
+			}
+
+			&:nth-child(3) {
+				text-align: left;
+			}
+		}
+
 
 	}
 

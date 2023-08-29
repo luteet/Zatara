@@ -1,0 +1,110 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="my-assets">
+			<nav class="my-assets__nav visible-on-mob">
+				<ul>
+					<li>
+						<a href="#crypto" class="theme-text current">
+							Крипта
+						</a>
+					</li>
+					<li>
+						<a href="#assets" class="theme-text">
+							Акции
+						</a>
+					</li>
+					<li>
+						<a href="#forex" class="theme-text">
+							Форекс
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="my-assets__block _active" id="crypto">
+				<div class="my-assets__block--header">
+					<h2 class="my-assets__block--title title _min visible-on-desktop">
+						Мой кошелек
+						<span>Криптовалюты</span>
+					</h2>
+					<a href="#" class="my-assets__buy-btn btn _min visible-on-mob">
+						Купить
+					</a>
+				</div>
+				<ul class="my-assets__grid">
+					@@loop("html/_my-assets-grid-item.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+					<li class="my-assets__grid--buy-more my-assets-grid__buy-more visible-on-desktop">
+						<a href="#" class="my-assets-grid__buy-more--link theme-fill">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#plus"></use>
+							</svg>
+							<b>Купить еще</b>
+							<span class="theme-text-3">Посмотрите на 239 </span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="my-assets__block" id="assets">
+				<div class="my-assets__block--header">
+					<h2 class="my-assets__block--title title _min visible-on-desktop">
+						Мой кошелек
+						<span>Акции</span>
+					</h2>
+					<a href="#" class="my-assets__buy-btn btn _min">
+						Купить
+					</a>
+				</div>
+				<ul class="my-assets__list">
+					@@loop("html/_my-assets-list-item.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+				<div class="my-assets__block--footer visible-on-mob">
+					@@include("html/_pagination.html")
+				</div>
+			</div>
+			<div class="my-assets__block" id="forex">
+				<div class="my-assets__block--header">
+					<h2 class="my-assets__block--title title _min visible-on-desktop">
+						Мой кошелек
+						<span>Форекс</span>
+					</h2>
+					<a href="#" class="my-assets__buy-btn btn _min">
+						Купить
+					</a>
+				</div>
+				<ul class="my-assets__list">
+					@@loop("html/_my-assets-list-item-2.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+				<div class="my-assets__block--footer visible-on-mob">
+					@@include("html/_pagination.html")
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer-account.html")

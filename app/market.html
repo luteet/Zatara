@@ -1,0 +1,425 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="market">
+			<div class="market__hero">
+				<div class="market__block market__balance">
+					<div class="market__balance--col">
+						<div class="market__balance--header">
+							<div class="market__balance--icon visible-on-mob">
+								<svg width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="img/sprites.svg#empty-wallet"></use>
+								</svg>
+							</div>
+							<h2 class="market__block--title market__balance--title theme-text">
+								Ваш баланс
+							</h2>
+							<div class="market__balance--row">
+								<strong class="market__balance--value main-title _min">
+									$54,654.09
+								</strong>
+								<b class="market__balance--percent _up">
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#arrow-up"></use>
+									</svg>
+									9,9%
+								</b>
+							</div>
+						</div>
+						<ul class="market__balance--nav">
+							<li>
+								<a href="#refill-popup" class="open-popup">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#plus"></use>
+									</svg>
+									Пополнить
+								</a>
+							</li>
+							<li>
+								<a href="#withdrawn-funds-2-popup" class="open-popup">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#conclusion"></use>
+									</svg>
+									Вывод
+								</a>
+							</li>
+							<li>
+								<a href="#exchange-popup" class="open-popup">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#exchange"></use>
+									</svg>
+									Обмен
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="market__balance--col">
+						<div class="market__balance--image image-aspect-ratio">
+							<picture>
+								<source srcset="img/account/our-balance/our-balance-image.avif" type="image/avif">
+								<source srcset="img/account/our-balance/our-balance-image.webp" type="image/webp">
+								<img src="img/account/our-balance/our-balance-image.png" alt="" width="333" height="334" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<ul class="market__balance--info">
+						<li>
+							<h3 class="theme-text">
+								Криптоактивы
+							</h3>
+							<div class="market__balance--info-row">
+								<strong>
+									$204,4
+								</strong>
+								<b class="market__balance--percent _up">
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#arrow-up"></use>
+									</svg>
+									9,9%
+								</b>
+							</div>
+						</li>
+						<li>
+							<h3 class="theme-text">
+								Акции
+							</h3>
+							<div class="market__balance--info-row">
+								<strong>
+									$204,4
+								</strong>
+								<b class="market__balance--percent _up">
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#arrow-up"></use>
+									</svg>
+									9,9%
+								</b>
+							</div>
+						</li>
+						<li>
+							<h3 class="theme-text">
+								Форекс
+							</h3>
+							<div class="market__balance--info-row">
+								<strong>
+									$204,4
+								</strong>
+								<b class="market__balance--percent _up">
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#arrow-up"></use>
+									</svg>
+									9,9%
+								</b>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="market__block market__buy">
+					<h2 class="market__block--title theme-text">
+						Купить
+					</h2>
+					<ul class="market__buy--nav tab-nav">
+						<li>
+							<a href="#market-stocks" class="theme-text current">
+								Акции
+							</a>
+						</li>
+						<li>
+							<a href="#market-fiat" class="theme-text">
+								Фиат
+							</a>
+						</li>
+						<li>
+							<a href="#market-crypto" class="theme-text">
+								Крипту
+							</a>
+						</li>
+					</ul>
+					<div class="market__buy--wrapper tab-wrapper">
+						<form method="post" class="market__buy--block tab-block _active" id="market-stocks">
+							<div class="market__buy--select">
+								<select name="assets" class="custom-select _alt-stroke">
+									<option value="tsl-1" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									<option value="tsl-2" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									<option value="tsl-3" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+								</select>
+							</div>
+							<div class="market__buy--row">
+								<label>
+									<span>Количество</span>
+									<input type="number" name="length" value="2" placeholder="0">
+								</label>
+								<label>
+									<span>Сумма</span>
+									<input type="text" name="result" value="$123" readonly placeholder="0">
+								</label>
+							</div>
+							<button class="market__buy--submit btn" type="submit">
+								Купить
+							</button>
+						</form>
+						<form method="post" class="market__buy--block tab-block" id="market-crypto">
+							<div class="market__buy--select">
+								<select name="assets" class="custom-select _alt-stroke">
+									<option value="btc-1" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+									<option value="btc-2" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+									<option value="btc-3" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+								</select>
+							</div>
+							<div class="market__buy--row">
+								<label>
+									<span>Количество</span>
+									<input type="number" name="length" value="2" placeholder="0">
+								</label>
+								<label>
+									<span>Сумма</span>
+									<input type="text" name="result" value="$123" readonly placeholder="0">
+								</label>
+							</div>
+							<button class="market__buy--submit btn" type="submit">
+								Купить
+							</button>
+						</form>
+						<form method="post" class="market__buy--block tab-block" id="market-fiat">
+							<div class="market__buy--select">
+								<select name="assets" class="custom-select _alt-stroke">
+									<option value="tsl-1" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									<option value="tsl-2" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									<option value="tsl-3" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+								</select>
+							</div>
+							<div class="market__buy--row">
+								<label>
+									<span>Количество</span>
+									<input type="number" name="length" value="2" placeholder="0">
+								</label>
+								<label>
+									<span>Сумма</span>
+									<input type="text" name="result" value="$123" readonly placeholder="0">
+								</label>
+							</div>
+							<button class="market__buy--submit btn" type="submit">
+								Купить
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="market__main">
+				<h2 class="market__title main-title _min">
+					Рынки
+				</h2>
+				<ul class="market__nav tab-nav">
+					<li>
+						<a href="#crypto-market" class="theme-text current">
+							Криптовалюты
+						</a>
+					</li>
+					<li>
+						<a href="#stocks-market" class="theme-text">
+							Акции
+						</a>
+					</li>
+					<li>
+						<a href="#fiat-market" class="theme-text">
+							Фиат
+						</a>
+					</li>
+				</ul>
+				<div class="market__table-wrapper tab-wrapper">
+					<div class="market__table coins-table-2 _crypto tab-block _active" id="crypto-market">
+						<div class="coins-table-2__nav visible-on-mob">
+							<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-prev"></use>
+								</svg>
+							</button>
+							<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="coins-table-2__wrapper">
+							<table class="coins-table-2__block">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Наименование</th>
+										<th>Цена</th>
+										<th>Объем (24 ч)</th>
+										<th>Капитализация</th>
+										<th>7d %</th>
+										<th>% 24ч</th>
+										<th>1h %</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<b>1</b>
+										</td>
+										<td>
+											<div class="coins-table-2__info">
+												<div class="coins-table-2__info--logo">
+													<img src="img/account/payment/BTC.svg" width="40" height="40" loading="lazy" alt="">
+												</div>
+												<h3>Bitcoin</h3>
+												<span class="theme-text-3">BTC</span>
+											</div>
+										</td>
+										<td>
+											<b>$28,951.07</b>
+										</td>
+										<td>
+											<b>$15,499,580,703</b><br>
+											<span>535,606 BTC</span>
+										</td>
+										<td>
+											<b>$315,063,221</b>
+										</td>
+										<td>
+											<span class="coins-table__percent-value _down">-1,2%</span>
+										</td>
+										<td>
+											<span class="coins-table__percent-value _up">+8,5%</span>
+										</td>
+										<td>
+											<span class="coins-table__percent-value _up">+8,5%</span>
+										</td>
+										<td>
+											<div class="coins-table__add-to-favorite">
+												<button class="coins-table__add-to-favorite--btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#like"></use>
+													</svg>
+												</button>
+											</div>
+										</td>
+										<td>
+											<button class="coins-table__buy btn _min" type="button">
+												Купить
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="stocks__table coins-table-2 _stocks tab-block" id="stocks-market">
+						<div class="coins-table-2__nav visible-on-mob">
+							<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-prev"></use>
+								</svg>
+							</button>
+							<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="coins-table-2__wrapper">
+							<table class="coins-table-2__block">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Symbol</th>
+										<th class="visible-on-desktop">Название</th>
+										<th>Цена</th>
+										<th>Market Time</th>
+										<th>Change</th>
+										<th>Change %</th>
+										<th>Market Cap</th>
+									</tr>
+								</thead>
+								<tbody>
+									@@loop("html/_stocks-table-item.html", [
+										{},
+										{},
+										{},
+										{},
+										{},
+									])
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="stocks__table coins-table-2 _stocks tab-block" id="fiat-market">
+						<div class="coins-table-2__nav visible-on-mob">
+							<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-prev"></use>
+								</svg>
+							</button>
+							<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="coins-table-2__wrapper">
+							<table class="coins-table-2__block">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Symbol</th>
+										<th class="visible-on-desktop">Название</th>
+										<th>Цена</th>
+										<th>Market Time</th>
+										<th>Change</th>
+										<th>Change %</th>
+										<th>Market Cap</th>
+									</tr>
+								</thead>
+								<tbody>
+									@@loop("html/_stocks-table-item.html", [
+										{},
+										{},
+										{},
+										{},
+										{},
+									])
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer-account.html")

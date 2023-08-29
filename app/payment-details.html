@@ -1,0 +1,84 @@
+@@include("html/_header-account.html")
+
+	<main class="main">
+		<section class="payment-details">
+			<form class="payment-details__body">
+				<h1 class="payment-details__title main-title _min">
+					Платежные Реквизиты
+				</h1>
+				<div class="payment-details__text theme-text">
+					<p>
+						Информация для безопасного и быстрого перевода средств
+					</p>
+				</div>
+				<ul class="payment-details__list">
+					@@loop("html/_payment-details-card.html", [
+						{
+							"theme": "#806BFF",
+							"logo": '<img src="img/account/payment/ETH.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Ethereum",
+							"name": "eth",
+						},
+						{
+							"theme": "#FF8F6B",
+							"logo": '<img src="img/account/payment/BTC.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Bitcoin Cash",
+							"name": "btha",
+						},
+						{
+							"theme": "#FFF06B",
+							"logo": '<img src="img/account/payment/DOGE.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Dogecoin",
+							"name": "dogecoin",
+						},
+						{
+							"theme": "#FF6B6B",
+							"logo": '<img src="img/account/payment/TRX.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "TRON",
+							"name": "trx",
+						},
+						{
+							"theme": "#62FFE3",
+							"logo": '<img src="img/account/payment/Tether.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Tether (TRC-20)",
+							"name": "tether-trc-20",
+						},
+						{
+							"theme": "#62FFE3",
+							"logo": '<img src="img/account/payment/Tether.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Tether (ERC-20)",
+							"name": "tether-erc-20",
+						},
+						{
+							"theme": "#545169",
+							"logo": '<img src="img/account/payment/XRP.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "RIPPLE",
+							"name": "xrp",
+						},
+						{
+							"theme": "#312561",
+							"logo": '<img src="img/account/payment/mastercard.svg" width="47" height="47" loading="lazy" alt=""><img src="img/account/payment/visa.svg" width="47" height="47" loading="lazy" alt="">',
+							"title": "Visa/Mastercard",
+							"name": "visa-mastercard",
+						},
+						{
+							"theme": "#FF8F6B",
+							"logo": '<img src="img/account/payment/BTC.svg" width="70" height="70" loading="lazy" alt="">',
+							"title": "Bitcoin",
+							"name": "btc",
+						},
+					])
+				</ul>
+				<div class="payment-details__footer">
+					<button class="payment-details__btn btn" type="button">
+						Cохранить изменения
+					</button>
+					<button class="payment-details__btn btn _none-accent" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+@@include("html/_footer-account.html")

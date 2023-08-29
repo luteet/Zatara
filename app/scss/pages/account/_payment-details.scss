@@ -1,0 +1,126 @@
+.payment-details {
+
+	margin-top: 19px;
+
+	// .payment-details__body
+
+	&__body {
+	}
+
+	// .payment-details__title
+
+	&__title {
+	}
+
+	// .payment-details__text
+
+	&__text {
+		margin-top: 5px;
+	}
+
+	// .payment-details__list
+
+	&__list {
+		margin-top: 24px;
+
+		display: grid;
+		@include _550 {
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			gap: 20px;
+		}
+
+		gap: 10px;
+		
+	}
+
+	// .payment-details__card
+
+	&__card {
+
+		padding: 16px;
+
+		@include _550 {
+			padding: 24px;
+		}
+
+		border-radius: 16px;
+		border: 1px solid var(--white-opacity-1);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.06) 100%);
+
+		overflow: hidden;
+
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		// .payment-details__card--decor
+
+		&--decor {
+			position: absolute;
+			right: 0; top: 0;
+			transform: translate(50%,-50%);
+			width: 150%; aspect-ratio: 1/1;
+			border-radius: 50%;
+			background: radial-gradient(circle, var(--theme) 10%, rgba(0,0,0,0) 70%);
+			z-index: -1;
+			opacity: .6;
+			filter: blur(5px);
+		}
+
+		// .payment-details__card--logo
+
+		&--logo {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			flex: 1 1 auto;
+
+			img {
+				margin-right: 10px;
+				width: 40px; height: 40px;
+				@include _550 {
+					width: initial; height: initial;
+				}
+			}
+		}
+
+		&--title {
+			
+			margin-top: 20px;
+		}
+
+		&--address {
+			margin-top: 20px;
+			display: block;
+		}
+	}
+
+	// .payment-details__footer
+
+	&__footer {
+		margin-top: 10px;
+
+		display: flex;
+		flex-wrap: wrap;
+		
+		flex-direction: column;
+
+		@include _550 {
+			margin-top: 20px;
+
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	// .payment-details__btn
+
+	&__btn {
+		margin-top: 10px;
+		@include _550 {
+			margin-right: 15px; margin-top: 0;
+		}
+	}
+}

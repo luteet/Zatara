@@ -3,28 +3,81 @@
 	<main class="main">
 		<section class="account-transactions">
 			<h1 class="account-transactions__title main-title _min">
-
+				Транзакции по счету
 			</h1>
 			<div class="account-transactions__text theme-text">
 				<p>
-
+					Информация для безопасного и быстрого перевода средств
 				</p>
 			</div>
 			<div class="account-transactions__header">
-				<div class="account-transactions__filter">
-					<button class="account-transactions__filter--target" type="button" aria-label="">
+				<div class="account-transactions__filter filter">
+					<button class="account-transactions__filter--target filter__target visible-on-mob" type="button" aria-label="Вывод">
 						<span>
-
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#conclusion"></use>
+							</svg>
+							Вывод
 						</span>
 						<svg width="16" height="16" viewBox="0 0 14 14">
 							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
 						</svg>
 					</button>
-					<ul class="account-transactions__filter--list">
+					<ul class="account-transactions__filter--list filter__list">
 						<li>
-							<a href="#">
-
-							</a>
+							<label aria-label="Вывод">
+								<input type="checkbox" name="filter" checked value="conclusion" class="min-input filter__input visually-hidden">
+								<span class="filter__element">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#conclusion"></use>
+									</svg>
+									Вывод
+								</span>
+							</label>
+						</li>
+						<li>
+							<label aria-label="Пополнения">
+								<input type="checkbox" name="filter" value="param-1" class="min-input filter__input visually-hidden">
+								<span class="filter__element">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#plus"></use>
+									</svg>
+									Пополнения
+								</span>
+							</label>
+						</li>
+						<li>
+							<label aria-label="Обмен">
+								<input type="checkbox" name="filter" value="refills" class="min-input filter__input visually-hidden">
+								<span class="filter__element">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#exchange"></use>
+									</svg>
+									Обмен
+								</span>
+							</label>
+						</li>
+						<li>
+							<label aria-label="Покупка">
+								<input type="checkbox" name="filter" value="exchange" class="min-input filter__input visually-hidden">
+								<span class="filter__element">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#corner-right-down"></use>
+									</svg>
+									Покупка
+								</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="filter" value="for-sale" class="min-input filter__input visually-hidden">
+								<span class="filter__element">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#corner-left-up"></use>
+									</svg>
+									Продажа
+								</span>
+							</label>
 						</li>
 					</ul>
 				</div>
@@ -34,10 +87,10 @@
 							<use xlink:href="img/sprites.svg#exchange"></use>
 						</svg>
 						<span>
-
+							Сортировать по
 						</span>
 						<b>
-
+							Самые новые
 						</b>
 						<svg width="19" height="19" viewBox="0 0 14 14">
 							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
@@ -45,33 +98,33 @@
 					</button>
 					<ul class="sort-select__list">
 						<li>
-							<label class="sort-select__param">
-								<input type="radio" name="sort" checked value="sort-1" class="min-input visually-hidden sort-select__param--input">
+							<label class="sort-select__param" aria-label="Сортировка 1">
+								<input type="radio" name="sort" checked value="sort-1" data-text="Сортировка 1" class="min-input visually-hidden sort-select__param--input">
 								<span class="sort-select__param--element">
-									
+									Сортировка 1
 								</span>
 							</label>
 						</li>
 						<li>
-							<label class="sort-select__param">
-								<input type="radio" name="sort" value="sort-2" class="min-input visually-hidden sort-select__param--input">
+							<label class="sort-select__param" aria-label="Сортировка 2">
+								<input type="radio" name="sort" value="sort-2" data-text="Сортировка 2" class="min-input visually-hidden sort-select__param--input">
 								<span class="sort-select__param--element">
-									
+									Сортировка 2
 								</span>
 							</label>
 						</li>
 						<li>
-							<label class="sort-select__param">
-								<input type="radio" name="sort" value="sort-3" class="min-input visually-hidden sort-select__param--input">
+							<label class="sort-select__param" aria-label="Сортировка 3">
+								<input type="radio" name="sort" value="sort-3" data-text="Сортировка 3" class="min-input visually-hidden sort-select__param--input">
 								<span class="sort-select__param--element">
-									
+									Сортировка 3
 								</span>
 							</label>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="account-transactions__block">
+			<div class="account-transactions__block" data-filter>
 				<table class="account-transactions__table">
 					<colgroup>
 						<col>
@@ -81,33 +134,28 @@
 						<col>
 					</colgroup>
 					<thead>
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
+						<tr class="theme-text">
+							<th>Транзакция</th>
+							<th>Вид</th>
+							<th>Платежная система</th>
+							<th>Сумма</th>
+							<th>Статус</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>
-								<div class="account-transactions__table--status-icon _danger">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<use xlink:href="img/sprites.svg#conclusion"></use>
-									</svg>
-								</div>
-								<div class="account-transactions__table--info">
-									<b></b>
-									<time></time>
-								</div>
-							</td>
-							<td>
-								
-							</td>
-						</tr>
+						@@loop("html/_account-transactions-list.html", [
+							{},
+							{},
+							{},
+							{},
+						])
 					</tbody>
 				</table>
+			</div>
+			<div class="account-transactions__footer">
+				@@include("html/_pagination.html", {
+					"class": 'news__pagination',
+				})
 			</div>
 		</section>
 	</main>

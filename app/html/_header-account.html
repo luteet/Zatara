@@ -7,7 +7,7 @@
 		}
 	</script>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -344,9 +344,12 @@
 									<source srcset="img/account/avatar.webp" type="image/webp">
 									<img src="img/account/avatar.png" alt="" width="32" height="32" loading="lazy">
 								</picture>
-								<div class="header__account--label _danger">
-									<svg width="24" height="24" viewBox="0 0 10 10">
+								<div class="header__account--label"> <!-- + _danger -->
+									<!-- <svg width="24" height="24" viewBox="0 0 10 10">
 										<use xlink:href="img/sprites.svg#alert-3"></use>
+									</svg> -->
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#verificated"></use>
 									</svg>
 								</div>
 							</div>
@@ -374,21 +377,35 @@
 										<source srcset="img/account/avatar.webp" type="image/webp">
 										<img src="img/account/avatar.png" alt="" width="48" height="48" loading="lazy">
 									</picture>
-									<div class="header__account-block--label _danger">
-										<svg width="24" height="24" viewBox="0 0 10 10">
+									<div class="header__account-block--label"> <!-- + _danger -->
+										<!-- <svg width="24" height="24" viewBox="0 0 10 10">
 											<use xlink:href="img/sprites.svg#alert-3"></use>
+										</svg> -->
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#verificated"></use>
 										</svg>
 									</div>
 								</div>
 								<b class="header__account-block--name">GitHAb676</b>
 								<span class="header__account-block--email">GitHAb676@gmail.com</span>
 							</div>
-							<a href="#" class="header__account-block--message _danger" aria-label="Please, verificate your information">
+							<!-- <a href="#" class="header__account-block--message _success" aria-label="Please, verificate your information">
 								<svg width="24" height="24" viewBox="0 0 24 24">
 									<use xlink:href="img/sprites.svg#alert-3"></use>
 								</svg>
 								<span>
 									Please, verificate <br> your information
+								</span>
+								<svg width="19" height="19" viewBox="0 0 17 17">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</a> -->
+							<a href="#" class="header__account-block--message" aria-label="You are verificated">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#verificated"></use>
+								</svg>
+								<span>
+									You are verificated
 								</span>
 								<svg width="19" height="19" viewBox="0 0 17 17">
 									<use xlink:href="img/sprites.svg#arrow-next"></use>

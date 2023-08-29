@@ -33,190 +33,192 @@
 	</svg>
 	<div class="wrapper">
 		<header class="header container">
-			<div class="header__logo">
-				<a href="index.html" class="header__logo--link">
-					<div class="theme-change">
-						<div class="theme-change-light">
-							<picture>
-								<source srcset="img/logo-dark.avif" type="image/avif">
-								<source srcset="img/logo-dark.webp" type="image/webp">
-								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
-							</picture>
-						</div>
-						<div class="theme-change-dark">
-							<picture>
-								<source srcset="img/logo-light.avif" type="image/avif">
-								<source srcset="img/logo-light.webp" type="image/webp">
-								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
-							</picture>
-						</div>
-					</div>
-				</a>
-			</div>
-			<nav class="header__nav">
-				<div class="header__nav--background"></div>
-				<div class="header__nav--body">
-					<div class="header__nav--login"></div>
-					<ul class="header__nav--list">
-						<li>
-							<a href="#">
-								О нас
-							</a>
-							<ul>
-								<li>
-									<a href="#">
-										Link Link Link Link Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								Торговля
-							</a>
-							<ul>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								Торговая платформа
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Новости
-							</a>
-							<ul>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										Link
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								FAQ
-							</a>
-						</li>
-					</ul>
-					<div class="header__nav--theme visible-on-mob">
-						<div class="header__nav--current-theme">
-							<div class="header__nav--current-theme-icon">
-								<div class="theme-change">
-									<div class="theme-change-light">
-										<svg width="15" height="15" viewBox="0 0 15 15">
-											<use xlink:href="img/sprites.svg#theme-light"></use>
-										</svg>
-									</div>
-									<div class="theme-change-dark">
-										<svg width="15" height="15" viewBox="0 0 15 15">
-											<use xlink:href="img/sprites.svg#theme-dark"></use>
-										</svg>
-									</div>
-								</div>
+			<div class="header__wrapper" data-aos="fade-in" data-aos-delay="100">
+				<div class="header__logo">
+					<a href="index.html" class="header__logo--link">
+						<div class="theme-change">
+							<div class="theme-change-light">
+								<picture>
+									<source srcset="img/logo-dark.avif" type="image/avif">
+									<source srcset="img/logo-dark.webp" type="image/webp">
+									<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+								</picture>
 							</div>
-							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+							<div class="theme-change-dark">
+								<picture>
+									<source srcset="img/logo-light.avif" type="image/avif">
+									<source srcset="img/logo-light.webp" type="image/webp">
+									<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+								</picture>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
-			</nav>
-			<div class="header__add">
-				<div class="header__change-theme-place">
-					<div class="header__change-theme" data-append-to=".header__nav--theme">
-						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
-							<svg width="15" height="15" viewBox="0 0 15 15">
-								<use xlink:href="img/sprites.svg#theme-dark"></use>
-							</svg>
-						</button>
-						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
-							<svg width="15" height="15" viewBox="0 0 15 15">
-								<use xlink:href="img/sprites.svg#theme-light"></use>
-							</svg>
-						</button>
-					</div>
-				</div>
-				<div class="header__lang-place">
-					<div class="header__lang change-lang">
-						<button class="change-lang__target" type="button">
-							<svg width="20" height="20" viewBox="0 0 20 20">
-								<use xlink:href="img/sprites.svg#lang"></use>
-							</svg>
-							RUS
-							<svg width="19" height="19" viewBox="0 0 14 14">
-								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
-							</svg>
-						</button>
-						<ul class="change-lang__list">
+				<nav class="header__nav">
+					<div class="header__nav--background"></div>
+					<div class="header__nav--body">
+						<div class="header__nav--login"></div>
+						<ul class="header__nav--list">
 							<li>
 								<a href="#">
-									ENG
+									О нас
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Link Link Link Link Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Торговля
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Торговая платформа
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									ENG
+									Новости
 								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Link
+										</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="#">
-									EN
+									FAQ
 								</a>
 							</li>
 						</ul>
+						<div class="header__nav--theme visible-on-mob">
+							<div class="header__nav--current-theme">
+								<div class="header__nav--current-theme-icon">
+									<div class="theme-change">
+										<div class="theme-change-light">
+											<svg width="15" height="15" viewBox="0 0 15 15">
+												<use xlink:href="img/sprites.svg#theme-light"></use>
+											</svg>
+										</div>
+										<div class="theme-change-dark">
+											<svg width="15" height="15" viewBox="0 0 15 15">
+												<use xlink:href="img/sprites.svg#theme-dark"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<div class="header__add">
+					<div class="header__change-theme-place">
+						<div class="header__change-theme" data-append-to=".header__nav--theme">
+							<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+								<svg width="15" height="15" viewBox="0 0 15 15">
+									<use xlink:href="img/sprites.svg#theme-dark"></use>
+								</svg>
+							</button>
+							<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+								<svg width="15" height="15" viewBox="0 0 15 15">
+									<use xlink:href="img/sprites.svg#theme-light"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="header__lang-place">
+						<div class="header__lang change-lang">
+							<button class="change-lang__target" type="button">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#lang"></use>
+								</svg>
+								RUS
+								<svg width="19" height="19" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+								</svg>
+							</button>
+							<ul class="change-lang__list">
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										ENG
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__login-place">
+						<div class="header__login" data-append-to=".header__nav--login">
+							<a href="register.html" class="header__login--btn btn _none-accent">
+								Регистрация
+							</a>
+							<a href="login.html" class="header__login--btn btn">
+								Вход
+							</a>
+						</div>
 					</div>
 				</div>
-				<div class="header__login-place">
-					<div class="header__login" data-append-to=".header__nav--login">
-						<a href="register.html" class="header__login--btn btn _none-accent">
-							Регистрация
-						</a>
-						<a href="login.html" class="header__login--btn btn">
-							Вход
-						</a>
-					</div>
-				</div>
+				<button class="header__burger" type="button" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
-			<button class="header__burger" type="button" aria-label="Menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
 		</header>
 
 		<main class="main">
@@ -225,7 +227,7 @@
 					<div class="index-hero__background--decor"></div>
 					<div class="index-hero__background--decor"></div>
 				</div>
-				<div class="index-hero__content">
+				<div class="index-hero__content" data-aos="fade-in" data-aos-delay="200">
 					<ul class="index-hero__tags">
 						<li>
 							Акции
@@ -249,7 +251,7 @@
 						Регистрация
 					</a>
 				</div>
-				<div class="index-hero__image">
+				<div class="index-hero__image" data-aos="fade-in" data-aos-delay="300">
 					<div class="index-hero__image--wrapper image-aspect-ratio">
 						<picture>
 							<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
@@ -281,7 +283,7 @@
 					</div>
 				</div>
 				<div class="index-hero__panel">
-					<div class="index-hero__panel--col">
+					<div class="index-hero__panel--col" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 						<div class="index-hero__about">
 							<div class="index-hero__about--logo">
 								<picture>
@@ -296,168 +298,170 @@
 						</div>
 					</div>
 					<div class="index-hero__panel--col">
-						<table class="index-hero__table">
-							<colgroup>
-								<col>
-								<col>
-								<col>
-								<col>
-							</colgroup>
-							<thead>
-								<tr>
-									<th>
-										Coin
-									</th>
-									<th>
-										Value
-									</th>
-									<th>
-										Change 24h
-									</th>
-									<th>
-										Dinamics
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class="index-hero__table--coin">
-											<div class="index-hero__table--coin-logo">
-												<picture>
-													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
-													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
-													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
-												</picture>
+						<div class="index-hero__table-wrapper" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
+							<table class="index-hero__table">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											Coin
+										</th>
+										<th>
+											Value
+										</th>
+										<th>
+											Change 24h
+										</th>
+										<th>
+											Dinamics
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="index-hero__table--coin">
+												<div class="index-hero__table--coin-logo">
+													<picture>
+														<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
+														<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
+														<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
+													</picture>
+												</div>
+												<span class="index-hero__table--coin-name">
+													BitVavo
+												</span>
 											</div>
-											<span class="index-hero__table--coin-name">
-												BitVavo
-											</span>
-										</div>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Value</span>
-										<span class="index-hero__table--value" data-before="$">53,09</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Change 24h</span>
-										<span class="index-hero__table--value _up">+8,5%</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Dinamics</span>
-										<div class="index-hero__table--dynamics _up">
-											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
-												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
-											</svg>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="index-hero__table--coin">
-											<div class="index-hero__table--coin-logo">
-												<picture>
-													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
-													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
-													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
-												</picture>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Value</span>
+											<span class="index-hero__table--value" data-before="$">53,09</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Change 24h</span>
+											<span class="index-hero__table--value _up">+8,5%</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Dinamics</span>
+											<div class="index-hero__table--dynamics _up">
+												<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+													<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+												</svg>
 											</div>
-											<span class="index-hero__table--coin-name">
-												BitVavo
-											</span>
-										</div>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Value</span>
-										<span class="index-hero__table--value" data-before="$">53,09</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Change 24h</span>
-										<span class="index-hero__table--value _up">+8,5%</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Dinamics</span>
-										<div class="index-hero__table--dynamics _up">
-											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
-												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
-											</svg>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="index-hero__table--coin">
-											<div class="index-hero__table--coin-logo">
-												<picture>
-													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
-													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
-													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
-												</picture>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="index-hero__table--coin">
+												<div class="index-hero__table--coin-logo">
+													<picture>
+														<source srcset="img/index/hero/BitfinexBadge.avif" type="image/avif">
+														<source srcset="img/index/hero/BitfinexBadge.webp" type="image/webp">
+														<img src="img/index/hero/BitfinexBadge.png" alt="" width="40" height="40" loading="lazy">
+													</picture>
+												</div>
+												<span class="index-hero__table--coin-name">
+													BitFinex
+												</span>
 											</div>
-											<span class="index-hero__table--coin-name">
-												BitVavo
-											</span>
-										</div>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Value</span>
-										<span class="index-hero__table--value" data-before="$">53,09</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Change 24h</span>
-										<span class="index-hero__table--value _up">+8,5%</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Dinamics</span>
-										<div class="index-hero__table--dynamics _up">
-											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
-												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
-											</svg>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="index-hero__table--coin">
-											<div class="index-hero__table--coin-logo">
-												<picture>
-													<source srcset="img/index/hero/BitvavoBadge.avif" type="image/avif">
-													<source srcset="img/index/hero/BitvavoBadge.webp" type="image/webp">
-													<img src="img/index/hero/BitvavoBadge.png" alt="" width="40" height="40" loading="lazy">
-												</picture>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Value</span>
+											<span class="index-hero__table--value" data-before="$">2,435</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Change 24h</span>
+											<span class="index-hero__table--value _up">+11,2%</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Dinamics</span>
+											<div class="index-hero__table--dynamics _up">
+												<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+													<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+												</svg>
 											</div>
-											<span class="index-hero__table--coin-name">
-												BitVavo
-											</span>
-										</div>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Value</span>
-										<span class="index-hero__table--value" data-before="$">53,09</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Change 24h</span>
-										<span class="index-hero__table--value _up">+8,5%</span>
-									</td>
-									<td>
-										<span class="index-hero__table--name">Dinamics</span>
-										<div class="index-hero__table--dynamics _up">
-											<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
-												<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
-											</svg>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="index-hero__table--coin">
+												<div class="index-hero__table--coin-logo">
+													<picture>
+														<source srcset="img/index/hero/CreamBadge.avif" type="image/avif">
+														<source srcset="img/index/hero/CreamBadge.webp" type="image/webp">
+														<img src="img/index/hero/CreamBadge.png" alt="" width="40" height="40" loading="lazy">
+													</picture>
+												</div>
+												<span class="index-hero__table--coin-name">
+													Cream
+												</span>
+											</div>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Value</span>
+											<span class="index-hero__table--value" data-before="$">190.34</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Change 24h</span>
+											<span class="index-hero__table--value _down">-3,3%</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Dinamics</span>
+											<div class="index-hero__table--dynamics _up">
+												<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+													<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+												</svg>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="index-hero__table--coin">
+												<div class="index-hero__table--coin-logo">
+													<picture>
+														<source srcset="img/index/hero/ProbitBadge.avif" type="image/avif">
+														<source srcset="img/index/hero/ProbitBadge.webp" type="image/webp">
+														<img src="img/index/hero/ProbitBadge.png" alt="" width="40" height="40" loading="lazy">
+													</picture>
+												</div>
+												<span class="index-hero__table--coin-name">
+													Probit
+												</span>
+											</div>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Value</span>
+											<span class="index-hero__table--value" data-before="$">43,4</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Change 24h</span>
+											<span class="index-hero__table--value _up">+29,5%</span>
+										</td>
+										<td>
+											<span class="index-hero__table--name">Dinamics</span>
+											<div class="index-hero__table--dynamics _up">
+												<svg width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 3.13181L2.41111 6.59281C3.82222 10.0538 6.64444 16.9758 9.46667 20.596C12.2889 24.2161 15.1111 24.5345 17.9333 24.8702C20.7556 25.2059 23.5778 25.559 26.4 25.2899C29.2222 25.0209 32.0444 24.1297 34.8667 25.6291C37.6889 27.1285 40.5111 31.0184 43.3333 29.2387C46.1556 27.4589 48.9778 20.0095 51.8 15.2448C54.6222 10.48 57.4444 8.39994 60.2667 8.78189C63.0889 9.16384 65.9111 12.0078 68.7333 11.9535C71.5556 11.8991 74.3778 8.94647 77.2 10.937C80.0222 12.9275 82.8444 19.8612 85.6667 21.5971C88.4889 23.3331 91.3111 19.8712 94.1333 17.5104C96.9556 15.1495 99.7778 13.8897 102.6 14.0246C105.422 14.1595 108.244 15.689 111.067 15.76C113.889 15.8309 116.711 14.4433 119.533 11.7402C122.356 9.0371 125.178 5.01855 126.589 3.00928L128 1" />
+													<path d="M2.41111 6.59281L1 3.13181V41H128V1L126.589 3.00928L126.589 3.00938C125.178 5.01868 122.356 9.03715 119.533 11.7402C116.711 14.4433 113.889 15.8309 111.067 15.76C108.244 15.689 105.422 14.1595 102.6 14.0246C99.7778 13.8897 96.9556 15.1495 94.1333 17.5104C91.3111 19.8712 88.4889 23.3331 85.6667 21.5971C82.8444 19.8612 80.0222 12.9275 77.2 10.937C74.3778 8.94647 71.5556 11.8991 68.7333 11.9535C65.9111 12.0078 63.0889 9.16384 60.2667 8.78189C57.4444 8.39994 54.6222 10.48 51.8 15.2448C48.9778 20.0095 46.1556 27.4589 43.3333 29.2387C40.5111 31.0184 37.6889 27.1285 34.8667 25.6291C32.0444 24.1297 29.2222 25.0209 26.4 25.2899C23.5778 25.559 20.7556 25.2059 17.9333 24.8702L17.8891 24.865C15.0816 24.5311 12.2741 24.1972 9.46667 20.596C6.64444 16.9758 3.82222 10.0538 2.41111 6.59281Z" />
+												</svg>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<div class="index-hero__panel--col">
 						<form method="post" class="index-hero__buy-shares buy-shares-block">
-							<div class="buy-shares-block__item">
+							<div class="buy-shares-block__item" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 								<h2 class="buy-shares-block__title">
 									Купить акции
 								</h2>
@@ -474,7 +478,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="buy-shares-block__item">
+							<div class="buy-shares-block__item" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 								<div class="buy-shares-block__element">
 									<div class="buy-shares-block__element--header">
 										<span class="buy-shares-block__name">Enter amount</span>
@@ -485,15 +489,17 @@
 									</div>
 								</div>
 							</div>
-							<button class="buy-shares-block__submit btn" type="button">
-								Купить
-							</button>
+							<div class="buy-shares-block__footer" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
+								<button class="buy-shares-block__submit btn" type="button">
+									Купить
+								</button>
+							</div>
 						</form>
 					</div>
 				</div>
 			</section>
 			<section class="start-trading container">
-				<div class="start-trading__image">
+				<div class="start-trading__image" data-aos="fade-in" data-aos-delay="200">
 					<div class="theme-change">
 						<div class="theme-change-light">
 							<div class="start-trading__image--wrapper image-aspect-ratio">
@@ -535,7 +541,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="start-trading__content">
+				<div class="start-trading__content" data-aos="fade-in" data-aos-delay="300">
 					<h2 class="start-trading__title main-title _min">
 						Откройте двери успешного трейдинга прямо сейчас
 					</h2>

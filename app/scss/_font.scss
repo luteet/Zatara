@@ -63,6 +63,10 @@
 	color: var(--white-opacity-7);
 }
 
+.theme-text-3 {
+	color: var(--white-opacity-5);
+}
+
 .super-min-text {
 	font-size: 0.75rem;
 }
@@ -74,6 +78,18 @@
 .large-text {
 	font-size: 1.125rem;
 	font-weight: 700;
+}
+
+.success-string {
+	color: var(--success);
+}
+
+.danger-string {
+	color: var(--danger);
+}
+
+.waiting-string {
+	color: var(--yellow);
 }
 
 .min-title {

@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		if (localStorage.getItem('zatara-theme') == 'light') {
+			document.querySelector('html').classList.add('light-theme')
+		}
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<svg class="visually-hidden" width="129" height="41" viewBox="0 0 129 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="up-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="down-gradient" x1="64.5" y1="1" x2="64.5" y2="43.1739" gradientUnits="userSpaceOnUse">
+				<stop offset="0" stop-opacity="0.26" />
+				<stop offset="1" stop-opacity="0" />
+			</linearGradient>
+		</defs>
+		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
+			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+		</clipPath>
+	</svg>
+	<div class="wrapper account-wrapper">
+		<aside class="aside">
+			<div class="aside__header visible-on-desktop">
+				<div class="aside__logo">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="aside__nav">
+				<ul>
+					<li>
+						<a href="#" class="current">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#dashboard"></use>
+							</svg>
+							<b>Дашборд</b>
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#market"></use>
+							</svg>
+							<b>Маркет</b>
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#">
+							Акции
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#">
+							Криптовалюты
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#">
+							Форекс
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#">
+							Избранное
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#my-assets"></use>
+							</svg>
+							<b class="visible-on-desktop">Мои активы</b>
+							<b class="visible-on-mob">Активы</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#my-wallets"></use>
+							</svg>
+							<b class="visible-on-desktop">Мои кошельки</b>
+							<b class="visible-on-mob">Кошельки</b>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#payment-transactions"></use>
+							</svg>
+							<b class="visible-on-desktop">Платежные операции</b>
+							<b class="visible-on-mob">Операции</b>
+						</a>
+					</li>
+					<li class="visible-on-desktop">
+						<a href="#verificate-popup" class="open-popup">
+							<svg width="20" height="20" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#verification"></use>
+							</svg>
+							<b>Верификация</b>
+						</a>
+					</li>
+					<li class="visible-on-mob">
+						<a href="#">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#account"></use>
+							</svg>
+							<b>Аккаунт</b>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="aside__add visible-on-desktop">
+				<div class="aside__lang change-lang">
+					<button class="change-lang__target" type="button">
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#lang"></use>
+						</svg>
+						<span>RUS</span>
+						<svg width="19" height="19" viewBox="0 0 14 14">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<ul class="change-lang__list">
+						<li>
+							<a href="#">
+								ENG
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								ENG
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								EN
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="aside__logout-place">
+					<a href="#" class="aside__logout" data-append-to=".header__nav--logout">
+						<div class="aside__logout--icon">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#logout"></use>
+							</svg>
+						</div>
+						<b class="aside__logout--name" title="0x49350123123123dk435">0x49350123123123dk435</b>
+						<span class="aside__logout--span">Metamask</span>
+					</a>
+				</div>
+			</div>
+		</aside>
+		<header class="header">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture>
+								<source srcset="img/logo-dark.avif" type="image/avif">
+								<source srcset="img/logo-dark.webp" type="image/webp">
+								<img src="img/logo-dark.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture>
+								<source srcset="img/logo-light.avif" type="image/avif">
+								<source srcset="img/logo-light.webp" type="image/webp">
+								<img src="img/logo-light.png" alt="Logo" width="115" height="40" loading="lazy" class="header__logo--img">
+							</picture>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="header__account-nav-place">
+				<div class="header__account-nav" data-append-to=".header__nav--account-nav">
+					<ul>
+						<li>
+							<a href="#refill-popup" class="open-popup">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#plus"></use>
+								</svg>
+								Пополнить
+							</a>
+						</li>
+						<li>
+							<a href="#withdrawn-funds-2-popup" class="open-popup">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#conclusion"></use>
+								</svg>
+								Вывод
+							</a>
+						</li>
+						<li>
+							<a href="#exchange-popup" class="open-popup">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#exchange"></use>
+								</svg>
+								Обмен
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<nav class="header__nav visible-on-mob">
+				<div class="header__nav--background"></div>
+				<div class="header__nav--body">
+					<div class="header__nav--account"></div>
+					<div class="header__nav--account-nav"></div>
+					<ul class="header__nav--list">
+						<li>
+							<a href="#">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#market"></use>
+								</svg>
+								<b>Маркет</b>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Акции
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Криптовалюты
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Форекс
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Избранное
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="20" height="20" viewBox="0 0 512 512">
+									<use xlink:href="img/sprites.svg#verification"></use>
+								</svg>
+								<b>Верификация</b>
+							</a>
+						</li>
+					</ul>
+					<div class="header__nav--theme visible-on-mob">
+						<div class="header__nav--current-theme">
+							<div class="header__nav--current-theme-icon">
+								<div class="theme-change">
+									<div class="theme-change-light">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-light"></use>
+										</svg>
+									</div>
+									<div class="theme-change-dark">
+										<svg width="15" height="15" viewBox="0 0 15 15">
+											<use xlink:href="img/sprites.svg#theme-dark"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							Тема: <span data-change-string-on-dark="Темная" data-change-string-on-light="Светлая">Темная</span>
+						</div>
+					</div>
+					<div class="header__nav--logout"></div>
+				</div>
+			</nav>
+			<div class="header__add">
+				<div class="header__change-theme-place">
+					<div class="header__change-theme" data-append-to=".header__nav--theme">
+						<button class="header__change-theme--btn change-theme-to-dark" type="button" title="Тёмная тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-dark"></use>
+							</svg>
+						</button>
+						<button class="header__change-theme--btn change-theme-to-light" type="button" title="Светлая тема">
+							<svg width="15" height="15" viewBox="0 0 15 15">
+								<use xlink:href="img/sprites.svg#theme-light"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="header__lang-place visible-on-mob">
+					<div class="header__lang change-lang">
+						<button class="change-lang__target" type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<use xlink:href="img/sprites.svg#lang"></use>
+							</svg>
+							RUS
+							<svg width="19" height="19" viewBox="0 0 14 14">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<ul class="change-lang__list">
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ENG
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__login-place">
+					<div class="header__account" data-append-to=".header__nav--account">
+						<button class="header__account--target" type="button" aria-label="account">
+							<div class="header__account--avatar">
+								<picture>
+									<source srcset="img/account/avatar.avif" type="image/avif">
+									<source srcset="img/account/avatar.webp" type="image/webp">
+									<img src="img/account/avatar.png" alt="" width="32" height="32" loading="lazy">
+								</picture>
+								<div class="header__account--label"> <!-- + _danger -->
+									<!-- <svg width="24" height="24" viewBox="0 0 10 10">
+										<use xlink:href="img/sprites.svg#alert-3"></use>
+									</svg> -->
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#verificated"></use>
+									</svg>
+								</div>
+							</div>
+							<b class="header__account--name" title="0x49350123123123213213123123dk435">
+								0x49350123123123213213123123dk435
+							</b>
+							<svg width="19" height="19" viewBox="0 0 14 14" class="header__account--icon">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__account--info">
+							<span>Balance</span><br>
+							<b>
+								$ 49,543
+								<svg width="16" height="17" viewBox="0 0 16 17">
+									<use xlink:href="img/sprites.svg#dollar"></use>
+								</svg>
+							</b>
+						</div>
+						<div class="header__account--block header__account-block">
+							<div class="header__account-block--header">
+								<div class="header__account-block--avatar">
+									<picture>
+										<source srcset="img/account/avatar.avif" type="image/avif">
+										<source srcset="img/account/avatar.webp" type="image/webp">
+										<img src="img/account/avatar.png" alt="" width="48" height="48" loading="lazy">
+									</picture>
+									<div class="header__account-block--label"> <!-- + _danger -->
+										<!-- <svg width="24" height="24" viewBox="0 0 10 10">
+											<use xlink:href="img/sprites.svg#alert-3"></use>
+										</svg> -->
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#verificated"></use>
+										</svg>
+									</div>
+								</div>
+								<b class="header__account-block--name">GitHAb676</b>
+								<span class="header__account-block--email">GitHAb676@gmail.com</span>
+							</div>
+							<!-- <a href="#" class="header__account-block--message _success" aria-label="Please, verificate your information">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#alert-3"></use>
+								</svg>
+								<span>
+									Please, verificate <br> your information
+								</span>
+								<svg width="19" height="19" viewBox="0 0 17 17">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</a> -->
+							<a href="#" class="header__account-block--message" aria-label="You are verificated">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#verificated"></use>
+								</svg>
+								<span>
+									You are verificated
+								</span>
+								<svg width="19" height="19" viewBox="0 0 17 17">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</a>
+							<ul class="header__account-block--list">
+								<li>
+									<a href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#settings"></use>
+										</svg>
+										Settings
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#logout"></use>
+										</svg>
+										Log out
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<section class="market">
+				<div class="market__hero">
+					<div class="market__block market__balance">
+						<div class="market__balance--col">
+							<div class="market__balance--header">
+								<div class="market__balance--icon visible-on-mob">
+									<svg width="18" height="18" viewBox="0 0 18 18">
+										<use xlink:href="img/sprites.svg#empty-wallet"></use>
+									</svg>
+								</div>
+								<h2 class="market__block--title market__balance--title theme-text">
+									Ваш баланс
+								</h2>
+								<div class="market__balance--row">
+									<strong class="market__balance--value main-title _min">
+										$54,654.09
+									</strong>
+									<b class="market__balance--percent _up">
+										<svg width="16" height="16" viewBox="0 0 16 16">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+										9,9%
+									</b>
+								</div>
+							</div>
+							<ul class="market__balance--nav">
+								<li>
+									<a href="#refill-popup" class="open-popup">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#plus"></use>
+										</svg>
+										Пополнить
+									</a>
+								</li>
+								<li>
+									<a href="#withdrawn-funds-2-popup" class="open-popup">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#conclusion"></use>
+										</svg>
+										Вывод
+									</a>
+								</li>
+								<li>
+									<a href="#exchange-popup" class="open-popup">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use xlink:href="img/sprites.svg#exchange"></use>
+										</svg>
+										Обмен
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="market__balance--col">
+							<div class="market__balance--image image-aspect-ratio">
+								<picture>
+									<source srcset="img/account/our-balance/our-balance-image.avif" type="image/avif">
+									<source srcset="img/account/our-balance/our-balance-image.webp" type="image/webp">
+									<img src="img/account/our-balance/our-balance-image.png" alt="" width="333" height="334" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<ul class="market__balance--info">
+							<li>
+								<h3 class="theme-text">
+									Криптоактивы
+								</h3>
+								<div class="market__balance--info-row">
+									<strong>
+										$204,4
+									</strong>
+									<b class="market__balance--percent _up">
+										<svg width="16" height="16" viewBox="0 0 16 16">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+										9,9%
+									</b>
+								</div>
+							</li>
+							<li>
+								<h3 class="theme-text">
+									Акции
+								</h3>
+								<div class="market__balance--info-row">
+									<strong>
+										$204,4
+									</strong>
+									<b class="market__balance--percent _up">
+										<svg width="16" height="16" viewBox="0 0 16 16">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+										9,9%
+									</b>
+								</div>
+							</li>
+							<li>
+								<h3 class="theme-text">
+									Форекс
+								</h3>
+								<div class="market__balance--info-row">
+									<strong>
+										$204,4
+									</strong>
+									<b class="market__balance--percent _up">
+										<svg width="16" height="16" viewBox="0 0 16 16">
+											<use xlink:href="img/sprites.svg#arrow-up"></use>
+										</svg>
+										9,9%
+									</b>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="market__block market__buy">
+						<h2 class="market__block--title theme-text">
+							Купить
+						</h2>
+						<ul class="market__buy--nav tab-nav">
+							<li>
+								<a href="#market-stocks" class="theme-text current">
+									Акции
+								</a>
+							</li>
+							<li>
+								<a href="#market-fiat" class="theme-text">
+									Фиат
+								</a>
+							</li>
+							<li>
+								<a href="#market-crypto" class="theme-text">
+									Крипту
+								</a>
+							</li>
+						</ul>
+						<div class="market__buy--wrapper tab-wrapper">
+							<form method="post" class="market__buy--block tab-block _active" id="market-stocks">
+								<div class="market__buy--select">
+									<select name="assets" class="custom-select _alt-stroke">
+										<option value="tsl-1" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+										<option value="tsl-2" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+										<option value="tsl-3" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									</select>
+								</div>
+								<div class="market__buy--row">
+									<label>
+										<span>Количество</span>
+										<input type="number" name="length" value="2" placeholder="0">
+									</label>
+									<label>
+										<span>Сумма</span>
+										<input type="text" name="result" value="$123" readonly placeholder="0">
+									</label>
+								</div>
+								<button class="market__buy--submit btn" type="submit">
+									Купить
+								</button>
+							</form>
+							<form method="post" class="market__buy--block tab-block" id="market-crypto">
+								<div class="market__buy--select">
+									<select name="assets" class="custom-select _alt-stroke">
+										<option value="btc-1" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+										<option value="btc-2" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+										<option value="btc-3" data-html="<b>BTC</b><strong class='success-string'>$4214</strong><span>Bitcoin</span>">BTC $4214 Bitcoin</option>
+									</select>
+								</div>
+								<div class="market__buy--row">
+									<label>
+										<span>Количество</span>
+										<input type="number" name="length" value="2" placeholder="0">
+									</label>
+									<label>
+										<span>Сумма</span>
+										<input type="text" name="result" value="$123" readonly placeholder="0">
+									</label>
+								</div>
+								<button class="market__buy--submit btn" type="submit">
+									Купить
+								</button>
+							</form>
+							<form method="post" class="market__buy--block tab-block" id="market-fiat">
+								<div class="market__buy--select">
+									<select name="assets" class="custom-select _alt-stroke">
+										<option value="tsl-1" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+										<option value="tsl-2" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+										<option value="tsl-3" data-html="<b>TSL</b><strong class='success-string'>$4214</strong><span>Tesla Inc.</span>">TSL $4214 Tesla Inc.</option>
+									</select>
+								</div>
+								<div class="market__buy--row">
+									<label>
+										<span>Количество</span>
+										<input type="number" name="length" value="2" placeholder="0">
+									</label>
+									<label>
+										<span>Сумма</span>
+										<input type="text" name="result" value="$123" readonly placeholder="0">
+									</label>
+								</div>
+								<button class="market__buy--submit btn" type="submit">
+									Купить
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="market__main">
+					<h2 class="market__title main-title _min">
+						Рынки
+					</h2>
+					<ul class="market__nav tab-nav">
+						<li>
+							<a href="#crypto-market" class="theme-text current">
+								Криптовалюты
+							</a>
+						</li>
+						<li>
+							<a href="#stocks-market" class="theme-text">
+								Акции
+							</a>
+						</li>
+						<li>
+							<a href="#fiat-market" class="theme-text">
+								Фиат
+							</a>
+						</li>
+					</ul>
+					<div class="market__table-wrapper tab-wrapper">
+						<div class="market__table coins-table-2 _crypto tab-block _active" id="crypto-market">
+							<div class="coins-table-2__nav visible-on-mob">
+								<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="coins-table-2__wrapper">
+								<table class="coins-table-2__block">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Наименование</th>
+											<th>Цена</th>
+											<th>Объем (24 ч)</th>
+											<th>Капитализация</th>
+											<th>7d %</th>
+											<th>% 24ч</th>
+											<th>1h %</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<div class="coins-table-2__info">
+													<div class="coins-table-2__info--logo">
+														<img src="img/account/payment/BTC.svg" width="40" height="40" loading="lazy" alt="">
+													</div>
+													<h3>Bitcoin</h3>
+													<span class="theme-text-3">BTC</span>
+												</div>
+											</td>
+											<td>
+												<b>$28,951.07</b>
+											</td>
+											<td>
+												<b>$15,499,580,703</b><br>
+												<span>535,606 BTC</span>
+											</td>
+											<td>
+												<b>$315,063,221</b>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _down">-1,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="stocks__table coins-table-2 _stocks tab-block" id="stocks-market">
+							<div class="coins-table-2__nav visible-on-mob">
+								<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="coins-table-2__wrapper">
+								<table class="coins-table-2__block">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Symbol</th>
+											<th class="visible-on-desktop">Название</th>
+											<th>Цена</th>
+											<th>Market Time</th>
+											<th>Change</th>
+											<th>Change %</th>
+											<th>Market Cap</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="stocks__table coins-table-2 _stocks tab-block" id="fiat-market">
+							<div class="coins-table-2__nav visible-on-mob">
+								<button class="coins-table-2__nav--arrow _prev" type="button" title="Previous">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="coins-table-2__nav--arrow _next" type="button" title="Next">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="coins-table-2__wrapper">
+								<table class="coins-table-2__block">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Symbol</th>
+											<th class="visible-on-desktop">Название</th>
+											<th>Цена</th>
+											<th>Market Time</th>
+											<th>Change</th>
+											<th>Change %</th>
+											<th>Market Cap</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<b>1</b>
+											</td>
+											<td>
+												<b>
+													<img src="img/account/payment/BTC.svg" width="26" height="26" class="visible-on-mob" alt="">
+													ADMP
+												</b>
+											</td>
+											<td class="visible-on-desktop">
+												<span>Adamis Pharmaceuticals Corporation</span>
+											</td>
+											<td>
+												<b>$3.9900</b>
+											</td>
+											<td>
+												<span>4:00PM EDT</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+12,2%</span>
+											</td>
+											<td>
+												<span class="coins-table__percent-value _up">+8,5%</span>
+											</td>
+											<td>
+												<b>9.081M</b>
+											</td>
+											<td>
+												<div class="coins-table__add-to-favorite">
+													<button class="coins-table__add-to-favorite--btn" type="button">
+														<svg width="24" height="24" viewBox="0 0 24 24">
+															<use xlink:href="img/sprites.svg#like"></use>
+														</svg>
+													</button>
+												</div>
+											</td>
+											<td>
+												<button class="coins-table__buy btn _min" type="button">
+													Купить
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+	</div>
+
+	<div class="verificate-popup popup" id="verificate-popup" style="display: none;">
+		<div class="verificate-popup__wrapper popup-wrapper">
+			<div class="verificate-popup__bg popup-bg popup-close"></div>
+			<div class="verificate-popup__body popup-body">
+				<button type="button" class="verificate-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<form class="verificate-popup__block popup-block _active">
+					<div class="verificate-popup__block--header">
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__upload">
+						<h3 class="verificate-popup__upload--title">
+							<b>
+								Загрузите фото паспорта
+							</b>
+						</h3>
+						<div class="verificate-popup__upload--area">
+							<div class="verificate-popup__upload--icon">
+								<svg width="32" height="32" viewBox="0 0 32 32">
+									<use xlink:href="img/sprites.svg#upload"></use>
+								</svg>
+							</div>
+							<b class="verificate-popup__upload--min-title">
+								Загрузить фото
+							</b>
+							<div class="verificate-popup__upload--text">
+								<p>
+									Фото до 4МБ. Формат png или jpeg. Вы можете загрузить фото или перетащить сюда
+								</p>
+							</div>
+							<label class="verificate-popup__upload--btn" title="Загрузить">
+								<input type="file" name="passport" accept="image/png, image/jpeg" class="visually-hidden">
+								<span>Загрузить</span>
+							</label>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<form class="verificate-popup__block popup-block">
+					<div class="verificate-popup__block--header">
+						<a href="#" class="verificate-popup__forward forward-link">
+							<svg width="19" height="19" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#arrow-prev"></use>
+							</svg>
+							Назад
+						</a>
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _success">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li class="disabled">
+							<div class="verificate-popup__list--decor-marker decor-marker">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__upload">
+						<h3 class="verificate-popup__upload--title">
+							<b>
+								Загрузите селфи с пасспортом
+							</b>
+						</h3>
+						<div class="verificate-popup__upload--area">
+							<div class="verificate-popup__upload--icon">
+								<svg width="32" height="32" viewBox="0 0 32 32">
+									<use xlink:href="img/sprites.svg#upload"></use>
+								</svg>
+							</div>
+							<b class="verificate-popup__upload--min-title">
+								Загрузить фото
+							</b>
+							<div class="verificate-popup__upload--text theme-text">
+								<p>
+									Фото до 4МБ. Формат png или jpeg. Вы можете загрузить фото или перетащить сюда
+								</p>
+							</div>
+							<label class="verificate-popup__upload--btn" title="Загрузить">
+								<input type="file" name="selfies-passport" accept="image/png, image/jpeg" class="visually-hidden">
+								<span>Загрузить</span>
+							</label>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<form class="verificate-popup__block popup-block _disable-next-change" data-remove-disable>
+					<div class="verificate-popup__block--header">
+						<a href="#" class="verificate-popup__forward forward-link">
+							<svg width="19" height="19" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#arrow-prev"></use>
+							</svg>
+							Назад
+						</a>
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<ul class="verificate-popup__list">
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Фото пасспорта
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _accent _fill">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Селфи с паспортом
+						</li>
+						<li>
+							<div class="verificate-popup__list--decor-marker decor-marker _success">
+								<div class="decor-marker-line"></div>
+								<div class="decor-marker-dot"></div>
+							</div>
+							Ожидайте
+						</li>
+					</ul>
+					<div class="verificate-popup__wait">
+						<div class="verificate-popup__wait--image">
+							<div class="verificate-popup__wait--image-wrapper">
+								<picture class="image-aspect-ratio">
+									<source srcset="img/account/verification/verification-waiting.avif" type="image/avif">
+									<source srcset="img/account/verification/verification-waiting.webp" type="image/webp">
+									<img src="img/account/verification/verification-waiting.png" alt="" width="105" height="105" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="verificate-popup__wait--content">
+							<h3 class="title _min">Мы проверяем информацию, ожидайте</h3>
+							<p class="theme-text">
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn" type="submit">
+						Пополнить
+					</button>
+				</form>
+				<div class="verificate-popup__block popup-block">
+					<div class="verificate-popup__block--header">
+						<h2 class="verificate-popup__title title _min">
+							Идентификация пользователя
+						</h2>
+						<div class="verificate-popup__text theme-text">
+							<p>
+								Для идентификации загрузите фотографию или отсканированные копии следующих документов
+							</p>
+						</div>
+					</div>
+					<div class="verificate-popup__success-icon">
+						<div class="verificate-popup__success-icon--wrapper">
+							<picture>
+								<source srcset="img/account/verification/verification-check.avif" type="image/avif">
+								<source srcset="img/account/verification/verification-check.webp" type="image/webp">
+								<img src="img/account/verification/verification-check.png" alt="" width="105" height="105" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<button class="verificate-popup__submit btn popup-close" type="button">
+						Торговать
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="withdrawn-funds popup" id="successfully-withdrawn-funds-popup" style="display: none;">
+		<div class="withdrawn-funds__wrapper popup-wrapper">
+			<div class="withdrawn-funds__bg popup-bg popup-close"></div>
+			<div class="withdrawn-funds__body popup-body">
+				<button type="button" class="withdrawn-funds__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="withdrawn-funds__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/successful-light.avif" type="image/avif">
+								<source srcset="img/account/successful-light.webp" type="image/webp">
+								<img src="img/account/successful-light.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/successful-dark.avif" type="image/avif">
+								<source srcset="img/account/successful-dark.webp" type="image/webp">
+								<img src="img/account/successful-dark.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<h2 class="withdrawn-funds__title title _min">
+					Успешно! Вы успешно вывели средства
+				</h2>
+				<div class="withdrawn-funds__text theme-text">
+					<p>
+						Пожалуйста, ожидайте поступления
+					</p>
+				</div>
+				<div class="withdrawn-funds__footer">
+					<a href="#" class="withdrawn-funds__btn btn popup-close">
+						Закрыть
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="withdrawn-funds popup" id="error-withdrawn-funds-popup" style="display: none;">
+		<div class="withdrawn-funds__wrapper popup-wrapper">
+			<div class="withdrawn-funds__bg popup-bg popup-close"></div>
+			<div class="withdrawn-funds__body popup-body">
+				<button type="button" class="withdrawn-funds__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="withdrawn-funds__image">
+					<div class="theme-change">
+						<div class="theme-change-light">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/error-light.avif" type="image/avif">
+								<source srcset="img/account/error-light.webp" type="image/webp">
+								<img src="img/account/error-light.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+						<div class="theme-change-dark">
+							<picture class="image-aspect-ratio">
+								<source srcset="img/account/error-dark.avif" type="image/avif">
+								<source srcset="img/account/error-dark.webp" type="image/webp">
+								<img src="img/account/error-dark.png" alt="Logo" width="798" height="828" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<h2 class="withdrawn-funds__title title _min">
+					Ой! Произошла ошибка при выводе средств
+				</h2>
+				<div class="withdrawn-funds__text theme-text">
+					<p>
+						Пожалуйста, попробуйте еще раз
+					</p>
+				</div>
+				<div class="withdrawn-funds__footer">
+					<a href="#" class="withdrawn-funds__btn btn popup-close">
+						Закрыть
+					</a>
+					<a href="#" class="withdrawn-funds__btn btn _none-accent">
+						Попробовать еще раз
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="exchange-popup popup" id="exchange-popup" style="display: none;">
+		<div class="exchange-popup__wrapper popup-wrapper">
+			<div class="exchange-popup__bg popup-bg popup-close"></div>
+			<form method="post" class="exchange-popup__body popup-body">
+				<button type="button" class="exchange-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="exchange-popup__title title _min">
+					Обменять
+				</h2>
+				<div class="exchange-popup__info theme-text">
+					<span>Ваш баланс</span>
+					<b>43,324 USDT</b>
+				</div>
+				<div class="exchange-popup__block">
+					<div class="exchange-popup__item">
+						<div class="exchange-popup__item--col">
+							<span>Я отдаю</span>
+							<input type="text" class="min-input" name="exchange" value="120" min="1" required>
+						</div>
+						<div class="exchange-popup__item--col">
+							<div class="exchange-popup__item--select">
+								<select name="exchange-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="exchange-popup__item">
+						<div class="exchange-popup__item--col">
+							<span>Я получаю</span>
+							<input type="text" class="min-input" name="get" value="0,003" min="1" required>
+						</div>
+						<div class="exchange-popup__item--col">
+							<div class="exchange-popup__item--select">
+								<select name="get-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="exchange-popup__icon">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#exchange"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="exchange-popup__info theme-text">
+					<span>Курс</span>
+					<b>1 BTC = 43,324 USDT</b>
+				</div>
+				<button class="exchange-popup__btn btn" type="submit">
+					Обменять
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="refill popup" id="refill-popup" style="display: none;">
+		<div class="refill__wrapper popup-wrapper">
+			<div class="refill__bg popup-bg popup-close"></div>
+			<form method="post" class="refill__body popup-body">
+				<button type="button" class="refill__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="refill__title title _min">
+					Пополнить
+				</h2>
+				<div class="refill__item">
+					<span class="theme-text">Количество</span>
+					<div class="refill__item--row">
+						<div class="refill__item--col">
+							<input type="number" name="length" placeholder="0" value="120" class="min-input">
+						</div>
+						<div class="refill__item--col">
+							<div class="refill__item--select">
+								<select name="refill-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="refill__select">
+					<span class="theme-text">Платёжная система</span>
+					<select name="payments-system" class="custom-select">
+						<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							USDT
+						</option>
+						<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							BTC
+						</option>
+					</select>
+				</div>
+				<ul class="refill__info">
+					<li>
+						<span class="theme-text">
+							Баланс будет пополнен на сумму:
+						</span>
+						<b>
+							12 ETH
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">
+							Комиссия:
+						</span>
+						<b>
+							0,00002 ETH
+						</b>
+					</li>
+				</ul>
+				<button class="refill__submit btn" type="submit">
+					Пополнить
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="refill popup" id="withdrawn-funds-2-popup" style="display: none;">
+		<div class="refill__wrapper popup-wrapper">
+			<div class="refill__bg popup-bg popup-close"></div>
+			<form method="post" class="refill__body popup-body">
+				<button type="button" class="refill__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="refill__title title _min">
+					Вывод
+				</h2>
+				<div class="refill__balance">
+					<span class="theme-text">Ваш баланс</span>
+					<b class="theme-text-2">43,324 USDT</b>
+				</div>
+				<div class="refill__item">
+					<span class="theme-text">Количество</span>
+					<div class="refill__item--row">
+						<div class="refill__item--col">
+							<input type="number" name="length" placeholder="0" value="120" class="min-input">
+						</div>
+						<div class="refill__item--col">
+							<div class="refill__item--select">
+								<select name="refill-currency" class="custom-select-3">
+									<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>BTC</b>'>
+										BTC
+									</option>
+									<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT</b>'>
+										USDT
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="refill__select">
+					<span class="theme-text">Платёжная система</span>
+					<select name="payments-system" class="custom-select">
+						<option value="usdt" data-html='<img src="img/account/payment/Tether.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							USDT
+						</option>
+						<option value="btc" data-html='<img src="img/account/payment/BTC.svg" width="26" height="26" alt=""><b>USDT Tether TRC-20</b>'>
+							BTC
+						</option>
+					</select>
+				</div>
+				<label class="refill__label">
+					<span class="required">Ваш кошелек</span>
+					<input type="text" name="wallet" placeholder="Введите кошелек" required>
+				</label>
+				<ul class="refill__info">
+					<li>
+						<span class="theme-text">
+							Будет выведено
+						</span>
+						<b>
+							12 ETH
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">
+							Комиссия:
+						</span>
+						<b>
+							0,00002 ETH
+						</b>
+					</li>
+				</ul>
+				<button class="refill__submit btn" type="submit">
+					Пополнить
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="refill-2 popup" id="refill-2-popup" style="display: none;">
+		<div class="refill-2__wrapper popup-wrapper">
+			<div class="refill-2__bg popup-bg popup-close"></div>
+			<form method="post" class="refill-2__body popup-body tab-wrapper">
+				<div class="refill-2__header">
+					<button type="button" class="refill-2__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+					<a href="#" class="refill-2__forward-link theme-fill">
+						<svg width="17" height="17" viewBox="0 0 17 17">
+							<use xlink:href="img/sprites.svg#arrow-prev"></use>
+						</svg>
+						Назад
+					</a>
+				</div>
+				<div class="refill-2__content">
+					<h2 class="refill-2__title title _min">
+						Пополнить
+					</h2>
+					<div class="refill-2__text">
+						<p>
+							Вы можете совершить оплату по указанным реквизитам вручную, а затем указать данные этого платежа в форме ниже
+						</p>
+					</div>
+				</div>
+				<div class="refill-2__status _waiting visible-on-mob">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#alert"></use>
+					</svg>
+					<b>Операция НЕ подтверждена Вами!</b>
+				</div>
+				<div class="refill-2__nav tab-nav visible-on-mob">
+					<ul>
+						<li>
+							<a href="#refill-2-check" class="theme-text current">
+								Автотранзакция
+							</a>
+						</li>
+						<li>
+							<a href="#refill-2-manual" class="theme-text">
+								Manual
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="refill-2__check tab-block _active" id="refill-2-check">
+					<div class="refill-2__check--icon _waiting">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#check-2"></use>
+						</svg>
+					</div>
+					<h3 class="refill-2__check--title">
+						Наши платежные <br> реквизиты для оплаты <br> вручную через Ethereum:
+					</h3>
+					<div class="refill-2__check--label">
+						<span>Счет получателя (Ether-address):</span>
+						<div class="refill-2__check--copy-place">
+							0xC2226167B9c16B09F6a72604Cc6bDb94D7d03552
+							<button type="button" class="refill-2__check--copy-btn copy-btn" title="Copy" data-clipboard-text="0xC2226167B9c16B09F6a72604Cc6bDb94D7d03552">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="refill-2__check--label">
+						<span>Сумма:</span>
+						<div class="refill-2__check--copy-place">
+							23.000000 ETH
+							<button type="button" class="refill-2__check--copy-btn copy-btn" title="Copy" data-clipboard-text="23.000000 ETH">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#copy"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<ul class="refill-2__check--info">
+						<li>
+							<span class="theme-text">Статус:</span>
+							<b class="refill-2__check--status _waiting">Ожидание</b>
+						</li>
+						<li>
+							<span class="theme-text">Дата:</span>
+							<b class="theme-text-2">сегодня, 13:32</b>
+						</li>
+						<li>
+							<span class="theme-text">Платежная система:</span>
+							<b class="theme-text-2">Ethereum</b>
+						</li>
+						<li>
+							<span class="theme-text">Сумма:</span>
+							<b class="theme-text-2">23.000000 ETH</b>
+						</li>
+					</ul>
+				</div>
+				<div class="refill-2__status _waiting visible-on-desktop">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#alert"></use>
+					</svg>
+					<b>Операция НЕ подтверждена Вами!</b>
+				</div>
+				<div class="refill-2__manual tab-block" id="refill-2-manual">
+					<h3 class="refill-2__manual--title">
+						Данные платежа через Ethereum, произведенного вручную и реквизиты плательщика:
+					</h3>
+					<label class="refill-2__manual--label">
+						<span class="required">Дата:</span>
+						<input type="text" name="date" readonly value="09.10.2023" placeholder="Дата">
+					</label>
+					<label class="refill-2__manual--label">
+						<span class="required">Batch-номер (операции/транзакции):</span>
+						<input type="text" name="batch-number" readonly value="IN000028" placeholder="Batch-номер (операции/транзакции)">
+					</label>
+					<label class="refill-2__manual--label">
+						<span class="required">Примечание:</span>
+						<input type="text" name="note" readonly value="Invoice #28, GitHAb676" placeholder="Дата">
+					</label>
+					<div class="refill-2__manual--footer visible-on-desktop">
+						<button class="refill-2__manual--btn btn" type="submit">
+							Подтвердить
+						</button>
+						<button class="refill-2__manual--btn btn _none-accent" type="button">
+							Отмена
+						</button>
+					</div>
+				</div>
+				<div class="refill-2__footer visible-on-mob">
+					<button class="refill-2__footer--btn btn" type="submit">
+						Подтвердить
+					</button>
+					<button class="refill-2__footer--btn btn _none-accent" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="transaction-popup popup" id="transaction-popup" style="display: none;">
+		<div class="transaction-popup__wrapper popup-wrapper">
+			<div class="transaction-popup__bg popup-bg popup-close"></div>
+			<div class="transaction-popup__body popup-body">
+				<div class="transaction-popup__header">
+					<div class="transaction-popup__main-info">
+						<div class="transaction-popup__status-icon _danger">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#conclusion"></use>
+							</svg>
+						</div>
+						<div>
+							<b>Вывод на карту **** 4395</b>
+							<time class="theme-text">12 июля 2023 16:00</time>
+						</div>
+					</div>
+					<button type="button" class="transaction-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				<ul class="transaction-popup__info">
+					<li>
+						<span class="theme-text">
+							Статус:
+						</span>
+						<b>
+							<span class="transaction-popup__status _waiting">
+								Ожидание
+							</span>
+						</b>
+					</li>
+					<li>
+						<span class="theme-text">Дата:</span>
+						<b>сегодня, 13:32</b>
+					</li>
+					<li>
+						<span class="theme-text">Платежная система:</span>
+						<b>Ethereum</b>
+					</li>
+					<li>
+						<span class="theme-text">Сумма:</span>
+						<b>23.000000 ETH</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="confirm-buy-stock popup" id="confirm-buy-stock-popup" style="display: none;">
+		<div class="confirm-buy-stock__wrapper popup-wrapper">
+			<div class="confirm-buy-stock__bg popup-bg popup-close"></div>
+			<form method="post" class="confirm-buy-stock__body popup-body">
+				<button type="button" class="confirm-buy-stock__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h2 class="confirm-buy-stock__title title _min">
+					Вы уверены?
+				</h2>
+				<div class="confirm-buy-stock__order">
+					<span>Ваш заказ:</span>
+					<div class="confirm-buy-stock__order--item">
+						<div class="confirm-buy-stock__logo">
+							<picture>
+								<source srcset="img/account/buy-shares/AAAU.avif" type="image/avif">
+								<source srcset="img/account/buy-shares/AAAU.webp" type="image/webp">
+								<img src="img/account/buy-shares/AAAU.png" alt="" width="52" height="52" loading="lazy">
+							</picture>
+						</div>
+						<h3 class="theme-text">AGILENT TECHNOLOGIES INC.</h3>
+						<b>AAAU</b>
+					</div>
+				</div>
+				<ul class="confirm-buy-stock__info">
+					<li>
+						<span class="theme-text">Количество</span>
+						<b>12</b>
+					</li>
+					<li>
+						<span class="theme-text">Цена</span>
+						<b>$334,3</b>
+					</li>
+				</ul>
+				<div class="confirm-buy-stock__footer">
+					<button class="confirm-buy-stock__submit btn" type="submit">
+						Купить
+					</button>
+					<button class="confirm-buy-stock__cancel btn _none-accent popup-close" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

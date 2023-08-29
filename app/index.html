@@ -6,7 +6,7 @@
 				<div class="index-hero__background--decor"></div>
 				<div class="index-hero__background--decor"></div>
 			</div>
-			<div class="index-hero__content">
+			<div class="index-hero__content" data-aos="fade-in" data-aos-delay="200">
 				<ul class="index-hero__tags">
 					<li>
 						Акции
@@ -30,7 +30,7 @@
 					Регистрация
 				</a>
 			</div>
-			<div class="index-hero__image">
+			<div class="index-hero__image" data-aos="fade-in" data-aos-delay="300">
 				<div class="index-hero__image--wrapper image-aspect-ratio">
 					<picture>
 						<source srcset="img/index/hero/index-hero-image.avif" type="image/avif">
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 			<div class="index-hero__panel">
-				<div class="index-hero__panel--col">
+				<div class="index-hero__panel--col" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 					<div class="index-hero__about">
 						<div class="index-hero__about--logo">
 							<picture>
@@ -77,42 +77,68 @@
 					</div>
 				</div>
 				<div class="index-hero__panel--col">
-					<table class="index-hero__table">
-						<colgroup>
-							<col>
-							<col>
-							<col>
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th>
-									Coin
-								</th>
-								<th>
-									Value
-								</th>
-								<th>
-									Change 24h
-								</th>
-								<th>
-									Dinamics
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							@@loop("html/_index-hero-table-item.html", [
-								{},
-								{},
-								{},
-								{},
-							])
-						</tbody>
-					</table>
+					<div class="index-hero__table-wrapper" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
+						<table class="index-hero__table">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										Coin
+									</th>
+									<th>
+										Value
+									</th>
+									<th>
+										Change 24h
+									</th>
+									<th>
+										Dinamics
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								@@loop("html/_index-hero-table-item.html", [
+									{
+										"logo": "BitvavoBadge",
+										"name": "BitVavo",
+										"price": "53,09",
+										"percent": "+8,5%",
+										"type_percent": "_up",
+									},
+									{
+										"logo": "BitfinexBadge",
+										"name": "BitFinex",
+										"price": "2,435",
+										"percent": "+11,2%",
+										"type_percent": "_up",
+									},
+									{
+										"logo": "CreamBadge",
+										"name": "Cream",
+										"price": "190.34",
+										"percent": "-3,3%",
+										"type_percent": "_down",
+									},
+									{
+										"logo": "ProbitBadge",
+										"name": "Probit",
+										"price": "43,4",
+										"percent": "+29,5%",
+										"type_percent": "_up",
+									},
+								])
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<div class="index-hero__panel--col">
 					<form method="post" class="index-hero__buy-shares buy-shares-block">
-						<div class="buy-shares-block__item">
+						<div class="buy-shares-block__item" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 							<h2 class="buy-shares-block__title">
 								Купить акции
 							</h2>
@@ -129,7 +155,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="buy-shares-block__item">
+						<div class="buy-shares-block__item" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
 							<div class="buy-shares-block__element">
 								<div class="buy-shares-block__element--header">
 									<span class="buy-shares-block__name">Enter amount</span>
@@ -140,15 +166,17 @@
 								</div>
 							</div>
 						</div>
-						<button class="buy-shares-block__submit btn" type="button">
-							Купить
-						</button>
+						<div class="buy-shares-block__footer" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
+							<button class="buy-shares-block__submit btn" type="button">
+								Купить
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>
 		</section>
 		<section class="start-trading container">
-			<div class="start-trading__image">
+			<div class="start-trading__image" data-aos="fade-in" data-aos-delay="200">
 				<div class="theme-change">
 					<div class="theme-change-light">
 						<div class="start-trading__image--wrapper image-aspect-ratio">
@@ -190,7 +218,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="start-trading__content">
+			<div class="start-trading__content" data-aos="fade-in" data-aos-delay="300">
 				<h2 class="start-trading__title main-title _min">
 					Откройте двери успешного трейдинга прямо сейчас
 				</h2>

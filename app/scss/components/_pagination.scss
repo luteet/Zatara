@@ -6,7 +6,13 @@
 	// .pagination__arrow
 
 	&__arrow {
-		width: 53px; height: 53px;
+		width: 44px; height: 44px; min-height: none;
+		&.btn {
+			padding: 0; min-height: 0;
+		}
+		@include _768 {
+			width: 53px; height: 53px;
+		}
 		fill: var(--white-opacity-4);
 
 		svg {
@@ -52,7 +58,13 @@
 		}
 
 		a {
-			width: 53px; height: 53px;
+			width: 44px; height: 44px; min-height: none;
+			&.btn {
+				padding: 0; min-height: 0;
+			}
+			@include _768 {
+				width: 53px; height: 53px;
+			}
 		}
 	}
 }

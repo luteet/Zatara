@@ -6,6 +6,7 @@
 	
 	--accent: #2E4CEB;
 	--accent-transparent: rgba(45, 99, 235, 0.1);
+	--accent-transparent-2: rgba(31, 82, 209, 0.1);
 	--accent-hover: #4260f5;
 	--accent-active: #1f3eda;
 	--accent-light: #5A75FF;
@@ -86,7 +87,7 @@ body {
 	}
 	padding-right: var(--popup-padding);
 
-	&._mob-menu-active {
+	&._mob-menu-active, &._drag {
 		overflow: hidden;
 	}
 
@@ -172,6 +173,14 @@ body {
 	}
 }
 
+.theme-fill {
+	fill: var(--white-opacity-4);
+}
+
+.theme-fill-2 {
+	fill: var(--white-opacity-4);
+}
+
 .light-theme {
 
 	body {
@@ -185,6 +194,8 @@ body {
 		--danger-2: #D63B25;
 		--text-color: #1C2546;
 		--text-color-2: #6A718B;
+		--yellow: #dfd700;
+		--yellow-2: rgba(255, 250, 118, 0.267);
 
 		--theme-shade-1: #E5E7F1;
 		--theme-shade-2: #fff;
@@ -192,6 +203,14 @@ body {
 
 	.theme-text {
 		color: var(--secondary);
+	}
+
+	.theme-text-3 {
+		color: var(--secondary);
+	}
+
+	.theme-fill, .theme-fill-2 {
+		fill: var(--secondary);
 	}
 
 	.aside {
@@ -480,11 +499,15 @@ body {
 			background: radial-gradient(circle, #95B6FF 0%, rgba(0,0,0,0) 50%);
 		}
 
-		&__table {
+		&__table-wrapper {
 			@include _992 {
 				background: var(--white);
 				backdrop-filter: none;
 			}
+		}
+
+		&__table {
+			background: transparent;
 
 			thead th {
 				color: var(--secondary);
@@ -1417,6 +1440,259 @@ body {
 	.theme-text-2 {
 		color: var(--secondary);
 	}
+
+	.filter {
+		&__target {
+			fill: var(--stroke);
+			border: 1px solid var(--stroke-2);
+			svg {
+				opacity: 1;
+			}
+		}
+
+		&__input:checked + .filter__element {
+			background: var(--stroke-2);
+		}
+
+		&__element {
+			fill: var(--stroke);
+			
+			
+			svg {
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.sort-select {
+		&__target {
+			border-color: var(--stroke-2);
+			fill: var(--tertiary);
+
+			span {
+				color: var(--tertiary);
+			}
+		}
+
+		&__param {
+			&--element {
+				font-weight: 500;
+				font-size: 0.875rem;
+			}
+		}
+	}
+
+	.account-transactions {
+		&__table {
+			&--open-popup {
+				fill: var(--stroke-2);
+			}	
+		}
+	}
+
+	.payment-details {
+		&__card {
+			background: var(--white);
+			box-shadow: 0px 4px 23px 0px #F2F2FB;
+			&--decor {
+				display: none;
+			}
+		}
+	}
+
+	.my-assets {
+		&__block {
+			@include _992 {
+				background: var(--white);
+			}
+		}
+
+		&__list {
+			background: var(--white);
+			@include _992 {
+				background: transparent;
+			}
+		}
+
+		&__grid {
+			background: var(--white);
+			@include _992 {
+				background: transparent;
+			}
+		}
+
+		&__item {
+			&--logo-row {
+				img:not(:first-child) {
+					border: 1px solid var(--white);
+					@include _768 {
+						border: 3px solid var(--white);
+					}
+				}
+			}
+		}
+	}
+
+	.my-assets-grid {
+		&__item {
+			border-color: rgba(204, 208, 222, 0.5);
+			&::before {
+				background: rgba(204, 208, 222, 0.5);
+			}
+		}
+
+		&__buy-more {
+			border-color: rgba(204, 208, 222, 0.5);
+			&::before {
+				background: rgba(204, 208, 222, 0.5);
+			}
+		}
+	}
+
+	.refill-2 {
+		&__nav {
+			a {
+				border-bottom: 1px solid var(--stroke-2);
+				&.current {
+					border-bottom: 1px solid var(--success);
+				}
+			}
+		}
+		&__check {
+			background: var(--accent-transparent) url("data:image/svg+xml,%3Csvg viewBox='0 0 29 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='14.4696' cy='10.697' rx='9.46957' ry='10.697' fill='%23FFF'/%3E%3C/svg%3E%0A")
+			center calc(100% + 11px) / 31.5px repeat-x;
+
+			&--copy-place {
+				background: var(--white);
+				filter: none;
+				
+			}
+		}
+	}
+
+	.ss-main.custom-select._alt-stroke, .ss-content.custom-select._alt-stroke {
+		border-color: var(--stroke-2);
+	}
+
+	.buy-stocks {
+		&__block {
+			background: var(--white);
+		}
+
+		&__about {
+			&--info {
+				li {
+					@include _768 {
+						background: var(--light-background);
+					}
+				}
+			}
+		}
+	}
+
+	.market {
+		&__block {
+			background: var(--white);
+		}
+
+		&__balance {
+			&--image {
+				opacity: .2;
+				/* img {
+					filter: invert(29%) sepia(97%) saturate(5410%) hue-rotate(231deg) brightness(96%) contrast(92%);
+				} */
+			}
+
+			&--nav {
+				a {
+					background: var(--light-background);
+					color: var(--secondary);
+					@include _550 {
+						background: var(--accent-light);
+						color: var(--white);
+					}
+				}
+			}
+
+			&--info {
+				li {
+					@include _768 {
+						background: var(--light-background);
+					}
+				}
+			}
+		}
+
+		&__buy {
+			&--nav {
+				background: var(--light-background);
+
+				a {
+					&.current {
+						background: var(--accent-light);
+					}
+				}
+			}
+		}
+
+		&__nav {
+			position: relative;
+			&::before {
+				background: var(--stroke-2);
+			}
+			a {
+				@include _992 {
+					border-color: var(--stroke-2);
+				}
+				&.current {
+					border-color: var(--accent);
+				}
+			}
+		}
+	}
+
+	.stocks-chart {
+		&__header {
+			background: var(--stroke);
+		}
+
+		
+
+		&__aside {
+			background: var(--stroke);
+		}
+
+		&__ranger {
+			background: var(--white);
+			border-radius: 8px;
+			
+			&--button {
+				input:checked + span {
+					color: var(--success);
+					background: rgba(58, 184, 86, 0.28);;
+					
+					@include _992 {
+						background: transparent;
+					}
+				}
+			}
+		}
+
+		&__tooltip {
+			&--volume {
+				li.success-string, li.danger-string {
+					background: var(--white);
+				}
+			}
+		}
+	}
+
+	.confirm-buy-stock {
+		&__info {
+			border-color: var(--stroke-2);
+		}
+	}
 }
 
 .image-aspect-ratio {
@@ -1470,6 +1746,8 @@ section {
 		grid-column: 2;
 		align-self: self-start;
 
+		overflow-y: auto;
+
 		padding: 8px;
 		width: 100%;
 
@@ -1477,11 +1755,11 @@ section {
 			padding: 16px 20px 0;
 		}
 
-		min-height: calc(100vh - var(--height-header));
+		height: auto;
 		margin-bottom: var(--height-aside);
 		@include _992 {
 			width: auto;
-			min-height: calc(100vh - var(--height-header) - 24px);
+			height: calc(100vh - var(--height-header, 68px) - 24px);
 			margin-bottom: 24px;
 		}
 	}
@@ -1588,14 +1866,14 @@ section {
 		}
 	}
 
-	&._dark {
+	&:not(._none-accent)._dark {
 		border: 1px solid var(--shade-2);
 		background: var(--shade-2);
 		color: var(--white);
 
 		padding: 7px 30px;
 
-		&::before {
+		&::before, &::after {
 			display: none;
 		}
 
@@ -1671,9 +1949,19 @@ section {
 		transition: fill .2s ease;
 	}
 
+	/* &._current:not(._none-accent) {
+		
+	} */
 	//border-radius: 8px;
 
 	transition: background .3s ease, color .3s ease, border-color .3s ease, opacity .3s ease;
+}
+
+.tab-block {
+	display: none;
+	&._active {
+		display: block;
+	}
 }
 
 .visually-hidden {
