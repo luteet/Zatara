@@ -402,16 +402,12 @@ function stockChart() {
 			})
 		})
 
-		fetch('https://canvasjs.com/data/docs/btcusd2018.json')
+		fetch(document.querySelector('#chartContainer').dataset.json)
 			.then((response) => {
 				return response.json();
 			})
 			.then((data) => {
-				/* for(var i = 0; i < data.length; i++){
-					dataPoints1.push({x: new Date(data[i].date), y: [Number(data[i].open), Number(data[i].high), Number(data[i].low), Number(data[i].close)], color: data[i].open < data[i].close ? "green" : "red"});;
-					dataPoints2.push({x: new Date(data[i].date), y: Number(data[i].volume_eur), color: data[i].open < data[i].close ? "green" : "red"});
-					dataPoints3.push({x: new Date(data[i].date), y: Number(data[i].close)});
-				} */
+
 				for (var i = 0; i < data.length; i++) {
 					dps1.push({ x: new Date(data[i].date), color: data[i].open < data[i].close ? colorObj["risingColor"] : colorObj["fallingColor"], type: data[i].open < data[i].close ? "open" : "close", y: [Number(data[i].open), Number(data[i].high), Number(data[i].low), Number(data[i].close)] });
 					dps2.push({ x: new Date(data[i].date), color: data[i].open < data[i].close ? colorObj["risingColor"] : colorObj["fallingColor"], type: data[i].open < data[i].close ? "open" : "close", y: Number(data[i].close) });
@@ -2110,11 +2106,6 @@ copyBtns.forEach(copyBtn => {
 		selectText(copyBtn.parentElement)
 	});
 })
-
-
-
-
-
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
