@@ -220,7 +220,15 @@ document.querySelectorAll('.header__nav--list > li').forEach(li => {
 
 // =-=-=-=-=-=-=-=-=-=- <click events> -=-=-=-=-=-=-=-=-=-=-
 
-let colorObj = {};
+let colorObj = {
+	backgroundColor: "#07071C",
+	lineColor: '#212121',
+	risingColor: "#BAFF62",
+	fallingColor: "#FF7562",
+	crosshair: "#FFF",
+	textColor: "#FFF",
+	textColorMob: "rgba(255,255,255,0.5)",
+};
 if (localStorage.getItem('zatara-theme') == "dark") {
 	colorObj = {
 		backgroundColor: "#07071C",
@@ -231,7 +239,7 @@ if (localStorage.getItem('zatara-theme') == "dark") {
 		textColor: "#FFF",
 		textColorMob: "rgba(255,255,255,0.5)",
 	}
-} else if (localStorage.getItem('zatara-theme') != "dark") {
+} else if (localStorage.getItem('zatara-theme') == "light") {
 	colorObj = {
 		backgroundColor: "#FFF",
 		lineColor: 'rgba(204, 208, 222, 0.49)',
