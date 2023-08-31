@@ -127,6 +127,47 @@ body {
 	}
 }
 
+@keyframes yoyo {
+	0% {
+		transform: translate3d(0,-15px,0.00001px);
+	}
+	50% {
+		transform: translate3d(0,0px,0.00001px);
+	}
+	100% {
+		transform: translate3d(0,-15px,0.00001px);
+	}
+}
+
+@keyframes circle_progress {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes list_marker {
+	from {
+		filter: grayscale(1);
+		opacity: .5;
+	}
+
+	to {
+		filter: grayscale(0);
+		opacity: 1;
+	}
+}
+
+@keyframes false_disabled {
+	from {
+		opacity: .5;
+		pointer-events: none;
+	}
+	to {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
 .fade-in {
 	animation: fadeIn 0.3s ease 0s 1 normal forwards;
 }
@@ -513,8 +554,23 @@ body {
 				color: var(--secondary);
 			}
 
+			tbody tr {
+				background: var(--white);
+				backdrop-filter: none;
+			}
+
 			&--coin-name {
 				color: var(--text-color);
+			}
+
+			&--name {
+				color: var(--secondary);
+			}
+			
+			td {
+				&:not(:last-child) {
+					border-bottom: 1px solid var(--accent-transparent);
+				}
 			}
 
 			&--value {
@@ -543,9 +599,12 @@ body {
 
 		&__element {
 			
-			&--input input {
+			&--input input:not(:read-only) {
 				border-color: var(--stroke);
 				color: var(--text-color);
+				&:focus {
+					color: var(--text-color);
+				}
 
 				&::placeholder {
 					color: var(--stroke);
@@ -638,11 +697,19 @@ body {
 		}
 
 		&-line::before {
-			background: linear-gradient(-90deg, transparent 0%, var(--decor-marker-light, var(--accent)) 100%);	
+			background: linear-gradient(-90deg, var(--decor-marker-light, var(--accent)) 0%, var(--decor-marker-light, var(--accent)) 50%, transparent 0%);
+			background-size: 200%;
+			background-position: -100%;
 		}
 	}
 
 	.start-trading {
+
+		&__decor-circle {
+			&--bg {
+				stroke: #e0e3ec;
+			}
+		}
 		&__card {
 			&::after {
 				background: var(--white);
@@ -744,7 +811,9 @@ body {
 
 	.try-now {
 		&__image--wrapper {
-			box-shadow: none;
+			img {
+				filter: drop-shadow(0px 52px 66px rgba(165, 179, 231, 0.22));
+			}
 		}
 	}
 
@@ -807,6 +876,19 @@ body {
 	.about-us-hero {
 		&__name-section {
 			color: var(--accent);
+		}
+
+		&__image {
+			&--tooltip-bg::after {
+				backdrop-filter: none;
+				background: var(--white);
+			}
+
+			&--tooltip-text {
+				background: var(--white);
+				backdrop-filter: none;
+				
+			}
 		}
 
 		&__image--wrapper {
@@ -1430,11 +1512,23 @@ body {
 			thead {
 				th {
 					color: var(--secondary);
+					&:nth-child(2) {
+						background: var(--light-background);
+						@include _992 {
+							background: transparent;
+						}
+					}
 				}
 			}
 			tbody {
 				td {
-					span {
+					&:nth-child(1), &:nth-child(2) {
+						background: var(--light-background);
+						@include _992 {
+							background: var(--theme-shade-2);
+						}
+					}
+					span:not(.coins-table__percent-value) {
 						color: var(--tertiary);
 					}
 				}
@@ -1734,8 +1828,6 @@ section {
 
 	display: flex;
 	flex-direction: column;
-
-	
 }
 
 .account-wrapper {
@@ -2028,6 +2120,8 @@ section {
 
 		&-line::before {
 			background: linear-gradient(90deg, #62B4FF 0%, rgba(85, 134, 22, 0.00) 90.10%);
+			//background: linear-gradient(-90deg, #62B4FF 0%, #62B4FF 50%, transparent 0%);
+			
 		}
 		
 	}
@@ -2035,8 +2129,6 @@ section {
 	&._success._fill &-dot {
 		background: linear-gradient(90deg, #BAFF62 0%, rgba(85, 134, 22, 0.9) 90.10%);
 	}
-
-	
 
 	&._success & {
 
@@ -2050,6 +2142,17 @@ section {
 
 		&-line::before {
 			background: linear-gradient(90deg, #BAFF62 0%, rgba(85, 134, 22, 0.00) 90.10%);
+		}
+	}
+
+	@include _992 {
+		&.anim-on-scroll {
+			filter: grayscale(1);
+			opacity: .5;
+	
+			&._animated {
+				animation: list_marker 0.4s ease var(--delay,0.2s) 1 normal forwards;
+			}
 		}
 	}
 

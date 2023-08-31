@@ -188,18 +188,20 @@
 			right: auto; left: 0;
 			&::after {
 				right: auto; left: -4px;
-				transform: translate(0,-50%) scaleX(-1);
+				transform: translate(0%,-49%) scaleX(-1);
+				@include _992 {
+					transform: translate(0,-51%) scaleX(-1);
+				}
 			}
 		}
 
 		&--tooltip:nth-child(3) &--tooltip-text {
 			padding: 5px 15px 3px 5px;
-			height: 32.5px;
-			margin-top: -0.5px;
+			height: 33px;
 			border-radius: 0 25px 25px 0;
-			margin-right: 0; margin-left: 25px;
+			margin-right: 0; margin-left: 27px;
 			@include _992 {
-				margin-left: 26px;
+				margin-left: 28px;
 			}
 		}
 
@@ -215,8 +217,11 @@
 				content: '';
 				position: absolute;
 				right: -4px; top: 50%;
-				transform: translate(0,-50%);
-				width: 55px; height: 33px;
+				transform: translate(-0.5%,-49%);
+				@include _992 {
+					transform: translate(0,-51%);
+				}
+				width: 57px; height: 33px;
 				
 				backdrop-filter: blur(10px);
 				background: var(--white-opacity-1);
@@ -229,9 +234,9 @@
 		// .index-hero__image--tooltip-text
 
 		&--tooltip-text {
-			margin-right: 25px;
+			margin-right: 28px;
 			@include _992 {
-				margin-right: 26px;
+				margin-right: 28px;
 			}
 			
 			margin-top: 0px;
@@ -243,7 +248,7 @@
 			transition: opacity .2s ease;
 
 			font-size: 0.875rem;
-			height: 32px;
+			height: 33px;
 			@include _992 {
 				font-size: 1rem;
 			}
@@ -268,6 +273,55 @@
 				width: 15px; height: 15px;
 			}
 
+		}
+
+		&--coin {
+			position: absolute;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; bottom: 0;
+				width: 100%; aspect-ratio: 1/1;
+				transform: translate(-50%,50%) rotate(-34deg) skew(40deg, 0deg);
+				background: radial-gradient(circle, rgba(0,29,72,1) 0%, rgba(0,0,0,0) 50%);
+				filter: blur(10px);
+				border-radius: 50%;
+				z-index: -1;
+
+			}
+			&:nth-child(4) {
+				left: 30%; top: 20%;
+				@include _992 {
+					left: 15%; top: -3%;
+				}
+				animation: yoyo 3.5s ease-in-out 0.2s infinite normal forwards;
+
+				img {
+					width: 12vw; height: 12vw;
+
+					@include _992 {
+						width: 114px; height: 114px;
+					}
+				}
+			}
+
+			&:nth-child(5) {
+				right: 25%; top: 25%;
+				@include _992 {
+					right: 26%; top: 14%;
+				}
+
+				animation: yoyo 4s ease-in-out 0s infinite normal forwards;
+
+				img {
+					width: 10vw; height: 10vw;
+				
+					@include _992 {
+						width: 82px; height: 82px;
+					}
+				}
+			}
 		}
 	}
 
@@ -626,7 +680,7 @@
 			margin-top: 10px;
 			input {
 				border-radius: 13px;
-				padding: 21px;
+				padding: 20px 21px;
 				width: 100%;
 				border: 1px solid var(--white-opacity-1);
 				background: transparent;

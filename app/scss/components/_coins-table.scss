@@ -466,8 +466,29 @@
 		display: flex;
 		align-items: center;
 
+		> b:first-child {
+			display: block;
+			padding-right: 10px;
+			@include _550 {
+				padding-right: 30px;
+			}
+
+			@include _992 {
+				display: none !important;
+			}
+		}
+
 		&--logo {
-			flex: 0 0 40px;
+			flex: 0 0 24px;
+			img {
+				width: 24px; height: 24px;
+				@include _550 {
+					width: 40px; height: 40px;
+				}
+			}
+			@include _550 {
+				flex: 0 0 40px;
+			}
 			margin-right: 12px;
 		}
 
@@ -480,7 +501,7 @@
 	&__nav {
 		position: absolute;
 		right: 8px; top: 0;
-		transform: translate(0,155%);
+		transform: translate(0,35%);
 
 		z-index: 2;
 
@@ -508,18 +529,27 @@
 	&__wrapper {
 		overflow-x: auto;
 		display: inline-flex;
-
+		
 		max-width: 100%;
-		width: 1005;
+		padding: 0 0 10px 0;
+		//width: 1005;
 
 		scroll-snap-type: x proximity;
 		
-
 		@include _992 {
 			display: block;
 			max-width: 100%;
 			padding: 0;
 		}
+	}
+
+	&__fixed-td {
+		position: absolute;
+		left: 0; top: 0;
+		background: var(--dark-background);
+		z-index: 2;
+
+
 	}
 
 	// .coins-table__block
@@ -543,7 +573,7 @@
 		}
 
 		col:nth-child(1) {
-			width: 30px;
+			width: 100vw;
 			@include _992 {
 				width: auto;
 			}
@@ -551,6 +581,7 @@
 
 		col:nth-child(2) {
 			width: calc(50vw - 30px);
+			
 			@include _992 {
 				width: auto;
 			}
@@ -591,6 +622,58 @@
 			}
 		}
 
+		@include _992 {
+			col:nth-child(1) {
+				width: 100vw;
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(2) {
+				width: calc(100vw - 30px);
+				
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(3) {
+				width: calc(100vw - 15px);
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(4) {
+				width: 50vw;
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(5) {
+				width: 50vw;
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(6) {
+				width: 50vw;
+				@include _992 {
+					width: auto;
+				}
+			}
+	
+			col:nth-child(7) {
+				width: 50vw;
+				@include _992 {
+					width: auto;
+				}
+			}
+		}
+
 		/* col:nth-last-child(1) {
 			width: 40px;
 			@include _992 {
@@ -622,6 +705,34 @@
 			th {
 				font-weight: 400;
 				padding: 15px 20px;
+
+				span {
+					padding-right: 10px;
+					@include _550 {
+						padding-right: 30px;
+					}
+				}
+
+				/* &:nth-child(1) {
+					min-width: 30px;
+					position: sticky;
+					left: 0; top: 0;
+					z-index: 3;
+					background: var(--dark-background);
+				} */
+
+				&:nth-child(2) {
+					position: sticky;
+					left: 0; top: 0;
+					z-index: 3;
+					background: var(--dark-background);
+					min-width: calc(50vw - 30px);
+					@include _992 {
+						min-width: 0;
+						background: transparent;
+						position: static;
+					}
+				}
 
 				border-top: 1px solid var(--theme-shade-1);
 				border-bottom: 1px solid var(--theme-shade-1);
@@ -670,9 +781,51 @@
 				}
 			}
 
+			tr {
+				position: relative;
+			}
+
 			td {
 				scroll-snap-align: start;
 				min-height: 72px;
+
+				&:nth-child(1), &:nth-child(2) {
+					min-width: auto;
+					position: sticky;
+					left: 0; top: 0;
+					z-index: 2;
+					background: var(--dark-background);
+					@include _992 {
+						min-width: 0;
+						background: var(--theme-shade-2);
+						position: static;
+					}
+				}
+
+				&:nth-child(1) {
+					min-width: 30px;
+					@include _992 {
+						min-width: 0;
+					}
+				}
+
+				&:nth-child(2) {
+					min-width: 50vw;
+					@include _992 {
+						min-width: 0;
+					}
+				}
+				
+				min-width: 50vw;
+				@include _992 {
+					min-width: auto;
+				}
+				
+
+				/* &:nth-child(1), &:nth-child(2) {
+					position: fixed;
+					left: 0; top: 0;
+				} */
 
 				&:nth-child(2) b {
 					display: flex;
@@ -710,7 +863,7 @@
 					border-left: 1px solid var(--theme-shade-1);
 				}
 
-				span {
+				span:not(.coins-table__percent-value) {
 					color: var(--white-opacity-5);
 				}
 
@@ -744,7 +897,10 @@
 
 	&._crypto &__block {
 		thead th {
-			text-align: right;
+			text-align: left;
+			@include _992 {
+				text-align: right;
+			}
 
 			&:nth-child(1) {
 				text-align: center;
@@ -760,7 +916,10 @@
 		}
 
 		tbody td {
-			text-align: right;
+			text-align: left;
+			@include _992 {
+				text-align: right;
+			}
 
 			&:nth-child(1) {
 				text-align: center;
@@ -772,6 +931,12 @@
 
 			&:nth-child(3) {
 				text-align: left;
+			}
+
+			&:last-child {
+				/* > * {
+					width: 50%;
+				} */
 			}
 		}
 
@@ -810,6 +975,19 @@
 
 			&:nth-child(2) {
 				text-align: left;
+				> div {
+					display: flex;
+					align-items: center;
+					b:first-child {
+						padding-right: 10px;
+					}
+					@include _992 {
+						display: block;
+						b:first-child {
+							display: none;
+						}
+					}
+				}
 			}
 
 			&:nth-child(3) {
@@ -830,6 +1008,8 @@
 		align-items: center;
 
 		margin-top: -2px;
+
+		
 
 		// .coins-table__coin--logo
 

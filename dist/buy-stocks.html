@@ -596,300 +596,314 @@
 					</form>
 				</div>
 				<div class="buy-stocks__chart stocks-chart" data-aos="fade-in" data-aos-delay="300" data-aos-anchor=".main">
-					<div class="stocks-chart__header">
-						<div class="stocks-chart__header--col">
-							<div class="stocks-chart__ranger">
-								<label class="stocks-chart__ranger--button">
-									<input type="radio" name="range" value="1" data-value-type="month" class="min-input visually-hidden">
-									<span>1m</span>
-								</label>
-								<label class="stocks-chart__ranger--button">
-									<input type="radio" name="range" value="2" data-value-type="month" class="min-input visually-hidden">
-									<span>2m</span>
-								</label>
-								<label class="stocks-chart__ranger--button">
-									<input type="radio" name="range" value="3" checked data-value-type="month" class="min-input visually-hidden">
-									<span>3m</span>
-								</label>
-							</div>
-						</div>
-						<div class="stocks-chart__header--col visible-on-desktop">
-							<ul class="stocks-chart__row-tool-list">
-								<li>
-									<button type="button">
-										<picture>
-											<source srcset="img/account/buy-shares/candlestick-chart-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/candlestick-chart-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/candlestick-chart-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<picture>
-											<source srcset="img/account/buy-shares/combo-chart-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/combo-chart-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/combo-chart-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-							</ul>
-						</div>
-						<div class="stocks-chart__header--col">
-							<ul class="stocks-chart__row-tool-list">
-								<li>
-									<div class="stocks-chart__drop-down">
-										<button class="stocks-chart__drop-down--target" type="button">
-											<picture>
-												<source srcset="img/account/buy-shares/formula-fx-icon.avif" type="image/avif">
-												<source srcset="img/account/buy-shares/formula-fx-icon.webp" type="image/webp">
-												<img src="img/account/buy-shares/formula-fx-icon.png" alt="" width="24" height="24" loading="lazy">
-											</picture>
-											<span>Indicators</span>
-											<svg width="14" height="14" viewBox="0 0 14 14">
-												<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
-											</svg>
-										</button>
-										<ul class="stocks-chart__drop-down--list">
-											<li>
-												<button type="button" aria-label="Param 1">
-													<span>Param 1</span>
-												</button>
-											</li>
-											<li>
-												<button type="button" aria-label="Param 2">
-													<span>Param 2</span>
-												</button>
-											</li>
-											<li>
-												<button type="button" aria-label="Param 3">
-													<span>Param 3</span>
-												</button>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="visible-on-desktop">
-									<button type="button" title="Alerts">
-										<picture>
-											<source srcset="img/account/buy-shares/alarm-clock-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/alarm-clock-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/alarm-clock-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-										<span>Alerts</span>
-									</button>
-								</li>
-								<li class="visible-on-desktop">
-									<button type="button" title="Compare">
-										<picture>
-											<source srcset="img/account/buy-shares/add-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/add-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/add-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-										<span>Compare</span>
-									</button>
-								</li>
-								<li class="visible-on-desktop">
-									<button type="button" title="Prev">
-										<picture>
-											<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/reply-all-arrow-prev-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-								<li class="visible-on-desktop">
-									<button type="button" title="Next">
-										<picture>
-											<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/reply-all-arrow-next-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-							</ul>
-						</div>
-						<div class="stocks-chart__header--col visible-on-desktop">
-							<ul class="stocks-chart__row-tool-list">
-								<li>
-									<button type="button" title="Camera" class="stocks-chart__download">
-										<picture>
-											<source srcset="img/account/buy-shares/camera-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/camera-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/camera-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-								<li>
-									<button type="button" title="Settings">
-										<picture>
-											<source srcset="img/account/buy-shares/gear-icon.avif" type="image/avif">
-											<source srcset="img/account/buy-shares/gear-icon.webp" type="image/webp">
-											<img src="img/account/buy-shares/gear-icon.png" alt="" width="24" height="24" loading="lazy">
-										</picture>
-									</button>
-								</li>
-							</ul>
+					<!-- <div class="stocks-chart__header">
+					<div class="stocks-chart__header--col">
+						<div class="stocks-chart__ranger">
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="1"  data-value-type="month" class="min-input visually-hidden">
+								<span>1m</span>
+							</label>
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="2" data-value-type="month" class="min-input visually-hidden">
+								<span>2m</span>
+							</label>
+							<label class="stocks-chart__ranger--button">
+								<input type="radio" name="range" value="3" checked data-value-type="month" class="min-input visually-hidden">
+								<span>3m</span>
+							</label>
 						</div>
 					</div>
-					<div class="stocks-chart__aside visible-on-desktop">
-						<ul class="stocks-chart__aside--list">
+					<div class="stocks-chart__header--col visible-on-desktop">
+						<ul class="stocks-chart__row-tool-list">
 							<li>
-								<button type="button" title="Button" data-button="crosshair">
+								<button type="button">
 									<picture>
-										<source srcset="img/account/buy-shares/cross-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/cross-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/cross-icon.png" alt="" width="24" height="24" loading="lazy">
+										<source srcset="img/account/buy-shares/candlestick-chart-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/candlestick-chart-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/candlestick-chart-icon.png" alt="" width="24" height="24" loading="lazy">
 									</picture>
 								</button>
 							</li>
 							<li>
-								<button type="button" title="Button">
+								<button type="button">
 									<picture>
-										<source srcset="img/account/buy-shares/unit-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/unit-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/unit-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/polyline-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/polyline-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/polyline-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/text-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/text-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/text-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/mesh-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/mesh-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/mesh-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/climate-change-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/climate-change-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/climate-change-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/shocker-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/shocker-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/shocker-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/ruler-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/ruler-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/ruler-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button" data-button="zoom">
-									<picture>
-										<source srcset="img/account/buy-shares/zoom-mode-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/zoom-mode-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/zoom-mode-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/hide-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/hide-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
-									</picture>
-								</button>
-							</li>
-							<li>
-								<button type="button" title="Button">
-									<picture>
-										<source srcset="img/account/buy-shares/padlock-icon.avif" type="image/avif">
-										<source srcset="img/account/buy-shares/padlock-icon.webp" type="image/webp">
-										<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
+										<source srcset="img/account/buy-shares/combo-chart-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/combo-chart-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/combo-chart-icon.png" alt="" width="24" height="24" loading="lazy">
 									</picture>
 								</button>
 							</li>
 						</ul>
 					</div>
+					<div class="stocks-chart__header--col">
+						<ul class="stocks-chart__row-tool-list">
+							<li>
+								<div class="stocks-chart__drop-down">
+									<button class="stocks-chart__drop-down--target" type="button">
+										<picture>
+											<source srcset="img/account/buy-shares/formula-fx-icon.avif" type="image/avif">
+											<source srcset="img/account/buy-shares/formula-fx-icon.webp" type="image/webp">
+											<img src="img/account/buy-shares/formula-fx-icon.png" alt="" width="24" height="24" loading="lazy">
+										</picture>
+										<span>Indicators</span>
+										<svg width="14" height="14" viewBox="0 0 14 14">
+											<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+										</svg>
+									</button>
+									<ul class="stocks-chart__drop-down--list">
+										<li>
+											<button type="button" aria-label="Param 1">
+												<span>Param 1</span>
+											</button>
+										</li>
+										<li>
+											<button type="button" aria-label="Param 2">
+												<span>Param 2</span>
+											</button>
+										</li>
+										<li>
+											<button type="button" aria-label="Param 3">
+												<span>Param 3</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Alerts">
+									<picture>
+										<source srcset="img/account/buy-shares/alarm-clock-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/alarm-clock-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/alarm-clock-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+									<span>Alerts</span>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Compare">
+									<picture>
+										<source srcset="img/account/buy-shares/add-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/add-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/add-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+									<span>Compare</span>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Prev">
+									<picture>
+										<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/reply-all-arrow-prev-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/reply-all-arrow-prev-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+							<li class="visible-on-desktop">
+								<button type="button" title="Next">
+									<picture>
+										<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/reply-all-arrow-next-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/reply-all-arrow-next-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="stocks-chart__header--col visible-on-desktop">
+						<ul class="stocks-chart__row-tool-list">
+							<li>
+								<button type="button" title="Camera" class="stocks-chart__download">
+									<picture>
+										<source srcset="img/account/buy-shares/camera-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/camera-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/camera-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+							<li>
+								<button type="button" title="Settings">
+									<picture>
+										<source srcset="img/account/buy-shares/gear-icon.avif" type="image/avif">
+										<source srcset="img/account/buy-shares/gear-icon.webp" type="image/webp">
+										<img src="img/account/buy-shares/gear-icon.png" alt="" width="24" height="24" loading="lazy">
+									</picture>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="stocks-chart__aside visible-on-desktop">
+					<ul class="stocks-chart__aside--list">
+						<li>
+							<button type="button" title="Button" data-button="crosshair">
+								<picture>
+									<source srcset="img/account/buy-shares/cross-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/cross-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/cross-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/unit-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/unit-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/unit-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/polyline-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/polyline-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/polyline-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/text-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/text-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/text-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/mesh-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/mesh-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/mesh-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/climate-change-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/climate-change-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/climate-change-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/shocker-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/shocker-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/shocker-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/ruler-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/ruler-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/ruler-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button" data-button="zoom">
+								<picture>
+									<source srcset="img/account/buy-shares/zoom-mode-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/zoom-mode-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/zoom-mode-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/hide-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/hide-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+						<li>
+							<button type="button" title="Button">
+								<picture>
+									<source srcset="img/account/buy-shares/padlock-icon.avif" type="image/avif">
+									<source srcset="img/account/buy-shares/padlock-icon.webp" type="image/webp">
+									<img src="img/account/buy-shares/hide-icon.png" alt="" width="24" height="24" loading="lazy">
+								</picture>
+							</button>
+						</li>
+					</ul>
+				</div> -->
 					<div class="stocks-chart__main">
-						<div id="chartContainer" data-json="https://canvasjs.com/data/docs/btcusd2018.json"></div>
-						<div class="stocks-chart__tooltip">
-							<div class="stocks-chart__tooltip--block visible-on-desktop">
-								<div class="stocks-chart__tooltip--currency">USD</div>
-								<div class="stocks-chart__tooltip--range">3m</div>
-								<div class="stocks-chart__tooltip--info-fx success-string">
-									<span>
-										DiamondFx
-									</span>
-									<ul>
-										<li>
-											<span>O</span>
-											<span>
-												0
-											</span>
-										</li>
-										<li>
-											<span>L</span>
-											<span>
-												0
-											</span>
-										</li>
-										<li>
-											<span>H</span>
-											<span>
-												0
-											</span>
-										</li>
-										<li>
-											<span>C</span>
-											<span>
-												0
-											</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="stocks-chart__tooltip--block">
-								<div class="stocks-chart__tooltip--volume">
-									<span>Volume</span>
-									<ul>
-										<li class="success-string">
-											0.0094
-										</li>
-										<li>
-											0.0001
-										</li>
-										<li class="danger-string">
-											0.0093
-										</li>
-									</ul>
-								</div>
+						<!-- <div id="chartContainer"></div> -->
+						<!-- TradingView Widget BEGIN -->
+						<div class="tradingview-widget-container">
+							<div id="tradingview_3fc30"></div>
+							<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+							<!-- <script type="text/javascript">
+							if(window.innerWidth > 992) {
+								
+							} else {
+								
+							}
+							
+						</script> -->
+						</div>
+						<!-- TradingView Widget END -->
+						<!-- <div class="stocks-chart__tooltip">
+						<div class="stocks-chart__tooltip--block visible-on-desktop">
+							<div class="stocks-chart__tooltip--currency">USD</div>
+							<div class="stocks-chart__tooltip--range">3m</div>
+							<div class="stocks-chart__tooltip--info-fx success-string">
+								<span>
+									DiamondFx
+								</span>
+								<ul>
+									<li>
+										<span>O</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>L</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>H</span>
+										<span>
+											0
+										</span>
+									</li>
+									<li>
+										<span>C</span>
+										<span>
+											0
+										</span>
+									</li>
+								</ul>
 							</div>
 						</div>
+						<div class="stocks-chart__tooltip--block">
+							<div class="stocks-chart__tooltip--volume">
+								<span>Volume</span>
+								<ul>
+									<li class="success-string">
+										0.0094
+									</li>
+									<li>
+										0.0001
+									</li>
+									<li class="danger-string">
+										0.0093
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div> -->
 					</div>
 				</div>
 			</section>

@@ -16,14 +16,45 @@
 		}
 	}
 
+	&__decor-circle {
+		pointer-events: none;
+
+		position: absolute;
+		left: 50%; top: 50%;
+		width: 105%; height: 105%;
+		transform: translate(-50%,-50%) rotate(90deg) scaleX(-1);
+		z-index: -2;
+
+		&--bg {
+			stroke: rgba(255, 255, 255, 0.08);
+		}
+
+		&--progress {
+			stroke: url(#start-trading-image-gradient);
+			stroke-dasharray: 300%;
+			//stroke-dashoffset: -300%;
+			@include _992 {
+				stroke-dashoffset: var(--progress);
+				transition: stroke-dashoffset .1s ease;
+			}
+		}
+
+		&._animated &--progress {
+			
+			//animation: circle_progress 3s ease 0s 1 normal forwards;
+		}
+	}
+
 	// .start-trading__image
 
 	&__image {
 
 		margin-top: 70px;
+		padding: 13%;
 
 		@include _992 {
 			margin-top: 0;
+			padding: 75px;
 		}
 
 		position: relative;
@@ -31,32 +62,58 @@
 		// .start-trading__image--wrapper
 
 		&--wrapper {
-			
+			pointer-events: none;
+			/* svg {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: auto;
+			} */
 			img {
 				object-fit: contain;
-				
 			}
 		}
 	}
 
+	/* &__image.aos-animate &__decor-circle--progress {
+		
+	} */
+
 	// .start-trading__card
 
 	&__card {
-
+		
 		position: absolute;
+		z-index: 2;
+		@media (any-hover: hover) {
+			&:hover {
+				z-index: 2;
+			}
+		}
 
 		&:nth-child(2) {
 			right: 0; top: -20px;
-			z-index: 2;
+			//z-index: 2;
 			@include _992 {
-				z-index: -1;
+				//z-index: -1;
 				top: -40px; right: -20px;
+			}
+		}
+
+		@include _992 {
+			z-index: -1;
+			&.anim-on-scroll {
+				opacity: 0;
+				transition: opacity .2s ease;
+			}
+	
+			&._animated {
+				animation: fadeIn 0.2s ease var(--delay,0.2s) 1 normal forwards;
 			}
 		}
 
 		&:nth-child(3) {
 			left: 0; bottom: 0px;
-			z-index: 2;
+			//z-index: 2;
 
 			&::before {
 				background: var(--blue);
@@ -273,6 +330,16 @@
 		min-width: 100%;
 		@include _550 {
 			min-width: 183px;
+		}
+
+		@include _992 {
+			&.anim-on-scroll {
+				opacity: .5;
+				pointer-events: none;
+				&._animated {
+					animation: false_disabled 0.2s ease var(--delay,0.2s) 1 normal forwards;
+				}
+			}
 		}
 	}
 }

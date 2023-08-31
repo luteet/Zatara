@@ -150,7 +150,7 @@
 				</form>
 			</div>
 			<div class="buy-stocks__chart stocks-chart" data-aos="fade-in" data-aos-delay="300" data-aos-anchor=".main">
-				<div class="stocks-chart__header">
+				<!-- <div class="stocks-chart__header">
 					<div class="stocks-chart__header--col">
 						<div class="stocks-chart__ranger">
 							<label class="stocks-chart__ranger--button">
@@ -388,10 +388,24 @@
 							</button>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="stocks-chart__main">
-					<div id="chartContainer" data-json="https://canvasjs.com/data/docs/btcusd2018.json"></div>
-					<div class="stocks-chart__tooltip">
+					<!-- <div id="chartContainer"></div> -->
+					<!-- TradingView Widget BEGIN -->
+					<div class="tradingview-widget-container">
+						<div id="tradingview_3fc30"></div>
+						<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+						<!-- <script type="text/javascript">
+							if(window.innerWidth > 992) {
+								
+							} else {
+								
+							}
+							
+						</script> -->
+					</div>
+					<!-- TradingView Widget END -->
+					<!-- <div class="stocks-chart__tooltip">
 						<div class="stocks-chart__tooltip--block visible-on-desktop">
 							<div class="stocks-chart__tooltip--currency">USD</div>
 							<div class="stocks-chart__tooltip--range">3m</div>
@@ -443,7 +457,7 @@
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>

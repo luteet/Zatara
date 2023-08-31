@@ -27,8 +27,9 @@
 				<stop offset="1" stop-opacity="0" />
 			</linearGradient>
 		</defs>
+		<!-- <clipPath id="image-tooltip" clipPathUnits="objectBoundingBox"><path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path></clipPath> -->
 		<clipPath id="image-tooltip" clipPathUnits="objectBoundingBox">
-			<path d="M0,0.998 C0.106,0.982,0.196,0.875,0.241,0.723 C0.26,0.661,0.295,0.612,0.336,0.612 C0.378,0.612,0.413,0.661,0.432,0.723 C0.481,0.887,0.582,1,0.7,1 C0.866,1,1,0.776,1,0.5 C1,0.224,0.866,0,0.7,0 C0.579,0,0.474,0.12,0.427,0.293 C0.41,0.354,0.377,0.403,0.336,0.403 C0.296,0.403,0.263,0.354,0.246,0.293 C0.202,0.133,0.11,0.019,0,0.002 V0.998"></path>
+			<path d="M0,1 H0.009 C0.122,1,0.22,0.887,0.268,0.723 C0.286,0.661,0.319,0.612,0.36,0.612 C0.4,0.612,0.433,0.661,0.451,0.723 C0.499,0.887,0.597,1,0.711,1 C0.87,1,1,0.776,1,0.5 C1,0.224,0.87,0,0.711,0 C0.593,0,0.492,0.12,0.447,0.293 C0.431,0.354,0.398,0.403,0.36,0.403 C0.321,0.403,0.289,0.354,0.272,0.293 C0.227,0.12,0.126,0,0.009,0 H0 V1"></path>
 		</clipPath>
 	</svg>
 	<div class="wrapper">
@@ -281,6 +282,20 @@
 							</svg>
 						</div>
 					</div>
+					<div class="index-hero__image--coin">
+						<picture>
+							<source srcset="img/index/hero/ethereum.avif" type="image/avif">
+							<source srcset="img/index/hero/ethereum.webp" type="image/webp">
+							<img src="img/index/hero/ethereum.png" alt="" width="114" height="114" loading="lazy">
+						</picture>
+					</div>
+					<div class="index-hero__image--coin">
+						<picture>
+							<source srcset="img/index/hero/bitcoin.avif" type="image/avif">
+							<source srcset="img/index/hero/bitcoin.webp" type="image/webp">
+							<img src="img/index/hero/bitcoin.png" alt="" width="84" height="84" loading="lazy">
+						</picture>
+					</div>
 				</div>
 				<div class="index-hero__panel">
 					<div class="index-hero__panel--col" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".index-hero">
@@ -499,28 +514,15 @@
 				</div>
 			</section>
 			<section class="start-trading container">
-				<div class="start-trading__image" data-aos="fade-in" data-aos-delay="200">
-					<div class="theme-change">
-						<div class="theme-change-light">
-							<div class="start-trading__image--wrapper image-aspect-ratio">
-								<picture>
-									<source srcset="img/index/start/index-start-image-light.avif" type="image/avif">
-									<source srcset="img/index/start/index-start-image-light.webp" type="image/webp">
-									<img src="img/index/start/index-start-image-light.png" alt="" width="565" height="565" loading="lazy">
-								</picture>
-							</div>
-						</div>
-						<div class="theme-change-dark">
-							<div class="start-trading__image--wrapper image-aspect-ratio">
-								<picture>
-									<source srcset="img/index/start/index-start-image-dark.avif" type="image/avif">
-									<source srcset="img/index/start/index-start-image-dark.webp" type="image/webp">
-									<img src="img/index/start/index-start-image-dark.png" alt="" width="565" height="565" loading="lazy">
-								</picture>
-							</div>
-						</div>
+				<div class="start-trading__image">
+					<div class="start-trading__image--wrapper image-aspect-ratio">
+						<picture>
+							<source srcset="img/index/start/index-start-image.avif" type="image/avif">
+							<source srcset="img/index/start/index-start-image.webp" type="image/webp">
+							<img src="img/index/start/index-start-image.png" alt="" width="565" height="565" loading="lazy">
+						</picture>
 					</div>
-					<div class="start-trading__card">
+					<div class="start-trading__card anim-on-scroll" style="--delay: 0.2s" data-anchor=".start-trading__decor-circle">
 						<div class="start-trading__card--icon">
 							<svg width="30" height="30" viewBox="0 0 30 30">
 								<use xlink:href="img/sprites.svg#reload"></use>
@@ -530,7 +532,7 @@
 							Ваша анонимность
 						</div>
 					</div>
-					<div class="start-trading__card">
+					<div class="start-trading__card anim-on-scroll" style="--delay: 0.4s" data-anchor=".start-trading__decor-circle">
 						<div class="start-trading__card--icon">
 							<svg width="30" height="30" viewBox="0 0 30 30">
 								<use xlink:href="img/sprites.svg#reload"></use>
@@ -540,8 +542,18 @@
 							Самые выгодные курсы
 						</div>
 					</div>
+					<svg class="start-trading__decor-circle anim-on-scroll" data-scrub width="995" height="995" viewBox="0 0 995 995" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient id="start-trading-image-gradient">
+								<stop offset="0" stop-color="#134CE1" />
+								<stop offset="1" stop-color="#79AEFD" />
+							</linearGradient>
+						</defs>
+						<circle cx="497.5" cy="497.5" r="472.5" class="start-trading__decor-circle--bg" stroke-width="50" />
+						<circle cx="497.5" cy="497.5" r="472.5" class="start-trading__decor-circle--progress" stroke-width="50" stroke-linecap="round" />
+					</svg>
 				</div>
-				<div class="start-trading__content" data-aos="fade-in" data-aos-delay="300">
+				<div class="start-trading__content" data-aos="fade-in" data-aos-delay="200">
 					<h2 class="start-trading__title main-title _min">
 						Откройте двери успешного трейдинга прямо сейчас
 					</h2>
@@ -550,21 +562,21 @@
 					</div>
 					<ul class="start-trading__list" style="--decor-marker-dark: #C1FBFF; --decor-marker-light: #2E4CEB;">
 						<li>
-							<div class="start-trading__list--decor-marker decor-marker">
+							<div class="start-trading__list--decor-marker decor-marker anim-on-scroll" style="--delay: 0.6s;" data-anchor=".start-trading__decor-circle">
 								<div class="decor-marker-line"></div>
 								<div class="decor-marker-dot"></div>
 							</div>
 							Создайте аккаунт
 						</li>
 						<li>
-							<div class="start-trading__list--decor-marker decor-marker">
+							<div class="start-trading__list--decor-marker decor-marker anim-on-scroll" style="--delay: 0.8s;" data-anchor=".start-trading__decor-circle">
 								<div class="decor-marker-line"></div>
 								<div class="decor-marker-dot"></div>
 							</div>
 							Внесите депозит
 						</li>
 						<li>
-							<div class="start-trading__list--decor-marker decor-marker">
+							<div class="start-trading__list--decor-marker decor-marker anim-on-scroll" style="--delay: 1s;" data-anchor=".start-trading__decor-circle">
 								<div class="decor-marker-line"></div>
 								<div class="decor-marker-dot"></div>
 							</div>
@@ -572,7 +584,7 @@
 						</li>
 					</ul>
 					<div class="start-trading__footer">
-						<a href="#" class="start-trading__btn btn">
+						<a href="#" class="start-trading__btn btn anim-on-scroll" style="--delay: 1.2s;" data-anchor=".start-trading__decor-circle">
 							Начать
 						</a>
 					</div>
@@ -831,21 +843,47 @@
 					</div>
 					<div class="try-now__row" data-aos="fade-in" data-aos-delay="300">
 						<div class="try-now__image">
-							<div class="try-now__image--wrapper image-aspect-ratio">
-								<picture>
-									<source srcset="img/index/try-now/try-now-image-large.avif" type="image/avif">
-									<source srcset="img/index/try-now/try-now-image-large.webp" type="image/webp">
-									<img src="img/index/try-now/try-now-image-large.png" alt="" width="896" height="636" loading="lazy">
-								</picture>
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<div class="try-now__image--wrapper image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/try-now/try-now-image-large-light.avif" type="image/avif">
+											<source srcset="img/index/try-now/try-now-image-large-light.webp" type="image/webp">
+											<img src="img/index/try-now/try-now-image-large-light.png" alt="" width="902" height="564" loading="lazy">
+										</picture>
+									</div>
+								</div>
+								<div class="theme-change-dark">
+									<div class="try-now__image--wrapper image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/try-now/try-now-image-large-dark.avif" type="image/avif">
+											<source srcset="img/index/try-now/try-now-image-large-dark.webp" type="image/webp">
+											<img src="img/index/try-now/try-now-image-large-dark.png" alt="" width="902" height="564" loading="lazy">
+										</picture>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="try-now__image">
-							<div class="try-now__image--wrapper image-aspect-ratio">
-								<picture>
-									<source srcset="img/index/try-now/try-now-image-min.avif" type="image/avif">
-									<source srcset="img/index/try-now/try-now-image-min.webp" type="image/webp">
-									<img src="img/index/try-now/try-now-image-min.png" alt="" width="288" height="636" loading="lazy">
-								</picture>
+							<div class="theme-change">
+								<div class="theme-change-light">
+									<div class="try-now__image--wrapper image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/try-now/try-now-image-min-light.avif" type="image/avif">
+											<source srcset="img/index/try-now/try-now-image-min-light.webp" type="image/webp">
+											<img src="img/index/try-now/try-now-image-min-light.png" alt="" width="278" height="565" loading="lazy">
+										</picture>
+									</div>
+								</div>
+								<div class="theme-change-dark">
+									<div class="try-now__image--wrapper image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/try-now/try-now-image-min-dark.avif" type="image/avif">
+											<source srcset="img/index/try-now/try-now-image-min-dark.webp" type="image/webp">
+											<img src="img/index/try-now/try-now-image-min-dark.png" alt="" width="278" height="565" loading="lazy">
+										</picture>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1131,7 +1169,7 @@
 				</div>
 			</section>
 			<section class="reviews container">
-				<div class="reviews__background" aria-hidden="true">
+				<div class="reviews__background anim-on-scroll" aria-hidden="true">
 					<div class="reviews__background--decor"></div>
 					<div class="reviews__background--decor"></div>
 				</div>
@@ -1743,7 +1781,7 @@
 	</div>
 
 	<script src="js/libs.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 

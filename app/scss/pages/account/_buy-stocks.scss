@@ -317,8 +317,8 @@
 	}
 	
 	@include _992 {
-		display: grid;
-		grid-template-columns: 50px auto;
+		/* display: grid;
+		grid-template-columns: 50px auto; */
 	}
 
 	// .stocks-chart__header
@@ -389,19 +389,25 @@
 
 		position: relative;
 
-		@include _992 {
+		/* @include _992 {
 			border-radius: 35px;
 			overflow: hidden;
-		}
+		} */
 
 		.canvasjs-chart-tooltip {
 			opacity: 0; visibility: hidden;
 		}
 		
-		#chartContainer {
+		.tradingview-widget-container {
 			height: 450px;
 			@include _768 {
 				height: 650px;
+			}
+			> div {
+				height: 450px;
+				@include _768 {
+					height: 650px;
+				}	
 			}
 		}
 		grid-column: 2;

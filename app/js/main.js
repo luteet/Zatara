@@ -255,7 +255,7 @@ if (localStorage.getItem('zatara-theme') == "dark") {
 
 function stockChart() {
 
-	if (document.querySelector('#chartContainer')) {
+	if (false) {
 		const stocksChartRangerInput = document.querySelectorAll('.stocks-chart__ranger--button input'),
 			tooltipInfoFx = document.querySelector('.stocks-chart__tooltip--info-fx');
 
@@ -512,17 +512,29 @@ body.addEventListener('click', function (event) {
 			changeString.textContent = changeString.dataset.changeStringOnDark;
 		})
 
-		colorObj = {
-			backgroundColor: "#07071C",
-			lineColor: '#212121',
-			risingColor: "#BAFF62",
-			fallingColor: "#FF7562",
-			crosshair: "#FFF",
-			textColor: "#E0E0E0",
-			textColorMob: "rgba(255,255,255,0.5)",
-		}
+		try {
+			if(TradingView) {
+				new TradingView.widget(
+					{
+						"autosize": true,
+						"symbol": "NASDAQ:AAPL",
+						"interval": "D",
+						"timezone": "Etc/UTC",
+						"theme": "dark",
+						"style": "1",
+						"locale": "en",
+						"backgroundColor": "#07071C",
+						"gridColor": "#212121",
+						"enable_publishing": false,
+						"allow_symbol_change": true,
+						"hide_side_toolbar": false,
+						"container_id": "tradingview_3fc30"
+					}
+				);
+			}
+		} catch {
 
-		stockChart();
+		}
 
 	}
 
@@ -544,17 +556,29 @@ body.addEventListener('click', function (event) {
 			changeString.textContent = changeString.dataset.changeStringOnLight;
 		})
 
-		colorObj = {
-			backgroundColor: "#FFF",
-			lineColor: 'rgba(204, 208, 222, 0.49)',
-			risingColor: "#26AE65",
-			fallingColor: "#D63B25",
-			crosshair: "#1C2546",
-			textColor: "#1C2546",
-			textColorMob: "#1C2546",
-		}
+		try {
+			if(TradingView) {
+				new TradingView.widget(
+					{
+						"autosize": true,
+						"symbol": "NASDAQ:AAPL",
+						"interval": "D",
+						"timezone": "Etc/UTC",
+						"theme": "ligth",
+						"style": "1",
+						"locale": "en",
+						"backgroundColor": "#F5F5FB",
+						"gridColor": "rgba(204, 208, 222, 0.07)",
+						"enable_publishing": false,
+						"allow_symbol_change": true,
+						"hide_side_toolbar": false,
+						"container_id": "tradingview_3fc30"
+					}
+				);
+			}
+		} catch {
 
-		stockChart();
+		}
 
 	}
 
@@ -674,19 +698,25 @@ body.addEventListener('click', function (event) {
 		let scrollNextCheck = false, scrollPrevCheck = false;
 		if (coinsTable2NavArrow.classList.contains('_next')) {
 			td.forEach(td => {
-				if (getCoords(td).left > 1 && !scrollNextCheck) {
-					scrollNextCheck = true;
-					td.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+				if(!td.classList.contains('visible-on-desktop') && !td.classList.contains('sticky')) {	
+					if (getCoords(td).left > 1 && !scrollNextCheck) {
+						scrollNextCheck = true;
+						td.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+					}
 				}
 			})
 		} else if (coinsTable2NavArrow.classList.contains('_prev')) {
-			Array.from(td).reverse().forEach(td => {
-
-				if (getCoords(td).left <= -10 && !scrollPrevCheck && !td.classList.contains('visible-on-desktop')) {
-					scrollPrevCheck = true;
-					td.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+			Array.from(td).reverse().forEach((td, index) => {
+				//console.log(console.log(getCoords(td).left))
+				if(!td.classList.contains('visible-on-desktop') && !td.classList.contains('sticky')) {	
+					
+					if (getCoords(td).left <= 10 && !scrollPrevCheck) {
+						scrollPrevCheck = true;
+						td.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "end" })
+					}
 				}
 			})
+			console.log('===')
 		}
 
 	}
@@ -905,7 +935,31 @@ function resize() {
 				appendElement["element"].style.removeProperty('display');
 			})
 
+			try {
+				if(TradingView) {
+					new TradingView.widget(
+						{
+							"autosize": true,
+							"symbol": "NASDAQ:AAPL",
+							"interval": "D",
+							"timezone": "Etc/UTC",
+							"theme": localStorage.getItem('zatara-theme') ? localStorage.getItem('zatara-theme') : "dark",
+							"style": "1",
+							"locale": "en",
+							"backgroundColor": localStorage.getItem('zatara-theme') == "light" ? "#F5F5FB" : "#07071C",
+							"gridColor": localStorage.getItem('zatara-theme') ? "rgba(204, 208, 222, 0.07)" : "#212121",
+							"enable_publishing": false,
+							"allow_symbol_change": true,
+							"hide_side_toolbar": false,
+							"container_id": "tradingview_3fc30"
+						}
+					);
+				}
+			} catch {
 
+			}
+
+			
 
 		},
 		function () {  // screen < 992px
@@ -915,6 +969,29 @@ function resize() {
 				appendElement["appendAddress"].append(appendElement["element"]);
 				appendElement["element"].style.removeProperty('display');
 			})
+
+			try {
+				if(TradingView) {
+					new TradingView.widget(
+						{
+							"autosize": true,
+							"symbol": "NASDAQ:AAPL",
+							"interval": "D",
+							"timezone": "Etc/UTC",
+							"theme": localStorage.getItem('zatara-theme') ? localStorage.getItem('zatara-theme') : "dark",
+							"style": "1",
+							"locale": "en",
+							"backgroundColor": localStorage.getItem('zatara-theme') == "light" ? "#F5F5FB" : "#07071C",
+							"gridColor": localStorage.getItem('zatara-theme') ? "rgba(204, 208, 222, 0.07)" : "#212121",
+							"enable_publishing": false,
+							"allow_symbol_change": true,
+							"container_id": "tradingview_3fc30"
+						}
+					);
+				}
+			} catch {
+				
+			}
 
 		}
 	);
@@ -978,7 +1055,15 @@ document.querySelectorAll('[data-simplebar]').forEach(customScrollbar => {
 
 let scrollProgress = window.pageYOffset, faqItemCheck = [];
 
+let animOnScroll = [];
+document.querySelectorAll('.anim-on-scroll').forEach((animOnScrollItem, index) => {
+	animOnScroll.push(animOnScrollItem);
+})
+
+//let animOnScrollAnchor = document.querySelectorAll('.anim-on-scroll[data-anchor]');
+
 function scroll() {
+
 	scrollProgress = window.pageYOffset;
 	if (scrollProgress && header.classList.contains('_on-top')) {
 		header.classList.remove('_on-top');
@@ -1005,6 +1090,37 @@ function scroll() {
 			document.querySelector(`a[href="#${blocks[blocks.length - 1].getAttribute('id')}"]`).classList.add('_current');
 		}
 	}
+
+	if(animOnScroll.length >= 1 && windowSize > 992) {
+		for(let index = 0; index < animOnScroll.length; index++) {
+			if(animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight < 0 && !animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
+				animOnScroll[index].classList.add('_animated')
+				animOnScroll = animOnScroll.filter(el => el != animOnScroll[index]);
+				
+			} else if(animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
+				let progress = Math.min(600, Math.max(0,animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight / 6));
+				animOnScroll[index].style.setProperty('--progress', "-" + progress / 2 + "%");
+
+				if(progress == 0) {
+					animOnScroll[index].classList.add('_animated');
+					//const anchor = document.querySelector(animOnScroll[index].dataset.anchor);
+				} else if(animOnScroll[index].closest('section').getBoundingClientRect().y >= window.innerHeight) {
+					animOnScroll[index].classList.remove('_animated');
+				}
+
+			} else if(animOnScroll[index].hasAttribute('data-anchor') && !animOnScroll[index].hasAttribute('data-scrub')) {
+				const anchor = document.querySelector(animOnScroll[index].dataset.anchor);
+				if(anchor.classList.contains('_animated')) {
+					animOnScroll[index].classList.add('_animated')
+				} else {
+					animOnScroll[index].classList.remove('_animated')
+				}
+			}
+			
+		}
+		
+	}
+	
 }
 
 scroll();
