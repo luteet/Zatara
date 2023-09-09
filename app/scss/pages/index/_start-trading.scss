@@ -35,7 +35,7 @@
 			//stroke-dashoffset: -300%;
 			@include _992 {
 				stroke-dashoffset: var(--progress);
-				transition: stroke-dashoffset .1s ease;
+				transition: stroke-dashoffset .25s ease;
 			}
 		}
 
@@ -58,6 +58,7 @@
 		}
 
 		position: relative;
+		z-index: 2;
 
 		// .start-trading__image--wrapper
 
@@ -178,7 +179,6 @@
 				border-radius: 16px;
 			}
 			background: linear-gradient(200deg, #4C603F 0%, #282D34 100%);
-			//backdrop-filter: blur(26px);
 		}
 
 		// .start-trading__card--icon
@@ -227,6 +227,7 @@
 
 			font-family: var(--title-font);
 			font-size: 0.875rem;
+			line-height: 110%;
 			@include _550 {
 				font-size: 1rem;
 			}
@@ -239,7 +240,7 @@
 			@include _992 {
 				font-size: 1.375rem;
 			}
-			line-height: 110%;
+			
 		}
 	}
 

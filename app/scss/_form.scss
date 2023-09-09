@@ -30,7 +30,7 @@ input, textarea {
 
 		color: var(--tertiary);
 		&:not([readonly]):focus {
-			color: var(--white);
+			color: var(--text-color);
 		}
 
 		&[readonly] {

@@ -525,15 +525,26 @@ body {
 		}
 
 		&__image {
-			&--tooltip-bg::after {
+			&--tooltip::before {
+				background: var(--white);
+				backdrop-filter: none;
+			}
+			/* &--tooltip-bg::after {
 				backdrop-filter: none;
 				background: var(--white);
+				
 			}
 
 			&--tooltip-text {
 				background: var(--white);
 				backdrop-filter: none;
 			}
+
+			&--tooltip:nth-child(3) .index-hero__image--tooltip-text {
+				@include _992 {
+					box-shadow: -0.5px 0 0 0 white;
+				}
+			} */
 		}
 
 		&__image--wrapper::before {
@@ -570,6 +581,9 @@ body {
 			td {
 				&:not(:last-child) {
 					border-bottom: 1px solid var(--accent-transparent);
+					@include _992 {
+						border-bottom: 0;
+					}
 				}
 			}
 
@@ -689,7 +703,7 @@ body {
 
 	.decor-marker {
 		&-dot::before {
-			background: linear-gradient(0deg, transparent 0%, var(--decor-marker-light, var(--accent)) 100%) border-box;
+			background: linear-gradient(0deg, var(--light-background) 0%, var(--decor-marker-light, var(--decor-marker-light-dot, var(--accent))) 100%) border-box;
 		}
 
 		&-dot {
@@ -697,9 +711,9 @@ body {
 		}
 
 		&-line::before {
-			background: linear-gradient(-90deg, var(--decor-marker-light, var(--accent)) 0%, var(--decor-marker-light, var(--accent)) 50%, transparent 0%);
-			background-size: 200%;
-			background-position: -100%;
+			background: linear-gradient(90deg, var(--decor-marker-light, var(--decor-marker-light-line, #82A9FF)) -1.55%, rgba(193, 251, 255, 0.00) 105.15%, rgba(193, 225, 255, 0.00) 105.15%);
+			/* background-size: 200%;
+			background-position: -100%; */
 		}
 	}
 
@@ -831,10 +845,14 @@ body {
 		&__card {
 			&--background {
 				&-panel {
-					background: linear-gradient(45deg, rgb(156, 228, 241) 0%, rgba(59,99,87,0) 30%, rgba(110,151,136,0) 70%, rgba(178,221,201,1) 100%);
+					background: linear-gradient(45deg, rgba(170,182,242,1) 0%, rgba(59,99,87,0) 30%, rgba(110,151,136,0) 70%, rgba(178,221,201,1) 100%);
 					@include _992 {
 						background: linear-gradient(45deg, rgba(170,182,242,1) 0%, rgba(59,99,87,0) 30%, rgba(110,151,136,0) 70%, rgba(178,221,201,1) 100%);
 					}
+				}
+
+				&-decor:nth-child(3) {
+					background: var(--accent);
 				}
 			}
 			&--body {
@@ -879,7 +897,11 @@ body {
 		}
 
 		&__image {
-			&--tooltip-bg::after {
+			&--tooltip::before {
+				background: var(--white);
+				backdrop-filter: none;
+			}
+			/* &--tooltip-bg::after {
 				backdrop-filter: none;
 				background: var(--white);
 			}
@@ -889,6 +911,12 @@ body {
 				backdrop-filter: none;
 				
 			}
+
+			&--tooltip:nth-child(3) .about-us-hero__image--tooltip-bg {
+				&::after {
+					transform: translate(0.5%,-51.5%) scaleX(-1);
+				}
+			} */
 		}
 
 		&__image--wrapper {
@@ -1278,9 +1306,7 @@ body {
 
 	input:not(.min-input) {
 		color: var(--tertiary);
-		&:focus {
-			color: var(--text-color);
-		}
+		
 		&::placeholder {
 			color: var(--tertiary);
 		}
@@ -2151,7 +2177,7 @@ section {
 			opacity: .5;
 	
 			&._animated {
-				animation: list_marker 0.4s ease var(--delay,0.2s) 1 normal forwards;
+				animation: list_marker 0.6s ease var(--delay,0.2s) 1 normal forwards;
 			}
 		}
 	}

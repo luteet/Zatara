@@ -62,7 +62,7 @@
 
 	&__nav {
 		position: fixed;
-		right: 0; top: 0;
+		right: var(--negative-container-padding); top: 0;
 		width: 270px; height: calc(var(--vh, 1svh) * 100 - var(--height-aside,0px));
 
 		overflow-y: auto; overflow-x: hidden;
@@ -88,8 +88,8 @@
 
 		&--background {
 			position: fixed;
-			left: 0; top: var(--height-header);
-			width: 100vw; height: calc(100vh - var(--height-header) - var(--height-aside,0px));
+			left: var(--negative-container-padding); top: var(--height-header);
+			width: calc(100vw + var(--container-padding)); height: calc(100vh - var(--height-header) - var(--height-aside,0px));
 			background: rgba(7, 7, 28, 0.72);
 			
 			border-top: 1px solid #181834;
@@ -135,10 +135,10 @@
 			&::before {
 				content: '';
 				position: fixed;
-				left: 0; top: 0;
-				width: 100%; height: var(--height-header);
+				left: var(--negative-container-padding); top: 0;
+				width: calc(100% + var(--container-padding) * 2); height: var(--height-header);
 				background: var(--dark-background);
-				z-index: 2;
+				z-index: 3;
 
 				transition: background .3s ease;
 			}

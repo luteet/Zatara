@@ -30,6 +30,7 @@
 		opacity: 1;
 		filter: blur(20px);
 		z-index: -1;
+		pointer-events: none;
 	}
 
 	> * {

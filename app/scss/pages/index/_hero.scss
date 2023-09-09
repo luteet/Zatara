@@ -143,11 +143,27 @@
 
 		&--tooltip {
 			position: absolute;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				backdrop-filter: blur(10px);
+				z-index: -1;
+				background: var(--white-opacity-1);
+				opacity: 1;
+				transition: opacity .3s ease;
+				pointer-events: none;
+			}
 
 			&:nth-child(2) {
 				left: 0; top: 40%;
+				width: 153px;
 				@include _992 {
 					left: -51px; top: 40%;
+				}
+				&::before {
+					clip-path: url(#image-tooltip-1);
 				}
 			}
 
@@ -156,6 +172,10 @@
 				@include _992 {
 					right: 31px; top: 42%;
 				}
+				width: 133px;
+				&::before {
+					clip-path: url(#image-tooltip-2);
+				}
 				flex-direction: row-reverse;
 			}
 
@@ -163,9 +183,27 @@
 			align-items: center;
 
 		}
+
+		&--tooltip:nth-child(2) &--target {
+			transform: translate(-4px,0);
+		}
+
+		&--tooltip:nth-child(3) &--target {
+			transform: translate(3.5px,0);
+		}
+
+		&--tooltip:nth-child(3) &--tooltip-text {
+			text-align: center;
+			flex: 1 1 auto;
+			width: 108px;
+			@include _992 {
+				margin-right: 0;
+				padding-left: 20px;
+			}
+		}
 		
 		@media (any-hover: hover) {
-			&--tooltip-bg::after {
+			&--tooltip::before {
 				opacity: 0;
 			}
 
@@ -173,10 +211,14 @@
 				opacity: 0;
 			}
 
-			&--tooltip:hover & {
-				&--tooltip-bg::after {
+			&--tooltip:hover {
+				&::before {
 					opacity: 1;
 				}
+			}
+
+			&--tooltip:hover & {
+				
 	
 				&--tooltip-text {
 					opacity: 1;
@@ -184,7 +226,7 @@
 			}
 		}
 
-		&--tooltip:nth-child(3) &--tooltip-bg {
+		/* &--tooltip:nth-child(3) &--tooltip-bg {
 			right: auto; left: 0;
 			&::after {
 				right: auto; left: -4px;
@@ -203,11 +245,11 @@
 			@include _992 {
 				margin-left: 28px;
 			}
-		}
+		} */
 
 		// .index-hero__image--tooltip-bg
 
-		&--tooltip-bg {
+		/* &--tooltip-bg {
 			position: absolute;
 			right: 0; top: 0;
 			z-index: -1;
@@ -229,29 +271,27 @@
 
 				transition: opacity .2s ease;
 			}
-		}
+		} */
 
 		// .index-hero__image--tooltip-text
 
 		&--tooltip-text {
-			margin-right: 28px;
+			/* margin-right: 28px;
 			@include _992 {
 				margin-right: 28px;
-			}
+			} */
+			flex: 1 1 auto;
 			
 			margin-top: 0px;
-			padding: 6px 5px 3px 15px;
-			backdrop-filter: blur(10px);
-			border-radius: 25px 0 0 25px;
-			background: var(--white-opacity-1);
+			padding: 6px 5px 3px 20px;
+			width: 100px;
+			//background: var(--white-opacity-1);
 
 			transition: opacity .2s ease;
 
 			font-size: 0.875rem;
+			font-weight: 500;
 			height: 33px;
-			@include _992 {
-				font-size: 1rem;
-			}
 
 			user-select: none; pointer-events: none;
 		}

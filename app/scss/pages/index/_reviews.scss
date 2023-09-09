@@ -107,9 +107,9 @@
 			&-decor:nth-child(2) {
 				background: var(--success);
 				right: 0; top: 0;
-				transform: translate(20%,21%) rotate(-3deg) skewX(-20deg);
+				transform: translate(20%,21%) rotate(-3deg) skewX(-25deg);
 				@include _550 {
-					transform: translate(11%,21%) rotate(-3deg) skewX(-20deg);
+					transform: translate(22%,21%) rotate(-3deg) skewX(-25deg);
 				}
 				z-index: -2;
 			}
@@ -117,9 +117,9 @@
 			&-decor:nth-child(3) {
 				background: var(--blue);
 				left: 0; bottom: 0;
-				transform: translate(-20%,-17%) rotate(-5deg) skewX(-20deg);
+				transform: translate(-20%,-17%) rotate(-5deg) skewX(-25deg);
 				@include _550 {
-					transform: translate(-13%,-17%) rotate(-5deg) skewX(-20deg);
+					transform: translate(-21%,-20%) rotate(-5deg) skewX(-25deg);
 				}
 				z-index: -2;
 			}
@@ -224,6 +224,7 @@
 	// .reviews__title
 
 	&__title {
+		max-width: 600px;
 	}
 
 	// .reviews__text
