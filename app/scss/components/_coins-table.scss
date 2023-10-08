@@ -449,6 +449,12 @@
 	}
 }
 
+.stocks .coins-table-2 {
+	&._stocks &__nav {
+		top: 35px;
+	}
+}
+
 .coins-table-2 {
 
 	margin: 0 -8px;
@@ -498,6 +504,7 @@
 	}
 	
 	position: relative;
+	
 	&__nav {
 		position: absolute;
 		right: 8px; top: 0;
@@ -531,7 +538,7 @@
 		display: inline-flex;
 		
 		max-width: 100%;
-		padding: 0 0 10px 0;
+		padding: 0px 0 10px 0;
 		//width: 1005;
 
 		scroll-snap-type: x proximity;
@@ -548,8 +555,6 @@
 		left: 0; top: 0;
 		background: var(--dark-background);
 		z-index: 2;
-
-
 	}
 
 	// .coins-table__block
@@ -564,22 +569,22 @@
 
 		border-radius: 15px;
 
-		min-width: 1400px;
+		min-width: 1200px;
 
 		@include _992 {
-			min-width: 1250px;
+			min-width: 950px;
 			border-spacing: 0 6px;
 			width: 100%;
 		}
 
-		col:nth-child(1) {
+		/* col:nth-child(1) {
 			width: 100vw;
 			@include _992 {
 				width: auto;
 			}
-		}
+		} */
 
-		col:nth-child(2) {
+		col:nth-child(1) {
 			width: calc(50vw - 30px);
 			
 			@include _992 {
@@ -587,7 +592,7 @@
 			}
 		}
 
-		col:nth-child(3) {
+		col:nth-child(2) {
 			width: calc(50vw - 15px);
 			@include _992 {
 				width: auto;
@@ -706,6 +711,8 @@
 				font-weight: 400;
 				padding: 15px 20px;
 
+				white-space: nowrap;
+
 				span {
 					padding-right: 10px;
 					@include _550 {
@@ -721,25 +728,25 @@
 					background: var(--dark-background);
 				} */
 
-				&:nth-child(2) {
+				&:nth-child(1) {
 					position: sticky;
 					left: 0; top: 0;
 					z-index: 3;
 					background: var(--dark-background);
-					min-width: calc(50vw - 30px);
+					min-width: 50vw;
+					
+					
 					@include _992 {
 						min-width: 0;
 						background: transparent;
 						position: static;
+						
 					}
 				}
 
 				border-top: 1px solid var(--theme-shade-1);
 				border-bottom: 1px solid var(--theme-shade-1);
-
-				&:not(:first-child) {
-					border-right: 1px solid var(--theme-shade-1);
-				}
+				border-right: 1px solid var(--theme-shade-1);
 
 				&:first-child {
 					border-left: 1px solid var(--theme-shade-1);
@@ -789,7 +796,7 @@
 				scroll-snap-align: start;
 				min-height: 72px;
 
-				&:nth-child(1), &:nth-child(2) {
+				&:nth-child(1) {
 					min-width: auto;
 					position: sticky;
 					left: 0; top: 0;
@@ -851,17 +858,11 @@
 					}
 				}
 
-				&:not(:first-child) {
-					border-right: 1px solid var(--theme-shade-1);
+				border-right: 1px solid var(--theme-shade-1);
+				@include _992 {
+					border-right: 0;
 				}
-
-				&:nth-last-child(2), &:nth-last-child(1) {
-					border-top: 1px solid var(--theme-shade-1);
-				}
-
-				&:first-child {
-					border-left: 1px solid var(--theme-shade-1);
-				}
+				
 
 				span:not(.coins-table__percent-value) {
 					color: var(--white-opacity-5);
@@ -903,14 +904,13 @@
 			}
 
 			&:nth-child(1) {
-				text-align: center;
+				text-align: left;
+				@include _992 {
+					text-align: left;
+				}
 			}
 
 			&:nth-child(2) {
-				text-align: left;
-			}
-
-			&:nth-child(3) {
 				text-align: left;
 			}
 		}
@@ -932,14 +932,7 @@
 			&:nth-child(3) {
 				text-align: left;
 			}
-
-			&:last-child {
-				/* > * {
-					width: 50%;
-				} */
-			}
 		}
-
 
 	}
 
@@ -951,14 +944,13 @@
 			text-align: left;
 
 			&:nth-child(1) {
-				text-align: center;
+				text-align: left;
+				@include _992 {
+					text-align: center;
+				}
 			}
 
 			&:nth-child(2) {
-				text-align: left;
-			}
-
-			&:nth-child(3) {
 				text-align: left;
 			}
 		}
@@ -966,15 +958,14 @@
 		tbody td {
 			text-align: left;
 			@include _992 {
-				text-align: right;
+				text-align: left;
 			}
 
 			&:nth-child(1) {
-				text-align: center;
-			}
-
-			&:nth-child(2) {
 				text-align: left;
+				@include _992 {
+					text-align: center;
+				}
 				> div {
 					display: flex;
 					align-items: center;
@@ -983,6 +974,7 @@
 					}
 					@include _992 {
 						display: block;
+						
 						b:first-child {
 							display: none;
 						}
@@ -990,8 +982,18 @@
 				}
 			}
 
-			&:nth-child(3) {
+			&:nth-child(2) {
 				text-align: left;
+
+				span {
+					display: -webkit-box;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					line-clamp: 2;
+					box-orient: vertical;
+				}
 			}
 
 			&:last-child {

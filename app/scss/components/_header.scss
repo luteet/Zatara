@@ -744,7 +744,10 @@
 			b {
 				width: 60px; margin-right: 12px;
 
-				display: block;
+				display: none;
+				@include _992 {
+					display: block;
+				}
 				overflow: hidden;
 				text-overflow: ellipsis;
 
@@ -758,7 +761,10 @@
 		&--avatar {
 			position: relative;
 			flex: 0 0 32px;
-			margin-right: 12px;
+			margin-right: 6px;
+			@include _992 {
+				margin-right: 12px;
+			}
 
 			img {
 				border-radius: 50%;
@@ -798,6 +804,7 @@
 		// .header__account--name
 
 		&--name {
+			
 		}
 
 		// .header__account--icon

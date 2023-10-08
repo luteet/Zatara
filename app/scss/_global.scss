@@ -1830,6 +1830,45 @@ body {
 			border-color: var(--stroke-2);
 		}
 	}
+
+	.datepicker-picker {
+		background: var(--theme-shade-1);
+	}
+}
+
+.datepicker-picker {
+	background: var(--theme-shade-1);
+}
+
+.datepicker-controls .button {
+	background: var(--theme-shade-1);
+	color: var(--text-color);
+}
+
+.datepicker-cell.focused:not(.selected) {
+	background: var(--accent);
+}
+
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+	background: var(--accent);
+}
+
+.datepicker-cell:not(.disabled) {
+	transition: background .2s ease, color .2s ease;
+}
+
+.datepicker-header .datepicker-controls .button {
+	transition: background .2s ease, color .2s ease;
+}
+
+.datepicker-header .datepicker-controls .button:hover {
+	background: var(--accent-hover);
+	color: var(--white);
+}
+
+.datepicker-cell:not(.disabled):hover {
+	background: var(--accent-hover);
+	color: var(--white);
 }
 
 .image-aspect-ratio {
@@ -2112,13 +2151,13 @@ section {
 
 .visible-on-mob {
 	@include _992 {
-		display: none;
+		display: none !important;
 	}
 }
 
 .visible-on-desktop {
 	@media (max-width: 991px) {
-		display: none;
+		display: none !important;
 	}
 }
 
