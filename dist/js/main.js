@@ -253,195 +253,7 @@ if (localStorage.getItem('zatara-theme') == "dark") {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <stock-chart> -=-=-=-=-=-=-=-=-=-=-=-=
 
-function stockChart() {
 
-	if (false) {
-		const stocksChartRangerInput = document.querySelectorAll('.stocks-chart__ranger--button input'),
-			tooltipInfoFx = document.querySelector('.stocks-chart__tooltip--info-fx');
-
-		let startDate = new Date("2018-02-02"), endDate = new Date("2018-05-02"),
-			startDateDefault = startDate, endDateDefault = endDate;
-
-		let dps1 = [], dps2 = [];
-		let stockChart = new CanvasJS.StockChart("chartContainer", {
-			theme: "dark1",
-			exportEnabled: true,
-
-			zoomEnabled: true,
-			zoomType: "xy",
-
-			backgroundColor: colorObj["backgroundColor"],
-
-			rangeChanged: function (e) {
-				startDate = e.minimum;
-				endDate = e.minimum;
-			},
-
-			rangeSelector: {
-				enabled: false,
-
-				inputFields: {
-					startValue: startDate,
-					endValue: endDate
-				}
-			},
-
-			charts: [{
-				//lineColor: "red",
-
-				axisY: {
-					enabled: false,
-				},
-				
-				axisX: {
-					
-					labelFontSize: 0,
-					tickColor: colorObj["lineColor"],
-					lineColor: colorObj["lineColor"],
-					
-					crosshair: {
-						enabled: false,
-						snapToDataPoint: true,
-						lineThickness: 5,
-						color: colorObj["crosshair"],
-					}
-				},
-
-				axisY2: {
-					prefix: "$",
-					labelFontSize: 14,
-					gridColor: colorObj["lineColor"],
-					lineColor: colorObj["lineColor"],
-					tickColor: colorObj["lineColor"],
-					labelPlacement: "inside", //Change it to "outside"
-					tickPlacement: "inside",
-					labelFontColor: windowSize >= 992 ? colorObj['textColor'] : colorObj['textColorMob'],
-				},
-
-				toolTip: {
-					updated: function (event) {
-						//console.log(event.entries[0].dataPoint);
-						tooltipInfoFx.classList.remove('success-string');
-						tooltipInfoFx.classList.remove('danger-string');
-
-						if (event.entries[0].dataPoint.type == 'close') {
-							tooltipInfoFx.classList.add('danger-string');
-						} else if (event.entries[0].dataPoint.type == "open") {
-							tooltipInfoFx.classList.add('success-string');
-						}
-
-						tooltipInfoFx.querySelectorAll('li').forEach((li, index) => {
-							li.querySelectorAll('span')[1].textContent = event.entries[0].dataPoint.y[index];
-						})
-					}
-				},
-
-				data: [{
-					type: "candlestick",
-					yValueFormatString: "$#,###.##",
-					axisYType: "secondary",
-					dataPoints: dps1,
-					risingColor: colorObj["risingColor"],
-					fallingColor: colorObj["fallingColor"],
-				}],
-			}],
-
-			navigator: {
-
-				enabled: true,
-				height: 0,
-
-				slider: {
-					minimum: startDate,
-					maximum: endDate,
-					maskColor: "#1C2546",
-					outlineColor: colorObj["lineColor"],
-				}
-			}
-		});
-
-		const tooltipRange = document.querySelector('.stocks-chart__tooltip--range');
-
-		stocksChartRangerInput.forEach(input => {
-			input.addEventListener('change', function (event) {
-				if (input.checked) {
-
-					endDate = startDate;
-
-					tooltipRange.textContent = input.parentElement.querySelector('span').textContent;
-
-					if (input.dataset.valueType == "month") {
-						endDate = new Date(endDate).setMonth(new Date(endDate).getMonth() + Number(input.value));
-					} else if (input.dataset.valueType == "hour") {
-						endDate = new Date(endDate).setHours(new Date(endDate).getHours() + Number(input.value));
-					} else if (input.dataset.valueType == "minute") {
-						endDate = new Date(endDate).setMinutes(new Date(endDate).getMinutes() + Number(input.value));
-					}
-
-					stockChart.navigator.slider.set('minimum', new Date(startDate))
-					stockChart.navigator.slider.set('maximum', new Date(endDate))
-
-				}
-			})
-		})
-
-		const asideButtons = document.querySelectorAll('.stocks-chart__aside button');
-		asideButtons.forEach(asideButton => {
-			asideButton.addEventListener('click', function (event) {
-				asideButton.classList.toggle('active');
-
-				if(asideButton.dataset.button == "zoom") {
-					if(!asideButton.classList.contains('active')) {
-						stockChart.navigator.set('height', 0)
-						stockChart.navigator.set('enabled', false);
-					} else if(asideButton.classList.contains('active')) {
-						stockChart.navigator.set('height', 100)
-						stockChart.navigator.set('enabled', true);
-					}
-				}
-
-				if(asideButton.dataset.button == "crosshair") {
-					if(!asideButton.classList.contains('active')) {
-						stockChart.charts[0].axisX[0].crosshair.set('enabled', false);
-					} else if(asideButton.classList.contains('active')) {
-						stockChart.charts[0].axisX[0].crosshair.set('enabled', true);
-					}
-				}
-			})
-		})
-
-		fetch(document.querySelector('#chartContainer').dataset.json)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-
-				for (var i = 0; i < data.length; i++) {
-					dps1.push({ x: new Date(data[i].date), color: data[i].open < data[i].close ? colorObj["risingColor"] : colorObj["fallingColor"], type: data[i].open < data[i].close ? "open" : "close", y: [Number(data[i].open), Number(data[i].high), Number(data[i].low), Number(data[i].close)] });
-					dps2.push({ x: new Date(data[i].date), color: data[i].open < data[i].close ? colorObj["risingColor"] : colorObj["fallingColor"], type: data[i].open < data[i].close ? "open" : "close", y: Number(data[i].close) });
-				}
-
-				stockChart.render();
-
-				const stocksChartDownload = document.querySelectorAll('.stocks-chart__download');
-				stocksChartDownload.forEach(stocksChartDownload => {
-					stocksChartDownload.addEventListener('click', function () {
-						stockChart.charts[0].axisX[0].set('minimum', new Date(startDate))
-						stockChart.charts[0].axisX[0].set('maximum', new Date(endDate))
-						stockChart.navigator.set('enabled', false)
-						stockChart.exportChart({ format: "jpg" });
-						stockChart.charts[0].axisX[0].set('minimum', null)
-						stockChart.charts[0].axisX[0].set('maximum', null)
-
-					})
-				})
-
-			});
-
-	}
-}
-
-window.addEventListener('load', stockChart)
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </stock-chart> -=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -1019,21 +831,11 @@ let customSelectsArray = [];
 
 document.querySelectorAll('form').forEach(form => {
 	form.addEventListener('reset', function () {
-		//console.log(customSelectsArray)
 		Array.from(customSelectsArray).forEach((customSelectItem, index) => {
 			if (customSelectItem['selectEl'].closest('form') == form) {
 				customSelectItem.setSelected(customSelectItem.getData()[0]['value'])
 			}
 		})
-		/* const customSelects = form.querySelectorAll('.custom-select, .custom-select-2');
-		customSelects.forEach(customSelect => {
-			new SlimSelect({
-				select: customSelect,
-				settings: {
-					showSearch: false,
-				}
-			})
-		}) */
 	})
 })
 
@@ -1060,7 +862,6 @@ document.querySelectorAll('.anim-on-scroll').forEach((animOnScrollItem, index) =
 	animOnScroll.push(animOnScrollItem);
 })
 
-//let animOnScrollAnchor = document.querySelectorAll('.anim-on-scroll[data-anchor]');
 
 function scroll() {
 
@@ -1092,6 +893,7 @@ function scroll() {
 	}
 
 	if(animOnScroll.length >= 1 && windowSize > 992) {
+
 		for(let index = 0; index < animOnScroll.length; index++) {
 			if(animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight < 0 && !animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
 				animOnScroll[index].classList.add('_animated')
@@ -1099,7 +901,7 @@ function scroll() {
 				
 			} else if(animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
 				let progress = Math.min(600, Math.max(0,animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight / 6));
-				animOnScroll[index].style.setProperty('--progress', "-" + progress / 2 + "%");
+				animOnScroll[index].style.setProperty('--progress',  progress / 2 + "%");
 
 				if(progress == 0) {
 					animOnScroll[index].classList.add('_animated');
@@ -1119,6 +921,34 @@ function scroll() {
 			
 		}
 		
+	} else if(animOnScroll.length >= 1 && windowSize < 992) {
+
+		for(let index = 0; index < animOnScroll.length; index++) {
+			if(animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight < 0 && !animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
+				animOnScroll[index].classList.add('_animated')
+				animOnScroll = animOnScroll.filter(el => el != animOnScroll[index]);
+				
+			} else if(animOnScroll[index].hasAttribute('data-scrub') && !animOnScroll[index].hasAttribute('data-anchor')) {
+				let progress = Math.min(600, Math.max(0,animOnScroll[index].closest('section').getBoundingClientRect().y - window.innerHeight / 6));
+				animOnScroll[index].style.setProperty('--progress',  progress / 2 + "%");
+
+				if(progress == 0) {
+					animOnScroll[index].classList.add('_animated');
+				} else if(animOnScroll[index].closest('section').getBoundingClientRect().y >= window.innerHeight) {
+					animOnScroll[index].classList.remove('_animated');
+				}
+
+			} else if(animOnScroll[index].hasAttribute('data-anchor') && !animOnScroll[index].hasAttribute('data-scrub')) {
+				const anchor = document.querySelector(animOnScroll[index].dataset.anchor);
+				if(anchor.classList.contains('_animated')) {
+					animOnScroll[index].classList.add('_animated')
+				} else {
+					animOnScroll[index].classList.remove('_animated')
+				}
+			}
+			
+		}
+
 	}
 	
 }

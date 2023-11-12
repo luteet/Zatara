@@ -32,6 +32,8 @@
 		&--progress {
 			stroke: url(#start-trading-image-gradient);
 			stroke-dasharray: 300%;
+			//stroke-dashoffset: calc(300% - (300% * var(--percent)) / 100);
+			stroke-dashoffset: var(--progress);
 			//stroke-dashoffset: -300%;
 			@include _992 {
 				stroke-dashoffset: var(--progress);
@@ -101,15 +103,17 @@
 		}
 
 		@include _992 {
-			z-index: -1;
-			&.anim-on-scroll {
-				opacity: 0;
-				transition: opacity .2s ease;
-			}
-	
-			&._animated {
-				animation: fadeIn 0.2s ease var(--delay,0.2s) 1 normal forwards;
-			}
+			
+		}
+
+		z-index: -1;
+		&.anim-on-scroll {
+			opacity: 0;
+			transition: opacity .2s ease;
+		}
+
+		&._animated {
+			animation: fadeIn 0.2s ease var(--delay,0.2s) 1 normal forwards;
 		}
 
 		&:nth-child(3) {
@@ -333,13 +337,11 @@
 			min-width: 183px;
 		}
 
-		@include _992 {
-			&.anim-on-scroll {
-				opacity: .5;
-				pointer-events: none;
-				&._animated {
-					animation: false_disabled 0.2s ease var(--delay,0.2s) 1 normal forwards;
-				}
+		&.anim-on-scroll {
+			opacity: .5;
+			pointer-events: none;
+			&._animated {
+				animation: false_disabled 0.2s ease var(--delay,0.2s) 1 normal forwards;
 			}
 		}
 	}

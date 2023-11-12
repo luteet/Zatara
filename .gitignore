@@ -1,2 +1,5 @@
 /node_modules
 /package-lock.json
+/zatara
+/zatara.zip
+/.DS_Store
